@@ -1,0 +1,257 @@
+%!TEX root = ../thesis.tex
+%*******************************************************************************
+%****************************** Fourth Chapter **********************************
+%*******************************************************************************
+\chapter{Percolation Theory}
+
+% **************************** Define Graphics Path **************************
+\ifpdf
+    \graphicspath{{Chapter4/Figs/}}
+\else
+    \graphicspath{{Chapter4/Figs/}}
+\fi
+
+\section{Percolation Phenomena}
+\section{Historical Overview}
+\section{Classifications and Playground}
+	\subsection{Types of Percolation}
+		\subsubsection{Bond Percolation}	
+		\subsubsection{Site Percolation}
+		\subsubsection{Explosive Percolation}
+		\subsubsection{K-Core Percolation}
+		\subsubsection{Bootstrap Percolation}
+		\subsubsection{Other}
+	\subsection{Types of Playground}
+		\subsubsection{Lattice}
+		\subsubsection{Graph}
+\section{Observables}
+	\subsection{Percolation Threshold, $p_c$}
+	\subsection{Spanning Probability, $w(p)$}
+	\subsection{Entropy, $H(p,L)$}
+	\subsection{Order Parameter, $P(p,L)$}
+	\subsection{Mean Cluster Size, S}
+	\subsection{Cluster Size Distribution Function, $n_s$}
+		\begin{equation}
+			n_s(p_c)\sim s^{-\tau}
+		\end{equation}
+
+	\subsection{Correlation Function, $g(r)$}		
+	\subsection{Correlation length, $\xi$}
+
+\section{Exact Solutions}
+	Percolation problem can be solved exactly in $1$ and $\infty$ dimension. In dimension $1 < d < \infty$ there is not analytical solution, it can only be solved approximately using simulations. Analytic solution in dimension greater than $1$ and less than $\infty$ is a still to be solved problem. Interestingly, many of the features found in one dimension seem to be valid for higher dimensions too. Thus using the insight of these exact solutions in $1$ and $\infty$ dimension we get a window into the world of phase transitions, scaling and critical exponents.
+	\subsection{One Dimension}
+		\subsubsection{Threshold}
+		The simplest lattice one can think of is the one dimensional lattice. It consists of many sites arranged at an equidistant positions along a line. Each site of the lattice can either be occupied with probability $p$ or remain empty with probability $1-p$. Thus there are only two possible states of each site.
+		\begin{figure}
+			\includegraphics[width=\linewidth]{{{1d_lattice}}}
+			\caption{One Dimensional Lattice. Empty ones are white and filled ones are black.}
+			\label{fig:1d-lattice}
+		\end{figure}
+		A cluster is a group of neighboring occupied sites which contains no empty sites in between. A single empty sites splits a cluster into two clusters. If we find $n$ successive occupied sites, we say that it forms a cluster of size $n$. We want to find the probability at which an infinite cluster appears for the first time, i.e., the critical occupation probability.\\
+		Let $\omega(p,L)$ is the probability that a linear chain of size $L$ has percolating cluster at probability $p$. Note that, if two sites form one cluster, the probability that we find such cluster is $p^2$. Similarly if we want a cluster containing $L$ sites the probability is $\omega(p,L) = p^L$, means $L$ successive sites are occupied independent of each other. 
+		\begin{equation}
+			\lim_{L \rightarrow \infty} omega(p,L) = 
+			\begin{cases}
+			  0 \text{ , } \forall p < 1
+			  \\
+			  1 \text{only if p = 1}
+			\end{cases}
+		\end{equation}
+		For $p=1$ all sites of the lattice are occupied and a percolating cluster spans from $-\infty$ to $\infty$ so that each and every and every sites of the lattice belong to the percolating cluster.For $p<1$ we will have on the average $(1-p)^L$ empty sites. So if $L \rightarrow \infty$, we have $(1-p)^L \rightarrow const.$ revealing that there will be at least one, if not more, empty site somewhere in the chain. Which proves that as long as $p<1$ there is no spanning cluster. Thus the percolation threshold or the critical occupation probability in one dimension is
+		\begin{equation}
+			p_c = 1
+		\end{equation}
+		\subsubsection{Cluster Size}
+		A cluster of size $s$,a.k.a. $s$-cluster, is formed when $s$ successive sites are occupied and they are surrounded by two empty sites. Probability of $s$ successive sites are being occupied is $p^s$ and $2$ sites are unoccupied is $(1-p)^2$. Thus the probability of picking a cluster at random that belongs to an $s$-cluster is
+		\begin{equation}
+			n_s = p^s (1-p)^s
+			\label{eqn:n_s-1d}
+		\end{equation}
+		$n_s$ is also the number of $s$-clusters per lattice site. Note that the state of one particular site is independent of any other sites, that's why we multiply probabilities. Further manipulation of equation \ref{eqn:n_s-1d} gives
+		\begin{equation}
+			n_s = (1-p)^2 \exp (s \ln p) = (1-p)^2 \exp(-s/\xi)
+		\end{equation}
+		where $\xi$ is the correlation length and defined as
+		\begin{equation}
+			\xi = -\frac{1}{\ln p} = - \frac{1}{\ln(p_c - (p_c -p))} \sim (p-p_c)^{-1}
+		\end{equation}
+		in the limit $p\rightarrow p_c$ and since $p_c=1$.
+		\subsubsection{Mean Cluster Size}
+		\subsubsection{Correlation Function and Correlation Length}
+	\subsection{Infinite Dimension}
+		\subsubsection{Bethe Lattice}
+			\begin{figure}
+				\includegraphics[width=\linewidth]{{{bethe-lattice}}}
+				\caption{Bethe Lattice for $z=3$}
+				\label{fig:bethe-lattice}
+			\end{figure}
+	
+\section{Relation of Phase Transition with Percolation}
+
+\section{Application}
+	
+Definitions of some quantities used in percolation.
+Basic Algorithm
+\subsection{Square Lattice}
+		A square lattice is an ideal playground for percolation. If it has length $L$ then number of sites in the lattice is $L^2$ and number of bonds in the lattice is $2 L^2$. All sites are equally separated from each other at a certain distance. And all sites have exactly four neighbor. Since with the periodic boundary condition the sites in the left edge are connected with the sites in the right edge and same rule for sites in the top and bottom edges. If the sites are densely spaced the experiment will be accurate, meaning, the larger the size of the lattice the accurate the results will be. It implies that a lattice of infinite size should be used which is practically impossible. The simple solution to this problem is to use number of large lengths, (say $L = \{L_1, L_2, \ldots L_n \}$, where $n$ is a finite number and $L_1 < L_2 < \ldots < L_n$), and extrapolate the results for infinite lattice. The visual structure of the square lattice is as follows \ref{fig:sq_lattiec_empty}. This is and empty lattice structure. Filled circles are for occupied site and filled bonds are for occupied bonds \ref{fig:site_bond_symbol}.
+
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics{{{square_lattice_5}}}
+		\caption{Square Lattie (empty) of length 6}
+		\label{fig:sq_lattiec_empty}
+	\end{figure}
+
+	\begin{figure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.1\linewidth]{{{site_empty}}}
+			\caption{Empty Site}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=0.1\linewidth]{{{site_occupied}}}
+			\caption{Occupied Site}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.1\linewidth]{{{bond_empty}}}
+			\caption{Empty Bond}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.1\linewidth]{{{bond_occupied}}}
+			\caption{Occupied Bond}
+		\end{subfigure}
+		\caption{Site and Bond symbol (empty and occupied).}
+		\label{fig:site_bond_symbol}
+	\end{figure}
+
+\subsection{Site Percolation}
+	The algorithm for site percolation is as follows,
+	\begin{enumerate}
+		\item take a square lattice of length $L$.
+		\item fill all $2 L^2$ bonds initially.
+		\item occupy a randomly chosen site and it will join some clusters.
+		\item each time a site is occupied, it will get connected to four neighboring bonds and will form a cluster of size $4$. Note that we define cluster size by number of bonds in it.
+		\item if a site is occupied and right next to it there is another occupied site and a cluster of size $7$ will be formed.
+		\item this process is repeated until all the sites are occupied and only one cluster remains
+	\end{enumerate}
+	The formation of cluster is visualized in the figure \ref{fig:cluster_growth_site_percolation}.
+
+	\begin{figure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{{{sq_lattice_site_percolation_1_0}}}
+			\caption{Initial state}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{{{sq_lattice_site_percolation_1_1}}}
+			\caption{Iteraion 1}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{{{sq_lattice_site_percolation_1_2}}}
+			\caption{Iteraion 2}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{{{sq_lattice_site_percolation_1_3}}}
+			\caption{Iteraion 3}
+		\end{subfigure}
+		
+		\caption{Growth of a Cluster in Site Percolation on square Lattice}
+		\label{fig:cluster_growth_site_percolation}
+	\end{figure}
+		
+\subsection{Bond Percolation}
+The algorithm for bond percolation is as follows,
+\begin{enumerate}
+	\item take a square lattice of length $L$.
+	\item fill all $L^2$ the sites initially.
+	\item occupy a randomly chosen bond and it will join some clusters.
+	\item each time a bond is occupied, it will get connected to two neighboring sites and will form a cluster of size $2$. Here cluster size by number of sites in it.
+	\item if a bond is occupied and right next to it there is another occupied bond and they are connected by a site and a cluster of size $3$ will be formed.
+	\item this process is repeated until all the bonds are occupied and only one cluster remains
+\end{enumerate}
+The formation of cluster is visualized in the figure \ref{fig:cluster_growth_bond_percolation}.
+	\begin{figure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{{{sq_lattice_bond_percolation_1_0}}}
+			\caption{Initial state}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{{{sq_lattice_bond_percolation_1_1}}}
+			\caption{Iteraion 1}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{{{sq_lattice_bond_percolation_1_2}}}
+			\caption{Iteraion 2}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{{{sq_lattice_bond_percolation_1_3}}}
+			\caption{Iteraion 3}
+		\end{subfigure}
+		\caption{Growth of a Cluster in Bond Percolation on square Lattice}
+		\label{fig:cluster_growth_bond_percolation}
+	\end{figure}
+		
+\section{Definitions}
+	\subsection{Cluster}
+	Cluster is a collection of sites and bonds. In bond percolation we occupy bond and measure cluster size in terms of the number of sites in it. And following this idea we measure the cluster size in terms of the number of bonds in it. Which is the new definition of site percolation \cite{redefinition-of-site-percolation}. Measuring cluster size in terms of the number of bonds in it in site percolation reproduces all known results and it is consistent with laws of thermodynamics.
+
+	\subsection{Order Parameter}
+	Percolation strength or $P$ is defined as to probability to find the site that belongs to the spanning cluster, meaning randomly pick a site and what is the probability that the selected site will belong to the spanning cluster. In a system where spanning cluster does not make any sense, the largest cluster is used instead of the spanning cluster. Examples of such system are Network and Bethe Lattice. Mathematically
+	\begin{align}
+		P(p,L) &= \frac{K}{\sum_{i} k_i}
+		\label{def:order-parameter}
+	\end{align}
+	where $K$ is the size of the spanning cluster and $k_i$ is the size of the $i-th$ cluster.
+	Percolation strength is the Order parameter of the system which is the measure of Order of a system.
+	But when simulating the program, performing summation as in the denominator of equation \ref{def:order-parameter} is time consuming. But since we know that the sum is always a constant and it is $2 L^2$ for a square lattice in periodic boundary condition. Hence we write
+	\begin{align}
+		P(p,L)		 &= \frac{K}{2L^2}
+		\label{def:order-parameter-2}
+	\end{align}
+	
+	\subsection{Entropy}
+	Entropy or Shanon Entropy is defined as
+	\begin{align}
+		H &= \sum_{i} - \mu_i \log(\mu_i)
+	\end{align}
+	where $\mu_i$ is the probability that the randomly picked site will belong to the $i-th$ cluster. Mathematically
+	\begin{align}
+		\mu_i &= \frac{k_i}{\sum_{i} k_i}
+	\end{align}
+	where	 $k_i$ is the size of the $i-th$ cluster.
+	Entropy is the measure of disorderedness of a system.
+	
+	\textbf{Occupation Probability}
+	\begin{align}
+		(p-p_c) &\sim L^{-1/\nu}\\
+		\log(p-p_c) &\sim -1/\nu\log(L)
+	\end{align}
+	
+	\text{Specific Heat}
+		\begin{align}
+	C &\sim L^{\alpha/\nu}\\
+	\log(C) &\sim \alpha/\nu\log(L)
+	\end{align}
+	
+	\text{Order Parameter}
+	\begin{align}
+	P &\sim L^{-\beta/\nu}\\
+	\log(P) &\sim -\beta/\nu\log(L)
+	\end{align}
+	
+	\text{Susceptibility}
+	\begin{align}
+	\chi &\sim L^{\gamma/\nu}\\
+	\log(\chi) &\sim \gamma/\nu\log(L)
+	\end{align}

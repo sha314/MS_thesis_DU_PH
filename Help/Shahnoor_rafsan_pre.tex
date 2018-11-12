@@ -1,0 +1,614 @@
+﻿\documentclass[twocolumn,showpacs,preprintnumbers,amsmath,amssymb]{revtex4}
+%\documentclass[preprint,showpacs,preprintnumbers,amsmath,amssymb]{revtex4}
+
+% Some other (several out of many) possibilities
+%\documentclass[preprint,aps]{revtex4}
+%\documentclass[preprint,aps,draft]{revtex4}
+%\documentclass[prb]{revtex4}% Physical Review B
+\usepackage[unicode]{hyperref}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{epsfig}
+\includegraphics{image}
+\usepackage{graphicx}% Include figure files
+\graphicspath{ {./images/} }
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage[caption=false]{subfig}
+%\nofiles
+
+
+\begin{document}
+
+%\preprint{APS/123-QED}
+\title{Percolation by a class of ballistic deposition and their universality classes 
+}%
+
+\author{M. Nageeb, I. M. Rafsan and M. K. Hassan}%
+%\email[REVTeX Support: ]{revtex@aps.org}
+%\affiliation{1 Research Road, Ridge, NY 11961}
+\date{\today}%
+
+\affiliation{
+University of Dhaka, Department of Physics, Dhaka 1000, Bangladesh \\
+%$2$ Information and Communication Technology Cell, Bangladesh Atomic Energy Commission, Dhaka 1000, Bangladesh \\
+%$2$ Potsdam Institute for Climate Impact Research, Telegrafenberg A31, 14473 Potsdam, Germany
+}
+
+\begin{abstract}
+We investigate percolation by random sequential ballistic deposition (RSBD) on a square lattice 
+with interaction range upto second nearest neighbors. The critical points $p_c$ and 
+all the necessary critical exponents $\alpha$, $\beta$, $\gamma$, $\nu$ etc. are obtained numerically for 
+each range of interactions. Like  in its thermal counterpart, we find that the critical exponents 
+of RSBD depend on the range of interactions and for a given range of interaction they obey the Rushbrooke inequality. 
+Besides, we obtain the exponent $\tau$ which characterizes the cluster size distribution  
+function $n_s(p_c)\sim s^{-\tau}$ and the fractal dimension $d_f$ that characterizes 
+the spanning cluster at $p_c$. Our results suggest that the RSBD for each range of interaction
+belong to a new universality class which is in sharp contrast to earlier results of the only work that exhist 
+on RSBD.
+\end{abstract}
+
+\pacs{61.43.Hv, 64.60.Ht, 68.03.Fg, 82.70.Dd}
+
+\maketitle
+
+\section{Introduction}
+
+Percolation is definitely one of the most studied problems in statistical physics. Its idea was first conceived
+by Paul Flory in the early 1940s in the context of gelation in polymers. Later, in 1957 it acquires the mathematical 
+formulation due to the work of engineer Simon Broadbent and mathematician John Hammersley. Ever since then
+percolation theory has been studied extensively by scientists in general
+and physicits in particular. The reasons why
+physicists find it so attractive are manyfold. First, it is easy
+to formulate and simple to impliment as there is only one control parameter. Second, scientists use it as a theoretical model
+for phase transition, just like
+architects use geometric model before building large expensive
+structure, because of its simplicity. Third, it is well endowed with beautiful features and 
+conjectures like finite-size scaling, universality, and renormalization group just like its thermal counterpart.
+Fourth, besides being the paradigmatic model for phase transition, it has been found that the notion of percolation is omnipresent in a wide 
+range of many seemingly disperate systems. Examples are the spread of computer or biological viruses causing epidemics, spread of fires through forest and flow of fluids through porous mediam and rocks.
+In fact, transport of fluid through porous media such as sedimentary strata or in oil reservoir is of 
+great interest in geological systems. Recently, percolation has received a renewed attention 
+due to widening scope for using complex networks as a skeleton and due to widening extent by using 
+various variants as a rule. 
+
+To study percolation theoretically, the first thing that one need is to choose a skeleton, 
+namely an empty lattice (or a graph/network), consisting of sites (or nodes) and bonds (or links).
+The definition of the percolation model is then so simple that it merely needs a sentence
+to define it. 
+Each site or bond of the chosen skeleton, depending on whether we want to study site or bond type percolation,
+is either occupied with probability $p$ or remains empty with probability $1-p$ 
+independent of the state of its neighbors. Recently, percolation has received a renewed attention 
+due to widening scope for using complex networks as a skeleton and due to widening extent of using 
+various variants as a rule. 
+In percolation most observable quantities
+this way or another is connected to clusters, group of contiguous occupied sites form a cluster, or to 
+their distribution function. As 
+the occupation probability $p$ is tuned strating from $p=0$, one finds that at certain value of $p=p_c$ the observable
+quantities undergoes a sudden and sharp change which is always regarded as a sign
+of phase transition. Indeed, the value at which such change occurs
+is called threshold or critical value which is equivalent to critical temperature of its thermal counterpart. 
+The phase transition that percolation describes is purely geometrical in nature. It requires 
+no consideration of quantum and many particle interaction effects and hence we can use it as a model for 
+thermal CPT like artichect use model before constructing large and complicated structure.
+
+In the classical Hosen-Kopelman algorithm for percolation model, one first choose an occupation probability 
+$p$ and then generate
+a number $R$ for each site of the lattice. The site is occupied if $R\leq p$ and remain empty if $R>p$.
+One therefore create an entire new state of a given lattice size for every different value of $p$. Note that
+ the number of occupied sites $n$ for a given $p$ may very in each realization. However, the expected or ensemble 
+average over $M$ experiments will give $n=pN$ in the limit $M\rightarrow \infty$. Thus the number
+of occupied bonds or sites is also a measure of $p$. Using this idea Ziff and Newman proposed an algorithm which generate states for each
+value of $n$ from zero up to some maximum value $n=L^2$ for site percolation on $L\times L$ square lattice for
+instance. In this way, one can save some effort by noticing 
+the fact that a new state with $n+1$ occupied sites or bonds cen be created by adding one extra randomly chosen site or bond
+to the state containing $n$ sites or bonds. The first step of their algorithm is to decide an order in which the bonds or
+sites are to be occupied. That is, every attempt to occupy a bond/site is successful.
+
+Percolation theory potentially has been of great interest as it can describe
+many phenomena \cite{ref.Sahimi}. New models and variants of exisitng model is always
+welcome due to its importance and of wide interdisciplinary interests. In recent decades there has been
+a surge of research activities in studying percolation thanks to the emergence of network which has
+been used as the skeleton for percolation which can mimic structure of many natural and man-made systems. 
+Besides, the work of Achlioptas {\it et al} who proposed a new growth rule, now well-known as Achlioptas  (AP) process, 
+for the percolation problem on Erdos-Renyi network and claim that it describes first order transition has
+also resulted in a surge of activities under the name explosive percolaion (EP). 
+Their results jolted the scientific community through a series of claims, unclaims and counter-claims.
+Typically,  the order parameter (OP) in regular percolation (RP) undergoes abrupt or sudden change but 
+suffers no discontinuity and hence it is called continuous or second order phase transition. 
+Note that OP is zero in the high temperature phase and hence we use entropy to characterize
+the phase where OP is equal zero. Indeed, like OP, entropy too can define the order of transition exactly
+in the same way as it is for OP. Recently, we have defined entropy and specific heat for percolation whose
+behaviour clearly suggest that EP too describe continuous phase transition.
+
+
+
+Random percolation (RP) model can also be seen as a random sequential adsorption (RSA) process of particles on a given 
+substrate to form
+monolayers of clusters of complex shape and structures. In RSA, a site is first picked at random and it is occupied
+if it is empty and the trial attempt is rejected if it is already occupied.
+We shall first show that this process too reproduce all the existing results of the CRP 
+including the $p_c$ value. In this article, we however, modify the rejection criterion. First,
+ we assume that the adsorbing
+particles are hard sphere and impenetrable. Then we assume that if a 
+particle fall onto an already adsorbed particle it is not straightaway rejected. Instead, it is allowed to roll down 
+over the already deposited
+particle to one of its nearest neighbours at random following the steepest descent path. 
+The particle is then adsorbed permanently if the nearest neighbour is empty 
+else the trial attempt is rejected. This is known as the ballistic deposition (BD) model for $l=1$. We also consider
+the case that if the nearest neighbour is occupied then the incoming particle attempt to push the neighbour
+to its next neighour site along the same line to make room for itself. However, the trial attempt of pushing 
+the neighbour is successful if the next neibhouring site along the same line is empty else the trial
+attempt is discarded. We regard it as BD model for $l=2$ while the classical percolation correspond to BD
+model with $l=0$. Our primery goal is to prove that the critical exponents of percolation changes
+as changes as we increase the range of interaction like we find in its thermal counterpart. We numerically 
+find the various necessary critical exponents and find that BD for each different range of interaction 
+belong to different universality class and each universality class obeys the Rusbrooke inequality.  
+
+\section{RSBD Model}
+
+Percolation is all about configuration of clusters of diposited particles and the investigation of the emergence 
+of a large-scale connected path created by clusters formed by contiguous diposoted particles.
+We use extensive Monte Carlo simulation on a square lattice with the usual periodic boundary condition
+to study site percolation according to RSBD rule.
+The algorithm of the percolation by RSBD can be described as follows. We first label all the sites
+row by row from left to right starting from the top left corner. That is, we first label the first row from
+left to right as $i=1,2,...,L$, the second row again from left to right as $i=L+1,L+2,....,2L$
+and we continue this till we reach the bottom row which we label as $i=(L-1)L+1,...,L^2$. 
+Then at each step we pick a discrete random number $R$ from $1,2,...,L^2-1,L^2$ using uniform random number
+ generator and check if the site it represents is already occupied or not. If it is
+empty we occupy it straightaway and move on to the next step. Else we pick one of its neighbours at random. 
+The second attempt in the same step, that mimic the roll over mechanism, is successul if the neighbour
+it picks is empty and if not the trial attempt to deposit is rejected permanently and we move on to the next 
+step anyway. This process is
+repeated over and over again till we want it to stop. We call it RSBD of degree one. We also consider
+the case of RSBS of degree two where the trial attempt is made to occupy the second nearest neighbour too.
+In this case if the incoming particle that fall onto an already occupied site and find its 
+neighbour is ocupied too but the next nearest neighbour site is empty then the neighbour move to the empty
+site to make space for the incoming perticle to be deposited there. 
+
+
+
+
+
+
+\begin{figure}
+
+\centering
+
+\subfloat[]
+{
+\includegraphics[height3.0 cm, width=4.0 cm, clip=true]
+{RSA_before001.eps}
+\label{fig:1a}
+}
+\subfloat[]
+{
+\includegraphics[height=3.0 cm, width=4.0 cm, clip=true]
+{RSA_after001.eps}
+\label{fig:1b}
+}
+
+\caption{Plots of order parameter $P$ versus $t$ for EP of PR in (a) and SR in (b). We plot $PN^{\beta/\nu}$ versus $(t-t_c)N^{1/\nu}$ and
+find that all the distinct plots of (a) and (b) collapse superbly in (c) for PR and (d) for SR.
+} 
+
+\label{fig:1ab}
+
+\end{figure}
+
+
+
+
+
+\begin{figure}
+\centering
+\subfloat[]
+{
+\includegraphics[height=4.0 cm, width=2.4 cm, clip=true,angle=-90]
+{wpsl_bond_sp.eps}
+\label{fig:2a}
+}
+\subfloat[]
+{
+\includegraphics[height=4.0 cm, width=2.4 cm, clip=true, angle=-90]
+{wpsl_site_sp.eps}
+\label{fig:2b}
+}
+
+\subfloat[]
+{
+\includegraphics[height=4.0 cm, width=2.4 cm, clip=true, angle=-90]
+{wpsl_bond_site_nu.eps}
+\label{fig:2c}
+}
+\subfloat[]
+{
+\includegraphics[height=4.0 cm, width=2.4 cm, clip=true, angle=-90]
+{wpsl_sp_datacollapse_bond_site_paper.eps}
+\label{fig:2d}
+}
+
+
+\caption{Spanning probability $W(p,L)$ vs $p$ in WPSL for (a) bond and 
+(b) site percolation. The simulation result of the percolation threshold is
+$p_{c}=0.3457$ for bond and $0.5265$ for site. In (c) we plot $\log(p-p_c)$ vs $\log L$ for both bond and site. The two lines have slopes $1/\nu=0.6117\pm 0.0074$ and $0.6135 \pm 0.0038$ for bond and site respectively. In (d) we plot dimensionless quantities $W$ vs $A_1((p-p_c)L^{1/\nu}-Z_1)$ and we find an excellent data-collapse of all the distinct plots in (a) and (b) if we use $1/\nu=0.6115$, $Z_1= 0.15$ and $A_1=1$ for bond and $A_1=0.785$ for site.
+} 
+\label{fig:2abcd}
+\end{figure}
+
+\section{Wrapping probability $W(p,L)$}
+
+One of the observable quantities of interest in percolation on lattice is: What is the probability
+$W(p,L)$ that there exist a spanning cluster at occupation probability $p$ of linear size of the lattice $L$? 
+In this article, we however, use the alternative definition, namely cluster wrapping probability, proposed
+by Newman and Ziff. To obtain data for cluster wrapping probability $W(p,L)$ 
+we keep occupying particles following RSBD rule till there appear a cluster which wraps all the way
+around the lattice and take record of the total number of particle $n$ being occupied.  We perform this
+over and over again say $M$ times. Note that when there appears a wrapping cluster for the first time 
+with $n_i$ occupied cluster in a given experiment then there is always a wrapping cluster for all $n_j>n_i$. 
+We now count the number of times $m_i$ we have a wrapping cluster with $n_i$ occupied cluster
+in a series of $M$ experiment. Thus the quantity $m_i/M$ is the relative
+frequency of obtaining wrapping cluster with $n_{i}$ occupied sites where $m_i$ can at best be equal
+to $M$. When $M$ is very high, the ratio $m_i/M$ becomes the wrapping 
+probability $W(n,L)$. That is, for a given system size $L$ we have a data of $W$ versus $n$ which
+represents the data of microcanonical ensemble average. Using this data in the convolution relation
+\begin{equation}
+\label{eq:convolution}
+W(p)=\sum_{n=1}^M \left( \begin{array}{c}
+M \\ n \end{array}\right ) p^n(1-p)^{M-n} W(n),
+\end{equation}
+gives $W$ as a function of $p$ that helps obtaining a smooth curve for $W(p)$. Note
+that doing this convolution does not alter at all the characteristic features of the systems.  
+
+
+%that provides us with tools to find a unique value for $p_c$ appropriate for infinite size from a finite size lattice. 
+One way of dealing with this is to use the idea of spanning probability $W(p)$ \citep{ref.Ziff_1}.  Consider that we have performed $m$ independent
+realizations and for each realization we check exactly at
+what value of $p=n/N$ there appears a cluster that connects the two opposite ends either horizontally
+or vertically, whichever come first. 
+The spanning probability $W(p)$ is the probability of occurrence of spanning cluster. It is obtained by
+finding the relative frequency of occurrence of spanning cluster out of $m$ independent realizations. 
+The plots in  Figs. (\ref{fig2}) show a set of curves $W(p)$ as a function of $p$ for different lattice sizes
+where each set is drawn for a fixed range of interactions $l$. Of course, the occupation probability at which 
+wrapping cluster appears for the first time at each independent 
+realization on finite size lattice will not be the same. The plots of wrapping probability clearly reveals
+that we can get wrapping cluster even at very much less than $p_c$ 
+or not get it even at a much higher $p$ than $p_c$ but with low probability.
+This is exactly why the percolation theory is a part of statistical physics.   One of the interesting
+points is that all the plots of a given $l$ for different lattice size meet at one particular
+point. It has a special significance as it means that if we could have data for infinitely large lattice the resulting 
+plots would still cross at the same meeting point. This meeting point actually gives
+the percolation threshold $p_c$. 
+
+
+We observe that the $p_c$ value decreases with increasing range of interations $l$ since the 
+higher $l$ expedite the emergence of spanning clusters. If we draw a vartical through the $p_c$ we observe 
+that the cruves for higher $L$ shift towards $p_c$ from either side of $p_c$. It is expected
+ that in the limit $L\rightarrow infty$ the curve
+for $W(p)$ would become a step function so that $W(p)=0$ for $p<p_c$ and $W(p)=1$ for $p\geq p_c$. This property makes
+it the best quantity of interest to obtain $p_c$ and the critical exponent $\nu$. To find the critical
+exponent $\nu$ we draw a horizontal line at an arbitrary low value of $W$ and hence
+measure the width $p_c-p$ for different $L$. Plotting $\log(p_c-p)$ versus $\log(L)$ gives a straight line
+whose slope gives a rough estimate of $1/\nu$ value. Using finite-size scaling
+\begin{equation}
+W(p,L)\sim L^{\eta/\nu}\phi_W((p-p_c)L^{1/\nu}),
+\end{equation}
+we can obtain a better value of $\nu$. We can now plot $W(p,L)$ versus $(p-p_c)L^{1/\nu}$ then we already see that all the distinct plots of $W$ versus $p$
+almost collpase into one universal curve. It suggest that $\eta=0$ and hence there is just one free parameter $1/\nu$. By tuning the value of $1/\nu$ till we get the
+get the best possible data collapse we find $1/\nu=$. Note that $\eta=0$ clearly supports 
+the assertion that $W(p,L)$ is a Heaviside step function, $W(p)=0$ for $p<p_c$ and $W(p)=1$ for $p\geq p_c$, revealing that the system is undergoing a phase transition across $p_c$  
+If we use $1/\nu=0.75$ of the classical random percolaion on two dimensional systems to $l=0$ we find excellent data collapse. However, the same is not true for $l=1$ and $l=2$ revealing that
+all the three cases belong to three distinct universality class which is in sharp contrast to the cliam by Viot {\it et al.}.
+
+
+\begin{figure}
+\label{fig2}
+\includegraphics[width=5.00cm,height=8.5cm,clip=true]{./RSA_before.eps}
+\caption{Plots of spanning probability $W(p)$ vs  occupation probability $p$ for different lattice size. The vertical is drawn at $p_c=0.526846$. In the inset, 
+we plot  $W(p)$ vs $(p-p_c)L^{1/\nu}$, where $\nu=5/3$ and find an excellent data collapse.
+\label{fig2}
+}
+\end{figure}
+
+
+A careful look at the plots of Fig. (\ref{fig2}) we find that if we increase $L$ then a given fixed value of $W$ is obtained at increasingly higher value of $p$ for $p<p_c$. 
+To quantify this 
+we draw a horizontal line, for instance at $W(p)=0.3$, and a vertical line passing through the $p_c$ value. Say, the
+horizontal line intersects all the three curves and the vertical line for different $L$ at A, B, C and at O. 
+We find that the distance $OA, OB, OC$ etc which represents $(p_c-p)$ and plot them in the $\log$-$\log$ scale as a function
+of $t$. The resulting plot gives a straight line with slope $0.2966\pm 0.0055$. Using $L\sim t^{1/2}$ we can write
+\begin{equation}
+\label{eq:3}
+(p_c-p) \sim L^{-1/\nu},
+\end{equation}
+where $1/\nu \sim 0.6$ or $\nu=5/3$. This is different and quite a bit higher than the known value $\nu=4/3$ for all planar lattices. For consistency check, one can now
+plot the $p$ values at $A, B, C$ etc versus $L^{-1/\nu}$. The intercept of the resulting linear fit gives the desired $p_c$ value 
+and hence this offers an alternative method of measuring $p_c$. The quantity 
+$(p_c-p)L^{1/\nu}$ is a dimensionless quantity, according to Eq. (\ref{eq:3}), in the sense that for a given value of $W$ as $L\rightarrow \infty$ the value of $(p_c-p)\rightarrow 0$ 
+such that the numerical value of $(p_c-p)L^{1/\nu}$ remains invariant regardless of the lattice
+size $L$. We now plot $w(p)$ as a function of $(p_c-p)L^{1/\nu}$, see the inset of Fig. (\ref{fig2}), and find that all the distinct curves of
+Fig. (\ref{fig3}) collapse onto a single universal curve. It implies, according to finite size scaling hypothesis, that
+\begin{equation}
+W(p)\sim L^\eta \phi\Big( (p-p_c)L^{1/\nu}\Big ), 
+\end{equation}
+with exponent $\eta=0$ where $\phi$ is the scaling function \cite{ref.saberi}. It states that the spanning probability $W$ itself is a dimensionless quantity provided it is measured in the scaled variable  
+$(p_c-p)L^{1/\nu}$ \cite{ref.barenblatt}. 
+It also means that the spanning probability for infinite lattice size would be
+like a step function around $p_c$. 
+
+
+\begin{figure}
+\label{fig3}
+\includegraphics[width=5.00cm,height=8.5cm,clip=true,angle=-90]{./wpsl_spanning_strength_C_3.eps}
+\caption{Plots of percolation probability $P(p)$ vs $p$ for three different size of the WPSL. In the
+inset we plot the same data but in the scaled variables $PL^{\beta/\nu}$ and $(p_c-p)L^{1/\nu}$ and  find an excellent data-collapse.
+\label{fig3}
+}
+\end{figure}
+
+It is well-known that like Ising model percolation too display a continuous phase
+transition and hence like magnetization of the Ising model there must be an order parameter for the percolation
+model too. The fact is that not all the occupied sites 
+belong to spanning cluster. We thus can define the percolation probability $P$ which must be zero 
+below $p_c$ and should increase continuously beyond $p_c$ - a characteristic feature for order parameter.  
+We define it as the ratio of the area of the spanning cluster
+$A_{{\rm span}}t$ to the total area of the lattice $at$ and hence
+%\begin{equation}
+$P(p)= A_{{\rm span}}$
+%\end{equation}
+since the the total area of the lattice is always equal to one. 
+Unlike $W(p)$ vs $p$ the distinct curves of the the $P(p)$ vs $p$ plots, see Fig. (\ref{fig3}), for different size do not meet at one unique value,
+namely at $p_c$ which we can only appreciate if we zoom in. Nevertheless,
+following the same procedure we once again
+find  $(p_c-p)\sim L^{-1/\nu}$ with the same $\nu$ value. Like for $W(p)$ if we plot $P$ as a function $(p_c-p)L^{1/\nu}$
+we do not get data collapse as before, instead we see that for a given value of $(p_c-p)L^{1/\nu}$ the $P$ value 
+decreases with lattice size $L$ following a power-law 
+\begin{equation}
+\label{eq:4}
+P\sim L^{-\beta/\nu},
+\end{equation}
+where $\beta/\nu=0.135\pm 0.0076$. It implies that for a given value of $(p_c-p)L^{1/\nu}$ the numerical value of $PL^{\beta/\nu}$ must remain invariant regardless of the lattice size of $L$. That is, 
+if we now plot $PL^{\beta/\nu}$ vs $(p_c-p)L^{1/\nu}$ all the distinct plots of $P$ vs $p$ should collapse into a single universal
+curve. Indeed, such data-collapse is shown in the inset of Fig. (\ref{fig3}) which implies that percolation probability $P$
+exhibits finite-size scaling
+\begin{equation}
+P(p_c-p,L)\sim L^{-a}\phi\Big ((p_c-p)L^{1/\nu}\Big ).
+\end{equation}
+Now, eliminating $L$ in favor of $p_c-p$ in Eq. (\ref{eq:4}) we get
+\begin{equation}
+\label{eq:5}
+P\sim (p_c-p)^\beta,
+\end{equation}
+where $\beta\sim 0.225$ or $\beta=9/40$ for WPSL whereas $\beta=5/36$ for all other known planar lattices. 
+
+
+
+%It means for a given value of $(p_c-p)L^\theta$ the dimensionless quantity $PL^\gamma$ must coincide
+%regardless of the size of the lattice $L$. Second, we can use the universal scaling curve to extract data for any size without
+%actually doing the experiment or simulation on that size.  Thirdly, the idea of data-collapse can be used
+%to verify the critical exponents. 
+
+
+
+
+\begin{figure}
+\label{fig4}
+\includegraphics[width=5.00cm,height=8.5cm,clip=true,angle=-90]{./wpsl_mean_cluster_area_C_1.eps}
+\caption{Mean cluster area S(p) as function of occupation probability $p$ with different lattice size $L$. In the
+inset we plot the scaled variables $SL^{-\gamma/\nu}$ vs $(p_c-p)L^{1/\nu}$ and find that data for different system sizes are
+well collapsed in a single universal curve.
+\label{fig4}
+}
+\end{figure}
+
+
+Percolation is all about clusters and hence the cluster size distribution function $n_s(p)$ plays a central
+role in the description of the percolation theory.  It is defined as the number of clusters of size $s$ per site.
+The quantity $sn_s(p)$ therefore is the probability that an arbitrary site belongs to a cluster of $s$ sites 
+and $\sum_{s=1} sn_s$ is probability that an arbitrary site belongs to a cluster of any size which is in fact equal to
+$p$.
+The mean cluster size $S(p)$ therefore is given by
+\begin{equation}
+\label{eq:6}
+S(p)=\sum_s sf_s={{\sum_s s^2n_s}\over{\sum_s sn_s}},
+\end{equation}
+where the sum is over the finite clusters only. In the case of percolation on the WPSL, we regard $s$ as
+the cluster area. It is important to mention that each time we evaluate the ratio of the second and the first moment of
+of $n_s$ we also have to multiply the result by $t$, the time at which the snapshot of the lattice is taken, to compensate the decreasing block size with increasing block number $N$. 
+The mean cluster size therefore is
+$S={{1}\over{p}}\sum_s s^2n_s \times t$ where $\sum_s sn_s=p$ is the sum of the areas of all the clusters. Note that the spanning cluster is excluded 
+from both the sums of Eq. (\ref{eq:6}). 
+In Fig. (\ref{fig4}) we plot $S(p)$ as a function of $p$ for different lattice sizes $L$. We observe that there are two main effects as we
+increase the lattice size. First, we see that the mean cluster area
+always increases as we increase the occupation probability. However, as the $p$ value approaches to $p_c$, we find
+that the peak height grows profoundly with $L$. 
+
+
+The increase of the peak height can be quantified by plotting 
+these heights as a function of $L$ in the $\log$-$\log$ scale and find
+\begin{equation}
+\label{eq:7}
+S\sim L^{\gamma/\nu},
+\end{equation}
+where $\gamma/\nu=1.73\pm 0.006321$. A careful observation reveals that there is also a shift in the $p$ value at which the peaks occur. 
+We find that the magnitude of this shift $(p_c-p)$ becomes smaller with
+increasing $L$ following a power-law $(p_c-p)\sim L^{-1/\nu}$. 
+ We now plot the same
+data in Fig (\ref{fig4}) by measuring the mean cluster area
+$S$ in unit of $L^b$ and $(p_c-p)$ in unit of $L^{-1/\nu}$ respectively and find that all the distinct plots of
+ $S$ vs $p$ collapse into one universal curve, see the inset of the same figure. It again implies that the mean cluster area too exhibits finite-size scaling
+\begin{equation}
+\label{eq:8}
+S \sim L^{b}\phi \Big ((p_c-p)L^{1/\nu}\Big ).
+\end{equation}
+Eliminating $L$ from Eq. (\ref{eq:7}) in favor of $(p_c-p)$ using $(p_c-p)\sim L^{-1/\nu}$ we find that the mean cluster
+area diverges 
+\begin{equation}
+\label{eq:9}
+S\sim (p_c-p)^{-\gamma},
+\end{equation}
+where $\gamma=2.883$ which we can approximately write $\gamma=173/60$. In contrast, $\gamma=172/72$  and for for all other planar lattices.
+
+
+\begin{figure}
+\centering
+\label{fig:ab}
+\subfloat[]
+{
+\includegraphics[height=1.6in, width=1.6in, clip=true,angle=-90]{wpsl_distribution_3.eps}
+\label{fig:a}
+}
+\subfloat[]
+{
+\includegraphics[height=1.6in, width=1.6in, clip=true,angle=-90]{wpsl_fractal_dimension_3.eps}
+\label{fig:b}
+}
+\caption{(a) The plot of $\log(n_s)$ vs $\log(s)$  for different lattice size $L$.
+(b) The double-logarithmic plot of the size of the spanning cluster $M$ against the lattice size $L$. 
+} 
+%The line has a slope $\tau=193/93$ revealing
+%$n_s(p_c)\sim s^{-\tau}$. (b) The size of the largest cluster $M$ at $p=p_c$ is  drawn as a function of the lattice size $L$. The straight line
+%with slope  $d_f=93/50$ suggest that spanning cluster is a fractal of dimension  $d_f=93/50$. 
+\label{fig:ab}
+\end{figure}
+
+
+
+We can also obtain the exponent $\tau$ by plotting the cluster area distribution function $n_s(p_c)$ at $p_c$. We
+plot it in the log-log scale and find a straight line except near the tail. However, we also observe that 
+as the lattice size increases the extent up to which we get a straight line having the same slope increases. It implies
+that if we performed on WPSL of infinitely large size we would have a perfect straight line obeying
+%\begin{equation}
+$n_s(p_c)\sim s^{-\tau}$
+%\end{equation}
+with $\tau=2.07$ which is less than its value for other planar lattices $\tau=187/91$. We already know that mean
+cluster area $S\rightarrow \infty$ as $p\rightarrow p_c$. According to Eq. (\ref{eq:6}), $S$ can only diverge
+if its numerator diverges. Generally, we know that $\sum_{s=1}^\infty s^\alpha$ converges if $\alpha<-1$ and diverges if 
+$\alpha\geq -1$. Applying it into both numerator and denominator of Eq. (\ref{eq:6}) at $p_c$ gives a bound that
+$2<\tau<3$. Assuming
+\begin{equation}
+n_s(p)\sim s^{-\tau}e^{-s/s_\xi},
+\end{equation}
+and using it in Eq. (\ref{eq:6}) and taking continuum limit gives
+\begin{equation}
+S\sim s_\xi^{3-\tau}.
+\end{equation}
+We know that $s_\xi$ diverges like $(p_c-p)^{1/\sigma}$ where $\sigma=1/(\nu d_f)$ and hence comparing it with Eq. (\ref{eq:9})
+we get
+\begin{equation}
+\label{eq:tau}
+\tau=3-\gamma \sigma.
+\end{equation}
+Note that the ramified nature of the spanning cluster at $p_c$ is reminiscent of fractal. Indeed, we find that the 
+the fractal dimension $d_f$ of the spanning cluster can be obtained by finding 
+the gradient of the plot of the size of the spanning cluster $M$ as a function of lattice size $L$ in the log-log scale (see Fig (\ref{fig:b}). We find $d_f=1.865$ which 
+can also be written as $d_f=373/200$ for WPSL and that for  square, triangular, honeycomb,
+Voronoi lattices is $d_f=93/48$. Using the value of $\gamma$ and $\sigma$ in Eq. (\ref{eq:tau}) we get 
+$\tau=2.072$ which we can approximately write as $773/373$. This is consistent with what we found from the slope of $\log[n_s(p_c)]$ vs $\log[s]$ plot shown in Fig. (\ref{fig:a}).   
+
+
+
+\begin{center}
+    \begin{tabular}{| l | l | l |}
+    \hline
+    Exponents & regular planar lattice & WPSL \\ \hline
+    $\nu$ & 4/3 & 5/3  \\ \hline
+    $\beta$ & 5/36 & 9/40  \\ \hline
+    $\gamma$ & 43/18 & 173/60  \\ \hline
+   $ \tau$ & 187/91 & 773/373 \\ \hline
+$d_f$ & 91/48 & 373/200 \\
+
+    \hline
+    \end{tabular}
+\end{center}
+
+
+
+To summarize, we have studied percolation on a scale-free multifractal planar lattice. We obtained the $p_c$ value and
+the characteristic exponents $\nu, \beta,\gamma, \tau, \sigma$ and $d_f$ which characterize the percolation transition.  
+Note that it is the sudden onset of a spanning cluster at the threshold $p_c$ which is 
+accompanied by discontinuity or divergence of 
+some observable quantities at the threshold make the percolation transition a critical phenomena. One of the most interesting and useful
+aspects of percolation theory so far known is that the values of the various exponents depend only on the dimensionality of the 
+lattice as they are found independent of
+the type of lattice (e.g., hexagonal, triangular or square, etc.) and the type of percolation (site or
+bond).  This central property of percolation theory is known as “universality”. 
+Recently, Corso {\it et al} performed percolation on 
+a particular mutifractal planar lattice whose coordination number distribution is, however, not scale-free like
+WPSL and still they found the exponents as for all the planar regular lattices \cite{ref.multifractal}. 
+Thus the most expected result would be to find a different value for $p_c$ value as its coordination number
+distribution is totally different than any known planar lattice. However, finding
+a complete different set of values, see the table, for all the characteristic exponents was not expected since WPSL too a planar
+lattice. Interestingly, like existing values for regular planar lattices, the exponents of the values for WPSL too satisfy the scaling relations $\beta=\nu(d- d_f)$, $\gamma=\nu(2d_f-d)$, $\tau=1+d/d_f$. 
+We can this conclude that percolation on WPSL belongs to a new universality class. 
+%It is thus the scale-free nature of the WPSL which can be held responsible for it being into a new universality class. 
+It would be interesting to check the role of the exponents $\gamma$ of the power-law coordination number distribution in the classification of universality classes. We intend to do it in our future endeavour.
+
+\begin{thebibliography}{99}
+\bibitem{ref.Stauffer} D. Stauffer and A. Aharony, {\it Introduction to Percolation Theory} (Taylor $\&$ Francis, London, 1994).
+\bibitem{ref.bunde} {\it Fractals and Disordered Systems} Edited by A. Bunde and S. Havlin  
+(New York, NY, Springer Verlag, 1996).
+\bibitem{ref.Stanley} H. E. Stanley, {\it Introduction to Phase Transitions and Critical Phenomena} (Oxford University Press, Oxford and New York 1971).
+\bibitem{ref.Binney} J.  J.  Binney,  N.  J.  Dowrick,  A.  J.  Fisher,  and  M.  E.  J.  Newman,  {\it The  Theory  of
+Critical  Phenomena}  (Oxford University Press, New York, 1992).
+\bibitem{ref.Sahimi} M. Sahimi, {\it Applications of Percolation Theory} (Taylor $\&$ Francis, London, 1994).
+\bibitem{ref.Newman_virus} M.E.J. Newman and D.J. Watts, Phys. Rev. E 60, 7332. (1999).
+\bibitem{ref.Moore_virus}  C. Moore and M.E.J. Newman, Phys. Rev. E62, 7059. (2000).
+\bibitem{ref.Cohen_virus} R. Cohen, K. Erez, D. ben-Avraham, and S. Havlin, Phys. Rev. Lett. 85, 4626-4628 (2000).
+\bibitem{ref.boccaletti_opinion} Boccaletti, S., Latora, V., Moreno, Y., Chavez, M., Hwang, D.: Phys. Rep.
+424, 175 (2006).
+\bibitem{ref.mendes_rumor}5. S. N. Dorogovtsev, J. F. F. Mendes, {\it Evolution of Networks} (Oxford University Press, Oxford 2003).
+\bibitem{ref.pastor_rumor} R. Pastor-Satorras and A. Vespignani, {\it Evolution and Structure of the Internet: A Statistical Physics Approach} (Cambridge University Press, Cambridge 2004).
+%\bibitem{ref.Sahim} M. Sahimi, J physique I 4, 1263 (1994).
+\bibitem{ref.Gennes} P.G. de Gennes and E. Guyon, J. de Mecanique 3, 403 (1978).
+\bibitem{ref.Larson} R. G. Larson, L. E. Scriven, and H. T. Davis, Chem. Eng. Sci. 15, 57 (1981).
+\bibitem{ref.geology_1} J. Muller, Ann. Geophys. {\bf 11} 525 ͑(1993͒).
+\bibitem{ref.geology_2} P. N. Khue, O. Fluseby, A. Saucier, and J. Muller, J. Phys.:
+Condens. Matter {\bf 14} 2347 ͑(2002͒).
+\bibitem{ref.Hassan} M. K. Hassan, M. Z. Hassan, and N. I. Pavel, New Journal of Physics {\bf 12}  093045 (2010); {\it ibid} J. Phys: Conf. Ser, {\bf 297} 012010 (2011).
+\bibitem{ref.multifractal} G. Corso, J. E. Freitas, L. S. Lucena, and R. F. Soares, Phys. Rev E {\bf 69} 066135 (2004).
+\bibitem{ref.multifractal_1} J. Feder,  {\it Fractals} (Plenum, New York,  1988).
+\bibitem{ref.hassan_dayeen} F. R. Dayeen and M. K. Hassan, arXiv:1409.7928 [cond-mat].
+\bibitem{ref.Ziff} M. E. J. Newman  and R. M. Ziff. Phys. Rev. Lett. {\bf 85} 4104 (2000); {\it ibid} Phys. Rev. E {\bf 64} 016706 (2001).
+\bibitem{ref.Ziff_1} R. M. Ziff, Phys. Rev. Lett., 69:2670, 1992.
+\bibitem{ref.saberi} A. A. Saberi, Appl. Phys. Lett. {\bf 97} 154102 (2010).
+\bibitem{ref.barenblatt} G. I. Barenblatt, {\it Scaling, Self-similarity, and Intermediate Asymptotics} (Cmpridge University Press, 1996).
+%\bibitem{ref.Barabasi}  R. Albert and A. L. Barabasi, Rev. Mod. Phys. {\bf 74} 47  (2002).
+%\bibitem{ref.Fisher}   V.  Privman  and  M.  E.  Fisher, Phys.  Rev.  B, {\bf 30} 322 (1984).
+
+
+
+
+
+%\bibitem{ref.Camia} F. Camia and C. M. Newman. Two-dimensional critical percolation:  The full scaling limit.  Commun.  Math.  Phys., 268:1, 2006.
+%\bibitem{ref.Broadbent}  S. R. Broadbent, J. M. Hammersley, Percolation processes I. Crystals and mazes, Proceedings of the Cambridge Philosophical Society 53 (1957)
+
+%\bibitem{ref.Smirnov} S.  Smirnov  and  W.  Werner.  Critical  exponents  for  two-dimensional  percolation. Math.  Res.  Lett., 8:729, 2001.
+
+%\bibitem{ref.Kesten} G. R. Grimmett and H. Kesten.  Percolation since Saint-Flour.  arXiv:1207.0373.
+
+%ref.Sahim,ref.Gennes,ref.Larson
+
+%/////////////// mean cluster area ///////////////////
+%\bibitem{ref.Ziff_2}   R. M. Ziff.  Results for a critical threshold, the correction-to-scaling exponent and susceptibility amplitude ratio for 2d percolation.  Phys.  Procedia, 15:106, 2011.
+
+%\bibitem{ref.Kesten_2} H.  Kesten.  Scaling  relations  for  2D -percolation.  Commun.  Math.  Phys.,  109:109, 1987.
+
+%\bibitem{ref.Ziff_3} R. M. Ziff.  Correction-to-scaling exponent for two-dimensional percolation.  Phys. Rev.  E, 83:020107(R), 2011.
+
+%\bibitem{ref.Ziff_4}   R.  M.  Ziff.  Scaling  behavior  of  explosive  percolation  on  the  square  lattice.  Phys. Rev.  E, 82:051105, 2010.
+
+%//////////fractal////////////////
+
+%\bibitem{ref.Christensen} C. Christensen, G. Bizhani, S.-W. Son, M. Paczuski, and P. Grassberger.  Agglomerative percolation in two dimensions.  EPL, 97:16004, 2012.
+
+%\bibitem{ref.Margolina} A. Margolina, H. J. Herrmann, and D. Stauffer.  Size of largest and second largest cluster in random percolation.  Phys.  Lett.  A, 93:73, 1982.
+%\bibitem{ref.Borgs}   C. Borgs, J. T. Chayes, H. Kesten, and J. Spencer. The birth of the infinite cluster: Finite-size scaling in percolation.  Commun.  Math.  Phys., 224:153, 2001.
+
+\end{thebibliography}
+
+
+
+\end{document}
+

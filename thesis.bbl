@@ -1,0 +1,18 @@
+\begin{thebibliography}{}
+
+\bibitem[dim, ]{dimension_class_FLT}
+Fluid mechanics - theory.
+\newblock Basic Dimensions of Common Parameters Table at
+  \url{https://www.ecourses.ou.edu/cgi-bin/ebook.cgi?doc=&topic=fl&chap_sec=06.1&page=theory}.
+
+\bibitem[Rahman and Hassan, 2018]{redefinition-of-site-percolation}
+Rahman, M.~S. and Hassan, M.~K. (2018).
+\newblock Redefinition of site percolation in light of entropy and the second
+  law of thermodynamics.
+
+\bibitem[Shanon, 1948]{shanon_entropy}
+Shanon, C.~E. (1948).
+\newblock A mathematical theory of communication.
+\newblock {\em Bell System Technical Journal}, 27:379--423.
+
+\end{thebibliography}

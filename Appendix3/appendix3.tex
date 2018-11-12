@@ -1,0 +1,78 @@
+%!TEX root = ../thesis.tex
+% ******************************* Thesis Appendix C ********************************
+\ifpdf
+\graphicspath{{Appendix3/figs/}}
+\else
+\graphicspath{{Appendix3/figs/}}
+\fi
+
+\chapter{Finding Exponents}
+\section{Algorithm}
+	\subsection{Specific Heat and Susceptibility}
+		\subsubsection{exponent for scaling the $y$-values}
+		To find the best exponent for scaling the $y$-values of specific heat and susceptibility the following approach is pretty helpful.\\
+		\textbf{Finding approximate value of the exponent}
+		\begin{enumerate}
+			\item get the $x$ and $y$ values of the convoluted data for all lengths ($L$)
+			\item get the maximum value or the peak value of $y$ as $y_{max}=max(y)$ for each length
+			\item now plot $\log(y_{max})$ vs $\log(L)$
+			\item slope of this graph is the approximate value of the exponent
+		\end{enumerate}
+		\textbf{Finding the best exponent}\\
+		Now that we know the approximate value of the exponent, $ex_{approx}$, we can find the best exponent in the following way
+		\begin{enumerate}
+			\item take a list of all the exponent in the range $E = [ex_{approx}-\epsilon, ex_{approx}+\epsilon]$ where $\epsilon$ is a small number (usually $\sim 0.05$)
+			\item for each value of the exponent in the range above do the following
+			\begin{enumerate}
+				\item get the $x$ and $y$ values of the convoluted data for all lengths (L)
+				\item scale the $y$ value with the exponent and call it $y^{\prime} = y*L^{-ex}$
+				\item get the maximum value or the peak value of $y^{\prime}$ as $y^{\prime}_{max}=max(y^{\prime})$ for each length
+				\item if the $y^{\prime}_{max}$ values for different exponents does not lie in the order of $10$ then scale $y^{\prime}_{max} = y^{\prime}_{max} / max(y^{\prime}_{max})$ to normalize $y^{\prime}_{max}$. By order of $10$ I mean that if the order $y^{\prime}_{max}$ for $ex_i$ is $10^-1$ and for $ex_j$ is $10^-2$ then when comparing between $std_{ex_i}$ and $std_{ex_j}$ we will get the $std_{ex_j}$ is lower always. Thus just because the standard deviation is lower we cannot say it is the best exponent if the order of  $y^{\prime}_{max}$ is different.
+				\item find the standard deviation of all the $y^{\prime}_{max}$'s and call it $std_{ex}$ where the subscript denotes the current selected exponent
+			\end{enumerate}
+			\item out of a number of selected exponent find the one with the minimum standard deviation and the exponent corresponding to this deviation is the best exponent denoted as $ex^*$. Symbolically
+			\begin{equation}
+				ex^* = argmin_{ex \in E}\ std_{ex}
+			\end{equation}
+		\end{enumerate}
+		\subsubsection{exponent for scaling the $x$-values}
+		Usually the exponent that scales the $x$-values is called $1/\nu$. The critical point is denoted as $x_c$
+		To find an estimate from the data that looks like the graph of specific heat or susceptibility, the following algorithm is very helpful
+		\begin{enumerate}
+			\item get the $x$ and $y$ values of the convoluted data for all lengths (L)
+			\item get the $x$ value at a specific height, $h$, and call it $x_h$
+			\item plot a graph of $\log( \left|x_h - x_c\right| )$ vs $\log(L)$ where $\left|\right|$ denotes the absolute value.
+			\item slope of this graph is the estimate for the exponent $1/\nu$
+		\end{enumerate}
+		Now to find the exponent that best collapses the data is the main goal. To do this the following algorithm can be followed.\\
+		Finding the standard deviation of the points at height $h$ after scaling $x$-values with an approximate value of the exponent $(1/nu)_approx$ that is obtained from the graph of $\log( \left|x_h - x_c\right| )$ vs $\log(L)$.
+		\begin{enumerate}
+			\item write a function that takes $h$, $x_{scaler}$, $y_{scaler}$, $lr$ as argument where, $h$ is the height at which we will be taking $x$-values, $x_{scaler}$ is the exponent that scales the $x$-values, $y_{scaler}$ is the exponent that scales the $y$-values and $lr$ is the argument that tells if the left or right side of the critical point should be taken under consideration. call this function \textit{find\_x\_deviation}
+			\item take $x^\prime = (x-x_c) L^{x_{scaler}}$ and $y^\prime = y L^{-y_{scaler}}$. Note that there is a minus sign used for scaling $y$ values because the $y\max$ increases as $L$ increases in our present case which is observed when finding $y_{scaler}$ previously.
+			\item at height $h$ we draw a horizontal straight line and the intersection of this line with the curve gives corresponding $x$ value at $h$. For each length $L$ we obtain the $x$ value and denote it with $x_L$.
+			\item after that we find the standard deviation of all $x_L$'s that we have found and this function returns the standard deviation
+			\item if $lr$ is $0$ then the left points of the critical point is considered and if $lr$ is $1$ then the right points of the critical point is considered for getting $x_L$'s.
+		\end{enumerate}
+		 Note that at a specific height there are two points on on the left of the critical point and another is on the right. So if we find the exponent that best collapses the points on the left, it might not best collapse the points on the right \ref{fig:left_right_dillema}. 
+		 \begin{figure}
+		 	\centering
+		 	\includegraphics[width=0.5\linewidth]{{{network_ba_explosive_M3_susceptibility_minimizing_one_by_nu}}}
+		 	\caption{Best collapsing on either right or left}
+		 	\ref{fig:left_right_dillema}
+		 \end{figure}
+	 	To resolve this problem we take following approach
+	 	\begin{enumerate}
+	 		\item take a range $ex=[(1/nu)_{approx}- \epsilon, (1/nu)_{approx}+\epsilon]$, where $\epsilon$ is usually $\sim 0.05$.
+	 		\item for each value in this range find the standard deviation for left and right points of the critical point and call it $d_{left}$ and $d_{right}$ respectively
+	 		\item plot $d_{left}$ vs $ex$ and $d_{right}$ vs $ex$ on the same graph
+	 		\item the minima of line corresponding to $d_{left}$ vs $ex$ graph gives the exponent that collapses left points of the critical point at best.
+	 		\item the minima of line corresponding to $d_{right}$ vs $ex$ graph gives the exponent that collapses right points of the critical point at best.
+	 		\item the intersection of the graph is the value where both left and right points of the critical point fits better.
+	 	\end{enumerate}
+		The figure \ref{fig:solving_left_right_dillema} gives the visual of the above process.
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.5\linewidth]{{{network_ba_explosive_M3_susceptibility_minimizing_one_by_nu}}}
+			\caption{Minimizing exponent for scaling $x$-values}
+			\label{fig:solving_left_right_dillema}
+		\end{figure}

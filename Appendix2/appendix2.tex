@@ -1,0 +1,18 @@
+%!TEX root = ../thesis.tex
+% ******************************* Thesis Appendix B ********************************
+\chapter{Convolution}
+\section{Algorithm}
+One further slightly tricky point in the implementation of our scheme is the performance of the convolution, Eq. (2), of the results of the algorithm with the binomial distribution. Since the number of sites or bonds on the
+lattice can easily be a million or more, direct evaluation of the binomial coefficients using factorials is not possible. And for high-precision studies, such as the calculations presented in Section III, a Gaussian approximation to the binomial is not sufficiently accurate. Instead, therefore, we recommend the following method of evaluation. The binomial distribution, Eq. (1), has its largest value for given N and p when n = n max = pN . We arbitrarily set this value to 1. (We will fix it in a moment.) Now we calculate B(N, n, p) iteratively for all other n from
+
+\begin{equation*}
+B(N.n.p) = 
+\begin{cases}
+	B(N, n-1, p) \frac{N-n+1}{n} \frac{p}{1-p}  \text{ if } n > n_{max}\\
+	B(N, n+1, p) \frac{n+1}{N-n} \frac{1-p}{p}  \text{ if } n < n_{max}
+\end{cases}   
+\end{equation*}
+Then we calculate the normalization coefficient $C = \sum_{n} B(N, n, p)$ and divide all the $B(N, n, p)$ by it, to correctly normalize the distribution. \textbf{site to Ziff paper}
+\section{Code}
+Complete code for convolution is available at 
+\url{https://github.com/sha314/Convolution}\\
