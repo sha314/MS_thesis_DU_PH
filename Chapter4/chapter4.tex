@@ -14,9 +14,12 @@
 \section{Percolation Phenomena}
 \section{Historical Overview}
 \section{Classifications and Playground}
+	Any percolation problem have two major parts, one is the rule which states how and what to occupy and connect and another is a playground on which we apply the rules.
 	\subsection{Types of Percolation}
-		\subsubsection{Bond Percolation}	
+		\subsubsection{Bond Percolation}
+			In bond percolation we occupy the bonds and we use sites to connect the bonds together. The cluster size is measured in terms of the number of sites in the cluster.
 		\subsubsection{Site Percolation}
+			In site percolation we occupy the sites. According to the definition of site percolation we use sites to measure the cluster size. But in order to keep it consistent with the laws of thermodynamics we have changed the definition \ref{redefinition-of-site-percolation}. Now we use bonds to to measure the cluster size while we occupy sites. This change of definition does not effect the exponent that describe the phase transition.
 		\subsubsection{Explosive Percolation}
 		\subsubsection{K-Core Percolation}
 		\subsubsection{Bootstrap Percolation}
@@ -26,17 +29,36 @@
 		\subsubsection{Graph}
 \section{Observables}
 	\subsection{Percolation Threshold, $p_c$}
+	\begin{figure}
+		\centering
+		\captionsetup[subfigure]{width=0.9\textwidth}
+				\begin{subfigure}[t]{.45\textwidth}
+			\centering
+			\includegraphics[width=0.8\linewidth]{{{square-lattice-clusters2}}}
+			\caption{One step away from threshold. Since the gray site is not occupied. The moment it gets occupied we reach percolation threshold}
+		\end{subfigure}
+		\begin{subfigure}[t]{.45\textwidth}
+			\centering
+			\includegraphics[width=0.8\linewidth]{{{square-lattice-clusters}}}
+			\caption{The gray site gets occupied and a wrapping cluster appears for the first time. We have reached percolation threshold}
+		\end{subfigure}
+
+		\caption{A square lattice of length $L=10$. Demonstrating the appearance of the wrapping cluster}
+		\label{fig:percolation-threshold}
+	\end{figure}
 	\subsection{Spanning Probability, $w(p)$}
 	\subsection{Entropy, $H(p,L)$}
+	\subsection{Specific Heat, $C(p,L)$}
 	\subsection{Order Parameter, $P(p,L)$}
+	\subsection{Susceptibility, $\chi(p,L)$}
 	\subsection{Mean Cluster Size, S}
-	\subsection{Cluster Size Distribution Function, $n_s$}
+	\subsection{Cluster Size Distribution Function, $n_s$} \label{subsect:cluster-size-dist-func}
 		\begin{equation}
 			n_s(p_c)\sim s^{-\tau}
 		\end{equation}
-
 	\subsection{Correlation Function, $g(r)$}		
 	\subsection{Correlation length, $\xi$}
+	\subsection{Fractal Dimension, $d_f$} \label{subsect:fractal-dim}
 
 \section{Exact Solutions}
 	Percolation problem can be solved exactly in $1$ and $\infty$ dimension. In dimension $1 < d < \infty$ there is not analytical solution, it can only be solved approximately using simulations. Analytic solution in dimension greater than $1$ and less than $\infty$ is a still to be solved problem. Interestingly, many of the features found in one dimension seem to be valid for higher dimensions too. Thus using the insight of these exact solutions in $1$ and $\infty$ dimension we get a window into the world of phase transitions, scaling and critical exponents.
@@ -74,18 +96,216 @@
 		\end{equation}
 		where $\xi$ is the correlation length and defined as
 		\begin{equation}
-			\xi = -\frac{1}{\ln p} = - \frac{1}{\ln(p_c - (p_c -p))} \sim (p-p_c)^{-1}
+			\xi = -\frac{1}{\ln p} = - \frac{1}{\ln(p_c - (p_c -p))} \sim (p-p_c)^{-1} = (p-p_c)^\nu
+			\label{eqn:correlation-length-def}
 		\end{equation}
 		in the limit $p\rightarrow p_c$ and since $p_c=1$.
 		\subsubsection{Mean Cluster Size}
+		The probability that an arbitrary site is in $s$-cluster is larger by a factor of s. This site can be any of the sites in the $s$-cluster. The probability that an arbitrary chosen site belongs to a cluster of size $s$ is $n_s s$, since $n_s$ is known to be the number of $s$-clusters per lattice site. Every occupied site must belong to one cluster even if it is a cluster of only one site, i.e., a cluster of size unity.  The probability that an arbitrary site belongs to a cluster is therefore proportional to the probably
+		$p$ that it is occupied.
+		\begin{equation}
+			\sum_{s=1}^{\infty} s n_s = \frac{number of total occupied sites}{number of total lattice sites} = p
+			\label{eqn:occupation-probability-in-mean-cluster-size}
+		\end{equation}
+		A quick check of the validity of equation \ref{eqn:occupation-probability-in-mean-cluster-size} can be performed using equation \ref{eqn:n_s-1d}.
+		\begin{align}
+			\sum_{s=1}^{\infty}	s n_s \nonumber
+			&=  \sum_{s} s (1-p)^2 p^s \nonumber \\
+			&= (1-p)^2 \sum_{s} s p^s  \nonumber \\
+			&= (1-p)^2 \sum_{s} p \frac{d(p^s)}{dp} \nonumber \\
+			&= (1-p)^2 p \frac{d \sum_{s} p^s}{dp} \nonumber \\
+			&= (1-p)^2 p \frac{d p(1-p)^{-1}}{dp} \nonumber \\
+			&= (1-p)^2 p \left(\frac{1}{1-p} + \frac{p}{(1-p)^2}\right) \nonumber \\
+			&= p 
+		\end{align}
+		Here we have used the series sum \ref{eqn:series-sum-1}.
+		\begin{align}
+			\sum_s p^s 
+			&= p + p^2 + p^3 + \ldots \nonumber \\
+			&= p( 1 + p + p^2 + \ldots) \nonumber \\
+			&= p(1-p)^{-1}
+			\label{eqn:series-sum-1}
+		\end{align}
+		An important question one can ask is that what is average size of the cluster that we are hitting. Since $n_s s$ is the probability that an arbitrary site belongs to an $s$-cluster and $\sum_{s} n_s s$ is the probability that it belongs to any cluster. Thus we define $w_s$ as
+		\begin{equation}
+			w_s = \frac{n_s s}{\sum_{s} n_s s}
+			\label{eqn:arbitrary-cluster-exactly-s-sites}
+		\end{equation}
+		$w_s$ is the probability that the cluster to which an arbitrary occupied site belongs contain exactly $s$ sites. The average cluster size $S$ is therefore
+		\begin{eqnarray}
+			S = \sum_{s} w_s s
+		\end{eqnarray}
+		This equation is very much similar to
+		\begin{equation}
+			\bar{x} = \int x p(x) dx
+		\end{equation}
+		using equation \ref{eqn:arbitrary-cluster-exactly-s-sites} we get
+		\begin{align}
+			S 
+			&= \frac{\sum_{s} n_s s^2}{\sum_{s} n_s s} \nonumber \\
+			&= \sum_{s=1}^{\infty} \frac{s^2 n_s}{p} \nonumber\\
+			&= \frac{(1-p)^2}{p} \sum_{s=1}^{\infty} s^2 p^s \nonumber \\
+			&= \frac{(1-p)^2}{p} \left(p \frac{d}{dp}\right)^2 \left(\sum_{s=1}^{\infty} p^s\right) \nonumber \\
+			&= \frac{(1-p)^2}{p} \left(p \frac{d}{dp}\right)^2 (p(1-p)^{-1}) \nonumber \\
+			&= p(1-p)^2 \frac{d^2}{dp^2} (p(1-p)^{-1}) \nonumber \\
+			&= p(1-p)^2 \frac{d}{dp}(1-p)^{-2} \nonumber \\
+			&= p(1-p)^2 2 (1-p)^{-3} \nonumber \\
+			&= \frac{2p}{1-p} \nonumber \\
+			&= \frac{1 + p}{1 - p}
+		\end{align}
+		we can write
+		\begin{equation}
+			S(p) = \frac{1-p}{1 + p} = \frac{p_c + p}{p_c - p}
+		\end{equation}
+		using the fact that $p_c = 1$ in 1D lattice.
+		This equation reveals that the mean cluster size diverges for $p\rightarrow p_c$ where the minus	sign signifies that we are approaching from below $p_c$. This is in sharp contrast with	higher dimensional ones where we can approach to $p_c$ from either end while in one	dimension we cannot have access to the state $p > p_c$ . We thus find the mean cluster	size diverges following power law as we have \cite{nesm-lecture-notes}
+		\begin{equation}
+			S(p) \sim (p_c - p)^{-1}
+		\end{equation}
+		We encounter the similar behaviour in the higher dimensions also.
+		
 		\subsubsection{Correlation Function and Correlation Length}
+		The correlation function or pair connectivity $g(r)$ is the probability that a site at position $r$ from an occupied site belongs to the same finite cluster. We are not including the contribution of the infinite cluster. This is valid infinite cluster does not exists as long as $p<1$. Let $r=0$ then $g(r=0)=1$ since the site at $r=0$ is the selected occupied site by definition. For 1D case a site at $r$ to be occupied and belongs to the same finite cluster, we will need $r$ subsequent sites and the probability of getting this is $p^r$. Therefore
+		\begin{equation}
+			g(r) = p^r
+		\end{equation}
+		It can also be expressed in terms of correlation length $\xi$
+		\begin{equation}
+			g(r) = \exp (\ln(p^r)) = \exp(-r/\xi)
+		\end{equation}
+		where $\xi$ is the correlation length \ref{eqn:correlation-length-def}.\\
+		Now that we have correlation function, we can define mean cluster size in terms of it
+		\begin{equation}
+			S = 1 + \sum_{r=1}^{\infty} g(r)
+			\label{eqn:mean-cluster-size-correlation-function}
+		\end{equation}
+		At this point it is evident that the cutoff cluster size $s_\xi$ , mean cluster size $S(p)$, and correlation length $\xi$ diverges at the percolation threshold. The divergence has the form of a	simple power law of the distance from the critical occupation probability. In higher dimensional percolation problem this observation is also valid.
+		
 	\subsection{Infinite Dimension}
-		\subsubsection{Bethe Lattice}
-			\begin{figure}
-				\includegraphics[width=\linewidth]{{{bethe-lattice}}}
-				\caption{Bethe Lattice for $z=3$}
-				\label{fig:bethe-lattice}
-			\end{figure}
+	Apart from one dimension percolation problem can be solved in infinite dimension. For this we need a suitable playground such as Bethe lattice. Bethe lattice lattice is a special type of lattice  where each site has $z$ neighbors and each branch gives rise to $(z-1)$ other branches. Figure \ref{fig:bethe-lattice} shows the Bethe lattice for $z=3$. Note that for $z=2$ we have nothing but the one dimensional lattice. \subsubsection{Properties of infinite dimensional object}
+	For a 3D object the surface area is has dimension to $L^2$ and volume as dimension $L^3$. The same pattern is true of object in any dimension. If we denote area by $A$ and volume by $V$ for any dimension we have
+	\begin{equation}
+		A \propto V^{1-1/d}
+	\end{equation}
+	now as $d \rightarrow \infty$ we have
+	\begin{equation}
+		A \propto V
+	\end{equation}
+	Therefore if we find that the area of any object is proportional to its volume we can say it is an infinite dimensional object.
+	\subsubsection{Bethe Lattice}
+	In order to construct Bethe lattice for any $z$ we start with a central point which will be connected to $z$ sites. For example if $z=3$ then we will have a central site connected to $3$ sites by a branch and when we go to next layer each branch will be divided to $2$ more branches and this process will be continued up to $r$ layers \ref{fig:bethe-lattice}. Only at the surface of the lattice, where the branching is stopped, is only one bond or branch connecting the surface site to the interior. There is only open loops in this structure, which means	that if we never change direction always reach new site if we never go back.Number of sites in the Bethe lattice increases exponentially with the distance from the origin, whereas in any $d$-dimensional lattice structure it	would increase with distance $d$ . In the case of Bethe lattice with $z=3$, the origin is surrounded by a shell of three sites ("first generation"), in the second shell we have six sites followed by a third	generation of twelve sites, etc.
+	\begin{figure}
+		\includegraphics[width=\linewidth]{{{bethe-lattice}}}
+		\caption{Bethe Lattice for $z=3$}
+		\label{fig:bethe-lattice}
+	\end{figure}
+	After $r$ generation the total number of sites in the Bethe lattice is
+	\begin{equation}
+		1+3\times(1 + 2 + \ldots + 2^{r-1}) = 3.2^r - 2
+	\end{equation}
+	The number $3\times 2^{r-1}$ is the number of sites at the surface.
+	Here we have used the following finite series sum
+	\begin{equation}
+		1+2+2^2+2^3+\ldots+2^r = 2^{r+1} - 1
+	\end{equation}
+	And if we measure the surface to volume ratio we get
+	\begin{equation}
+		\frac{A}{V} = \frac{number of sites in the surface}{total number of sites} = \frac{3\times 2^{r-1}}{3\times2^r - 2}
+	\end{equation}
+	as $r\rightarrow\infty$ we get
+	\begin{equation}
+		\frac{A}{V} \sim \frac{3\times 2^{r-1}}{3\times2^r} = \frac{1}{2} = constant
+	\end{equation}
+	Therefore Bethe lattice is indeed an infinite dimensional lattice.
+	\subsubsection{Percolation Threshold}
+	Percolation threshold of Bethe lattice is the occupation probability at which an infinite cluster appears for the first time. To find it we start walking from the origin and after one step we have $z-1$ new bonds that is connected to $z-1$ new sites in those direction. On the average there will be $(z-1)p$ occupied sites. And for each site there will be another $z-1$ branch and those bonds are connected to $(z-1)p$ sites on the average and so on. After $r$ step we will have an infinite cluster at probability $((z-1)p)^r$. Since $r\rightarrow \infty$ we have $((z-1)p)^r = 0$ if $(z-1)p < 1$. Thus we choose $(z-1)p = 1$ so that we will get an infinite cluster. That lead us to the desired critical  occupation  probability
+	\begin{align}
+		(z-1)p_c &= 1 \nonumber \\
+		p_c 	 &= \frac{1}{z-1}
+	\end{align}
+	For $z=3$ we have $p_c = 1/2$.
+	\subsubsection{Percolation Strength}
+	Percolation strength of an infinite cluster is the probability of any arbitrary site to be the part of the infinite cluster. For the sake of calculation, for $p>p_c$ in the Bethe lattice, we introduce a new quantity $Q$ as the probability that an arbitrary site is note connected to the infinite cluster through a fixed branch originating from this site. Restricting ourselves to the lattice with $z=3$ and using basic probability theory, the strength 
+	\begin{equation}
+		P(p) = p(1-Q^3)
+	\end{equation}
+	Here $p$ is the probability that the site is occupied and $(1-Q^3)$ is the probability that at least one branch is connected to infinity.\\
+	The probability that the two subbranches which start at the neighbor are not both leading infinity is	$Q^2$. The quantity $pQ^2$ is the probability that this neighbor is occupied but not connected to infinity	by any of its two subbranches. This neighbor is empty with probability $(1-p)$, in which case even	well connected subbranches do not help it. This gives us,
+	\begin{equation}
+		Q = (1-p) + p Q^2
+	\end{equation}
+	This is the probability that this fixed branch does not lead to infinity, either because the connection	is already broken at the first neighbor, or because later something is missing in the subbranch. So the solution of this quadratic equation is
+	\begin{equation}
+		Q = 1, \frac{1-p}{p}
+	\end{equation}
+	For $z$ neighbors, in general we have
+	\begin{equation}
+		Q = 1, 1 - \frac{2p(z-1)-2}{p(z-1)(z-2)}
+	\end{equation}
+	for $p<p_c$, there are no infinite clusters, fo with probability $1$ there are no connection to infinity. Now we use Taylor expansion for $P(p)$ around $p=p_c=1/2$
+	\begin{align}
+		P(p) = 
+		\begin{cases}
+		0	&\text{ for } p < p_c \\
+		p\left(1- \left(\frac{1-p}{p}\right)^3\right) &\text{ for } p \geq p_c
+		\end{cases}
+	\end{align}
+	Let,
+	\begin{equation}
+		f(p) = \left(\frac{(1-p)}{p} \right)^3
+	\end{equation}
+	Then
+	\begin{align}
+		f^\prime(p) &= -3p^-4 (1-p)^3 - 3 p^-3 (1-p)^2 \nonumber \\
+		&= -\frac{3}{p} \left(\frac{(1-p)}{p}\right)^3 -\frac{3}{p} \left(\frac{(1-p)}{p}\right)^2
+	\end{align}
+	\begin{align}
+		P(p) &= P(p_c) + (p-p_c) P^\prime(p_c) + \ldots \\
+		&= 0 + (p-p_c) \left(1-f(p_c) - p f^\prime(p_c)\right) + \ldots \\
+		&= 6(p-p_c) + \ldots \\
+	\end{align}
+	Therefore we get
+	\begin{equation}
+		P(p) \propto (p-p_c) \ \text{for} p \rightarrow p_c^+
+	\end{equation}
+	the critical exponent $\beta$ is defined by
+	\begin{equation}
+	P(p) \propto (p-p_c)^\beta
+	\end{equation}
+	Thus in Bethe lattice $\beta = 1$.
+	\subsubsection{Mean Cluster Size}
+	In case of Bethe lattice the mean cluster size is defined as the average number of sites to which the origin belongs. Let $T$ be the mean cluster size for one branch, that is the average number of sites to which the origin is connected and which belongs to one branch. Again, subbranches have the same mean cluster $T$ as the branch itself. If the neighbor is empty the cluster size for this branch is zero. If the neighbor is occupied, it contributes its own mass to the cluster which is unity and adds the mass $T$ for each of its two subbranches. Thus,
+	\begin{equation}
+		T = (1-p) \times 0 + p(1+2T)
+	\end{equation}
+	Solving this we get
+	\begin{equation}
+		T = \frac{p}{1 - 2p}
+	\end{equation}
+	for $p<p_c$. \\
+	The total cluster size is zero if the origin is empty and $(1+3T)$ if the origin is occupied. Therefore the mean cluster size $S(p)$ is
+	\begin{align}
+		S(p) &= 1 + 3 T \\
+		     &= \frac{1+p}{1-2p} \nonumber\\
+   		     &= \frac{1+p}{2(p_c-p} \nonumber \\
+   		     &=\frac{1+p}{2} (p_c - p)^{-1}
+	\end{align}
+	Thus the critical exponent $\gamma = 1$ for Bethe lattice. This is the exact result for mean cluster size and we notice that it diverges for $p\rightarrow p_c$.
+	\subsubsection{Correlation Function and Correlation Length}
+	The radial correlation function $g(r)$ is the average number of occupied sites within the same cluster at a distance $r$ from an arbitrary occupied site. The probability that a site at distance $r$ from the origin is occupied and the sites in between are occupied too is equal to $p^r$. Now if we think about a shell of radius $r$ then the number of all the sites enclosed by this shell is $z(z-1)^{r-1}$. Thus
+	\begin{align}
+		g(r) &= z(z-1)^{r-1} p^r \\
+			 &= \frac{z}{z-1} \left(p(z-1)\right)^r \\
+			 &= \frac{z}{z-1} \exp \left[\log\left[p(z-1)\right]\right]
+	\end{align}
+	The value of percolation threshold for Bethe lattice can be found by analyzing the behaviour of the correlation function at large distances, i.e. at r $\rightarrow \infty$. For $p(z-1) < 1$, $g(r)$ decreases exponentially, on the other hand for $p(z-1)>1$, the correlation function diverges which signifies the existence of an infinite cluster. Mathematical treatment yields the correlation length from \ref{eqn:correlation-length-def}
+	\begin{align}
+		\xi &= \frac{-1}{\log[p(1-z)]} \nonumber \\
+			&= \frac{-1}{\log(p/p_c)} \nonumber \\
+			&= (p-p_c)^{-1}
+	\end{align}
+	as $p$ approaches $p_c$, that is $\nu = 1$. \\
+	Clearly the 1D lattice and Bethe  lattice exhibits power law while we approach a critical value which suggests the same phenomena in other variants of such problems.
 	
 \section{Relation of Phase Transition with Percolation}
 

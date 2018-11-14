@@ -5,41 +5,42 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Self-Similarity examples\relax }}{13}{figure.caption.9}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces entropy of a system of $8$ particles\relax }}{25}{figure.caption.10}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces shape of $f(x)$ from $f^{\prime }(x)$\relax }}{28}{figure.caption.11}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces shape of $f(x)$ from $f^{\prime }(x)$\relax }}{27}{figure.caption.11}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces shape of $f(x)$ from $f^{\prime \prime }(x)$\relax }}{28}{figure.caption.12}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Shape of the free energy\relax }}{29}{figure.caption.13}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Shape of entropy\relax }}{30}{figure.caption.14}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Shape of Specific Heat\relax }}{31}{figure.caption.15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Shape of the free energy\relax }}{28}{figure.caption.13}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Shape of entropy\relax }}{29}{figure.caption.14}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Shape of Specific Heat\relax }}{30}{figure.caption.15}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces figure required\relax }}{32}{figure.caption.16}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Function showing power law\relax }}{34}{figure.caption.17}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Function showing power law\relax }}{33}{figure.caption.17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces One Dimensional Lattice. Empty ones are white and filled ones are black.\relax }}{41}{figure.caption.27}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Bethe Lattice for $z=3$\relax }}{43}{figure.caption.32}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Square Lattie (empty) of length 6\relax }}{44}{figure.caption.33}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Site and Bond symbol (empty and occupied).\relax }}{44}{figure.caption.34}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Growth of a Cluster in Site Percolation on square Lattice\relax }}{45}{figure.caption.35}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Growth of a Cluster in Bond Percolation on square Lattice\relax }}{47}{figure.caption.36}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A square lattice of length $L=10$. Demonstrating the appearance of the wrapping cluster\relax }}{40}{figure.caption.26}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces One Dimensional Lattice. Empty ones are white and filled ones are black.\relax }}{41}{figure.caption.28}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Bethe Lattice for $z=3$\relax }}{47}{figure.caption.34}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Square Lattie (empty) of length 6\relax }}{52}{figure.caption.39}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Site and Bond symbol (empty and occupied).\relax }}{52}{figure.caption.40}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Growth of a Cluster in Site Percolation on square Lattice\relax }}{53}{figure.caption.41}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Growth of a Cluster in Bond Percolation on square Lattice\relax }}{55}{figure.caption.42}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Spanning Probability, $w(p,L)$ vs Occupation Probability, $p$\relax }}{52}{figure.caption.37}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces $w(p,L)$ vs $(p-p_c) L^{1/\nu }$\relax }}{53}{figure.caption.38}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Entropy, $H(p,L)$ vs Occupation Probability, $p$\relax }}{54}{figure.caption.39}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Specific Heat, $C(p,L)$ vs Occupation Probability, $p$\relax }}{54}{figure.caption.40}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces $C(p,L)$ vs $(p-p_c) L^{1/\nu }$\relax }}{55}{figure.caption.41}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces $C L^{-\alpha /\nu }$ vs $(p-p_c) L^{1/\nu }$\relax }}{55}{figure.caption.42}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Order Parameter, $P(p,L)$ vs Occupation Probability, $p$\relax }}{56}{figure.caption.43}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Order Parameter, $P(p,L)$ vs Occupation Probability, $p$\relax }}{56}{figure.caption.44}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces $P(p,L)$ vs $(p-p_c) L ^{1/\nu }$\relax }}{56}{figure.caption.44}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces $P L^{\beta /\nu }$ vs $(p-p_c) L ^{1/\nu }$\relax }}{57}{figure.caption.45}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Susceptibility, $\chi (p,L)$ vs Occupation Probability, $p$\relax }}{58}{figure.caption.46}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces $\chi (p,L)$ vs $(p-p_c) L ^{1/\nu }$\relax }}{58}{figure.caption.47}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces $\chi L^{\gamma /\nu }$ vs $(p-p_c) L ^{1/\nu }$\relax }}{58}{figure.caption.48}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Number of cluster of size $s$, $n_s$ vs size of the cluster $s$\relax }}{58}{figure.caption.49}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces $\qopname \relax o{log}(n_s)$ vs $\qopname \relax o{log}(s)$\relax }}{59}{figure.caption.50}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces $H(p,L)/H(0,L)$ or $P(p,L)/P(1,L)$ vs $p$\relax }}{59}{figure.caption.51}
-\contentsline {figure}{\numberline {5.17}{\ignorespaces $\qopname \relax o{log}(S)$ vs $\qopname \relax o{log}(L)$\relax }}{60}{figure.caption.52}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Spanning Probability, $w(p,L)$ vs Occupation Probability, $p$\relax }}{59}{figure.caption.43}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces $w(p,L)$ vs $(p-p_c) L^{1/\nu }$\relax }}{60}{figure.caption.44}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Entropy, $H(p,L)$ vs Occupation Probability, $p$\relax }}{60}{figure.caption.45}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Specific Heat, $C(p,L)$ vs Occupation Probability, $p$\relax }}{61}{figure.caption.46}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces $C(p,L)$ vs $(p-p_c) L^{1/\nu }$\relax }}{61}{figure.caption.47}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces $C L^{-\alpha /\nu }$ vs $(p-p_c) L^{1/\nu }$\relax }}{62}{figure.caption.48}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Order Parameter, $P(p,L)$ vs Occupation Probability, $p$\relax }}{62}{figure.caption.49}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Order Parameter, $P(p,L)$ vs Occupation Probability, $p$\relax }}{63}{figure.caption.50}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces $P(p,L)$ vs $(p-p_c) L ^{1/\nu }$\relax }}{63}{figure.caption.50}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces $P L^{\beta /\nu }$ vs $(p-p_c) L ^{1/\nu }$\relax }}{63}{figure.caption.51}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Susceptibility, $\chi (p,L)$ vs Occupation Probability, $p$\relax }}{64}{figure.caption.52}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces $\chi (p,L)$ vs $(p-p_c) L ^{1/\nu }$\relax }}{64}{figure.caption.53}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces $\chi L^{\gamma /\nu }$ vs $(p-p_c) L ^{1/\nu }$\relax }}{65}{figure.caption.54}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Number of cluster of size $s$, $n_s$ vs size of the cluster $s$\relax }}{65}{figure.caption.55}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces $\qopname \relax o{log}(n_s)$ vs $\qopname \relax o{log}(s)$\relax }}{65}{figure.caption.56}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces $H(p,L)/H(0,L)$ or $P(p,L)/P(1,L)$ vs $p$\relax }}{66}{figure.caption.57}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces $\qopname \relax o{log}(S)$ vs $\qopname \relax o{log}(L)$\relax }}{66}{figure.caption.58}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Best collapsing on either right or left\relax }}{71}{figure.caption.58}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Minimizing exponent for scaling $x$-values\relax }}{72}{figure.caption.59}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Best collapsing on either right or left\relax }}{77}{figure.caption.64}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Minimizing exponent for scaling $x$-values\relax }}{78}{figure.caption.65}
