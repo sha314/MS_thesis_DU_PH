@@ -19,45 +19,45 @@ Database file #1: References/references.bib.bib
 Warning--to sort, need author or key in dimension_class_FLT
 Warning--empty year in dimension_class_FLT
 Warning--empty year in nesm-lecture-notes
-You've used 4 entries,
+You've used 23 entries,
             1935 wiz_defined-function locations,
-            502 strings with 4553 characters,
-and the built_in function-call counts, 1077 in all, are:
-= -- 109
-> -- 27
-< -- 3
-+ -- 10
-- -- 8
-* -- 74
-:= -- 197
-add.period$ -- 9
-call.type$ -- 4
-change.case$ -- 24
-chr.to.int$ -- 4
-cite$ -- 8
-duplicate$ -- 44
-empty$ -- 78
-format.name$ -- 13
-if$ -- 205
+            653 strings with 7734 characters,
+and the built_in function-call counts, 9017 in all, are:
+= -- 896
+> -- 358
+< -- 12
++ -- 124
+- -- 120
+* -- 814
+:= -- 1576
+add.period$ -- 66
+call.type$ -- 23
+change.case$ -- 174
+chr.to.int$ -- 23
+cite$ -- 27
+duplicate$ -- 308
+empty$ -- 631
+format.name$ -- 150
+if$ -- 1720
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 1
-newline$ -- 20
-num.names$ -- 9
-pop$ -- 20
+missing$ -- 21
+newline$ -- 115
+num.names$ -- 66
+pop$ -- 129
 preamble$ -- 1
-purify$ -- 24
+purify$ -- 175
 quote$ -- 0
-skip$ -- 34
+skip$ -- 234
 stack$ -- 0
-substring$ -- 72
-swap$ -- 1
+substring$ -- 727
+swap$ -- 20
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
+type$ -- 136
 warning$ -- 3
-while$ -- 7
+while$ -- 78
 width$ -- 0
-write$ -- 43
+write$ -- 289
 (There were 3 warnings)

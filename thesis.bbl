@@ -5,18 +5,121 @@ Fluid mechanics - theory.
 \newblock Basic Dimensions of Common Parameters Table at
   \url{https://www.ecourses.ou.edu/cgi-bin/ebook.cgi?doc=&topic=fl&chap_sec=06.1&page=theory}.
 
+\bibitem[Achlioptas et~al., 2009]{Achlioptas2009}
+Achlioptas, D., D{\textquotesingle}Souza, R.~M., and Spencer, J. (2009).
+\newblock Explosive percolation in random networks.
+\newblock {\em Science}, 323(5920):1453--1455.
+
+\bibitem[Adler, 1991]{Adler1991}
+Adler, J. (1991).
+\newblock Bootstrap percolation.
+\newblock {\em Physica A: Statistical Mechanics and its Applications},
+  171(3):453--470.
+
+\bibitem[Blume, 1966]{Blume1966}
+Blume, M. (1966).
+\newblock Theory of the first-order magnetic phase change in {UO}2.
+\newblock {\em Physical Review}, 141(2):517--524.
+
+\bibitem[Boccaletti et~al., 2014]{Boccaletti2014}
+Boccaletti, S., Bianconi, G., Criado, R., del Genio, C.,
+  G{\'{o}}mez-Garde{\~{n}}es, J., Romance, M., Sendi{\~{n}}a-Nadal, I., Wang,
+  Z., and Zanin, M. (2014).
+\newblock The structure and dynamics of multilayer networks.
+\newblock {\em Physics Reports}, 544(1):1--122.
+
+\bibitem[Bogu{\~{n}}{\'{a}}, 2009]{Bogu2009}
+Bogu{\~{n}}{\'{a}}, M. (2009).
+\newblock M. franceschetti, r. meester: Random networks for~communication. from
+  statistical physics to~information systems.
+\newblock {\em Journal of Statistical Physics}, 135(3):585--586.
+
+\bibitem[Chalupa et~al., 1979]{Chalupa1979}
+Chalupa, J., Leath, P.~L., and Reich, G.~R. (1979).
+\newblock Bootstrap percolation on a bethe lattice.
+\newblock {\em Journal of Physics C: Solid State Physics}, 12(1):L31--L35.
+
+\bibitem[Csermely et~al., 2013]{Csermely2013}
+Csermely, P., London, A., Wu, L.-Y., and Uzzi, B. (2013).
+\newblock Structure and dynamics of core/periphery networks.
+\newblock {\em Journal of Complex Networks}, 1(2):93--123.
+
+\bibitem[Dorogovtsev et~al., 2006]{Dorogovtsev2006}
+Dorogovtsev, S.~N., Goltsev, A.~V., and Mendes, J. F.~F. (2006).
+\newblock k-core organization of complex networks.
+\newblock {\em Physical Review Letters}, 96(4).
+
+\bibitem[Furuberg et~al., 1996]{Furuberg1996}
+Furuberg, L., M{\aa}l{\o}y, K.~J., and Feder, J. (1996).
+\newblock Intermittent behavior in slow drainage.
+\newblock {\em Physical Review E}, 53(1):966--977.
+
+\bibitem[Hall, 1985]{Hall1985}
+Hall, P. (1985).
+\newblock On continuum percolation.
+\newblock {\em Institute of Mathematical Statistics}, 13(4):1250--1266.
+
 \bibitem[Hassan, ]{nesm-lecture-notes}
 Hassan, M.~K.
 \newblock Lecture notes on statistical mechanics of non-equilibrium phenomena.
+
+\bibitem[Kivela et~al., 2014]{Kivela2014}
+Kivela, M., Arenas, A., Barthelemy, M., Gleeson, J.~P., Moreno, Y., and Porter,
+  M.~A. (2014).
+\newblock Multilayer networks.
+\newblock {\em Journal of Complex Networks}, 2(3):203--271.
+
+\bibitem[Lenormand and Zarcone, 1985]{Lenormand1985}
+Lenormand, R. and Zarcone, C. (1985).
+\newblock Invasion percolation in an etched network: Measurement of a fractal
+  dimension.
+\newblock {\em Physical Review Letters}, 54(20):2226--2229.
+
+\bibitem[L{\'{o}}pez et~al., 2007]{Lpez2007}
+L{\'{o}}pez, E., Parshani, R., Cohen, R., Carmi, S., and Havlin, S. (2007).
+\newblock Limited path percolation in complex networks.
+\newblock {\em Physical Review Letters}, 99(18).
+
+\bibitem[M{\aa}lo?y et~al., 1992]{Mloy1992}
+M{\aa}lo?y, K.~J., Furuberg, L., Feder, J., and Jo?ssang, T. (1992).
+\newblock Dynamics of slow drainage in porous media.
+\newblock {\em Physical Review Letters}, 68(14):2161--2164.
+
+\bibitem[Palla et~al., 2005]{Palla2005}
+Palla, G., Der{\'{e}}nyi, I., Farkas, I., and Vicsek, T. (2005).
+\newblock Uncovering the overlapping community structure of complex networks in
+  nature and society.
+\newblock {\em Nature}, 435(7043):814--818.
+
+\bibitem[Penrose, 1998]{Penrose1998}
+Penrose, M.~D. (1998).
+\newblock {CONTINUUM} {PERCOLATION} (cambridge tracts in mathematics 119).
+\newblock {\em Bulletin of the London Mathematical Society}, 30(4):435--436.
+
+\bibitem[Porter and Gleeson, 2016]{Porter2016}
+Porter, M. and Gleeson, J. (2016).
+\newblock {\em Dynamical Systems on Networks}.
+\newblock Springer International Publishing.
 
 \bibitem[Rahman and Hassan, 2018]{redefinition-of-site-percolation}
 Rahman, M.~S. and Hassan, M.~K. (2018).
 \newblock Redefinition of site percolation in light of entropy and the second
   law of thermodynamics.
 
-\bibitem[Shanon, 1948]{shanon_entropy}
-Shanon, C.~E. (1948).
+\bibitem[Seidman, 1983]{Seidman1983}
+Seidman, S.~B. (1983).
+\newblock Network structure and minimum degree.
+\newblock {\em Social Networks}, 5(3):269--287.
+
+\bibitem[Shannon, 1948]{shanon_entropy}
+Shannon, C.~E. (1948).
 \newblock A mathematical theory of communication.
-\newblock {\em Bell System Technical Journal}, 27:379--423.
+\newblock {\em Bell System Technical Journal}, 27(3):379--423.
+
+\bibitem[Wilkinson and Willemsen, 1983]{Wilkinson1983}
+Wilkinson, D. and Willemsen, J.~F. (1983).
+\newblock Invasion percolation: a new form of percolation theory.
+\newblock {\em Journal of Physics A: Mathematical and General},
+  16(14):3365--3376.
 
 \end{thebibliography}
