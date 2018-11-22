@@ -10,12 +10,34 @@
 \else
     \graphicspath{{Chapter5/Figs/}{Chapter5/Figs/L0/}{Chapter5/Figs/L1/}{Chapter5/Figs/L2/}}
 \fi
+
+
 We investigate percolation by random sequential ballistic deposition (RSBD) on a square lattice with interaction range upto second nearest neighbors. The critical points $p_c$ and all the necessary critical exponents $\alpha$, $\beta$, $\gamma$, $\nu$ etc. are obtained numerically for  each range of interactions. Like  in its thermal counterpart, we find that the critical exponents of RSBD depend on the range of interactions and for a given range of interaction they obey the Rushbrooke inequality. Besides, we obtain the exponent $\tau$ which characterizes the cluster size distribution  function $n_s(p_c)\sim s^{-\tau}$ \ref{subsect:cluster-size-dist-func} and the fractal dimension $d_f$ that characterizes the spanning cluster at $p_c$ \ref{subsect:fractal-dim}. Our results suggest that the RSBD for each range of interaction belong to a new universality class which is in sharp contrast to earlier results of the only work that exhist on RSBD.
 \\
 Imagine a spherical shaped object, say marble, is thrown on top of a 2D square lattice structure. First possible scenario is that the marble will be deposited in the first encountered site in the lattice . Now if the first encountered site is not empty, the possible scenario is that the marble will go in any of the four direction, $+x$, $-x$, $+y$ or $-y$, assuming no other direction in between is allowed in the lattice.  Now if the first neighbor is not empty then the marble will continue to go on in the previously selected direction and choose the next neighbor. This is the main theme of this thesis.\\
 In our experiment, we occupy a randomly chosen site if it is empty else we select one of its four neighbor to occupy if it is empty else select next neighbor in that direction and occupy that site if it is empty else ignore current iteration and choose another site randomly. This process is repeated until there is no empty site in the lattice. We call this process the ballistic deposition on the square lattice. We introduce 1st and 2nd nearest neighbor interaction in this way.
-\section{Building The Structure}
-\section{Percolation Algorithm}
+
+\section{Structure and Algorithm}
+Random percolation (RP) model can also be seen as a random sequential adsorption (RSA) process of particles on a given substrate to form monolayers of clusters of complex shape and structures. In RSA, a site is first picked at random and it is occupied if it is empty and the trial attempt is rejected if it is already occupied. We shall first show that this process too reproduce all the existing results of the CRP including the $p_c$ value. We can modify the rejection criterion. First, we assume that the adsorbing particles are hard sphere and impenetrable. Then we assume that if a particle fall onto an already adsorbed particle it is not straightaway rejected. Instead, it is allowed to roll down over the already deposited particle to one of its nearest neighbours at random following the steepest descent path. The particle is then adsorbed permanently if the nearest neighbour is empty else the trial attempt is rejected. This is known as the ballistic deposition (BD) model for $l = 1$. We also consider the case that if the nearest neighbour is occupied then the incoming particle attempt to push the neighbour to its next neighour site along the same line to make room for itself. However, the trial attempt of pushing the neighbour is successful if the next neibhouring site along the same line is empty else the trial attempt is discarded. We regard it as BD model for $l = 2$ while the classical percolation correspond to BD model with $l = 0$. Our primery goal is to prove that the critical exponents of percolation changes as changes as we increase the range of interaction like we find in its thermal counterpart. We numerically find the various necessary critical exponents and find that BD for each different range of interaction belong to different universality class and each universality class
+obeys the Rusbrooke inequality.\\
+
+Percolation is all about configuration of clusters of deposited particles and the investigation of the emergence of a large-scale connected path created by clusters formed by contiguous diposoted particles. We use extensive Monte Carlo simulation on a square lattice with the usual periodic boundary condition to study site percolation according to RSBD rule.\\
+
+The algorithm of the percolation by RSBD can be described as follows. We first label all the sites
+row by row from left to right starting from the top left corner. That is, we first label the first row from
+left to right as $i=1,2,...,L$, the second row again from left to right as $i=L+1,L+2,....,2L$
+and we continue this till we reach the bottom row which we label as $i=(L-1)L+1,...,L^2$. 
+Then at each step we pick a discrete random number $R$ from $1,2,...,L^2-1,L^2$ using uniform random number
+generator and check if the site it represents is already occupied or not. If it is
+empty we occupy it straightaway and move on to the next step. Else we pick one of its neighbours at random. 
+The second attempt in the same step, that mimic the roll over mechanism, is successul if the neighbour
+it picks is empty and if not the trial attempt to deposit is rejected permanently and we move on to the next 
+step anyway. This process is
+repeated over and over again till we want it to stop. We call it RSBD of degree one. We also consider
+the case of RSBS of degree two where the trial attempt is made to occupy the second nearest neighbour too.
+In this case if the incoming particle that fall onto an already occupied site and find its 
+neighbour is ocupied too but the next nearest neighbour site is empty then the neighbour move to the empty
+site to make space for the incoming perticle to be deposited there. 
 \begin{enumerate}
 	\item take a square lattice of length $L$.
 	\item choose a site randomly
@@ -24,9 +46,11 @@ In our experiment, we occupy a randomly chosen site if it is empty else we selec
 	\item if the second nearest neighbor is empty then occupy the site else ignore this step
 \end{enumerate}
 \section{Finite Size Scaling in Percolation Theory}
-\section{Finding Numerical Values}
-	\subsection{Critical occupation probability, $p_c$}
-	When we occupy sites of the square lattice, initially, there are only cluster of size 1. As we keep occupying different size of clusters starts to appear. At a certain point a special cluster appears which spans the entire lattice. We call this cluster the \textit{Spanning Cluster}. It should be noted that the spanning cluster is a special property of the lattice and the appearance of the spanning cluster is the result of phase transition. At the point where the spanning cluster first appears is called the critical point and denoted by $p_c$, meaning the occupation probability at the critical point. The figure \ref{finding-pc} shows the graph of the spanning probability, $w(p,L)$, versus the occupation probability $p$ for different interactions ($L0, L1, L2$) for different lengths. We have found that $p_c$ is $0.5927, 0.5782, 0.5701$ for $L0, L1, L2$ respectively.Thus for long range interaction $p_c$ is smaller than for short range interaction. 
+\section{Finding Numerical Values} 
+\label{sect:finding-numerical-values}
+	\subsection{Critical occupation probability, $p_c$} 
+	\label{subsect:finding-pc}
+	When we occupy sites of the square lattice, initially, there are only cluster of size $1$. As we keep occupying different size of clusters starts to appear. At a certain point a special cluster appears which spans the entire lattice. We call this cluster the \textit{Spanning Cluster}. It should be noted that the spanning cluster is a special property of the lattice and the appearance of the spanning cluster is the result of phase transition. At the point where the spanning cluster first appears is called the critical point and denoted by $p_c$, meaning the occupation probability at the critical point. The figure \ref{fig:spanning-probability} shows the graph of the spanning probability, $w(p,L)$, versus the occupation probability $p$ for different interactions ($L0, L1, L2$) for different lengths. We have found that $p_c$ is $0.5927, 0.5782, 0.5701$ for $L0, L1, L2$ respectively.Thus for long range interaction $p_c$ is smaller than for short range interaction. 
 		\begin{figure}
 			\begin{subfigure}{0.329\textwidth}
 				\centering
@@ -44,12 +68,12 @@ In our experiment, we occupy a randomly chosen site if it is empty else we selec
 			\caption{L2}
 			\end{subfigure}
 			\caption{Spanning Probability, $w(p,L)$ vs Occupation Probability, $p$}
-			\label{finding-pc}
+			\label{fig:spanning-probability}
 		\end{figure}
 	The quantity $w(p, L)$ is called the spanning probability in a non periodic case and wrapping probability in a periodic case.
 	The question is how do we find the wrapping probability, given that we have a list of $p_c$ for different length. Note that for a certain length $L$, in each realization the $p_c$ is not exact value, instead it is a range of values that contains the $p_c$. For example, say we have a lattice of length $200$ and for that we will have different $p_c$ at each realization. After an infinite number of experimentation we will have to take an average and that will give the exact value of $p_c$. But since it is practically impossible, we can find $p_{c_{avg}}$ for different lattice size then from the graph we can extrapolate the exact value of $p_c$ for infinite lattice. Here $p_{c_{avg}}$ is calculated from a finite set of $p_c$ for a certain length. This process is not good enough. Since it requires  $p_{c_{avg}}$'s for a number of lattice size which is very costly to obtain. But from the data, list of $p_c$'s for different length, we can find the cumulative frequency distribution. It is astonishing  that for all length the wrapping probability coincide at a specific point. This implies that if we could have an infinite system, the wrapping probability for that system would have gone through this same point. This means we got our critical point, $p_c$, as the intersection of the $w(p,L)$ for different lengths.
-	\subsection{Spanning Probability and finding $1/\nu$} \label{section:spanning-probability-and-one-by-nu}
-	From the figure \ref{finding-pc} we can see that, as we increase the length of the lattice the wrapping probability $w(p,L)$ moves closer and closer to the critical point. And if we draw a horizontal line at a certain height, say $y=0.1$, and find the intersection of this line with $w(p,L)$ for each length  and note the $p$ and if we plot $\log(L)$ vs $\log(p-p_c)$ we get the slope $1/\nu$. If we now use the finite size scaling (FSS) hypothesis
+	\subsection{Spanning Probability and finding $1/\nu$} \label{subsect:spanning-probability-and-one-by-nu}
+	From the figure \ref{fig:spanning-probability} we can see that, as we increase the length of the lattice the wrapping probability $w(p,L)$ moves closer and closer to the critical point. And if we draw a horizontal line at a certain height, say $y=0.1$, and find the intersection of this line with $w(p,L)$ for each length  and note the $p$ and if we plot $\log(L)$ vs $\log(p-p_c)$ we get the slope $1/\nu$. If we now use the finite size scaling (FSS) hypothesis
 	\begin{equation}
 		w = (p-p_c) L^{1/\nu}
 	\end{equation}
@@ -75,6 +99,7 @@ In our experiment, we occupy a randomly chosen site if it is empty else we selec
 		\end{figure}
 	
 	\subsection{Entropy, Specific Heat and finding $\alpha$}
+	\label{subsect:entropy-specific-heat}
 		For any phase transition model the entropy is crucial. In percolation theory we use Shannon Entropy \cite{shanon_entropy}. Using the definition \ref{label} we get the figure \ref{fig:entropy}
 		\begin{figure}
 			\begin{subfigure}{0.329\textwidth}
@@ -115,7 +140,7 @@ In our experiment, we occupy a randomly chosen site if it is empty else we selec
 			\caption{Specific Heat, $C(p,L)$ vs Occupation Probability, $p$}
 			\label{fig:specific-heat-graph}
 		\end{figure}
-		From specific heat we can find the exponent $\alpha$. To do this first we need to scale the $x$-values of the specific heat data using the exponent $1/\nu$ obtained from \ref{section:spanning-probability-and-one-by-nu} and get the graph as in figure \ref{fig:specific-heat-x-scaled-graph}. From this graph we will not the height of each line and call it $C_h$. Since each line corresponds to a specific length $L$ we can plot $\log(C_h)$ versus $\log(L)$ and the absolute value of the graph will give $\alpha/\nu$ and from that we can find the exponent $\alpha$ simply by dividing $\alpha/\nu$ by $1/\nu$. We get $\alpha$ values $0.906,0.911,0.919$ for $L0,L1,L2$ correspondingly. and using this value we can apply FSS hypothesis to get data collapse.
+		From specific heat we can find the exponent $\alpha$. To do this first we need to scale the $x$-values of the specific heat data using the exponent $1/\nu$ obtained from \ref{subsect:spanning-probability-and-one-by-nu} and get the graph as in figure \ref{fig:specific-heat-x-scaled-graph}. From this graph we will not the height of each line and call it $C_h$. Since each line corresponds to a specific length $L$ we can plot $\log(C_h)$ versus $\log(L)$ and the absolute value of the graph will give $\alpha/\nu$ and from that we can find the exponent $\alpha$ simply by dividing $\alpha/\nu$ by $1/\nu$. We get $\alpha$ values $0.906,0.911,0.919$ for $L0,L1,L2$ correspondingly. and using this value we can apply FSS hypothesis to get data collapse.
 		\begin{figure}
 			\begin{subfigure}{0.329\textwidth}
 				\centering
@@ -156,6 +181,7 @@ In our experiment, we occupy a randomly chosen site if it is empty else we selec
 			\label{fig:specific-heat-data-collapse-graph}
 		\end{figure}
 	\subsection{Order Parameter and finding $\beta$}
+	\label{subsect:order-parameter}
 		Order parameter, also knows as the percolation strength, is ,along with entropy, an important quantity in the study of phase transition. It is denoted as $P(p,L)$. Using the definition \ref{def:order-parameter-2} we obtain the order parameter for our system and it is shown in the figure \ref{fig:order-parameter}. Since using spanning cluster and the largest cluster gives the same exponent, it really does not matter which one we use. But in our case there is a boundary of the system, which we define as periodic. Hence using spanning cluster is appropriate.
 		\begin{figure}
 			\begin{subfigure}{0.329\textwidth}
@@ -176,7 +202,7 @@ In our experiment, we occupy a randomly chosen site if it is empty else we selec
 			\caption{Order Parameter, $P(p,L)$ vs Occupation Probability, $p$}
 			\label{fig:order-parameter}
 		\end{figure}
-		Using the exponent $1/\nu$ obtained in section \ref{section:spanning-probability-and-one-by-nu} we scale the $x$-values as $(p-p_c)L^{1/\nu}$ and get the following figure \ref{fig:order-parameter-x-scaled}.
+		Using the exponent $1/\nu$ obtained in section \ref{subsect:spanning-probability-and-one-by-nu} we scale the $x$-values as $(p-p_c)L^{1/\nu}$ and get the following figure \ref{fig:order-parameter-x-scaled}.
 		\begin{figure}
 			\begin{subfigure}{0.329\textwidth}
 				\centering
@@ -198,7 +224,7 @@ In our experiment, we occupy a randomly chosen site if it is empty else we selec
 			\caption{$P(p,L)$ vs $(p-p_c) L ^{1/\nu}$}
 		\end{figure}
  	    Then in figure \ref{fig:order-parameter-x-scaled} we draw a vertical line where there are several horizontal lines. We measure the height of the lines and call it $P_h$ and after plotting $\log(P_h)$ vs $\log(L)$ (inset of figure \ref{fig:order-parameter-data-collapse})we get the exponent $\beta/\nu$ from it's slope and obtain exponent $\beta$ by dividing $\beta/\nu$ by $1/\nu$.
- 	    Using the FSS hypothesis \ref{label} we plot $PL^{\beta/\nu}$ versus $(p-p_c)L^1/\nu$ and get a good data collapse which is shown in figure \ref{fig:order-parameter-data-collapse}.
+ 	    Using the FSS hypothesis \ref{subsect:FSS} we plot $PL^{\beta/\nu}$ versus $(p-p_c)L^1/\nu$ and get a good data collapse which is shown in figure \ref{fig:order-parameter-data-collapse}.
 		\begin{figure}
 			\begin{subfigure}{0.329\textwidth}
 				\centering
@@ -219,7 +245,7 @@ In our experiment, we occupy a randomly chosen site if it is empty else we selec
 			\label{fig:order-parameter-data-collapse}
 		\end{figure}
 	\subsection{Susceptibility and finding $\gamma$}
-	Susceptibility is defined as the derivative of the order parameter $P(p,L)$ with respect to the control parameter $p$,i.e., $\chi = \frac{dP}{dp}$. Using this definition we obtain the graph of susceptibility \ref{fig:susceptibility}. And if we scale the $x$ values and plot $\chi$ vs $(p-p_c)L^{1/\nu}$ we get all the peak point aligned (figure \ref{fig:susceptibility-x-scaled}). Note that the value of $1/\nu$ is known from section \ref{section:spanning-probability-and-one-by-nu}. Then we take the reading of the height of each line and call it $\chi_h$. Since each line represents a different lattice size, plotting $\log(\chi_h)$ vs $\log(L)$ gives the slope $\gamma/\nu$. And using the FSS hypothesis we plot $\chi L^{-\gamma/\nu}$ vs $(p-p_c)L^{1/\nu}$ and obtain a perfect data collapse. It is shown in figure \ref{fig:susceptibility-data-collapse}. We obtain the values of $\gamma$ to be $0.8543,0.8542,0.882$.
+	Susceptibility is defined as the derivative of the order parameter $P(p,L)$ with respect to the control parameter $p$,i.e., $\chi = \frac{dP}{dp}$. Using this definition we obtain the graph of susceptibility \ref{fig:susceptibility}. And if we scale the $x$ values and plot $\chi$ vs $(p-p_c)L^{1/\nu}$ we get all the peak point aligned (figure \ref{fig:susceptibility-x-scaled}). Note that the value of $1/\nu$ is known from section \ref{subsect:spanning-probability-and-one-by-nu}. Then we take the reading of the height of each line and call it $\chi_h$. Since each line represents a different lattice size, plotting $\log(\chi_h)$ vs $\log(L)$ gives the slope $\gamma/\nu$. And using the FSS hypothesis we plot $\chi L^{-\gamma/\nu}$ vs $(p-p_c)L^{1/\nu}$ and obtain a perfect data collapse. It is shown in figure \ref{fig:susceptibility-data-collapse}. We obtain the values of $\gamma$ to be $0.8543,0.8542,0.882$.
 		\begin{figure}
 			\begin{subfigure}{0.329\textwidth}
 				\centering

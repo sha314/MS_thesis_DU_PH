@@ -79,51 +79,30 @@ Let's take a break to talk about free energy. What is free energy?
 	
 \section{Definition of Thermodynamic Quantities}
 	\subsection{Entropy}
+	\label{subsect:entropy-thermodynamics}
 	Entropy is considered as a quantity about the disorderness of a system. This kind of disorder is the number of states a system can take on. So what are the states of a system? Imagine a cube of volume $1cm^3$, filled with one particular gas. At a particular time if we can label all the molecules of the gas uniquely then at next moment most of the molecule will change their positions due to their random motion. Then we will not be able to identify each molecule with their previous label. This process of identifying the labels of the molecules are easier if it's a liquid and even more easier in it's solid form. Since temperature increases the random motion of the molecules, as the temprature rises it is more difficult to identify those molecules. Thus at high temperature a system has higher entropy. Another thing to mention about it's volume. If a larger volume is selected then obviously the number of possible states will increase therefore entropy will increase.\\
 	Example:\\
 	If we were ot compare the entropy of the moon and the sun, the above discussion tells us that the sun has higher entropy than the moon. The reason is that the sun is much much larger than the moon and has much higher temperature than the moon. Therefor the number of possible states will be larger for the sun than the moon.\\
-	Entropy in one of the key feature of a phase transition model. But thermodynamic entropy cannot be calculated for any model such as our percolation on a square lattice model. So we take our approach in another way. Information entropy or the Shanon entropy is best suited for our model. The concept of information entropy was introduced by Claude Shannon in his 1948 paper "A Mathematical Theory of Communication" \cite{shanon_entropy}. The Defition is
-	\begin{align}
-		H = - \sum_{i} \mu_i \log \mu_i	
-	\end{align}
-	where, $\mu_i$ is the probability of getting $i$-th element.\\
-	Say we have a coin with a head and a tail. If the coin is unbiased then the probability of getting the head or the tail is 50\% or 0.5. Now what's the entropy of this system? The Shanon entropy is the one that can be used here. For convenience $\log_{2}$ will be used for evaluating logarithms here, after all $\log_{2} = const. \log_{10} = const. \log_{e}$. Here, $\mu_i = 0.5$ and $\log_{2} (0.5) = -1$, Therefore we have
-	\begin{align}
-		H &= - (0.5 \log_{2} (0.5) + 0.5 \log_{2} (0.5)) \nonumber \\ 
-		&= - (0.5 \times (-1) + 0.5 \times (-1)) \nonumber \\ 
-		&= 1 \nonumber
-	\end{align}
-	so in this system entropy is $1$.\\
-	Now take a new system where there is $4$ identical object. Since all objects are identical, each have probability $\mu_i = 1/4$ and $\log_{2} (1/4) = -2$. Then the total entropy of that system is $2$. So this is clear that the entropy increses with the increase of the system size. Here system size is determined by the number of particles in it. Now, let's take a non-uniform system, where there are total $8$ particles and there are $4$ cluster. Cluster $1$ has $4$ particles and cluster $2$ has $2$ particles and other $2$ cluster of $1$ particle each. Probability of getting cluster $1$ is $\mu_1 = 4/8$ and for cluster $2$ it is $\mu_2 = 2/8$ and for other clusters it is $\mu_3 = \mu_4 = 1/8$. Now the entropy of the system becomes,
-	\begin{align}
-		H &= - \sum_i \mu_i \log_2 \mu_i \nonumber \\
-		&= - (4/8 \log_2 (4/8) + 2/8 \log_2 (2/8) + 1/8 \log_2(1/8) + 1/8 \log_2(1/8) \nonumber \\
-		&= - (-1/2 -1/2 -3/8 -3/8) \nonumber \\
-		&= 7/4 \nonumber
-	\end{align}
-	which is less then the entropy of a system where all $8$ particles are disconnected, i.e., $H=3$. So we can see that as the particles are joined together entropy reduces, which is in agreement with the experimental results. 
-	\begin{figure}
-		\begin{subfigure}{.5\textwidth}
-			\includegraphics[width=.5\linewidth]{entropy_cluster/step1.png}
-			\caption{Free particles. $H=3$}
-		\end{subfigure}
-		\begin{subfigure}{.5\textwidth}
-			\includegraphics[width=.5\linewidth]{entropy_cluster/step2.png}
-			\caption{Some Free and Some Bound Particles. $0 < H < 3$}
-		\end{subfigure}
-		\begin{subfigure}{.5\textwidth}
-			\includegraphics[width=.5\linewidth]{entropy_cluster/step3.png}
-			\caption{Bount particles. $H=0$}
-		\end{subfigure}
-		\caption{entropy of a system of $8$ particles}
-	\end{figure}
 	
-	The reason I am taking the system size as $2^n$ for all $n$ is that it's easier to take logarithm of base $2$.
 	
 	
 	\subsection{latent heat}
 	The latent heat associated with the phase transition is , where and are the entropies just above and below the phase transition. Since the entropy is continuous at the phase transition, the latent heat is zero. The latent heat is always zero for a second order phase transition.
 	\subsection{Specific Heat}
+	The specific heat is the amount of heat per unit mass required to raise the temperature by one degree Celsius. The relationship between heat and temperature change is usually expressed in the form shown below where $C$ is the specific heat.
+	\begin{equation}
+		C = \frac{Q}{dT}
+	\end{equation}
+	and we know
+	\begin{equation}
+		Q = T dS
+	\end{equation}
+	where $S$ is the entropy. we immediately get
+	\begin{equation}
+		C = T \frac{dS}{dT}
+		\label{def:specific-heat-thermodynamics}
+	\end{equation}
+	
 	\subsection{Order Parameter}
 	\subsection{Susceptibility}
 	The first law of thermodynamics for a non magnetic system is \ref{label}

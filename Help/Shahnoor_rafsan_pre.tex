@@ -1,4 +1,5 @@
-﻿\documentclass[twocolumn,showpacs,preprintnumbers,amsmath,amssymb]{revtex4}
+
+\documentclass[twocolumn,showpacs,preprintnumbers,amsmath,amssymb]{article}
 %\documentclass[preprint,showpacs,preprintnumbers,amsmath,amssymb]{revtex4}
 
 % Some other (several out of many) possibilities
@@ -9,9 +10,9 @@
 \usepackage{graphics}
 \usepackage{epstopdf}
 \usepackage{epsfig}
-\includegraphics{image}
+%\includegraphics{image}
 \usepackage{graphicx}% Include figure files
-\graphicspath{ {./images/} }
+%\graphicspath{ {./images/} }
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
 \usepackage[caption=false]{subfig}
@@ -29,11 +30,11 @@
 %\affiliation{1 Research Road, Ridge, NY 11961}
 \date{\today}%
 
-\affiliation{
+%\affiliation{
 University of Dhaka, Department of Physics, Dhaka 1000, Bangladesh \\
 %$2$ Information and Communication Technology Cell, Bangladesh Atomic Energy Commission, Dhaka 1000, Bangladesh \\
 %$2$ Potsdam Institute for Climate Impact Research, Telegrafenberg A31, 14473 Potsdam, Germany
-}
+%}
 
 \begin{abstract}
 We investigate percolation by random sequential ballistic deposition (RSBD) on a square lattice 
@@ -48,7 +49,7 @@ belong to a new universality class which is in sharp contrast to earlier results
 on RSBD.
 \end{abstract}
 
-\pacs{61.43.Hv, 64.60.Ht, 68.03.Fg, 82.70.Dd}
+%\pacs{61.43.Hv, 64.60.Ht, 68.03.Fg, 82.70.Dd}
 
 \maketitle
 
@@ -176,18 +177,18 @@ site to make space for the incoming perticle to be deposited there.
 
 \centering
 
-\subfloat[]
-{
-\includegraphics[height3.0 cm, width=4.0 cm, clip=true]
-{RSA_before001.eps}
-\label{fig:1a}
-}
-\subfloat[]
-{
-\includegraphics[height=3.0 cm, width=4.0 cm, clip=true]
-{RSA_after001.eps}
-\label{fig:1b}
-}
+%\subfloat[]
+%{
+%	\includegraphics[height3.0 cm, width=4.0 cm, clip=true]
+%	{RSA_before001.eps}
+%	\label{fig:1a}
+%}
+%\subfloat[]
+%{
+%	\includegraphics[height=3.0 cm, width=4.0 cm, clip=true]
+%	{RSA_after001.eps}
+%	\label{fig:1b}
+%}
 
 \caption{Plots of order parameter $P$ versus $t$ for EP of PR in (a) and SR in (b). We plot $PN^{\beta/\nu}$ versus $(t-t_c)N^{1/\nu}$ and
 find that all the distinct plots of (a) and (b) collapse superbly in (c) for PR and (d) for SR.
@@ -203,31 +204,31 @@ find that all the distinct plots of (a) and (b) collapse superbly in (c) for PR 
 
 \begin{figure}
 \centering
-\subfloat[]
-{
-\includegraphics[height=4.0 cm, width=2.4 cm, clip=true,angle=-90]
-{wpsl_bond_sp.eps}
-\label{fig:2a}
-}
-\subfloat[]
-{
-\includegraphics[height=4.0 cm, width=2.4 cm, clip=true, angle=-90]
-{wpsl_site_sp.eps}
-\label{fig:2b}
-}
-
-\subfloat[]
-{
-\includegraphics[height=4.0 cm, width=2.4 cm, clip=true, angle=-90]
-{wpsl_bond_site_nu.eps}
-\label{fig:2c}
-}
-\subfloat[]
-{
-\includegraphics[height=4.0 cm, width=2.4 cm, clip=true, angle=-90]
-{wpsl_sp_datacollapse_bond_site_paper.eps}
-\label{fig:2d}
-}
+%\subfloat[]
+%{
+%\includegraphics[height=4.0 cm, width=2.4 cm, clip=true,angle=-90]
+%{wpsl_bond_sp.eps}
+%\label{fig:2a}
+%}
+%\subfloat[]
+%{
+%\includegraphics[height=4.0 cm, width=2.4 cm, clip=true, angle=-90]
+%{wpsl_site_sp.eps}
+%\label{fig:2b}
+%}
+%
+%\subfloat[]
+%{
+%\includegraphics[height=4.0 cm, width=2.4 cm, clip=true, angle=-90]
+%{wpsl_bond_site_nu.eps}
+%\label{fig:2c}
+%}
+%\subfloat[]
+%{
+%\includegraphics[height=4.0 cm, width=2.4 cm, clip=true, angle=-90]
+%{wpsl_sp_datacollapse_bond_site_paper.eps}
+%\label{fig:2d}
+%}
 
 
 \caption{Spanning probability $W(p,L)$ vs $p$ in WPSL for (a) bond and 
@@ -263,7 +264,7 @@ that doing this convolution does not alter at all the characteristic features of
 
 
 %that provides us with tools to find a unique value for $p_c$ appropriate for infinite size from a finite size lattice. 
-One way of dealing with this is to use the idea of spanning probability $W(p)$ \citep{ref.Ziff_1}.  Consider that we have performed $m$ independent
+One way of dealing with this is to use the idea of spanning probability $W(p)$ \cite{ref.Ziff_1}.  Consider that we have performed $m$ independent
 realizations and for each realization we check exactly at
 what value of $p=n/N$ there appears a cluster that connects the two opposite ends either horizontally
 or vertically, whichever come first. 
@@ -304,10 +305,9 @@ all the three cases belong to three distinct universality class which is in shar
 
 \begin{figure}
 \label{fig2}
-\includegraphics[width=5.00cm,height=8.5cm,clip=true]{./RSA_before.eps}
+%\includegraphics[width=5.00cm,height=8.5cm,clip=true]{./RSA_before.eps}
 \caption{Plots of spanning probability $W(p)$ vs  occupation probability $p$ for different lattice size. The vertical is drawn at $p_c=0.526846$. In the inset, 
 we plot  $W(p)$ vs $(p-p_c)L^{1/\nu}$, where $\nu=5/3$ and find an excellent data collapse.
-\label{fig2}
 }
 \end{figure}
 
@@ -340,7 +340,7 @@ like a step function around $p_c$.
 
 \begin{figure}
 \label{fig3}
-\includegraphics[width=5.00cm,height=8.5cm,clip=true,angle=-90]{./wpsl_spanning_strength_C_3.eps}
+%\includegraphics[width=5.00cm,height=8.5cm,clip=true,angle=-90]{./wpsl_spanning_strength_C_3.eps}
 \caption{Plots of percolation probability $P(p)$ vs $p$ for three different size of the WPSL. In the
 inset we plot the same data but in the scaled variables $PL^{\beta/\nu}$ and $(p_c-p)L^{1/\nu}$ and  find an excellent data-collapse.
 \label{fig3}
@@ -393,8 +393,8 @@ where $\beta\sim 0.225$ or $\beta=9/40$ for WPSL whereas $\beta=5/36$ for all ot
 
 
 \begin{figure}
-\label{fig4}
-\includegraphics[width=5.00cm,height=8.5cm,clip=true,angle=-90]{./wpsl_mean_cluster_area_C_1.eps}
+
+%\includegraphics[width=5.00cm,height=8.5cm,clip=true,angle=-90]{./wpsl_mean_cluster_area_C_1.eps}
 \caption{Mean cluster area S(p) as function of occupation probability $p$ with different lattice size $L$. In the
 inset we plot the scaled variables $SL^{-\gamma/\nu}$ vs $(p_c-p)L^{1/\nu}$ and find that data for different system sizes are
 well collapsed in a single universal curve.
@@ -453,17 +453,17 @@ where $\gamma=2.883$ which we can approximately write $\gamma=173/60$. In contra
 
 \begin{figure}
 \centering
-\label{fig:ab}
-\subfloat[]
-{
-\includegraphics[height=1.6in, width=1.6in, clip=true,angle=-90]{wpsl_distribution_3.eps}
-\label{fig:a}
-}
-\subfloat[]
-{
-\includegraphics[height=1.6in, width=1.6in, clip=true,angle=-90]{wpsl_fractal_dimension_3.eps}
-\label{fig:b}
-}
+
+%\subfloat[]
+%{
+%\includegraphics[height=1.6in, width=1.6in, clip=true,angle=-90]{wpsl_distribution_3.eps}
+%\label{fig:a}
+%}
+%\subfloat[]
+%{
+%\includegraphics[height=1.6in, width=1.6in, clip=true,angle=-90]{wpsl_fractal_dimension_3.eps}
+%\label{fig:b}
+%}
 \caption{(a) The plot of $\log(n_s)$ vs $\log(s)$  for different lattice size $L$.
 (b) The double-logarithmic plot of the size of the spanning cluster $M$ against the lattice size $L$. 
 } 

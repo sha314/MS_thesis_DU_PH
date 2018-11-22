@@ -1,10 +1,2054 @@
 %!TEX root = ../thesis.tex
 % ******************************* Thesis Appendix A ****************************
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{CStyle}{
+	backgroundcolor=\color{backgroundColour},   
+	commentstyle=\color{mGreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{mGray},
+	stringstyle=\color{mPurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2,
+	language=C
+}
+
 \chapter{Percolation} 
 \section{Algorithm}
 \section{Code}
-Complete code for percolation on square lattice is available at
+	\subsection{Index}
+	The \textbf{index.h} file
+	\begin{lstlisting}[style=CStyle]
+	#ifndef SITEPERCOLATION_INDEX_H
+	#define SITEPERCOLATION_INDEX_H
+	
+	#include <ostream>
+	#include <iostream>
+	#include <sstream>
+	#include <vector>
+	
+	#include "../types.h"
+	#include "../exception/exceptions.h"
+	#include "../lattice/bond_type.h"
+	
+	
+	struct Index{
+	value_type row_{};
+	value_type column_{};
+	
+	~Index()                      = default;
+	Index()                       = default;
+		
+	Index(value_type x, value_type y) : row_{x}, column_{y} {}
+	
+	};
+	
+	
+	class IndexRelative{
+	public:
+	int x_{};
+	int y_{};
+	
+	~IndexRelative()                      = default;
+	IndexRelative()                       = default;
+	
+	IndexRelative(int x, int y) : x_{x}, y_{y} {}
+	
+	};
+	
+
+	struct BondIndex{
+	BondType bondType;
+	
+	value_type row_;
+	value_type column_;
+	
+	~BondIndex()                        = default;
+	BondIndex()                         = default;
+	
+	BondIndex(BondType hv, value_type row, value_type column)
+	:  row_{row}, column_{column}
+	{
+	bondType = hv;
+	}
+	
+	bool horizontal() const { return bondType == BondType::Horizontal;}
+	bool vertical() const { return bondType == BondType::Vertical;}
+	
+	};
+	
+	std::ostream& operator<<(std::ostream& os, const Index& index);
+	bool operator==(const Index& index1, const Index& index2);
+	bool operator<(const Index& index1, const Index& index2);
+	
+	std::ostream& operator<<(std::ostream& os, const IndexRelative& index);
+	
+	std::ostream& operator<<(std::ostream& os, const BondIndex& index);
+	bool operator==(BondIndex index1, BondIndex index2);
+	bool operator<(BondIndex index1, BondIndex index2);
+	
+	
+	/**
+	*  Get 2nd nearest neightbor / sin the direction of 1st nearest neighbor, while @var center is the center
+	*/
+	Index get_2nn_in_1nn_direction(Index center, Index nn_1, value_type length);
+	std::vector<Index> get_2nn_s_in_1nn_s_direction(Index center, const std::vector<Index> &nn_1, value_type length);
+	
+	#endif //SITEPERCOLATION_INDEX_H
+	
+	\end{lstlisting}
+	
+	
+	The \textbf{index.cpp} file
+	\begin{lstlisting}[style=CStyle]
+	#include <iomanip>
+	#include "index.h"
+	
+	using namespace std;
+	
+	ostream& operator<<(ostream& os, const Index& index)
+	{
+	return os <<'(' << index.row_ << ',' << index.column_ << ')';
+	}
+	
+	ostream& operator<<(ostream& os, const IndexRelative& index)
+	{
+	return os << '(' << std::setw(3) << index.x_ << ',' << std::setw(3) << index.y_ << ')';
+	}
+	
+	bool operator==(const Index& index1, const Index& index2){
+	return (index1.row_ == index2.row_) && (index1.column_ == index2.column_);
+	}
+	
+	bool operator<(const Index& index1, const Index& index2){
+	if(index1.row_ < index2.row_)
+	return true;
+	if(index1.row_ == index2.row_){
+	return index1.column_ < index2.column_;
+	}
+	return false;
+	}
+	
+	
+	ostream& operator<<(ostream& os, const BondIndex& index){
+	if(index.horizontal()){
+	// horizontal bond
+	os << "<->" ;
+	}
+	if (index.vertical()){
+	// vertical bond
+	os << "<|>" ;
+	}
+	return os << '(' << index.row_ << ',' << index.column_ << ')';
+	}
+	
+	bool operator==(BondIndex index1, BondIndex index2){
+	if(index1.horizontal() ==  index2.horizontal() || index1.vertical() ==  index2.vertical()){
+	// horizontal or vertical
+	return index1.row_ == index2.row_ && index1.column_ == index2.column_;
+	}
+	return false;
+	}
+	
+	
+	bool operator<(BondIndex index1, BondIndex index2){
+	cout << "not yet defined : line " << __LINE__ << endl;
+	return false;
+	}
+	
+	
+	/**
+	* Get the 2nd nearest nearest neighbor in the direction of 1st nearest neighbor.
+	* Periodicity is not considered here.
+	* @param center
+	* @param nn_1
+	* @param length
+	* @return
+	*/
+	Index get_2nn_in_1nn_direction(Index center, Index nn_1, value_type length){
+	int delta_c = int(nn_1.column_) - int(center.column_);
+	int delta_r = int(nn_1.row_) - int(center.row_);
+	if (delta_c == 0 && delta_r == 0){
+	cout << "Both indices are same : line " << __LINE__ << endl;
+	}
+	else if(delta_c > 1 || delta_r > 1){
+	// meaning, the sites are on the opposite edges
+	//        cout << "2nd index is not the First nearest neighbor : line " << __LINE__ << " : file " << __FILE__ << endl;
+	}
+	
+	return Index{(nn_1.row_ + delta_r + length) % length, (nn_1.column_ + delta_c + length) % length};
+	}
+	
+	
+	/**
+	* Get all second nearest neighbors based on the first nearest neighbors.
+	* Periodicity is not considered here
+	* @param center
+	* @param nn_1
+	* @param length
+	* @return
+	*/
+	vector<Index> get_2nn_s_in_1nn_s_direction(Index center, const vector<Index> &nn_1, value_type length){
+	vector<Index> nn_2(nn_1.size());
+	
+	for(size_t i{}; i != nn_1.size() ; ++i){
+	int delta_c = int(nn_1[i].column_) - int(center.column_);
+	int delta_r = int(nn_1[i].row_) - int(center.row_);
+	if (delta_c == 0 && delta_r == 0){
+	cout << "Both indices are same : line " << __LINE__ << endl;
+	}
+	else if(delta_c > 1 || delta_r > 1){
+	// meaning, the sites are on the opposite edges
+	//            cout << "center " << center << " nn " << nn_1 << endl;
+	//            cout << "2nd index is not the First nearest neighbor : line " << __LINE__ << " : file " << __FILE__ << endl;
+	}
+	
+	nn_2[i] =  Index{(nn_1[i].row_ + delta_r + length) % length, (nn_1[i].column_ + delta_c + length) % length};
+	}
+	return nn_2;
+	}
+	
+	\end{lstlisting}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\subsection{Site and Bond}
+	The \textbf{site.h} file
+	\begin{lstlisting}[style=CStyle]
+
+	#ifndef SITEPERCOLATION_SITE_H
+	#define SITEPERCOLATION_SITE_H
+	
+	#include <array>
+	#include <set>
+	#include <vector>
+	#include <iostream>
+	#include <memory>
+	
+	#include "../index/index.h"
+	#include "../types.h"
+	
+	
+	/**
+	* single Site of a lattice
+	*/
+	struct Site{
+	
+	/**
+	* if true -> site is placed.
+	* if false -> the (empty) position is there but the site is not (required for site percolation)
+	*/
+	bool _status{false};
+	int _group_id{-1};
+	Index _id{};
+	value_type _weight{};    // when one site is occupied multiple times only weight increases by occupation
+	
+	//relative distance from the root site. {0,0} if it is the root site
+	//very useful for detecting wrapping // todo
+	IndexRelative _relative_index{0,0};
+	
+	//    std::vector<Index> _neighbor{};
+	// _connection[0] -> _connection between "set_ID" and "_neighbor[0]"
+	
+	/**
+	* using set gives following advantages
+	* 1. Keeps elements sorted
+	* 2. automatically manage repeated value
+	*/
+	//    std::set<int> _connection{};
+	
+	public:
+	
+	~Site()                 = default;
+	Site()                  = default;
+	Site(const Site&)             = default;
+	Site(Site&&)            = default;
+	Site& operator=(const Site&)  = default;
+	Site& operator=(Site&&) = default;
+	
+	Site(Index id, value_type length){
+	// I have handle _neighbor or corner points and edge points carefully
+	if(id.row_ >= length || id.column_ >= length){
+	std::cout << "out of range : line " << __LINE__ << std::endl;
+	}
+	_id.row_ = id.row_;
+	_id.column_ = id.column_;
+	//        _neighbor = Lattice_Helper::get_neighbor(id, length);
+	}
+	
+	
+	bool isActive() const { return _status;}
+	void activate(){ _status = true;}
+	void deactivate() {
+	_relative_index = {0,0};
+	_group_id = -1;
+	_status = false;
+	}
+	Index ID() const { return  _id;}
+	/*
+	* Group get_ID is the set_ID of the cluster they are in
+	*/
+	int     get_groupID() const {return _group_id;}
+	void    set_groupID(int g_id) {_group_id = g_id;}
+	
+	std::stringstream getSite() const {
+	std::stringstream ss;
+	if(isActive())
+	ss << _id;
+	else
+	ss << "(*)";
+	return ss;
+	}
+	
+	value_type weight() const {return _weight;}
+	void increaseWeight(){_weight += 1;}
+	
+	void relativeIndex(IndexRelative r){
+	_relative_index = r;
+	}
+	
+	void relativeIndex(int x, int y){
+	_relative_index = {x,y};
+	}
+	
+	IndexRelative relativeIndex() const {return _relative_index;}
+	
+	};
+	
+	std::ostream& operator<<(std::ostream& os, const Site& site);
+	bool operator==(Site& site1, Site& site2);
+	
+	#endif //SITEPERCOLATION_SITE_H
+	\end{lstlisting}
+	
+	file : \textbf{site.cpp}
+	\begin{lstlisting}[style=CStyle]
+		#include <iomanip>
+		#include "site.h"
+		
+		std::ostream& operator<<(std::ostream& os, const Site& site)
+		{
+		if(site.isActive())
+		return os << site._id;
+		else
+		return os << "(*)";
+		}
+		
+		
+		
+		bool operator==(Site& site1, Site& site2){
+		return (site1.ID().row_ == site2.ID().row_) && (site1.ID().column_ == site2.ID().column_);
+		}
+		
+	\end{lstlisting}
+	
+	
+	file : \textbf{bond\_type.h}
+	\begin{lstlisting}[style=CStyle]	
+		#ifndef PERCOLATION_BOND_V2_H
+		#define PERCOLATION_BOND_V2_H
+		
+		/**
+		* Only two type bonds in 2D lattice
+		*/
+		enum class BondType{
+		Horizontal,
+		Vertical
+		};
+
+		#endif //PERCOLATION_BOND_V2_H
+	\end{lstlisting}
+	
+	file : \textbf{bond.h}
+	\begin{lstlisting}[style=CStyle]
+	#ifndef SITEPERCOLATION_BOND_H
+	#define SITEPERCOLATION_BOND_H
+	
+	#include <ostream>
+	#include <iostream>
+	#include <sstream>
+	
+	#include "../index/index.h"
+	#include "../types.h"
+
+	/**
+	* A bond has two end
+	* say a 5x5 lattice bond between end1 (0,0) and end2 (0,1)
+	* if _status is false -> bond is not there
+	*
+	*/
+	struct Bond{
+	// check if active or not
+	bool _status{false};
+	value_type _length;
+	int _group_id{-1};
+	
+	BondType bondType;
+	//relative distance from the root site. {0,0} if it is the root site
+	//very useful for detecting wrapping // todo
+	IndexRelative _relative_index{0,0};
+	
+	
+	Index _end1;
+	Index _end2;
+	
+	BondIndex _id;
+	
+	~Bond() = default;
+	Bond() = default;
+	Bond(Index end1, Index end2, value_type length){
+	_end1.row_ = end1.row_;
+	_end1.column_ = end1.column_;
+	_end2.row_ = end2.row_;
+	_end2.column_ = end2.column_;
+	
+	// correct the bond here
+	_length = length;
+	// check if the bond is valid??
+	if(_end1.row_ == _end2.row_){
+	bondType = BondType::Horizontal;
+	//            horizontal = true;
+	// means x_ values are equal
+	if(_end1.column_ > _end2.column_){
+	// case (0,0)<->(0,4) for L=5 and
+	// case (0,4)<->(0,0) are equal for bond like this end1=(0,4) end2=(0,0)
+	// for all other cases lower index is end1
+	if(_end1.column_ == _length-1 && _end2.column_ ==0){
+	// do nothing
+	//                    std::cout << "_end1.y_ == _length-1 && _end2.y_ ==0 : line " << __LINE__ << std::endl;
+	}
+	else{
+	// sort them out
+	_end1.column_ = end2.column_;
+	_end2.column_ = end1.column_;
+	}
+	}
+	else if(_end1.column_ < _end2.column_){
+	if(_end1.column_ == 0 && _end2.column_ == _length-1){
+	_end1.column_ = end2.column_;
+	_end2.column_ = end1.column_;
+	}
+	}
+	//            _id = set_ID<3>({0, _end1.x_, _end1.y_});
+	}
+	else if(_end1.column_ == _end2.column_){
+	bondType = BondType::Vertical;
+	//            vertical = true;
+	// means y_ values are equal
+	if(_end1.row_ > _end2.row_){
+	// case (0,0)<->(4,0) for L=5 and
+	// case (4,0)<->(0,0) are equal for bond like this end1=(4,0) end2=(0,0)
+	// for all other cases lower index is end1
+	if(_end1.row_ == _length-1 && _end2.row_ ==0){
+	// do nothind
+	//                    std::cout << "_end1.x_ == _length-1 && _end2.x_ ==0 : line " << __LINE__ << std::endl;
+	}
+	else{
+	// sort them out
+	_end1.row_ = end2.row_;
+	_end2.row_ = end1.row_;
+	}
+	}
+	else if(_end1.row_ < _end2.row_){
+	if(_end1.row_ == 0 && _end2.row_ == _length-1){
+	_end1.row_ = end2.row_;
+	_end2.row_ = end1.row_;
+	}
+	}
+	//            _id = set_ID<3>({1, _end1.x_, _end1.y_});
+	}
+	else{
+	std::cout << '(' << _end1.row_ << ',' << _end1.column_ << ')' << "<->"
+	<< '(' << _end2.row_ << ',' << _end2.column_ << ')'
+	<< " is not a valid bond : line " << __LINE__ << std::endl;
+	//            _id = set_ID<3>({-1, -1, -1});
+	}
+	
+	//        _id = {(horizontal) ? 0ul : 1ul, _end1.x_, end1.y_};  // unsigned long
+	_id = BondIndex(bondType, _end1.row_, _end1.column_);  // unsigned long
+	
+	}
+	
+	std::vector<Index> getSites() const { return {_end1, _end2};}
+	
+	Index id() const {
+	return _end1;
+	}
+	
+	BondIndex ID() const {
+	return _id;
+	}
+	
+	void activate() {_status = true;}
+	void deactivate() {
+	_relative_index = {0,0};
+	_group_id = -1;
+	_status = false;
+	}
+	bool isActive() const { return _status;}
+	/*
+	* Group get_ID is the set_ID of the cluster they are in
+	*/
+	int get_groupID() const {return _group_id;}
+	void set_groupID(int g_id) {_group_id = g_id;}
+	
+	
+	std::stringstream getBondString() const {
+	std::stringstream ss;
+	if(isActive()) {
+	// place '-' for horizontal bond and '|' for vertical bong
+	if(bondType == BondType::Horizontal) {
+	ss << '(' << _end1 << "<->" << _end2 << ')';
+	}
+	else {
+	ss << '(' << _end1 << "<|>" << _end2 << ')';
+	}
+	}
+	else
+	ss << "(**)";
+	return ss;
+	}
+	
+	bool isHorizontal() const { return bondType == BondType ::Horizontal;}
+	bool isVertical()   const { return bondType == BondType ::Vertical;}
+	
+	void relativeIndex(IndexRelative r){
+	_relative_index = r;
+	}
+	
+	void relativeIndex(int x, int y){
+	_relative_index = {x,y};
+	}
+	
+	IndexRelative relativeIndex() const {return _relative_index;}
+	};
+	
+	
+	std::ostream&   operator<<(std::ostream& os, const Bond& bond);
+	bool            operator==(Bond a, Bond b);
+	bool            operator<(const Bond& bond1, const Bond& bond2);
+	bool            operator>(const Bond& bond1, const Bond& bond2);
+	
+	
+	#endif //SITEPERCOLATION_BOND_H
+	
+	\end{lstlisting}
+	
+	file : \textbf{bond.cpp}
+	\begin{lstlisting}[style=CStyle]
+		#include "bond.h"
+		
+		/**
+		* use '-' and '|' in between '<>' to indicate horizontal or vertical bond
+		* ((0,1)<->(0,0)) for horizontal bond
+		* ((1,1)<|>(0,1)) for vertical bond
+		* @param os
+		* @param bond
+		* @return
+		*/
+		std::ostream& operator<<(std::ostream& os, const Bond& bond)
+		{
+		if(bond.isActive()) {
+		// place '-' for horizontal bond and '|' for vertical bong
+		if(bond.isHorizontal()) {
+		return os << '(' << bond._end1 << "<->" << bond._end2 << ')';
+		}
+		return os << '(' << bond._end1 << "<|>" << bond._end2 << ')';
+		}
+		else
+		return os << "(**)";
+		}
+		
+		bool operator==(Bond a, Bond b)
+		{
+		if(a.isHorizontal() && b.isHorizontal())
+		{
+		return (a.id().row_ == b.id().row_) && (a.id().column_ == b.id().column_);
+		}
+		if(a.isVertical() && b.isVertical()){
+		return (a.id().row_ == b.id().row_) && (a.id().column_ == b.id().column_);
+		}
+		
+		return false;
+		}
+		
+		bool  operator<(const Bond& bond1, const Bond& bond2){
+		if(bond1.isHorizontal() && bond2.isHorizontal()){
+		return bond1._end1.column_ < bond2._end1.column_;
+		}
+		if(bond1.isVertical() && bond2.isVertical()){
+		return bond1._end1.row_ < bond2._end1.row_;
+		}
+		return bond1.isHorizontal();
+		}
+		
+		
+		bool  operator>(const Bond& bond1, const Bond& bond2){
+		if(bond1.isHorizontal() && bond2.isHorizontal()){
+		return bond1._end1.column_ > bond2._end1.column_;
+		}
+		if(bond1.isVertical() && bond2.isVertical()){
+		return bond1._end1.row_ > bond2._end1.row_;
+		}
+		return bond1.isVertical();
+		}
+	\end{lstlisting}
+	
+	%%------------------------------------------------------------------------------
+	%%%%%%%%%%%%%%%%%%%
+	\subsection{Lattice}
+	file: \textbf{lattice.h}
+	\begin{lstlisting}[style=CStyle]
+	
+	#ifndef SITEPERCOLATION_LATTICE_H
+	#define SITEPERCOLATION_LATTICE_H
+	
+	#include <vector>
+	#include <cmath>
+	
+	#include "../percolation/cluster.h"
+	#include "../types.h"
+	#include "site.h"
+	#include "bond.h"
+	
+	
+	/**
+	* The square Lattice
+	* Site and Bonds are always present But they will not be counted unless they are activated
+	* always return by references, so that values in the class itself is modified
+	*/
+	class SqLattice {
+	//    std::vector<std::vector<Index>> _clusters;  // only store index in the cluster
+	std::vector<std::vector<Site>> _sites;  // holds all the sites
+	std::vector<std::vector<Bond>> _h_bonds;  // holds all horizontal bonds
+	std::vector<std::vector<Bond>> _v_bonds;  // holds all vertical bonds
+	
+	bool _bond_resetting_flag=true; // so that we can reset all bonds
+	bool _site_resetting_flag=true; // and all sites
+	
+	value_type _length{};
+	
+	private:
+	void reset_sites();
+	void reset_bonds();
+	public:
+	~SqLattice() = default;
+	SqLattice() = default;
+	SqLattice(SqLattice&) = default;
+	SqLattice(SqLattice&&) = default;
+	SqLattice& operator=(const SqLattice&) = default;
+	SqLattice& operator=(SqLattice&&) = default;
+	
+	SqLattice(value_type length, bool activate_bonds, bool activate_sites, bool bond_reset, bool site_reset);
+	
+	void reset(bool reset_all=false);
+	
+	
+	/***************************************
+	* I/O functions
+	**************************************/
+	void view_sites();
+	void view_sites_extended();
+	void view_sites_by_id();
+	void view_sites_by_relative_index();
+	void view_bonds_by_relative_index();
+	void view_bonds_by_relative_index_v2();
+	void view_bonds_by_relative_index_v3();
+	void view_bonds_by_relative_index_v4();
+	void view_by_relative_index();
+	void view(); // view lattice bonds and sites together
+	
+	void view_h_bonds();
+	void view_v_bonds();
+	
+	void view_bonds(){
+	view_h_bonds();
+	view_v_bonds();
+	}
+	
+	void view_h_bonds_extended();
+	void view_v_bonds_extended();
+	
+	void view_bonds_by_id();
+	
+	/************************************
+	* Activation functions
+	***********************************/
+	void activateAllSite();
+	void activateAllBond();
+	void activate_site(Index index);
+	void activateBond(BondIndex bond);
+	
+	void deactivate_site(Index index);
+	void deactivate_bond(Bond bond);
+	
+	
+	value_type length() const { return  _length;}
+	
+	//    Site getSite(Index index);
+	//    Bond get_h_bond(Index set_ID);
+	//    Bond get_v_bond(Index set_ID);
+	
+	Site& getSite(Index index);
+	//    Site&& getSiteR(Index index);
+	Bond& get_h_bond(Index id);
+	Bond& get_v_bond(Index id);
+	Bond& getBond(BondIndex);
+	
+	const Site& getSite(Index index) const ;
+	
+	void setGroupID(Index index, int group_id);
+	void setGroupID(BondIndex index, int group_id);
+	int getGroupID(Index index);
+	int getGroupID(BondIndex index);
+	
+	
+	/******************************************************************************
+	* Get Neighbor from given index
+	******************************************************************************/
+	std::vector<Index> get_neighbor_site_indices(Index site);   // site neighbor of site
+	std::vector<BondIndex> get_neighbor_bond_indices(BondIndex site); // bond neighbor of bond
+	std::vector<Index> get_neighbor_indices(BondIndex bond);   // two site neighbor of bond.
+	
+	static std::vector<Index> get_neighbor_site_indices(size_t length, Index site);   // 4 site neighbor of site
+	static std::vector<BondIndex> get_neighbor_bond_indices(size_t length, BondIndex site); // 6 bond neighbor of bond
+	static std::vector<Index> get_neighbor_indices(size_t length, BondIndex bond);   // 2 site neighbor of bond.
+	
+	
+	};
+	
+	
+	#endif //SITEPERCOLATION_LATTICE_H
+
+	\end{lstlisting}
+	
+	file: \textbf{lattice.cpp}
+	\begin{lstlisting}[style=CStyle]
+	#include <iomanip>
+	#include "lattice.h"
+	#include "../util/printer.h"
+	
+	using namespace std;
+	
+	
+	/**
+	*
+	* @param length         -> length of the lattice
+	* @param activate_bonds -> if true all bonds are activated by default
+	*                          and will not be deactivated as long as the object exists,
+	*                          even if SLattice::reset function is called.
+	* @param activate_sites -> if true all sites are activated by default
+	*                          and will not be deactivated as long as the object exists,
+	*                          even if SLattice::reset function is called.
+	*/
+	SqLattice::SqLattice(
+	value_type length,
+	bool activate_bonds, bool activate_sites,
+	bool bond_reset, bool site_reset)
+	: _length{length}, _bond_resetting_flag{bond_reset}, _site_resetting_flag{site_reset}
+	{
+	cout << "Constructing Lattice object : line " << __LINE__ << endl;
+	_sites = std::vector<std::vector<Site>>(_length);
+	_h_bonds = std::vector<std::vector<Bond>>(_length);
+	_v_bonds = std::vector<std::vector<Bond>>(_length);
+	if(!activate_bonds && !activate_sites) {    // both are deactivated by default
+	for (value_type i{}; i != _length; ++i) {
+	_sites[i] = std::vector<Site>(_length);
+	_h_bonds[i] = std::vector<Bond>(_length);
+	_v_bonds[i] = std::vector<Bond>(_length);
+	for (value_type j{}; j != _length; ++j) {
+	_sites[i][j] = Site(Index(i, j), _length);
+	_h_bonds[i][j] = {Index(i, j), Index(i, (j + 1) % _length), _length};
+	_v_bonds[i][j] = {Index(i, j), Index((i + 1) % _length, j), _length};
+	}
+	}
+	}
+	else if(activate_bonds && !activate_sites) {    // all bonds are activated by default
+	for (value_type i{}; i != _length; ++i) {
+	_sites[i] = std::vector<Site>(_length);
+	_h_bonds[i] = std::vector<Bond>(_length);
+	_v_bonds[i] = std::vector<Bond>(_length);
+	for (value_type j{}; j != _length; ++j) {
+	_sites[i][j] = Site(Index(i, j), _length);
+	_h_bonds[i][j] = {Index(i, j), Index(i, (j + 1) % _length), _length};
+	_v_bonds[i][j] = {Index(i, j), Index((i + 1) % _length, j), _length};
+	_h_bonds[i][j].activate();
+	_v_bonds[i][j].activate();
+	}
+	}
+	}
+	else if(!activate_bonds && activate_sites) {    // all sites are activated by default
+	for (value_type i{}; i != _length; ++i) {
+	_sites[i] = std::vector<Site>(_length);
+	_h_bonds[i] = std::vector<Bond>(_length);
+	_v_bonds[i] = std::vector<Bond>(_length);
+	for (value_type j{}; j != _length; ++j) {
+	_sites[i][j] = Site(Index(i, j), _length);
+	_sites[i][j].activate();
+	_h_bonds[i][j] = {Index(i, j), Index(i, (j + 1) % _length), _length};
+	_v_bonds[i][j] = {Index(i, j), Index((i + 1) % _length, j), _length};
+	}
+	}
+	}
+	else {
+	for (value_type i{}; i != _length; ++i) {   // all bonds and sites are activated by default
+	_sites[i] = std::vector<Site>(_length);
+	_h_bonds[i] = std::vector<Bond>(_length);
+	_v_bonds[i] = std::vector<Bond>(_length);
+	for (value_type j{}; j != _length; ++j) {
+	_sites[i][j] = Site(Index(i, j), _length);
+	_sites[i][j].activate();
+	_h_bonds[i][j] = {Index(i, j), Index(i, (j + 1) % _length), _length};
+	_v_bonds[i][j] = {Index(i, j), Index((i + 1) % _length, j), _length};
+	_h_bonds[i][j].activate();
+	_v_bonds[i][j].activate();
+	}
+	}
+	}
+	
+	}
+	
+	/********************************************************************
+	* Activation and Deactivation
+	********************************************************************/
+	void SqLattice::activateAllSite()
+	{
+	for(value_type i{} ; i != _length ; ++i) {
+	for (value_type j{}; j != _length; ++j) {
+	_sites[i][j].activate();
+	}
+	}
+	}
+	
+	/**
+	*
+	*/
+	void SqLattice::activateAllBond()
+	{
+	for(value_type i{} ; i != _length ; ++i) {
+	for (value_type j{}; j != _length; ++j) {
+	_h_bonds[i][j].activate();
+	_v_bonds[i][j].activate();
+	}
+	}
+	}
+	
+	void SqLattice::activate_site(Index index) {
+	//    cout << "activating site " << index << endl;
+	_sites[index.row_][index.column_].activate();
+	}
+	
+	
+	void SqLattice::activateBond(BondIndex bond) {
+	// check if the bond is vertical or horizontal
+	// then call appropriate function to activate _h_bond or _v_bond
+	if(bond.horizontal()){ // horizontal
+	if(_h_bonds[bond.row_][bond.column_].isActive()){
+	cout << "Bond is already activated : line " << __LINE__ << endl;
+	}
+	_h_bonds[bond.row_][bond.column_].activate();
+	}
+	else if(bond.vertical()) // vertical
+	{
+	if(_v_bonds[bond.row_][bond.column_].isActive()){
+	cout << "Bond is already activated : line " << __LINE__ << endl;
+	}
+	_v_bonds[bond.row_][bond.column_].activate();
+	}
+	else{
+	cout << bond << " is not a valid bond : line " << __LINE__ << endl;
+	}
+	
+	}
+	
+	
+	void SqLattice::deactivate_site(Index index){
+	_sites[index.row_][index.column_].deactivate();
+	}
+	
+	
+	void SqLattice::deactivate_bond(Bond bond) {
+	// check if the bond is vertical or horizontal
+	// then call appropriate function to activate _h_bond or _v_bond
+	if(bond.isHorizontal()){
+	if(_h_bonds[bond.id().row_][bond.id().column_].isActive()){
+	cout << "Bond is already activated : line " << __LINE__ << endl;
+	}
+	_h_bonds[bond.id().row_][bond.id().column_].deactivate();
+	}
+	else if(bond.isVertical())
+	{
+	if(_v_bonds[bond.id().row_][bond.id().column_].isActive()){
+	cout << "Bond is already activated : line " << __LINE__ << endl;
+	}
+	_v_bonds[bond.id().row_][bond.id().column_].deactivate();
+	}
+	else{
+	bond.activate();
+	cout << bond << " is not a valid bond : line " << __LINE__ << endl;
+	}
+	}
+	
+	
+	/*********************************************************
+	* Viewing methods
+	*********************************************************/
+	/**
+	*  View the sites of the lattice
+	*  place (*) if the site is not active
+	*/
+	void SqLattice::view_sites()
+	{
+	std::cout << "view sites" << std::endl;
+	std::cout << '{';
+	for(value_type i{} ; i != _length ; ++i) {
+	if(i!=0) std::cout << "  ";
+	else std::cout << '{';
+	for (value_type j{}; j != _length; ++j) {
+	if(_sites[i][j].isActive()){
+	std::cout << _sites[i][j] ;
+	}
+	else{
+	std::cout << "(*)";
+	}
+	if(j != _length-1)
+	std::cout << ',';
+	}
+	std::cout << '}';
+	if(i != _length-1)
+	std::cout << std::endl;
+	}
+	std::cout << '}';
+	std::cout << std::endl;
+	}
+	
+	/**
+	*  View the sites of the lattice
+	*  place (*) if the site is not active
+	*  Shows the group_id along with sites
+	*
+	*  Very good output format. Up to lattice size < 100
+	*/
+	void SqLattice::view_sites_extended()
+	{
+	std::cout << "view sites" << std::endl;
+	std::cout << '{';
+	for(value_type i{} ; i != _length ; ++i) {
+	if(i!=0) std::cout << "  ";
+	else std::cout << '{';
+	for (value_type j{}; j != _length; ++j) {
+	std::cout << std::setw(3) << _sites[i][j].get_groupID() << ":";
+	
+	if(_sites[i][j].isActive()) {
+	cout << '(' << std::setw(2) << _sites[i][j]._id.row_ << ','
+	<< std::setw(2) << _sites[i][j]._id.column_ << ')';
+	}
+	else{
+	cout << std::setw(7) << "(*)";
+	}
+	
+	if(j != _length-1)
+	std::cout << ',';
+	}
+	std::cout << '}';
+	if(i != _length-1)
+	std::cout << std::endl;
+	}
+	std::cout << '}';
+	std::cout << std::endl;
+	}
+	
+	
+	
+	/**
+	* Displays group ids of sites in a matrix form
+	*/
+	void SqLattice::view_sites_by_id() {
+	std::cout << "Sites by id : line " << __LINE__ << endl;
+	cout << "   ";
+	for(value_type j{}; j != _length; ++ j){
+	cout << " " << setw(3) << j;
+	}
+	cout << endl << " __|";
+	for(value_type j{}; j != _length; ++ j){
+	cout << "_ _ ";
+	}
+	cout << endl;
+	for(value_type i{} ; i != _length; ++i){
+	cout << setw(3) << i << "|";
+	for(value_type j{} ; j != _length ; ++ j){
+	cout << setw(3) << _sites[i][j].get_groupID() << ' ';
+	}
+	cout << endl;
+	}
+	}
+	
+	
+	/**
+	*
+	*/
+	void SqLattice::view_sites_by_relative_index(){
+	std::cout << "Relative index : line " << __LINE__ << endl;
+	cout << "Format: \"id(x,y)\"" << endl;
+	cout << "   |";
+	for(value_type j{}; j != _length; ++ j){
+	cout << setw(4) << j << "         |";
+	}
+	cout << endl;
+	print_h_barrier(_length, "___|__", "___________|__");
+	for(value_type i{} ; i != _length; ++i){
+	cout << setw(3) << i << "|";
+	for(value_type j{} ; j != _length ; ++ j){
+	if(_sites[i][j].get_groupID() == -1){
+	// left blank
+	cout << setw(4) << _sites[i][j].get_groupID() << "         |";
+	continue;
+	}
+	cout << setw(4) << _sites[i][j].get_groupID() << _sites[i][j].relativeIndex() << "|";
+	}
+	cout << endl;
+	print_h_barrier(_length, "___|__", "___________|__");
+	}
+	//    print_h_barrier(_length, "___|__", "___________|_");
+	}
+	
+	/**
+	* View bonds in the lattice by relative index.
+	* format : id(relative_index)
+	*/
+	void SqLattice::view_bonds_by_relative_index() {
+	
+	std::cout << "Bonds by id : line " << __LINE__ << endl;
+	// printing indices for columns
+	std::cout << "    | ";
+	for(value_type i{}; i != _length; ++i){
+	std::cout << "   " << setw(4) << i << "         | ";
+	}
+	std::cout << std::endl;
+	
+	// pringing H,V label
+	
+	print_h_barrier(_length, "    |  ", "V           H  |  ");
+	print_h_barrier(_length, "____|__", "_______________|__");
+	
+	// for each row there will be two columns
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << ' ';
+	std::cout << "H |";
+	for(value_type j1{}; j1 != _length; ++j1){
+	std::cout << "     " << std::setw(3) << _h_bonds[i][j1].get_groupID()
+	<< _h_bonds[i][j1].relativeIndex() << "|";
+	}
+	std::cout << std::endl;
+	print_h_barrier(_length, "    |  ", "               |  "); // just for better viewing
+	std::cout << "  " << "V |";
+	for(value_type j2{}; j2 != _length; ++j2){
+	std::cout << std::setw(3) << _v_bonds[i][j2].get_groupID()
+	<< _v_bonds[i][j2].relativeIndex() << "     |";
+	}
+	std::cout << std::endl;
+	
+	// printing horizontal separator
+	print_h_barrier(_length, "____|__", "_______________|__");
+	}
+	std::cout << std::endl;
+	}
+	
+	
+	/**
+	* View bonds in the lattice by relative index. id of the site is showed
+	* format : id for site or id(relative_index) for bond
+	*/
+	void SqLattice::view_bonds_by_relative_index_v2() {
+	
+	std::cout << "Bonds by id : line " << __LINE__ << endl;
+	cout << "site id -1 means isolated site and 0 means connected site in bond percolation(definition)" << endl;
+	print_h_barrier(15, "_", "___", "_\n");
+	cout << "|(site id) (horizontal bond id(relative index))|" << endl;
+	cout << "|(vertical bond id(relative index))            |" << endl;
+	print_h_barrier(15, "-", "---", "-\n");
+	// printing indices for columns
+	std::cout << "    | ";
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << "                  | ";
+	}
+	std::cout << std::endl;
+	
+	// pringing H,V label
+	
+	print_h_barrier(_length, "    |  ", " V            H   |  ");
+	print_h_barrier(_length, "____|__", "__________________|__");
+	
+	// for each row there will be two columns
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << ' ';
+	std::cout << "H |";
+	for(value_type j1{}; j1 != _length; ++j1){
+	std::cout << std::setw(3) << _sites[i][j1].get_groupID() ;
+	std::cout << "     " << std::setw(3) << _h_bonds[i][j1].get_groupID()
+	<< _h_bonds[i][j1].relativeIndex() << "|";
+	}
+	std::cout << std::endl;
+	print_h_barrier(_length, "    |  ", "                  |  "); // just to see a better view
+	std::cout << "  " << "V |";
+	for(value_type j2{}; j2 != _length; ++j2){
+	std::cout << std::setw(3) << _v_bonds[i][j2].get_groupID()
+	<< _v_bonds[i][j2].relativeIndex() << "        |";
+	}
+	std::cout << std::endl;
+	
+	// printing horizontal separator
+	print_h_barrier(_length, "____|__", "__________________|__");
+	}
+	
+	std::cout << std::endl;
+	}
+	
+	
+	/**
+	* View bonds in the lattice by relative index. id of the site is showed
+	* format : id(relative index) for site and only id for bond
+	*/
+	void SqLattice::view_bonds_by_relative_index_v3() {
+	
+	std::cout << "Bonds by id : line " << __LINE__ << endl;
+	//cout << "site id -1 means isolated site and 0 means connected site in bond percolation(definition)" << endl;
+	print_h_barrier(15, "_", "___", "_\n");
+	cout << "|(site id) (horizontal bond id(relative index))|" << endl;
+	cout << "|(vertical bond id(relative index))            |" << endl;
+	print_h_barrier(15, "-", "---", "-\n");
+	// printing indices for columns
+	std::cout << "    | ";
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << "                | ";
+	}
+	std::cout << std::endl;
+	
+	// pringing H,V label
+	
+	print_h_barrier(_length, "    |  ", " V           H  |  ");
+	print_h_barrier(_length, "____|__", "________________|__");
+	
+	// for each row there will be two columns
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << ' ';
+	std::cout << "H |";
+	for(value_type j1{}; j1 != _length; ++j1){
+	std::cout << std::setw(3) << _sites[i][j1].get_groupID() << _sites[i][j1].relativeIndex() ;
+	std::cout << "   " << std::setw(3) << _h_bonds[i][j1].get_groupID() << "|";
+	}
+	std::cout << std::endl;
+	print_h_barrier(_length, "    |  ", "                |  "); // just to see a better view
+	std::cout << "  " << "V |";
+	for(value_type j2{}; j2 != _length; ++j2){
+	std::cout << std::setw(3) << _v_bonds[i][j2].get_groupID() << "               |";
+	}
+	std::cout << std::endl;
+	
+	// printing horizontal separator
+	print_h_barrier(_length, "____|__", "________________|__");
+	}
+	
+	std::cout << std::endl;
+	}
+	
+	/**
+	* View bonds in the lattice by relative index. id of the site is showed
+	* format : id(relative index) for site and only id for bond
+	* if any site is isolated relative index is not shown
+	*/
+	void SqLattice::view_bonds_by_relative_index_v4() {
+	
+	std::cout << "Bonds by id : line " << __LINE__ << endl;
+	//cout << "site id -1 means isolated site and 0 means connected site in bond percolation(definition)" << endl;
+	print_h_barrier(15, "_", "___", "_\n");
+	cout << "|(site id) (horizontal bond id(relative index))|" << endl;
+	cout << "|(vertical bond id(relative index))            |" << endl;
+	print_h_barrier(15, "-", "---", "-\n");
+	// printing indices for columns
+	std::cout << "    | ";
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << "                | ";
+	}
+	std::cout << std::endl;
+	
+	// pringing H,V label
+	
+	print_h_barrier(_length, "    |  ", " V           H  |  ");
+	print_h_barrier(_length, "____|__", "________________|__");
+	
+	// for each row there will be two columns
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << ' ';
+	std::cout << "H |";
+	for(value_type j1{}; j1 != _length; ++j1){
+	int id = _sites[i][j1].get_groupID();
+	std::cout << std::setw(3) << id  ;
+	if(id != -1){
+	cout << _sites[i][j1].relativeIndex();
+	}else{
+	cout << "(-,-)    ";
+	}
+	std::cout << "   " << std::setw(3) << _h_bonds[i][j1].get_groupID() << "|";
+	}
+	std::cout << std::endl;
+	print_h_barrier(_length, "    |  ", "                |  "); // just to see a better view
+	std::cout << "  " << "V |";
+	for(value_type j2{}; j2 != _length; ++j2){
+	std::cout << std::setw(3) << _v_bonds[i][j2].get_groupID() << "               |";
+	}
+	std::cout << std::endl;
+	
+	// printing horizontal separator
+	print_h_barrier(_length, "____|__", "________________|__");
+	}
+	
+	std::cout << std::endl;
+	}
+	
+	
+	
+	/**
+	* View lattice (sites and bonds) by relative index.
+	* format : id(relative_index)
+	*/
+	void SqLattice::view_by_relative_index() {
+	
+	std::cout << "Bonds by id : line " << __LINE__ << endl;
+	// printing indices for columns
+	std::cout << "    | ";
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << "                         | ";
+	}
+	std::cout << std::endl;
+	
+	// pringing H,V label
+	
+	print_h_barrier(_length, "    |  ", " V                   H   |  ");
+	print_h_barrier(_length, "____|__", "_________________________|__");
+	
+	// for each row there will be two columns
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << ' ';
+	std::cout << "H |";
+	for(value_type j1{}; j1 != _length; ++j1){
+	std::cout << std::setw(3) << _sites[i][j1].get_groupID() << _sites[i][j1].relativeIndex();
+	std::cout << "   " << std::setw(3) << _h_bonds[i][j1].get_groupID()
+	<< _h_bonds[i][j1].relativeIndex() << "|";
+	}
+	std::cout << std::endl;
+	print_h_barrier(_length, "    |  ", "                         |  "); // just to see a better view
+	std::cout << "  " << "V |";
+	for(value_type j2{}; j2 != _length; ++j2){
+	std::cout << std::setw(3) << _v_bonds[i][j2].get_groupID()
+	<< _v_bonds[i][j2].relativeIndex() << "               |";
+	}
+	std::cout << std::endl;
+	
+	// printing horizontal separator
+	print_h_barrier(_length, "____|__", "_________________________|__");
+	}
+	
+	//        view_h_bonds_extended();
+	//        view_v_bonds_extended();
+	std::cout << std::endl;
+	
+	}
+	
+	/**
+	* View lattice (sites and bonds) by relative index.
+	* format : id(relative_index)
+	*/
+	void SqLattice::view() {
+	
+	std::cout << "Bonds by id : line " << __LINE__ << endl;
+	cout << "Structure " << endl;
+	print_h_barrier(10, "_", "___", "_\n");
+	cout << "|(site id) (horizontal bond id)|" << endl;
+	cout << "|(vertical bond id)            |" << endl;
+	print_h_barrier(10, "-", "---", "-\n");
+	// printing indices for columns
+	std::cout << "    | ";
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << "      | ";
+	}
+	std::cout << std::endl;
+	
+	// pringing H,V label
+	
+	print_h_barrier(_length, "    |  ", "V    H|  ");
+	print_h_barrier(_length, "____|__", "______|__");
+	
+	// for each row there will be two columns
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << ' ';
+	std::cout << "H |";
+	for(value_type j1{}; j1 != _length; ++j1){
+	std::cout << std::setw(3) << _sites[i][j1].get_groupID() ;
+	std::cout << "  " << std::setw(3) << _h_bonds[i][j1].get_groupID() << "|";
+	}
+	std::cout << std::endl;
+	print_h_barrier(_length, "    |  ", "      |  "); // just to see a better view
+	std::cout << "  " << "V |";
+	for(value_type j2{}; j2 != _length; ++j2){
+	std::cout << std::setw(3) << _v_bonds[i][j2].get_groupID() << "     |";
+	}
+	std::cout << std::endl;
+	
+	// printing horizontal separator
+	print_h_barrier(_length, "____|__", "______|__");
+	}
+	
+	//        view_h_bonds_extended();
+	//        view_v_bonds_extended();
+	std::cout << std::endl;
+	
+	}
+	
+	
+	/**
+	*
+	*/
+	void SqLattice::view_h_bonds()
+	{
+	std::cout << "view horizontal bonds" << std::endl;
+	std::cout << '{';
+	for(value_type i{} ; i != _length ; ++i) {
+	if(i!=0) std::cout << "  ";
+	else std::cout << '{';
+	for (value_type j{}; j != _length; ++j) {
+	std::cout << _h_bonds[i][j] ;
+	if(j != _length-1)
+	std::cout << ',';
+	}
+	std::cout << '}';
+	if(i != _length-1)
+	std::cout << std::endl;
+	}
+	std::cout << '}';
+	std::cout << std::endl;
+	}
+	
+	/**
+	*
+	*/
+	void SqLattice::view_v_bonds()
+	{
+	std::cout << "view vertical bonds" << std::endl;
+	std::cout << '{';
+	for(value_type i{} ; i != _length ; ++i) {
+	if(i!=0) std::cout << "  ";
+	else std::cout << '{';
+	for (value_type j{}; j != _length; ++j) {
+	std::cout << _v_bonds[i][j] ;
+	if(j != _length-1)
+	std::cout << ',';
+	}
+	std::cout << '}';
+	if(i != _length-1)
+	std::cout << std::endl;
+	}
+	std::cout << '}';
+	std::cout << std::endl;
+	}
+	
+	
+	/**
+	*
+	*/
+	void SqLattice::view_h_bonds_extended(){
+	std::cout << "view horizontal bonds" << std::endl;
+	std::cout << '{';
+	for(value_type i{} ; i != _length ; ++i) {
+	if(i!=0) std::cout << "  ";
+	else std::cout << '{';
+	for (value_type j{}; j != _length; ++j) {
+	std::cout << "(" << _h_bonds[i][j].get_groupID() << ":" << _h_bonds[i][j] << ")" ;
+	if(j != _length-1)
+	std::cout << ',';
+	}
+	std::cout << '}';
+	if(i != _length-1)
+	std::cout << std::endl;
+	}
+	std::cout << '}';
+	std::cout << std::endl;
+	}
+	
+	/**
+	*
+	*/
+	void SqLattice::view_v_bonds_extended(){
+	std::cout << "view vertical bonds" << std::endl;
+	std::cout << '{';
+	for(value_type i{} ; i != _length ; ++i) {
+	if(i!=0) std::cout << "  ";
+	else std::cout << '{';
+	for (value_type j{}; j != _length; ++j) {
+	std::cout << "(" << _v_bonds[i][j].get_groupID() << ":" << _v_bonds[i][j] << ")" ;
+	if(j != _length-1)
+	std::cout << ',';
+	}
+	std::cout << '}';
+	if(i != _length-1)
+	std::cout << std::endl;
+	}
+	std::cout << '}';
+	std::cout << std::endl;
+	}
+	
+	
+	/**
+	*
+	*/
+	void SqLattice::view_bonds_by_id(){
+	std::cout << "Bonds by id : line " << __LINE__ << endl;
+	cout << "Structure " << endl;
+	print_h_barrier(8, "__", "___", "_\n");
+	cout << "|      (horizontal bond id)|" << endl;
+	cout << "|(vertical bond id)        |" << endl;
+	print_h_barrier(8, "--", "---", "-\n");
+	// printing indices for columns
+	std::cout << "    | ";
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << "    | ";
+	}
+	std::cout << std::endl;
+	
+	// pringing H,V label
+	
+	print_h_barrier(_length, "    |  ", "V  H|  ");
+	print_h_barrier(_length, "____|__", "____|__");
+	
+	// for each row there will be two columns
+	for(value_type i{}; i != _length; ++i){
+	std::cout << i << ' ';
+	std::cout << "H |";
+	for(value_type j1{}; j1 != _length; ++j1){
+	std::cout << "   " << std::setw(3) << _h_bonds[i][j1].get_groupID() << "|";
+	}
+	std::cout << std::endl;
+	std::cout << "  " << "V |";
+	for(value_type j2{}; j2 != _length; ++j2){
+	std::cout << std::setw(3) << _v_bonds[i][j2].get_groupID() << "   |";
+	}
+	std::cout << std::endl;
+	
+	// printing horizontal separator
+	print_h_barrier(_length, "____|__", "____|__");
+	}
+	
+	//        view_h_bonds_extended();
+	//        view_v_bonds_extended();
+	std::cout << std::endl;
+	}
+	
+	
+	Site& SqLattice::getSite(Index index) {
+	return _sites[index.row_][index.column_];
+	}
+	
+	//Site&& SqLattice::getSiteR(Index index) {
+	//    Site a = _sites[index.x_][index.y_];
+	//    return std::move(a);
+	//}
+	
+	const Site& SqLattice::getSite(Index index) const {
+	return _sites[index.row_][index.column_];
+	}
+	
+	void SqLattice::setGroupID(Index index, int group_id){
+	_sites[index.row_][index.column_].set_groupID(group_id);
+	}
+	
+	void SqLattice::setGroupID(BondIndex index, int group_id){
+	if(index.horizontal()){
+	_h_bonds[index.row_][index.column_].set_groupID(group_id);
+	}
+	if(index.vertical()){
+	_v_bonds[index.row_][index.column_].set_groupID(group_id);
+	}
+	}
+	
+	int SqLattice::getGroupID(Index index){
+	return _sites[index.row_][index.column_].get_groupID();
+	}
+	
+	int SqLattice::getGroupID(BondIndex index){
+	if(index.horizontal()){
+	return _h_bonds[index.row_][index.column_].get_groupID();
+	}
+	if(index.vertical()){
+	return  _v_bonds[index.row_][index.column_].get_groupID();
+	}
+	return -1;
+	}
+	
+	//Bond Lattice::get_h_bond(Index set_ID) {
+	//    return _h_bonds[id.x_][set_ID.y_];
+	//}
+	//
+	//Bond Lattice::get_v_bond(Index set_ID) {
+	//    return _v_bonds[id.x_][set_ID.y_];
+	//}
+	
+	
+	Bond& SqLattice::get_h_bond(Index id) {
+	return _h_bonds[id.row_][id.column_];
+	}
+	
+	Bond& SqLattice::get_v_bond(Index id) {
+	return _v_bonds[id.row_][id.column_];
+	}
+	
+	
+	Bond& SqLattice::getBond(BondIndex index) {
+	if(index.horizontal())
+	return _h_bonds[index.row_][index.column_];
+	if(index.vertical())
+	return _v_bonds[index.row_][index.column_];
+	// todo throw exception
+	throw InvalidBond{"Invalid bond : line " + to_string(__LINE__)};
+	}
+	
+	void SqLattice::reset(bool reset_all) {
+	if(reset_all){
+	reset_sites();
+	reset_bonds();
+	return;
+	}
+	// setting all group id to -1
+	if(_site_resetting_flag) {
+	reset_sites();
+	}
+	//    cout << "Bond resetting is disabled : line " << __LINE__ << endl;
+	if(_bond_resetting_flag) {
+	reset_bonds();
+	}
+	
+	}
+	
+	/**
+	*
+	*/
+	void SqLattice::reset_bonds() {
+	for(value_type i{}; i != _h_bonds.size(); ++i){
+	for (int j{}; j != _h_bonds[i].size(); ++j) {
+	// deactivating. automatically set group id == - and relative index == (0,0)
+	// setting group id = -1 and deactivating the bond
+	_h_bonds[i][j].deactivate();
+	_v_bonds[i][j].deactivate();
+	
+	
+	}
+	}
+	}
+	
+	/**
+	*
+	*/
+	void SqLattice::reset_sites() {
+	for(value_type i{}; i != _sites.size(); ++i){
+	for(value_type j{}; j != _sites[i].size(); ++j) {
+	// deactivating. automatically set group id == - and relative index == (0,0)
+	// setting group id = -1 and deactivating the site
+	_sites[i][j].deactivate();
+	}
+	}
+	}
+	
+	
+	
+	/******************************************************************************
+	* Get Neighbor from given index
+	******************************************************************************/
+	/**
+	* Periodic case only.
+	* Each site has four neighbor sites.
+	* @param site
+	* @return
+	*/
+	std::vector<Index> SqLattice::get_neighbor_site_indices(Index site){
+	std::vector<Index> sites(4);
+	sites[0] = {(site.row_ + 1) % _length, site.column_};
+	sites[1] = {(site.row_ - 1 + _length) % _length, site.column_};
+	sites[2] = {site.row_, (site.column_ + 1) % _length};
+	sites[3] = {site.row_, (site.column_ - 1 + _length) % _length};
+	return sites;
+	}
+	
+	/**
+	* Periodic case only.
+	* Each bond has six neibhbor bonds.
+	* @param site
+	* @return
+	*/
+	std::vector<BondIndex> SqLattice::get_neighbor_bond_indices(BondIndex bond) {
+	value_type next_column = (bond.column_ + 1) % _length;
+	value_type prev_column = (bond.column_ - 1 + _length) % _length;
+	value_type prev_row = (bond.row_ - 1 + _length) % _length;
+	value_type next_row = (bond.row_ + 1) % _length;
+	
+	vector<BondIndex> bonds(6);
+	
+	// horizontal bond case
+	if (bond.horizontal()) {
+	// increase column index for the right neighbor
+	
+	// left end of bond
+	bonds[0] = {BondType::Vertical, bond.row_, bond.column_};
+	bonds[1] = {BondType::Vertical, prev_row, bond.column_};
+	bonds[2] = {BondType::Horizontal, bond.row_, prev_column};
+	
+	// right end bond
+	bonds[3] = {BondType::Vertical, prev_row, next_column};
+	bonds[4] = {BondType::Vertical, bond.row_, next_column};
+	bonds[5] = {BondType::Horizontal, bond.row_, next_column};
+	
+	}
+	// vertical bond case
+	else if (bond.vertical()) {
+	// increase row index
+	
+	// top end of bond
+	bonds[0] = {BondType::Horizontal, bond.row_, bond.column_};
+	bonds[1] = {BondType::Horizontal, bond.row_, prev_column};
+	bonds[2] = {BondType::Vertical, prev_row, bond.column_};
+	
+	// bottom end of bond
+	bonds[3] = {BondType::Horizontal, next_row, bond.column_};
+	bonds[4] = {BondType::Horizontal, next_row, prev_column};
+	bonds[5] = {BondType::Vertical, next_row, bond.column_};
+	
+	}
+	
+	
+	return bonds;
+	}
+	
+	std::vector<Index> SqLattice::get_neighbor_indices(BondIndex bond) {
+	value_type r = bond.row_;
+	value_type c = bond.column_;
+	vector<Index> sites(2);
+	sites[0] = {r, c};
+	if(bond.horizontal()){
+	sites[1] = {r, (c+1) % _length};
+	}else{
+	sites[1] = {(r+1) % _length, c};
+	}
+	return sites;
+	}
+	
+	/************************************************************
+	* Static methods
+	*/
+	std::vector<Index> SqLattice::get_neighbor_site_indices(size_t length, Index site){
+	std::vector<Index> sites(4);
+	sites[0] = {(site.row_ + 1) % length, site.column_};
+	sites[1] = {(site.row_ - 1 + length) % length, site.column_};
+	sites[2] = {site.row_, (site.column_ + 1) % length};
+	sites[3] = {site.row_, (site.column_ - 1 + length) % length};
+	return sites;
+	}
+	
+	/**
+	* Periodic case only.
+	* Each bond has six neibhbor bonds.
+	* @param site
+	* @return
+	*/
+	std::vector<BondIndex> SqLattice::get_neighbor_bond_indices(size_t length, BondIndex bond) {
+	value_type next_column = (bond.column_ + 1) % length;
+	value_type prev_column = (bond.column_ - 1 + length) % length;
+	value_type prev_row = (bond.row_ - 1 + length) % length;
+	value_type next_row = (bond.row_ + 1) % length;
+	
+	vector<BondIndex> bonds(6);
+	
+	// horizontal bond case
+	if (bond.horizontal()) {
+	// increase column index for the right neighbor
+	
+	// left end of bond
+	bonds[0] = {BondType::Vertical, bond.row_, bond.column_};
+	bonds[1] = {BondType::Vertical, prev_row, bond.column_};
+	bonds[2] = {BondType::Horizontal, bond.row_, prev_column};
+	
+	// right end bond
+	bonds[3] = {BondType::Vertical, prev_row, next_column};
+	bonds[4] = {BondType::Vertical, bond.row_, next_column};
+	bonds[5] = {BondType::Horizontal, bond.row_, next_column};
+	
+	}
+	// vertical bond case
+	else if (bond.vertical()) {
+	// increase row index
+	
+	// top end of bond
+	bonds[0] = {BondType::Horizontal, bond.row_, bond.column_};
+	bonds[1] = {BondType::Horizontal, bond.row_, prev_column};
+	bonds[2] = {BondType::Vertical, prev_row, bond.column_};
+	
+	// bottom end of bond
+	bonds[3] = {BondType::Horizontal, next_row, bond.column_};
+	bonds[4] = {BondType::Horizontal, next_row, prev_column};
+	bonds[5] = {BondType::Vertical, next_row, bond.column_};
+	
+	}
+	
+	
+	return bonds;
+	}
+	
+	std::vector<Index> SqLattice::get_neighbor_indices(size_t length, BondIndex bond) {
+	value_type r = bond.row_;
+	value_type c = bond.column_;
+	vector<Index> sites(2);
+	sites[0] = {r, c};
+	if(bond.horizontal()){
+	sites[1] = {r, (c+1) % length};
+	}else{
+	sites[1] = {(r+1) % length, c};
+	}
+	return sites;
+	}
+	
+	\end{lstlisting}
+	
+	%%------------------------------------------------------------------------------
+	%%%%%%%%%%%%%%%%%%%
+	\subsection{Cluster}
+	file: \textbf{cluster.h}
+	\begin{lstlisting}[style=CStyle]
+	//
+	// Created by shahnoor on 10/3/2017.
+	//
+	
+	#ifndef SITEPERCOLATION_CLUSTER_H
+	#define SITEPERCOLATION_CLUSTER_H
+	
+	#include <vector>
+	#include <set>
+	#include "../lattice/bond.h"
+	#include "../types.h"
+	#include "../lattice/site.h"
+	
+	
+	/**
+	* Cluster of bonds and sites
+	* version 3
+	* final goal -> make a template cluster. so that we can use it for Bond cluster or Site cluster
+	* root site (bond) is the first site (bond) of the cluster. nedeed for (wrapping) site percolation
+	*/
+	class Cluster{
+	// contains bond and site
+	std::vector<BondIndex>  _bond_index; // BondIndex for indexing bonds
+	std::vector<Index>      _site_index; // Site index
+	
+	
+	int _creation_time;  // holds the creation birthTime of a cluster object
+	int _id;
+	public:
+	//    using iterator = std::vector<Bond>::iterator;
+	
+	~Cluster()                           = default;
+	Cluster()                            = default;
+	Cluster(Cluster&)                 = default;
+	Cluster(Cluster&&)                = default;
+	Cluster& operator=(const Cluster&)      = default;
+	Cluster& operator=(Cluster&&)     = default;
+	
+	explicit Cluster(int id){
+	
+	_id = id;       // may be modified in the program
+	
+	/*
+	* Only readable, not modifiable.
+	* when time = 0 => only lattice exists and bonds in site percolation, not any sites
+	* When id = 0, time = 1 => we have placed the first site, hence created a cluster with size greater than 1
+	*      Only then Cluster constructor is called.
+	*
+	*/
+	_creation_time = id + 1;       // only readable, not modifiable
+	}
+	
+	
+	void addSiteIndex(Index );
+	void addBondIndex(BondIndex );
+	
+	Index lastAddedSite(){return _site_index.back();}
+	BondIndex lastAddedBond(){return _bond_index.back();}
+	
+	bool isPresent(BondIndex bond) const ;
+	bool isPresent(Index site) const ;
+	
+	bool checkPresenceAndErase(BondIndex bond);
+	bool checkPresenceAndErase(Index bond);
+	
+	bool checkPresenceAndEraseIf(BondIndex bond, bool flag);
+	bool checkPresenceAndEraseIf(Index bond, bool flag);
+	
+	void eraseSite(value_type index);
+	void eraseBond(value_type index);
+	
+	
+	void insert(const std::vector<BondIndex>& bonds);
+	void insert(const std::vector<Index>& sites);
+	
+	void insert(const Cluster& cluster);
+	void insert_v2(const Cluster& cluster);
+	void insert_with_id_v2(const Cluster& cluster, int id);
+	
+	
+	friend std::ostream& operator<<(std::ostream& os, const Cluster& cluster);
+	
+	const std::vector<BondIndex>&   getBondIndices()    {return _bond_index;}
+	const std::vector<Index>&       getSiteIndices()    {return _site_index;}
+	
+	const std::vector<BondIndex>&   getBondIndices()  const  {return _bond_index;}
+	const std::vector<Index>&       getSiteIndices()  const  {return _site_index;}
+	
+	value_type numberOfBonds() const { return _bond_index.size();}
+	value_type numberOfSites() const { return _site_index.size();}
+	int get_ID() const { return _id;}
+	void set_ID(int id) { _id = id;}
+	
+	int birthTime() const {return _creation_time;}
+	
+	Index getRootSite()const{return _site_index[0];} // for site percolation
+	BondIndex getRootBond()const{return _bond_index[0];} // for bond percolation
+	bool empty() const { return _bond_index.empty() && _site_index.empty();}
+	void clear() {_bond_index.clear(); _site_index.clear(); }
+	};
+	
+	
+	
+	#endif //SITEPERCOLATION_CLUSTER_H
+	
+	\end{lstlisting}
+	
+	file: \textbf{cluster.cpp}
+	\begin{lstlisting}[style=CStyle]
+	//
+	// Created by shahnoor on 10/2/2017.
+	//
+	
+	
+	//
+	// Created by shahnoor on 10/11/2017.
+	//
+	
+	
+	#include "cluster.h"
+	
+	using namespace std;
+	
+	// add Site index
+	void Cluster::addSiteIndex(Index index) {
+	_site_index.push_back(index);
+	}
+	
+	void Cluster::addBondIndex(BondIndex bondIndex) {
+	_bond_index.push_back(bondIndex);
+	}
+	
+	
+	bool Cluster::isPresent(BondIndex bond) const {
+	for (auto a: _bond_index) {
+	if (a == bond)
+	return true;
+	}
+	return false;
+	}
+	
+	bool Cluster::isPresent(Index site) const {
+	for (auto a: _site_index) {
+	if (a == site)
+	return true;
+	}
+	return false;
+	}
+	
+	bool Cluster::checkPresenceAndErase(BondIndex bond) {
+	for (auto it = _bond_index.begin(); it != _bond_index.end(); ++it) {
+	if (*it == bond) {
+	_bond_index.erase(it);
+	return true;
+	}
+	}
+	return false;
+	}
+	
+	bool Cluster::checkPresenceAndEraseIf(BondIndex bond, bool flag) {
+	if(!flag)
+	return false;
+	for (auto it = _bond_index.begin(); it != _bond_index.end(); ++it) {
+	if (*it == bond) {
+	_bond_index.erase(it);
+	return true;
+	}
+	}
+	return false;
+	}
+	
+	bool Cluster::checkPresenceAndEraseIf(Index bond, bool flag) {
+	if(!flag)
+	return false;
+	for (auto it = _site_index.begin(); it != _site_index.end(); ++it) {
+	if (*it == bond) {
+	_site_index.erase(it);
+	return true;
+	}
+	}
+	return false;
+	}
+	
+	
+	bool Cluster::checkPresenceAndErase(Index bond) {
+	for (auto it = _site_index.begin(); it != _site_index.end(); ++it) {
+	if (*it == bond) {
+	_site_index.erase(it);
+	return true;
+	}
+	}
+	return false;
+	}
+	
+	
+	void Cluster::eraseSite(value_type index) {
+	auto it = _site_index.begin();
+	it += index;
+	_site_index.erase(it);
+	}
+	
+	void Cluster::eraseBond(value_type index) {
+	auto it = _bond_index.begin();
+	it += index;
+	_bond_index.erase(it);
+	}
+	
+	
+	void Cluster::insert(const std::vector<BondIndex>& bonds){
+	_bond_index.reserve(bonds.size());
+	for(value_type i{} ; i != bonds.size() ; ++i){
+	_bond_index.push_back(bonds[i]);
+	}
+	}
+	
+	void Cluster::insert(const std::vector<Index>& sites){
+	_site_index.reserve(sites.size());
+	for(value_type i{} ; i != sites.size() ; ++i){
+	_site_index.push_back(sites[i]);
+	}
+	}
+	
+	/**
+	* Merge two cluster as one
+	* All intrinsic property should be considered, e.g., creation time of a cluster must be recalculated
+	* @param cluster
+	*/
+	void Cluster::insert(const Cluster &cluster) {
+	if(_id > cluster._id){
+	cout << "_id > cluster._id : line " << __LINE__ << endl;
+	_id = cluster._id;
+	}
+	// older time or smaller time is the creation birthTime of the cluster
+	//    cout << "Comparing " << _creation_time << " and " << cluster._creation_time;
+	_creation_time = _creation_time < cluster._creation_time ? _creation_time : cluster._creation_time;
+	//    cout << " Keeping " << _creation_time << endl;
+	_bond_index.insert(_bond_index.end(), cluster._bond_index.begin(), cluster._bond_index.end());
+	_site_index.insert(_site_index.end(), cluster._site_index.begin(), cluster._site_index.end());
+	}
+	
+	
+	/**
+	* Merge two cluster as one
+	* All intrinsic property should be considered, e.g., creation time of a cluster must be recalculated
+	* @param cluster
+	*/
+	void Cluster::insert_v2(const Cluster &cluster) {
+	// older time or smaller time is the creation birthTime of the cluster
+	//    cout << "Comparing " << _creation_time << " and " << cluster._creation_time;
+	_creation_time = _creation_time < cluster._creation_time ? _creation_time : cluster._creation_time;
+	//    cout << " Keeping " << _creation_time << endl;
+	_bond_index.insert(_bond_index.end(), cluster._bond_index.begin(), cluster._bond_index.end());
+	_site_index.insert(_site_index.end(), cluster._site_index.begin(), cluster._site_index.end());
+	}
+	
+	
+	void Cluster::insert_with_id_v2(const Cluster &cluster, int id) {
+	_id = id;
+	// older time or smaller time is the creation birthTime of the cluster
+	//    cout << "Comparing " << _creation_time << " and " << cluster._creation_time;
+	_creation_time = _creation_time < cluster._creation_time ? _creation_time : cluster._creation_time;
+	//    cout << " Keeping " << _creation_time << endl;
+	_bond_index.insert(_bond_index.end(), cluster._bond_index.begin(), cluster._bond_index.end());
+	_site_index.insert(_site_index.end(), cluster._site_index.begin(), cluster._site_index.end());
+	}
+	
+	
+	std::ostream &operator<<(std::ostream &os, const Cluster &cluster) {
+	os << "Sites : size (" << cluster._site_index.size() << ") : ";
+	os << '{';
+	for(auto a: cluster._site_index){
+	os << a << ',';
+	}
+	os << '}' << endl;
+	
+	os << "Bonds : size (" << cluster._bond_index.size() <<") : ";
+	os << '{';
+	for(auto a: cluster._bond_index){
+	os << a << ',';
+	}
+	os << '}';
+	
+	return os << endl;
+	}
+	
+	\end{lstlisting}
+	
+	%%------------------------------------------------------------------------------
+	%%%%%%%%%%%%%%%%%%%
+	\subsection{Percolation}
+	file: \textbf{cluster.h}
+	\begin{lstlisting}[style=CStyle]
+	a = -1
+	\end{lstlisting}
+	
+	%%------------------------------------------------------------------------------
+	%%%%%%%%%%%%%%%%%%%
+	\subsection{Utility}
+	
+	%%------------------------------------------------------------------------------
+	%%%%%%%%%%%%%%%%%%%
+	\subsection{Tests}
+
+	%%------------------------------------------------------------------------------
+	%%%%%%%%%%%%%%%%%%%	
+	\subsection{Main}
+
+	
+Complete code for RSBD model on square lattice is available at
+\url{https://github.com/sha314/SqLattice_RSBD}
+or use the git link to clone the repository
+\url{https://github.com/sha314/SqLattice_RSBD.git}
+\\
+Detailed version of the same program with other extensions are available at
 \url{https://github.com/sha314/SqLatticePercolation}
+or the git link
+\url{https://github.com/sha314/SqLatticePercolation.git}
 
 
 

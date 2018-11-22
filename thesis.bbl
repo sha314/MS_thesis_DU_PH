@@ -1,125 +1,437 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{56}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[dim, ]{dimension_class_FLT}
+\bibitem[Erd()]{Erdos1959}
+
+
+\bibitem[cub()]{cubic-lattices}
+Different kind of cubic lattice.
+\newblock URL
+  \url{http://utkarshchemistry.blogspot.com/2012/09/solid-state-2.html}.
+
+\bibitem[dim()]{dimension_class_FLT}
 Fluid mechanics - theory.
-\newblock Basic Dimensions of Common Parameters Table at
+\newblock URL
   \url{https://www.ecourses.ou.edu/cgi-bin/ebook.cgi?doc=&topic=fl&chap_sec=06.1&page=theory}.
+\newblock Basic Dimensions of Common Parameters Table.
 
-\bibitem[Achlioptas et~al., 2009]{Achlioptas2009}
-Achlioptas, D., D{\textquotesingle}Souza, R.~M., and Spencer, J. (2009).
+\bibitem[hon()]{honeycomb-lattice}
+Honeycomb lattice.
+\newblock URL
+  \url{https://www.quora.com/Why-are-there-only-14-bravais-lattices}.
+
+\bibitem[sca()]{scale-free-network}
+Scale free network.
+\newblock URL \url{https://www.flickr.com/photos/sjcockell/8425835703}.
+
+\bibitem[Bar(1999)]{Barabasi1999}
+286\penalty0 (5439):\penalty0 509--512, oct 1999.
+\newblock \doi{10.1126/science.286.5439.509}.
+\newblock URL \url{https://doi.org/10.1126/science.286.5439.509}.
+
+\bibitem[Achlioptas et~al.(2009)Achlioptas, D{\textquotesingle}Souza, and
+  Spencer]{Achlioptas2009}
+D.~Achlioptas, R.~M. D{\textquotesingle}Souza, and J.~Spencer.
 \newblock Explosive percolation in random networks.
-\newblock {\em Science}, 323(5920):1453--1455.
+\newblock \emph{Science}, 323\penalty0 (5920):\penalty0 1453--1455, mar 2009.
+\newblock \doi{10.1126/science.1167782}.
+\newblock URL \url{https://doi.org/10.1126/science.1167782}.
 
-\bibitem[Adler, 1991]{Adler1991}
-Adler, J. (1991).
+\bibitem[Adler(1991)]{Adler1991}
+Joan Adler.
 \newblock Bootstrap percolation.
-\newblock {\em Physica A: Statistical Mechanics and its Applications},
-  171(3):453--470.
+\newblock \emph{Physica A: Statistical Mechanics and its Applications},
+  171\penalty0 (3):\penalty0 453--470, mar 1991.
+\newblock \doi{10.1016/0378-4371(91)90295-n}.
+\newblock URL \url{https://doi.org/10.1016/0378-4371(91)90295-n}.
 
-\bibitem[Blume, 1966]{Blume1966}
-Blume, M. (1966).
+\bibitem[Bauer and Golinelli(2001)]{Bauer2001}
+M.~Bauer and O.~Golinelli.
+\newblock Core percolation in random graphs: a critical phenomena analysis.
+\newblock \emph{The European Physical Journal B}, 24\penalty0 (3):\penalty0
+  339--352, dec 2001.
+\newblock \doi{10.1007/s10051-001-8683-4}.
+\newblock URL \url{https://doi.org/10.1007/s10051-001-8683-4}.
+
+\bibitem[Blume(1966)]{Blume1966}
+M.~Blume.
 \newblock Theory of the first-order magnetic phase change in {UO}2.
-\newblock {\em Physical Review}, 141(2):517--524.
+\newblock \emph{Physical Review}, 141\penalty0 (2):\penalty0 517--524, jan
+  1966.
+\newblock \doi{10.1103/physrev.141.517}.
+\newblock URL \url{https://doi.org/10.1103/physrev.141.517}.
 
-\bibitem[Boccaletti et~al., 2014]{Boccaletti2014}
-Boccaletti, S., Bianconi, G., Criado, R., del Genio, C.,
-  G{\'{o}}mez-Garde{\~{n}}es, J., Romance, M., Sendi{\~{n}}a-Nadal, I., Wang,
-  Z., and Zanin, M. (2014).
+\bibitem[Boccaletti et~al.(2014)Boccaletti, Bianconi, Criado, del Genio,
+  G{\'{o}}mez-Garde{\~{n}}es, Romance, Sendi{\~{n}}a-Nadal, Wang, and
+  Zanin]{Boccaletti2014}
+S.~Boccaletti, G.~Bianconi, R.~Criado, C.I. del Genio,
+  J.~G{\'{o}}mez-Garde{\~{n}}es, M.~Romance, I.~Sendi{\~{n}}a-Nadal, Z.~Wang,
+  and M.~Zanin.
 \newblock The structure and dynamics of multilayer networks.
-\newblock {\em Physics Reports}, 544(1):1--122.
+\newblock \emph{Physics Reports}, 544\penalty0 (1):\penalty0 1--122, nov 2014.
+\newblock \doi{10.1016/j.physrep.2014.07.001}.
+\newblock URL \url{https://doi.org/10.1016/j.physrep.2014.07.001}.
 
-\bibitem[Bogu{\~{n}}{\'{a}}, 2009]{Bogu2009}
-Bogu{\~{n}}{\'{a}}, M. (2009).
+\bibitem[Bogu{\~{n}}{\'{a}}(2009)]{Bogu2009}
+Mari{\'{a}}n Bogu{\~{n}}{\'{a}}.
 \newblock M. franceschetti, r. meester: Random networks for~communication. from
   statistical physics to~information systems.
-\newblock {\em Journal of Statistical Physics}, 135(3):585--586.
+\newblock \emph{Journal of Statistical Physics}, 135\penalty0 (3):\penalty0
+  585--586, apr 2009.
+\newblock \doi{10.1007/s10955-009-9740-2}.
+\newblock URL \url{https://doi.org/10.1007/s10955-009-9740-2}.
 
-\bibitem[Chalupa et~al., 1979]{Chalupa1979}
-Chalupa, J., Leath, P.~L., and Reich, G.~R. (1979).
+\bibitem[Bollob{\'{a}}s and Riordan(2010)]{Bollobs2010}
+B{\'{e}}la Bollob{\'{a}}s and Oliver Riordan.
+\newblock Percolation on self-dual polygon configurations.
+\newblock In \emph{Bolyai Society Mathematical Studies}, pages 131--217.
+  Springer Berlin Heidelberg, 2010.
+\newblock \doi{10.1007/978-3-642-14444-8_3}.
+\newblock URL \url{https://doi.org/10.1007/978-3-642-14444-8_3}.
+
+\bibitem[Broadbent and Hammersley(1957)]{Broadbent1957}
+S.~R. Broadbent and J.~M. Hammersley.
+\newblock Percolation processes.
+\newblock \emph{Mathematical Proceedings of the Cambridge Philosophical
+  Society}, 53\penalty0 (03):\penalty0 629, jul 1957.
+\newblock \doi{10.1017/s0305004100032680}.
+\newblock URL \url{https://doi.org/10.1017/s0305004100032680}.
+
+\bibitem[Callaway et~al.(2000)Callaway, Newman, Strogatz, and
+  Watts]{Callaway2000}
+Duncan~S. Callaway, M.~E.~J. Newman, Steven~H. Strogatz, and Duncan~J. Watts.
+\newblock Network robustness and fragility: Percolation on random graphs.
+\newblock \emph{Physical Review Letters}, 85\penalty0 (25):\penalty0
+  5468--5471, dec 2000.
+\newblock \doi{10.1103/physrevlett.85.5468}.
+\newblock URL \url{https://doi.org/10.1103/physrevlett.85.5468}.
+
+\bibitem[Cardy(1996)]{Cardy1996}
+John Cardy.
+\newblock \emph{Scaling and Renormalization in Statistical Physics}.
+\newblock Cambridge University Press, 1996.
+\newblock \doi{10.1017/cbo9781316036440}.
+\newblock URL \url{https://doi.org/10.1017/cbo9781316036440}.
+
+\bibitem[Chalupa et~al.(1979)Chalupa, Leath, and Reich]{Chalupa1979}
+J~Chalupa, P~L Leath, and G~R Reich.
 \newblock Bootstrap percolation on a bethe lattice.
-\newblock {\em Journal of Physics C: Solid State Physics}, 12(1):L31--L35.
+\newblock \emph{Journal of Physics C: Solid State Physics}, 12\penalty0
+  (1):\penalty0 L31--L35, jan 1979.
+\newblock \doi{10.1088/0022-3719/12/1/008}.
+\newblock URL \url{https://doi.org/10.1088/0022-3719/12/1/008}.
 
-\bibitem[Csermely et~al., 2013]{Csermely2013}
-Csermely, P., London, A., Wu, L.-Y., and Uzzi, B. (2013).
+\bibitem[Cohen et~al.(2002)Cohen, ben Avraham, and Havlin]{Cohen2002}
+Reuven Cohen, Daniel ben Avraham, and Shlomo Havlin.
+\newblock Percolation critical exponents in scale-free networks.
+\newblock \emph{Physical Review E}, 66\penalty0 (3), sep 2002.
+\newblock \doi{10.1103/physreve.66.036113}.
+\newblock URL \url{https://doi.org/10.1103/physreve.66.036113}.
+
+\bibitem[Csermely et~al.(2013)Csermely, London, Wu, and Uzzi]{Csermely2013}
+P.~Csermely, A.~London, L.-Y. Wu, and B.~Uzzi.
 \newblock Structure and dynamics of core/periphery networks.
-\newblock {\em Journal of Complex Networks}, 1(2):93--123.
+\newblock \emph{Journal of Complex Networks}, 1\penalty0 (2):\penalty0 93--123,
+  oct 2013.
+\newblock \doi{10.1093/comnet/cnt016}.
+\newblock URL \url{https://doi.org/10.1093/comnet/cnt016}.
 
-\bibitem[Dorogovtsev et~al., 2006]{Dorogovtsev2006}
-Dorogovtsev, S.~N., Goltsev, A.~V., and Mendes, J. F.~F. (2006).
+\bibitem[Der{\'{e}}nyi et~al.(2005)Der{\'{e}}nyi, Palla, and
+  Vicsek]{Dernyi2005}
+Imre Der{\'{e}}nyi, Gergely Palla, and Tam{\'{a}}s Vicsek.
+\newblock Clique percolation in random networks.
+\newblock \emph{Physical Review Letters}, 94\penalty0 (16), apr 2005.
+\newblock \doi{10.1103/physrevlett.94.160202}.
+\newblock URL \url{https://doi.org/10.1103/physrevlett.94.160202}.
+
+\bibitem[Dorogovtsev et~al.(2006)Dorogovtsev, Goltsev, and
+  Mendes]{Dorogovtsev2006}
+S.~N. Dorogovtsev, A.~V. Goltsev, and J.~F.~F. Mendes.
 \newblock k-core organization of complex networks.
-\newblock {\em Physical Review Letters}, 96(4).
+\newblock \emph{Physical Review Letters}, 96\penalty0 (4), feb 2006.
+\newblock \doi{10.1103/physrevlett.96.040601}.
+\newblock URL \url{https://doi.org/10.1103/physrevlett.96.040601}.
 
-\bibitem[Furuberg et~al., 1996]{Furuberg1996}
-Furuberg, L., M{\aa}l{\o}y, K.~J., and Feder, J. (1996).
+\bibitem[Erd{\H{o}}s and R{\'{e}}nyi(1964)]{Erdos1964}
+P.~Erd{\H{o}}s and A.~R{\'{e}}nyi.
+\newblock On the strength of connectedness of a random graph.
+\newblock \emph{Acta Mathematica Academiae Scientiarum Hungaricae}, 12\penalty0
+  (1-2):\penalty0 261--267, mar 1964.
+\newblock \doi{10.1007/bf02066689}.
+\newblock URL \url{https://doi.org/10.1007/bf02066689}.
+
+\bibitem[Essam(1980)]{Essam1980}
+J~W Essam.
+\newblock Percolation theory.
+\newblock \emph{Reports on Progress in Physics}, 43\penalty0 (7):\penalty0
+  833--912, jul 1980.
+\newblock \doi{10.1088/0034-4885/43/7/001}.
+\newblock URL \url{https://doi.org/10.1088/0034-4885/43/7/001}.
+
+\bibitem[Fisher(1961)]{Fisher1961}
+Michael~E. Fisher.
+\newblock Critical probabilities for cluster size and percolation problems.
+\newblock \emph{Journal of Mathematical Physics}, 2\penalty0 (4):\penalty0
+  620--627, jul 1961.
+\newblock \doi{10.1063/1.1703746}.
+\newblock URL \url{https://doi.org/10.1063/1.1703746}.
+
+\bibitem[Flory(1941)]{Flory1941}
+Paul~J. Flory.
+\newblock Molecular size distribution in three dimensional polymers. {II}.
+  trifunctional branching units.
+\newblock \emph{Journal of the American Chemical Society}, 63\penalty0
+  (11):\penalty0 3091--3096, nov 1941.
+\newblock \doi{10.1021/ja01856a062}.
+\newblock URL \url{https://doi.org/10.1021/ja01856a062}.
+
+\bibitem[Furuberg et~al.(1996)Furuberg, M{\aa}l{\o}y, and Feder]{Furuberg1996}
+Liv Furuberg, Knut~J{\o}rgen M{\aa}l{\o}y, and Jens Feder.
 \newblock Intermittent behavior in slow drainage.
-\newblock {\em Physical Review E}, 53(1):966--977.
+\newblock \emph{Physical Review E}, 53\penalty0 (1):\penalty0 966--977, jan
+  1996.
+\newblock \doi{10.1103/physreve.53.966}.
+\newblock URL \url{https://doi.org/10.1103/physreve.53.966}.
 
-\bibitem[Hall, 1985]{Hall1985}
-Hall, P. (1985).
+\bibitem[Hall(1985)]{Hall1985}
+Peter Hall.
 \newblock On continuum percolation.
-\newblock {\em Institute of Mathematical Statistics}, 13(4):1250--1266.
+\newblock \emph{Institute of Mathematical Statistics}, 13\penalty0
+  (4):\penalty0 1250--1266, 1985.
+\newblock \doi{110.2307/2244176}.
 
-\bibitem[Hassan, ]{nesm-lecture-notes}
-Hassan, M.~K.
+\bibitem[Hassan()]{nesm-lecture-notes}
+M.~K. Hassan.
 \newblock Lecture notes on statistical mechanics of non-equilibrium phenomena.
 
-\bibitem[Kivela et~al., 2014]{Kivela2014}
-Kivela, M., Arenas, A., Barthelemy, M., Gleeson, J.~P., Moreno, Y., and Porter,
-  M.~A. (2014).
-\newblock Multilayer networks.
-\newblock {\em Journal of Complex Networks}, 2(3):203--271.
+\bibitem[Hoshen and Kopelman(1976)]{Hoshen1976}
+J.~Hoshen and R.~Kopelman.
+\newblock Percolation and cluster distribution. i. cluster multiple labeling
+  technique and critical concentration algorithm.
+\newblock \emph{Physical Review B}, 14\penalty0 (8):\penalty0 3438--3445, oct
+  1976.
+\newblock \doi{10.1103/physrevb.14.3438}.
+\newblock URL \url{https://doi.org/10.1103/physrevb.14.3438}.
 
-\bibitem[Lenormand and Zarcone, 1985]{Lenormand1985}
-Lenormand, R. and Zarcone, C. (1985).
+\bibitem[{Kasteleyn} and {Fortuin}(1969)]{Kasteleyn1969}
+P.~W. {Kasteleyn} and C.~M. {Fortuin}.
+\newblock Phase transitions in lattice systems with random local properties.
+\newblock \emph{Physical Society of Japan Journal Supplement, Vol.~26.~
+  Proceedings of the International Conference on Statistical Mechanics held
+  9-14 September, 1968 in Koyto., p.11}, 26:\penalty0 11, 1969.
+\newblock URL \url{http://adsabs.harvard.edu/abs/1969PSJJS..26...11K}.
+\newblock Provided by the SAO/NASA Astrophysics Data System.
+
+\bibitem[Kesten(1987)]{Kesten1987}
+Harry Kesten.
+\newblock Scaling relations for 2d-percolation.
+\newblock \emph{Communications in Mathematical Physics}, 109\penalty0
+  (1):\penalty0 109--156, mar 1987.
+\newblock \doi{10.1007/bf01205674}.
+\newblock URL \url{https://doi.org/10.1007/bf01205674}.
+
+\bibitem[Kivela et~al.(2014)Kivela, Arenas, Barthelemy, Gleeson, Moreno, and
+  Porter]{Kivela2014}
+M.~Kivela, A.~Arenas, M.~Barthelemy, J.~P. Gleeson, Y.~Moreno, and M.~A.
+  Porter.
+\newblock Multilayer networks.
+\newblock \emph{Journal of Complex Networks}, 2\penalty0 (3):\penalty0
+  203--271, jul 2014.
+\newblock \doi{10.1093/comnet/cnu016}.
+\newblock URL \url{https://doi.org/10.1093/comnet/cnu016}.
+
+\bibitem[Leath(1976)]{Leath1976}
+P.~L. Leath.
+\newblock Cluster size and boundary distribution near percolation threshold.
+\newblock \emph{Physical Review B}, 14\penalty0 (11):\penalty0 5046--5055, dec
+  1976.
+\newblock \doi{10.1103/physrevb.14.5046}.
+\newblock URL \url{https://doi.org/10.1103/physrevb.14.5046}.
+
+\bibitem[Lenormand and Zarcone(1985)]{Lenormand1985}
+Roland Lenormand and Cesar Zarcone.
 \newblock Invasion percolation in an etched network: Measurement of a fractal
   dimension.
-\newblock {\em Physical Review Letters}, 54(20):2226--2229.
+\newblock \emph{Physical Review Letters}, 54\penalty0 (20):\penalty0
+  2226--2229, may 1985.
+\newblock \doi{10.1103/physrevlett.54.2226}.
+\newblock URL \url{https://doi.org/10.1103/physrevlett.54.2226}.
 
-\bibitem[L{\'{o}}pez et~al., 2007]{Lpez2007}
-L{\'{o}}pez, E., Parshani, R., Cohen, R., Carmi, S., and Havlin, S. (2007).
+\bibitem[L{\'{o}}pez et~al.(2007)L{\'{o}}pez, Parshani, Cohen, Carmi, and
+  Havlin]{Lpez2007}
+Eduardo L{\'{o}}pez, Roni Parshani, Reuven Cohen, Shai Carmi, and Shlomo
+  Havlin.
 \newblock Limited path percolation in complex networks.
-\newblock {\em Physical Review Letters}, 99(18).
+\newblock \emph{Physical Review Letters}, 99\penalty0 (18), oct 2007.
+\newblock \doi{10.1103/physrevlett.99.188701}.
+\newblock URL \url{https://doi.org/10.1103/physrevlett.99.188701}.
 
-\bibitem[M{\aa}lo?y et~al., 1992]{Mloy1992}
-M{\aa}lo?y, K.~J., Furuberg, L., Feder, J., and Jo?ssang, T. (1992).
+\bibitem[Lorenz and Ziff(1998)]{Lorenz1998}
+Christian~D. Lorenz and Robert~M. Ziff.
+\newblock Precise determination of the bond percolation thresholds and
+  finite-size scaling corrections for the sc, fcc, and bcc lattices.
+\newblock \emph{Physical Review E}, 57\penalty0 (1):\penalty0 230--236, jan
+  1998.
+\newblock \doi{10.1103/physreve.57.230}.
+\newblock URL \url{https://doi.org/10.1103/physreve.57.230}.
+
+\bibitem[Lorenz et~al.(2000)Lorenz, May, and Ziff]{Lorenz2000}
+Christian~D. Lorenz, Raechelle May, and Robert~M. Ziff.
+\newblock \emph{Journal of Statistical Physics}, 98\penalty0 (3/4):\penalty0
+  961--970, 2000.
+\newblock \doi{10.1023/a:1018648130343}.
+\newblock URL \url{https://doi.org/10.1023/a:1018648130343}.
+
+\bibitem[M{\aa}lo?y et~al.(1992)M{\aa}lo?y, Furuberg, Feder, and
+  Jo?ssang]{Mloy1992}
+Knut~Jo?rgen M{\aa}lo?y, Liv Furuberg, Jens Feder, and Torstein Jo?ssang.
 \newblock Dynamics of slow drainage in porous media.
-\newblock {\em Physical Review Letters}, 68(14):2161--2164.
+\newblock \emph{Physical Review Letters}, 68\penalty0 (14):\penalty0
+  2161--2164, apr 1992.
+\newblock \doi{10.1103/physrevlett.68.2161}.
+\newblock URL \url{https://doi.org/10.1103/physrevlett.68.2161}.
 
-\bibitem[Palla et~al., 2005]{Palla2005}
-Palla, G., Der{\'{e}}nyi, I., Farkas, I., and Vicsek, T. (2005).
+\bibitem[Mandelbrot(1983)]{Mandelbrot1983}
+Benoit~B. Mandelbrot.
+\newblock \emph{The Fractal Geometry of Nature}.
+\newblock W. H. Freeman, 1983.
+\newblock ISBN 0716711869.
+\newblock URL
+  \url{https://www.amazon.com/Fractal-Geometry-Nature-Benoit-Mandelbrot/dp/0910321647?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0910321647}.
+
+\bibitem[Moore and Newman(2000)]{Moore2000}
+Cristopher Moore and M.~E.~J. Newman.
+\newblock Exact solution of site and bond percolation on small-world networks.
+\newblock \emph{Physical Review E}, 62\penalty0 (5):\penalty0 7059--7064, nov
+  2000.
+\newblock \doi{10.1103/physreve.62.7059}.
+\newblock URL \url{https://doi.org/10.1103/physreve.62.7059}.
+
+\bibitem[Newman and Ziff(2000)]{Newman2000}
+M.~E.~J. Newman and R.~M. Ziff.
+\newblock Efficient monte carlo algorithm and high-precision results for
+  percolation.
+\newblock \emph{Physical Review Letters}, 85\penalty0 (19):\penalty0
+  4104--4107, nov 2000.
+\newblock \doi{10.1103/physrevlett.85.4104}.
+\newblock URL \url{https://doi.org/10.1103/physrevlett.85.4104}.
+
+\bibitem[Newman and Ziff(2001)]{Newman2001}
+M.~E.~J. Newman and R.~M. Ziff.
+\newblock Fast monte carlo algorithm for site or bond percolation.
+\newblock \emph{Physical Review E}, 64\penalty0 (1), jun 2001.
+\newblock \doi{10.1103/physreve.64.016706}.
+\newblock URL \url{https://doi.org/10.1103/physreve.64.016706}.
+
+\bibitem[Palla et~al.(2005)Palla, Der{\'{e}}nyi, Farkas, and Vicsek]{Palla2005}
+Gergely Palla, Imre Der{\'{e}}nyi, Ill{\'{e}}s Farkas, and Tam{\'{a}}s Vicsek.
 \newblock Uncovering the overlapping community structure of complex networks in
   nature and society.
-\newblock {\em Nature}, 435(7043):814--818.
+\newblock \emph{Nature}, 435\penalty0 (7043):\penalty0 814--818, jun 2005.
+\newblock \doi{10.1038/nature03607}.
+\newblock URL \url{https://doi.org/10.1038/nature03607}.
 
-\bibitem[Penrose, 1998]{Penrose1998}
-Penrose, M.~D. (1998).
+\bibitem[Penrose(1998)]{Penrose1998}
+M.~D. Penrose.
 \newblock {CONTINUUM} {PERCOLATION} (cambridge tracts in mathematics 119).
-\newblock {\em Bulletin of the London Mathematical Society}, 30(4):435--436.
+\newblock \emph{Bulletin of the London Mathematical Society}, 30\penalty0
+  (4):\penalty0 435--436, jul 1998.
+\newblock \doi{10.1112/s0024609397243808}.
+\newblock URL \url{https://doi.org/10.1112/s0024609397243808}.
 
-\bibitem[Porter and Gleeson, 2016]{Porter2016}
-Porter, M. and Gleeson, J. (2016).
-\newblock {\em Dynamical Systems on Networks}.
-\newblock Springer International Publishing.
+\bibitem[Porter and Gleeson(2016)]{Porter2016}
+Mason Porter and James Gleeson.
+\newblock \emph{Dynamical Systems on Networks}.
+\newblock Springer International Publishing, 2016.
+\newblock \doi{10.1007/978-3-319-26641-1}.
+\newblock URL \url{https://doi.org/10.1007/978-3-319-26641-1}.
 
-\bibitem[Rahman and Hassan, 2018]{redefinition-of-site-percolation}
-Rahman, M.~S. and Hassan, M.~K. (2018).
+\bibitem[Rahman and Hassan(2018)]{redefinition-of-site-percolation}
+M.~S. Rahman and M.~K. Hassan.
 \newblock Redefinition of site percolation in light of entropy and the second
-  law of thermodynamics.
+  law of thermodynamics, 2018.
 
-\bibitem[Seidman, 1983]{Seidman1983}
-Seidman, S.~B. (1983).
+\bibitem[Reich and Leath(1978)]{Reich1978}
+G.~R. Reich and P.~L. Leath.
+\newblock High-density percolation: Exact solution on a bethe lattice.
+\newblock \emph{Journal of Statistical Physics}, 19\penalty0 (6):\penalty0
+  611--622, dec 1978.
+\newblock \doi{10.1007/bf01011772}.
+\newblock URL \url{https://doi.org/10.1007/bf01011772}.
+
+\bibitem[Sahini and Sahimi(1994)]{Sahini1994}
+M~Sahini and M~Sahimi.
+\newblock \emph{Applications Of Percolation Theory}.
+\newblock CRC Press, 1994.
+\newblock ISBN 9780748400768.
+\newblock URL
+  \url{https://www.amazon.com/Applications-Percolation-Theory-M-Sahini/dp/0748400761?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0748400761}.
+
+\bibitem[Schrenk et~al.(2013)Schrenk, Ara{\'{u}}jo, and Herrmann]{Schrenk2013}
+K.~J. Schrenk, N.~A.~M. Ara{\'{u}}jo, and H.~J. Herrmann.
+\newblock Stacked triangular lattice: Percolation properties.
+\newblock \emph{Physical Review E}, 87\penalty0 (3), mar 2013.
+\newblock \doi{10.1103/physreve.87.032123}.
+\newblock URL \url{https://doi.org/10.1103/physreve.87.032123}.
+
+\bibitem[Schwartz et~al.(2002)Schwartz, Cohen, ben Avraham, Barab{\'{a}}si, and
+  Havlin]{Schwartz2002}
+N.~Schwartz, R.~Cohen, D.~ben Avraham, A.-L. Barab{\'{a}}si, and S.~Havlin.
+\newblock Percolation in directed scale-free networks.
+\newblock \emph{Physical Review E}, 66\penalty0 (1), jul 2002.
+\newblock \doi{10.1103/physreve.66.015104}.
+\newblock URL \url{https://doi.org/10.1103/physreve.66.015104}.
+
+\bibitem[Seidman(1983)]{Seidman1983}
+Stephen~B. Seidman.
 \newblock Network structure and minimum degree.
-\newblock {\em Social Networks}, 5(3):269--287.
+\newblock \emph{Social Networks}, 5\penalty0 (3):\penalty0 269--287, sep 1983.
+\newblock \doi{10.1016/0378-8733(83)90028-x}.
+\newblock URL \url{https://doi.org/10.1016/0378-8733(83)90028-x}.
 
-\bibitem[Shannon, 1948]{shanon_entropy}
-Shannon, C.~E. (1948).
+\bibitem[Shannon(1948)]{shanon_entropy}
+C.~E. Shannon.
 \newblock A mathematical theory of communication.
-\newblock {\em Bell System Technical Journal}, 27(3):379--423.
+\newblock \emph{Bell System Technical Journal}, 27\penalty0 (3):\penalty0
+  379--423, jul 1948.
+\newblock \doi{10.1002/j.1538-7305.1948.tb01338.x}.
+\newblock URL \url{https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}.
 
-\bibitem[Wilkinson and Willemsen, 1983]{Wilkinson1983}
-Wilkinson, D. and Willemsen, J.~F. (1983).
+\bibitem[Wierman(1984)]{Wierman1984}
+J~C Wierman.
+\newblock A bond percolation critical probability determination based on the
+  star-triangle transformation.
+\newblock \emph{Journal of Physics A: Mathematical and General}, 17\penalty0
+  (7):\penalty0 1525--1530, may 1984.
+\newblock \doi{10.1088/0305-4470/17/7/020}.
+\newblock URL \url{https://doi.org/10.1088/0305-4470/17/7/020}.
+
+\bibitem[Wierman(1981)]{Wierman1981}
+John~C. Wierman.
+\newblock Bond percolation on honeycomb and triangular lattices.
+\newblock \emph{Advances in Applied Probability}, 13\penalty0 (02):\penalty0
+  298--313, jun 1981.
+\newblock \doi{10.1017/s0001867800036028}.
+\newblock URL \url{https://doi.org/10.1017/s0001867800036028}.
+
+\bibitem[Wilkinson and Willemsen(1983)]{Wilkinson1983}
+D~Wilkinson and J~F Willemsen.
 \newblock Invasion percolation: a new form of percolation theory.
-\newblock {\em Journal of Physics A: Mathematical and General},
-  16(14):3365--3376.
+\newblock \emph{Journal of Physics A: Mathematical and General}, 16\penalty0
+  (14):\penalty0 3365--3376, oct 1983.
+\newblock \doi{10.1088/0305-4470/16/14/028}.
+\newblock URL \url{https://doi.org/10.1088/0305-4470/16/14/028}.
+
+\bibitem[Zimm and Stockmayer(1949)]{Zimm1949}
+Bruno~H. Zimm and Walter~H. Stockmayer.
+\newblock The dimensions of chain molecules containing branches and rings.
+\newblock \emph{The Journal of Chemical Physics}, 17\penalty0 (12):\penalty0
+  1301--1314, dec 1949.
+\newblock \doi{10.1063/1.1747157}.
+\newblock URL \url{https://doi.org/10.1063/1.1747157}.
 
 \end{thebibliography}

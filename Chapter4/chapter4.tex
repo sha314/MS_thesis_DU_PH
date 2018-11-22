@@ -6,41 +6,133 @@
 
 % **************************** Define Graphics Path **************************
 \ifpdf
-    \graphicspath{{Chapter4/Figs/}}
+    \graphicspath{{Chapter4/Figs/}{Chapter4/Figs/playground/}{Chapter4/Figs/entropy_cluster/}}
 \else
-    \graphicspath{{Chapter4/Figs/}}
+    \graphicspath{{Chapter4/Figs/}{Chapter4/Figs/playground/}{Chapter4/Figs/entropy_cluster/}}
 \fi
 
+Percolation theory potentially has been of great interest as it can describe many phenomena \cite{Sahini1994}. New models and variants of existing model is always welcome due to its importance and of wide interdisciplinary interests. In recent decades there has been a surge of research activities in studying percolation thanks to the emergence of network which has been used as the skeleton for percolation which can mimic structure of many natural and man-made systems.\\
+
+There are several reason to study percolation. First, it is easy to formulate and simple to implement as there is only one control parameter, called occupation probability $p$ \ref{subsect:occupation-probability}. Second, scientists use it as a theoretical model for phase transition, just like architects use geometric model before building large expensive structure, because of its simplicity. Third, it is well endowed with beautiful features and conjectures like finite-size scaling, universality just like its thermal counterpart. Fourth, besides being the paradigmatic model for phase transition, it has been found that the notion of percolation is omnipresent in a wide range of many seemingly disperate systems \ref{sect:application}.\\
+
+To study percolation theoretically, the first thing that one need is to choose a skeleton or playground, namely an empty lattice (or a graph/network), consisting of sites (or nodes) and bonds (or links). The definition of the percolation model is then so simple that it merely needs a sentence to define it. Each site or bond of the chosen skeleton, depending on whether we want to study site or bond type percolation, is either occupied with probability p or remains empty with probability $1-p$ independent of the state of its neighbors. Recently, percolation has received a renewed attention due to widening scope for using complex networks as a skeleton and due to widening extent of using various variants as a rule. In percolation most observable quantities this way or another is connected to clusters, group of contiguous occupied sites form a cluster, or to their distribution function. As the occupation probability p is tuned starting from $p = 0$, one finds that at certain value of $p=p_c$ the observable quantities undergoes a sudden and sharp change which is always regarded as a sign of phase transition. Indeed, the value at which such change occurs is called threshold or critical value which is equivalent to critical temperature of its thermal counterpart. The phase transition that percolation describes
+is purely geometrical in nature. It requires no consideration of quantum and many particle interaction effects and hence we can use it as a model for thermal Continuous Phase Transition (CPT) like artichect use model before constructing large and complicated structure
+
 \section{Percolation Phenomena}
+	The word 'Percolation' comes from the coffee percolator but it has nothing to do with	coffee brewing. The only connection might be in the concept that lies behind the name.	Let's start explaining the phenomena by example. Let's consider a square grid made of conductor of	size $L\times L$ containing $L^2$ sites (insulator).% and $2 L^2$ bonds.
+    Now we set up an arrangement to put a potential difference across the square grid and measure the effective resistance of the grid as well	as the current. Suppose now we start taking of the sites one by one at a random and place a conductor there. We	define a parameter called Occupation Probability, $p$, which is the fraction of the  sites replaced as conductor to the total number of sites. We visit all the sites and generate a random number and only if $r <= p$ we replace the site with a conductor. We observe that the electric	conductance of the grid will be found to increase with increasing sites being replaced by conductors. As the sites are being turned into insulators, the value of $p$ changes. We see that at a	certain value of $p$ , the electricity starting flowing. This particular value is known as Percolation Threshold, $p_c$ . This vanishing resistance occurs when a particular amount of sites turns into conductors from insulators that causes the system to get the connection	between the two end across polarity. The exact value of $p_c$ has been found to be close to $0.5927$. One can never expect to get the	value each time they perform this experiment, infact, the chance of getting this exact	value at any experiment can be one in a million. So we do this same experiment a	number of times and then average over the value to get a better result. This example shows a simple way of understanding the phenomenon that we call
+	percolation. The theory which simulates this kind of phenomenon is known as Percolation Theory. It provides a quantitative description of the nature of continuous pathways through space. The usual objective of research implementing this phenomenon	is to characterize some aspect of the critical phenomena of the phase transition between finite and infinite range connectivity. This is actually non-trivial when the space	is randomly disordered and the connected regions acquire fractal properties \cite{Zimm1949, Mandelbrot1983}.
+	\begin{figure}
+		\centering
+		\caption{percolation phenomena in square structure. No current if $p<p_c$.}
+	\end{figure}
+
 \section{Historical Overview}
+	In 1941, the idea of percolation was first conceived by Flory \cite{Flory1941} in the context of gelation transition. But as a mathematical model, it was formulated in the late fifties, to understand the motion of gas molecules through the maze of pores in carbon granules filling a gas mask. This seminal work was done by Simon Broadbent and John Hammersley \cite{Broadbent1957}, an engineer and a mathematician respectively. Later on, percolation problem was popularized in physics community by Cyril Domb, Michael Fisher, John Essam and M.F. Skyes \cite{Essam1980, Fisher1961}. Another remarkable work was the observation of percolation to be the limiting case of the general Potts model, which includes the Ising model and can be solved exactly which is done by Fortuin and Kasteleyn in 1969 \cite{Kasteleyn1969}. This work paved the way to many exact results in percolation, and also 	allowed the usage of powerful re-normalization group ideas \cite{Cardy1996}. Finding percolation threshold both exactly and by simulation has been an enduring subject of research in	this field \cite{Schrenk2013}, as well as the development of algorithms such as those by Hoshen and	Kopelman \cite{Hoshen1976}, by Leath \cite{Leath1976}, and by Newman and Ziff \cite{Newman2001} (which we have used in	our research). Finding rigorous proofs of exact thresholds and bounds has also been an enduring area of research for mathematicians (Kesten \cite{Kesten1987}, Wierman \cite{Wierman1984}, Bollobas	and Riordan \cite{Bollobs2010} etc.) Another infusion of interest in percolation came from the surgin	field of network theory which goes back to the study of random and complete graphs	by Erdos-Renyi(1959). In ER model, an observation of made of formation of a giant	component, this giant component is exactly analogous to the formation pattern in percolation \cite{Erdos1959, Erdos1964}. It was then revitalized by interest in the small world phenomenon and	Scale free networks. In 2000, Newman and Moore found the critical point for a random	graph in the limit of large size, in which case the system is effectively a Bethe lattice,	and this result connects to the early work of Flory, Fisher and Essam, but it was found
+	with a general degree distribution \cite{Moore2000}. In the field of random networks, the model of	explosive percolation was first introduced by Achlioptas, D'Souza and Spencer \cite{Achlioptas2009},	and this has been another fascinating problem which has led to a wave of new interest	in percolation.
+
 \section{Classifications and Playground}
 	Any percolation problem have two major parts, one is the rule which states how and what to occupy and connect and another is a playground on which we apply the rules. The term spanning cluster is the cluster that connects the opposite boundary of a playground. If, however, the system has no boundary then it is measured in terms of largest cluster and is called Giant Connected Component or GCC and it only appears if the system has reached or passed the threshold. 
+		
 	\subsection{Types of Percolation}
+		Since the first percolation model studied was Bernoulli percolation (In this model all bonds are independent. This model is called bond percolation by physicists) through time physicists have defined different types of percolation model in different types of skeleton or playground. Here we discuss some of the most used percolation types.
+		
 		\subsubsection{Bond Percolation}
 			In bond (or edge, link) percolation we occupy the bonds with probability $p$ and we use sites to connect the bonds together. The cluster size is measured in terms of the number of sites in the cluster. If $p$ is below a critical value $p_c$ then there is no spanning cluster (or GCC) and if $p \geq p_c$ then we will have a spanning cluster or GCC.
+			
+			
 		\subsubsection{Site Percolation}
 			In site (or vertex, node) percolation we occupy the sites. According to the definition of site percolation we use sites to measure the cluster size. But in order to keep it consistent with the laws of thermodynamics we have changed the definition \cite{redefinition-of-site-percolation}. Now we use bonds to measure the cluster size while we occupy sites. This change of definition does not effect the exponent that describe the phase transition. Before the critical point where $p<p_c$ there is not spanning cluster and if $p=p_c$ the spanning cluster appears for the first time and it remains as the largest cluster of the system. All the property that describes the phase transition are present at $p=p_c$ and this is where we study them.
+
+
 		\subsubsection{Explosive Percolation}
 		% citation completed
 		In 2009 Achlioptas et al. proposed a biased occupation rule, known as the Achlioptas process (AP), that encourages slower growth of the larger clusters and faster growth of the smaller clusters	instead of random occupation in classical percolation \cite{Achlioptas2009}. According to this rule a pair of links	or, bonds are first picked uniformly at random from all possible distinct links. However, of the		two, only the one that satisfies the pre-selected rule is finally chosen to occupy and the other one	is discarded. The preset rule is usually chosen so that it discourages the growth of the larger	clusters and encourages the growth of the smaller clusters. As a result, the percolation threshold is delayed and hence the corresponding $p_c$ is always higher than the case where only one bond is	always selected. Furthermore, it is natural to expect that close to $p_c$ nearly equal sized clusters, waiting to merge, are so great in number that occupation of a few bonds results in an abrupt global	connection and thus the name "Explosive Percolation" (EP). Investigation of Achlioptas processes on different types of substrate networks and with different choices of rules especially with the aim	of developing rules that do not use global information about a graph is an active area of research.
+
+
 		\subsubsection{K-Core Percolation}
 		% citation completed
 		The $K$-core of an unweighted, undirected network is the maximal subset of nodes such that each node is connected to at least $K$ other nodes \cite{Seidman1983}. Determining $K$-cores computationally is fast and they are insightful in many situations \cite{Dorogovtsev2006,Csermely2013}. Every undirected, unweighted network has a $K$-core decomposition. $K$-shell of a network is defined as the set of all nodes that belong to the $K$-core but not to the $(K+1) $- core. $K$-core is given by the union of all $c$-shells for $c>=K$ and the $K$-core decomposition is the set of all of its $c$-shells. One can examine the $K$-core of a network as the limit of a dynamical pruning process. Starting with the initial network we delete all nodes with fewer than $k$ neighbors. After this pruning, the degree of some of the remaining nodes will have been reduced. Repeating this process to delete nodes will give a network which will have fewer than $K$ remaining neighbors. Iterating this process until no further pruning is possible leaves the $K$-core of the network \cite{Porter2016}.
+
+
 		\subsubsection{Bootstrap Percolation}
 		% citation completed
 		Bootstrap percolation is an infection-like process in which nodes becomes infected if sufficiently many of their neighbors are infected \cite{Adler1991}. In bootstrap percolation, sites on an empty lattice are first randomly occupied and then all occupied sits with less than a given number $m$ of the occupied neighbors are successively removed until a stable configuration reached. On any lattice for sufficiently large $m$, the ensuing clusters can  only be infinite. On a Bethe lattice for $m\geq 3$, the fraction of the lattice occupied by infinite clusters discontinuously jumps from zero at the percolation threshold. From an analysis of stable and metastable ground state of the dilute Blume-Capel model \cite{Blume1966}, it is concluded that the effects like bootstrap percolation may occur in some real magnets \cite{Chalupa1979}.
+
+
 		\subsubsection{Other}
 		% citation completed
 		Apart from the type of percolation process described briefly above there are numerous other types of percolation. In \textit{Limited Path Percolation}, one construes "connectivity" as implying that sufficiently short path still exists after some network components have been removed \cite{Lpez2007}. The percolation of $K$-cliques (completely connected sub-graphs of $K$ nodes) has been used to study the algorithmic detection of dense sets of nodes known as "communities" \cite{Palla2005}. Various percolation processes have also been studied in several different types of multi-layer networks (e.g. multiplex networks and interdependent networks) \cite{Boccaletti2014, Kivela2014}. Another class of models results if we remove the restriction of a lattice and allow particles to occupy positions which vary continuously in space. \textit{Continuum Percolation} \cite{Hall1985,Penrose1998,Bogu2009}, as it is called, suffers from the added complication that tricks which can sometimes be used on lattice models cannot be applied. A quite different process as \textit{Invasion Percolation} \cite{Furuberg1996,Mloy1992, Wilkinson1983}; its invention was prompted by attempts to understand flow in porous media. Random numbers are assigned to each site of a lattice. Choose a site, or sites, on one side of the lattice and draw a bond to the neighbor which has the lower random number assigned to it. (The growing cluster represents the invading fluid with the remainder of the sites representing the initial, or defending, fluid). This process continues until the cluster reaches the other side \cite{Lenormand1985}.
-	\subsection{Types of Playground}
+
+
+
+		\subsection{Types of Playground}
+		Apart from the rules we need a playground to study percolation. Most used playground is described in the following.
+		
+		
 		\subsubsection{Lattice}
-		\subsubsection{Graph}
-\section{Observables}
+		Percolation was mainly studied on different types of lattice. For example, Honeycomb lattice, Bethe lattice, Simple Cubic lattice, Body-Centered-Cubic lattice, Face-Centered-Cubic lattice. In $1998$ Christian D. Lorenz et al. did extensive Monte Carlo simulation to study bond percolation on the simple cubic, face-centered-cubic and body-centered-cubic lattices using epidemic approach. There simulations provide very precise values of the critical thresholds \cite{Lorenz1998}. They calculated Fisher exponent, $\tau$, the finite-size correction exponent, $\Omega$ and the scaling function exponent, $\sigma$ confirmed to be universal. They also did percolation on the HCP (hexagonal closed packed) lattice \cite{Lorenz2000}. Before that in 1981 JC Wireman studied bond percolation on honeycomb and triangular lattices \cite{Wierman1981}.
+		\begin{figure}
+			\centering
+			\includegraphics[width=\linewidth]{{{cubic}}}
+			\caption{Different types of cubic lattice \cite{cubic-lattices}}
+			\label{fig:cubic-lattice}
+		\end{figure}
+
+		\begin{figure}
+			\centering
+			\captionsetup[subfigure]{width=0.9\textwidth}
+			\begin{subfigure}[t]{.45\textwidth}
+				\centering
+				\includegraphics[width=\linewidth]{{{triangular}}}
+				\caption{Triangular Lattice \cite{cubic-lattices}}
+			\end{subfigure}
+			\begin{subfigure}[t]{.45\textwidth}
+				\centering
+				\includegraphics[width=\linewidth]{{{honeycomb}}}
+				\caption{Honeycomb Lattice \cite{honeycomb-lattice}}
+			\end{subfigure}
+
+			\caption{Different types of cubic lattice}
+			\label{fig:honeycomb-triangular-lattice}
+		\end{figure}
+		Furthermore, an exact solution on Bethe lattice for high density percolation was  done by G. R. Reich and P. L. Leath in 1978 \cite{Reich1978} and J. Chalupa et al. did bootstrap percolation on Bethe lattice in the following year \cite{Chalupa1979}.
+		
+		
+		\subsubsection{Graph or Network}
+		A new playground was added to the world of percolation in 1959 when two prominent	mathematicians of all time, Paul Erdos and Alfred Renyi introduced Random Graphs 	\cite{}. Before that, it was mostly popular among the mathematicians but not that		much fascinating for most of the physicists because of its abstraction. But with the advent of scale free networks \cite{Barabasi1999} which mimics the real life networks such as citation		network, social network, protein-protein interaction, in 1999, physicists became much		more interested in random networks. The difference in the terminology like graphs		and networks are just graphs are mostly used by mathematicians and computer scientists and networks is mainly referred by physicists to the same concept. Duncan S.		Callaway and his group did percolation study to find robustness and fragility \cite{Callaway2000}.	Clique percolation is also studied on random networks \cite{Dernyi2005}. A critical phenomenon		analysis on random networks for core percolation is done by Bauer \cite{Bauer2001}. In early 80’s,	before the birth of scale free networks, C McDiarmid did two significant works which	you can find in the references \cite{}.\\
+		
+		Reuvan Cohen et al. studied scale free networks close to the percolation threshold \cite{Cohen2002}. N. Schwartz et al. worked on percolation problem in directed scale free		networks \cite{Schwartz2002}. Filippo Radicchi and Santo Fortunato studied scale-free networks		constructed via a cooperative Achlioptas Growth Process \cite{Achlioptas2009}. They showed that	networks constructed via this biased procedure show a percolation transition which		strongly differes from the one observed in standard percolation, where links were introduced just randomly.
+		\begin{figure}
+			\centering
+			\includegraphics[width=\linewidth]{{{scale-free-network}}}
+			\caption{Scale Free Network \cite{scale-free-network}}
+			\label{fig:scale-free-network}
+		\end{figure}
+	
+	
+
+\section{Basic Elements}
+	In this section we discuss some of the basic elements of percolation. All the observable quantities depends on these elements.
+	
+	\subsection{Occupation Probability} \label{subsect:occupation-probability}
+	The probability at which each site (bond) is occupied is called occupation probability in site (bond) percolation and it is denoted as $p$. In section \ref{sect:algorithm} we discuss who we determine $p$ in percolation. Simply saying, instead of fixing $p$ for one experiment we can find all quantity for each values of $p$ using the famous Ziff algorithm \cite{Newman2000, Newman2001}.
+	
+	\subsection{Cluster}
+	Cluster is a collection of sites and bonds. In bond percolation we occupy bond and measure cluster size in terms of the number of sites in it. And following this idea we measure the cluster size in terms of the number of bonds in it. Which is the new definition of site percolation \cite{redefinition-of-site-percolation}. Measuring cluster size in terms of the number of bonds in it in site percolation reproduces all known results and it is consistent with laws of thermodynamics.
+	\subsection{Spanning cluster}
+	
+\section{Observable Quantities}
+	In percolation we study formation of clusters, their properties such as how they are distributed as a function of control parameter $p$. A cluster is a group of occupied bonds (sites) in site (bond) percolation \cite{redefinition-of-site-percolation} With no gap or unoccupied object between them. In a network cluster is defined as a group of nodes that connects the links. In this section we discuss some of the most used observable quantities in percolation.
+	
+	
+	
 	\subsection{Percolation Threshold, $p_c$}
+	The idea of percolation threshold is a mathematical concept that deals with formation of long range connectivity in random systems. While there are no existence of a giant connected component that are talked about below the threshold, its existence is well present above it. As the occupation probability increases from $0$ toward $1$, average cluster size also increases and among all cluster one cluster pops up to be the spanning cluster at $p_c$. Hence $p_c$ is the percolation threshold or critical point. In the thermodynamic limit this cluster becomes infinitely large. Thus for $p<p_c$ there is no spanning cluster and for $p\geq p_c$ there is one. The spanning cluster is a special type of cluster which spans the entire lattice. In periodic case we call it wrapping cluster. A figure illustrating this process is given here \ref{fig:percolation-threshold}.
 	\begin{figure}
 		\centering
 		\captionsetup[subfigure]{width=0.9\textwidth}
-				\begin{subfigure}[t]{.45\textwidth}
+		\begin{subfigure}[t]{.45\textwidth}
 			\centering
 			\includegraphics[width=0.8\linewidth]{{{square-lattice-clusters2}}}
 			\caption{One step away from threshold. Since the gray site is not occupied. The moment it gets occupied we reach percolation threshold}
@@ -54,10 +146,157 @@
 		\caption{A square lattice of length $L=10$. Demonstrating the appearance of the wrapping cluster}
 		\label{fig:percolation-threshold}
 	\end{figure}
-	\subsection{Spanning Probability, $w(p)$}
+	Percolation threshold has been determined for different types of lattices. The table \ref{tab:percolation-threshold} shows some of them.
+	
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Lattice & $p_c$, site percolation & $p_c$, bond percolation \\ 		\hline
+			Body Centered & 0.246 & 0.1803 \\ 		\hline
+			Face Centered & 0.198 &  0.119 \\ 		\hline
+			Simple Cubic & 0.3116 & 0.2488 \\ 		\hline
+			Diamond & 0.43 & 0.388 \\ 		\hline
+			Honeycomb & 0.6962 & 0.65271 \\ 		\hline
+			Triangular & 0.50 & 0.34729 \\ 		\hline
+			Square & 0.592746 & 0.50 \\ 		\hline
+		\end{tabular}
+		\caption{Percolation Threshold for Some Regular Lattices}
+		\label{tab:percolation-threshold}
+	\end{table}
+	One simple way of obtaining $p_c$ is to perform $M$ number of independent experiment for a particular $L$ and them take the average 
+	\begin{equation}
+		p_{c_avg} = \lim_{M\rightarrow\infty}\frac{1}{M} \sum_{i} p_{c_i}
+	\end{equation}
+	But performing infinite number of experiment is not possible. So we use another approach which is described in section \ref{subsect:spanning-probability} and \ref{subsect:finding-pc}
+	
+	
+	
+	\subsection{Spanning Probability, $w(p,L)$}
+	\label{subsect:spanning-probability}
+	The best quantity for finding the critical exponent $\nu$	is the spanning probability $W(p,L)$. It describes the likelihood of finding a cluster that spans across the entire system of length $L$ either horizontally or vertically at a given occupation probability $p$. To find $W(p,L)$ we perform say $M$ independent realizations under the same identical conditions. In each realization for a given finite system size	we take record of the $p_c$ value at which there appears a	spanning cluster for the first time. If there is a spanning	cluster at $p=p_{c_i}$ then it means that there exists a spanning cluster for all $p_{c_i} \leq p \leq 1$. To find a regularity or a	pattern among all the $M$ numbers of $p_c$ values recorded,	one usually looks at the relative frequency of occurrence	within a class or width $\Delta p$. To find $W(p,L)$, we can process the data containing $M$ number of $p_c$ values to plot	histogram displaying normalized relative frequency as a	function of class of width $\Delta p$ chosen as per convenience	\cite{redefinition-of-site-percolation}. Figure \ref{fig:spanning-probability} shows spanning probability $w(p,L)$ as a function of $p$ and $L$. Clearly all curves meet at a specific point regardless of system length $L$. Thus we can say if $L \rightarrow \infty$ the curve would still go through that point and that's how we get the $p_c$ value. Then if we apply scaling on the $x$-axis by $(p-p_c)L^{1/\nu}$ we would get a perfect data collapse for a specific $1/nu$ that is our exponent. This process is discussed further in section \ref{subsect:finding-pc} and \ref{subsect:spanning-probability-and-one-by-nu}.
+
+
+
 	\subsection{Entropy, $H(p,L)$}
+	Entropy in one of the key feature of a phase transition model. But thermodynamic entropy cannot be calculated for any model such as our percolation on a square lattice model. So we take our approach in another way. Information entropy or the Shanon entropy is best suited for our model. The concept of information entropy was introduced by Claude Shannon in his 1948 paper "A Mathematical Theory of Communication" \cite{shanon_entropy}. The Defition is
+	\begin{align}
+		H = - \sum_{i} \mu_i \log \mu_i	
+		\label{def:shannon-entropy-def}
+	\end{align}
+	where, $\mu_i$ is the probability of getting $i$-th element.\\
+	As we have seen in section \ref{subsect:entropy-thermodynamics} that the entropy measures disorderness of a system. It is also easy to understand	order and disorder in solid to liquid transition. But it is not that easy in percolation since the idea of order and disorder in percolation is not yet clear. To understand	disorder, let us consider that at $p=0$ we have $12$ isolated	sites and each has different color to identify them visually, figure \ref{fig:system-of-12-sites}. Thus each color corresponds to one distinct cluster. Occupation of a bond means merging of two colors into	one. If one of the components is bigger in size than the	other then the newly merged cluster will take the color	of the bigger cluster and if they are equal then we choose	one at random. If we now continue to occupy all the	frozen bonds then we will finally have one cluster of one	color. Initially at $p = 0$ we have $12$ different colors and	hence it can easily be regarded as the most disordered	state. On the other hand, at the other extreme we will	have only one cluster represented by one color which can	be regarded as the ordered state. We can easily extend	the problem to a system that contains N number of sites	but colored with $12$ colors only such that $n_1, n_2, \ldots, n_{12}$ of them are red, orange, ..., violet respectively and hence	we can define $\mu_i = n_i /N$ . We now make $M$ number of	independent attempts to pick one site at each attempt	from $N$ sites at random with uniform probability. Say, that we found $n_1^\prime$ times red, $n_1^\prime$ times orange, and so on	such that $\sum_{i=1}^{m} n_i^\prime = M$. We assume that both $N$ and $M$ are sufficiently large and $M \approx N$ . The total number	of ways we could have $M$ outcomes are
+	\begin{equation}
+		\Omega = \frac{M!}{\left(M_{\mu_1}\right)! \left(M_{\mu_2}\right)!\ldots\left(M_{\mu_m}\right)!}
+	\end{equation}
+	since $n_i^\prime \approx M_{\mu_i}$. Taking log on both side of the above equation and using the String's approximation $\log (M!)  = M \log M - M$ for very large $M$ we get
+	\begin{align}
+		\log \Omega 
+		&= \log M! - \log \left(\prod_{i} M_{\mu_i}\right) \nonumber \\
+		&= M\log M - M - \sum_{i} \log \left(M_{\mu_i}!\right) \nonumber \\
+		&= M\log M - M - \sum_{i} \left[M_{\mu_i}\log M_{\mu_i} - M_{\mu_i}\right] \nonumber \\
+		&= M\log M - \sum_{i} M_{\mu_i}\log M_{\mu_i} \nonumber \\
+		&=  M\log M - M \sum_{i} \frac{M_{\mu_i}}{M} \left[\log \left(\frac{M_{\mu_i}}{M}\right) + \log M \right] \nonumber \\
+		&= M\log M - M \sum_{i} \mu_i  \log \mu_i + M \sum_{i} \frac{M_{\mu_i}}{M} \log M
+	\end{align}
+	Finally we have,
+	\begin{equation}
+		\log \Omega = -M \sum_{i=1}^{m} \mu_i \log \mu_i = M H(\mu)
+	\end{equation}
+	where $H(\mu)$ is nothing but the Shannon entropy $H(p)$ and clearly it is the degree of uncertainty per attempt. Total entropy	or information is therefore equal to $NH$ if we consider $M = N$. In the case when each site has distinct color	then each site will have the equal chance of being picked.	It means $\mu_i = 1/N \forall i$ and hence $H(\mu) = N \log(N )$	which is the average entropy or degree of disorder and	the total entropy is $N H(\mu)$. Now initially if we had $N$	distinct color then the system would have the maximum	entropy $S = N \log N$. On the other hand, if all the sites	had the same color then the system would have minimum	entropy $S = 0$. Thus percolation is indeed an order-disorder transition where disorder is equivalent to degree of confusion \cite{redefinition-of-site-percolation}.
+	\begin{figure}
+		\centering
+		\captionsetup[subfigure]{width=0.9\textwidth}
+		\begin{subfigure}{.3\textwidth}
+			\centering
+			\includegraphics[width=.4\linewidth]{{{12object-entropy-max}}}
+			\caption{Entropy of this system is in minimum}
+		\end{subfigure}
+		\begin{subfigure}{.3\textwidth}
+			\centering
+			\includegraphics[width=.4\linewidth]{{{12object-entropy-mid}}}
+			\caption{Entropy of this system is in between maximum and minimum}
+		\end{subfigure}
+		\begin{subfigure}{.3\textwidth}
+			\centering
+			\includegraphics[width=.4\linewidth]{{{12object-entropy-min}}}
+			\caption{All distinct cluster. A system of maximum entropy}
+		\end{subfigure}
+		\caption{A system of $12$ cluster}
+		\label{fig:system-of-12-sites}
+	\end{figure}
+	
+	
+	Say we have a coin with a head and a tail. If the coin is unbiased then the probability of getting the head or the tail is 50\% or 0.5. Now what's the entropy of this system? The Shanon entropy is the one that can be used here. For convenience $\log_{2}$ will be used for evaluating logarithms here, after all $\log_{2} = const. \log_{10} = const. \log_{e}$. Here, $\mu_i = 0.5$ and $\log_{2} (0.5) = -1$, Therefore we have
+	\begin{align}
+		H &= - (0.5 \log_{2} (0.5) + 0.5 \log_{2} (0.5)) \nonumber \\ 
+		&= - (0.5 \times (-1) + 0.5 \times (-1)) \nonumber \\ 
+		&= 1 \nonumber
+	\end{align}
+	so in this system entropy is $1$.\\
+	Now take a new system where there is $4$ identical object. Since all objects are identical, each have probability $\mu_i = 1/4$ and $\log_{2} (1/4) = -2$. Then the total entropy of that system is $2$. So this is clear that the entropy increses with the increase of the system size. Here system size is determined by the number of particles in it. Now, let's take a non-uniform system, where there are total $8$ particles and there are $4$ cluster. Cluster $1$ has $4$ particles and cluster $2$ has $2$ particles and other $2$ cluster of $1$ particle each. Probability of getting cluster $1$ is $\mu_1 = 4/8$ and for cluster $2$ it is $\mu_2 = 2/8$ and for other clusters it is $\mu_3 = \mu_4 = 1/8$. Now the entropy of the system becomes,
+	\begin{align}
+		H &= - \sum_i \mu_i \log_2 \mu_i \nonumber \\
+		&= - (4/8 \log_2 (4/8) + 2/8 \log_2 (2/8) + 1/8 \log_2(1/8) + 1/8 \log_2(1/8) \nonumber \\
+		&= - (-1/2 -1/2 -3/8 -3/8) \nonumber \\
+		&= 7/4 \nonumber
+	\end{align}
+	which is less then the entropy of a system where all $8$ particles are disconnected, i.e., $H=3$. So we can see that as the particles are joined together entropy reduces, which is in agreement with the experimental results. 
+	\begin{figure}
+		\begin{subfigure}{.5\textwidth}
+			\includegraphics[width=.5\linewidth]{entropy_cluster/step1.png}
+			\caption{Free particles. $H=3$}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\includegraphics[width=.5\linewidth]{entropy_cluster/step2.png}
+			\caption{Some Free and Some Bound Particles.\\ $0 < H < 3$}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+			\includegraphics[width=.5\linewidth]{entropy_cluster/step3.png}
+			\caption{Bount particles. $H=0$}
+		\end{subfigure}
+		\caption{entropy of a system of $8$ particles}
+	\end{figure}
+	
+
 	\subsection{Specific Heat, $C(p,L)$}
+	According to the definition of specific heat in thermodynamics \ref{def:specific-heat-thermodynamics}  we can find specific heat if we know the temperature and entropy. In percolation theory we measure the Shannon entropy, $H(p,L)$. And we use $(1-p)$ as the analogue of temperature which gives
+	\begin{align}
+		C &= (1-p) \frac{dH}{d(1-p)} \\
+		  &= -(1-p) \frac{dH}{dp}
+		  \label{def:specific-heat-percolation}
+	\end{align}
+	using this definition we can easily find the specific heat of the percolating system. And from specific heat we obtain the critical exponent $\alpha$.
+	
 	\subsection{Order Parameter, $P(p,L)$}
+		From above discussion we can say that if $p\geq p_c$ the spanning cluster exists but we still cannot say if a randomly chosen site belongs to the spanning cluster. Therefore we need to quantify the strength of the spanning cluster. Percolation strength or $P$ is defined as the probability to find the site that belongs to the spanning cluster, meaning randomly pick a site and what is the probability that the selected site will belong to the spanning cluster. And this quantity should depend on occupation probability $p$ and system size $L$. We call it Percolation Strength or sometimes Order Parameter as it describes the measure of order in the system. Order means the likeliness of not getting confused. If all clusters of same size, i.e. identical, we will get confused which cluster we have chosen ($p=0$ case) but if there is only one cluster there is no chance of confusion ($p=1$ case).\\
+		We define the percolation strength as
+		\begin{equation}
+			P = \frac{\text{number of sites in the spanning cluster}}{\text{total number of sites in the lattice}}
+		\end{equation}
+		But in a system where there are no boundary, e.g. a network or Bethe lattice, the idea of spanning cluster is not valid. Then we use the largest cluster to define the percolation strength
+		\begin{equation}
+			P = \frac{\text{number of nodes in the largest cluster}}{\text{total number of nodes in the network}}
+		\end{equation}
+		Both definition, though looks a bit different when plotted, gives the same critical exponent $\beta$. How to find this exponent is shown in section \ref{subsect:order-parameter}.
+		
+	    Mathematically
+		\begin{align}
+			P(p,L) &= \frac{K}{\sum_{i} k_i}
+			\label{def:order-parameter}
+		\end{align}
+		where $K$ is the size of the spanning cluster and $k_i$ is the size of the $i-th$ cluster.
+		Percolation strength is the Order parameter of the system which is the measure of Order of a system.
+		Note that, with periodic boundary condition we have
+		\begin{equation}
+			\sum_{i} k_i = L^2
+		\end{equation}
+		and without periodic boundary condition
+		\begin{equation}
+			\sum_{i} k_i = L(L-1)
+		\end{equation}
+		
+	
 	\subsection{Susceptibility, $\chi(p,L)$}
 	\subsection{Mean Cluster Size, S}
 	\subsection{Cluster Size Distribution Function, $n_s$} \label{subsect:cluster-size-dist-func}
@@ -314,10 +553,13 @@
 	\end{align}
 	as $p$ approaches $p_c$, that is $\nu = 1$. \\
 	Clearly the 1D lattice and Bethe  lattice exhibits power law while we approach a critical value which suggests the same phenomena in other variants of such problems.
-	
+
+\section{Algorithm} \label{sect:algorithm}
+In the classical Hosen-Kopelman algorithm for percolation model \cite{Hoshen1976}, one first choose an occupation probability $p$ and then generate a number $r$ for each site of the lattice. The site is occupied if $r \leq p$ and remain empty if $r > p$. One therefore create an entire new state of a given lattice size for every different value of $p$. Note that the number of occupied sites $n$ for a given $p$ may very in each realization. However, the expected or ensemble average over $M$ experiments will give $n = p M$ in the limit $M \rightarrow$. Thus the number of occupied bonds or sites is also a measure of $p$. Using this idea Ziff and Newman \cite{Newman2001} proposed an algorithm which generate states for each value of $n$ from zero up to some maximum value $n = L^2$ for site percolation on $L\times L$ square lattice for instance. In this way, one can save some effort by noticing the fact that a new state with $n + 1$ occupied sites or bonds can be created by adding one extra randomly chosen site or bond to the state containing n sites or bonds. The first step of their algorithm is to decide an order in which the bonds or sites are to be occupied. That is, every attempt to occupy a bond/site is successful.
+
 \section{Relation of Phase Transition with Percolation}
 
-\section{Application}
+\section{Application}\label{sect:application}
 	
 Definitions of some quantities used in percolation.
 Basic Algorithm
@@ -430,56 +672,6 @@ The formation of cluster is visualized in the figure \ref{fig:cluster_growth_bon
 		\label{fig:cluster_growth_bond_percolation}
 	\end{figure}
 		
-\section{Definitions}
-	\subsection{Cluster}
-	Cluster is a collection of sites and bonds. In bond percolation we occupy bond and measure cluster size in terms of the number of sites in it. And following this idea we measure the cluster size in terms of the number of bonds in it. Which is the new definition of site percolation \cite{redefinition-of-site-percolation}. Measuring cluster size in terms of the number of bonds in it in site percolation reproduces all known results and it is consistent with laws of thermodynamics.
+	
 
-	\subsection{Order Parameter}
-	Percolation strength or $P$ is defined as to probability to find the site that belongs to the spanning cluster, meaning randomly pick a site and what is the probability that the selected site will belong to the spanning cluster. In a system where spanning cluster does not make any sense, the largest cluster is used instead of the spanning cluster. Examples of such system are Network and Bethe Lattice. Mathematically
-	\begin{align}
-		P(p,L) &= \frac{K}{\sum_{i} k_i}
-		\label{def:order-parameter}
-	\end{align}
-	where $K$ is the size of the spanning cluster and $k_i$ is the size of the $i-th$ cluster.
-	Percolation strength is the Order parameter of the system which is the measure of Order of a system.
-	But when simulating the program, performing summation as in the denominator of equation \ref{def:order-parameter} is time consuming. But since we know that the sum is always a constant and it is $2 L^2$ for a square lattice in periodic boundary condition. Hence we write
-	\begin{align}
-		P(p,L)		 &= \frac{K}{2L^2}
-		\label{def:order-parameter-2}
-	\end{align}
 	
-	\subsection{Entropy}
-	Entropy or Shanon Entropy is defined as
-	\begin{align}
-		H &= \sum_{i} - \mu_i \log(\mu_i)
-	\end{align}
-	where $\mu_i$ is the probability that the randomly picked site will belong to the $i-th$ cluster. Mathematically
-	\begin{align}
-		\mu_i &= \frac{k_i}{\sum_{i} k_i}
-	\end{align}
-	where	 $k_i$ is the size of the $i-th$ cluster.
-	Entropy is the measure of disorderedness of a system.
-	
-	\textbf{Occupation Probability}
-	\begin{align}
-		(p-p_c) &\sim L^{-1/\nu}\\
-		\log(p-p_c) &\sim -1/\nu\log(L)
-	\end{align}
-	
-	\text{Specific Heat}
-		\begin{align}
-	C &\sim L^{\alpha/\nu}\\
-	\log(C) &\sim \alpha/\nu\log(L)
-	\end{align}
-	
-	\text{Order Parameter}
-	\begin{align}
-	P &\sim L^{-\beta/\nu}\\
-	\log(P) &\sim -\beta/\nu\log(L)
-	\end{align}
-	
-	\text{Susceptibility}
-	\begin{align}
-	\chi &\sim L^{\gamma/\nu}\\
-	\log(\chi) &\sim \gamma/\nu\log(L)
-	\end{align}
