@@ -30,6 +30,14 @@ I was expecting a `,' or a `}'---line 698 of file References/references.bib.bib
  :  author = {P. Erd{\H{o}}s and A. R{\'{e}}nyi},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Repeated entry---line 895 of file References/references.bib.bib
+ : @article{Moore2000
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 960 of file References/references.bib.bib
+ : @article{Hughes1958
+ :                    ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for ""
 Warning--to sort, need author or key in cubic-lattices
 Warning--to sort, need author or key in scale-free-network
@@ -49,47 +57,48 @@ Warning--empty year in scale-free-network
 Warning--empty author in Barabasi1999
 Warning--empty title in Barabasi1999
 Warning--empty journal in Barabasi1999
+Warning--empty publisher in Carnot1890
 Warning--empty year in nesm-lecture-notes
 Warning--empty title in Lorenz2000
-You've used 56 entries,
+You've used 82 entries,
             2773 wiz_defined-function locations,
-            1078 strings with 16752 characters,
-and the built_in function-call counts, 25375 in all, are:
-= -- 2465
-> -- 1160
-< -- 35
-+ -- 404
-- -- 348
-* -- 2245
-:= -- 3847
-add.period$ -- 256
-call.type$ -- 56
-change.case$ -- 277
-chr.to.int$ -- 56
-cite$ -- 138
-duplicate$ -- 1111
-empty$ -- 2148
-format.name$ -- 432
-if$ -- 5309
-int.to.chr$ -- 1
+            1290 strings with 22112 characters,
+and the built_in function-call counts, 36376 in all, are:
+= -- 3523
+> -- 1619
+< -- 56
++ -- 569
+- -- 486
+* -- 3149
+:= -- 5585
+add.period$ -- 379
+call.type$ -- 82
+change.case$ -- 393
+chr.to.int$ -- 81
+cite$ -- 191
+duplicate$ -- 1630
+empty$ -- 3111
+format.name$ -- 605
+if$ -- 7595
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 54
-newline$ -- 375
-num.names$ -- 200
-pop$ -- 478
+missing$ -- 86
+newline$ -- 550
+num.names$ -- 304
+pop$ -- 686
 preamble$ -- 1
-purify$ -- 228
+purify$ -- 325
 quote$ -- 0
-skip$ -- 804
+skip$ -- 1146
 stack$ -- 0
-substring$ -- 1109
-swap$ -- 104
+substring$ -- 1558
+swap$ -- 148
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 596
-warning$ -- 20
-while$ -- 225
+type$ -- 847
+warning$ -- 21
+while$ -- 336
 width$ -- 0
-write$ -- 891
-(There were 3 error messages)
+write$ -- 1310
+(There were 5 error messages)

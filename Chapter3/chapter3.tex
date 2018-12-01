@@ -77,14 +77,101 @@ Let's take a break to talk about free energy. What is free energy?
 			\item Continuous change in entropy
 		\end{enumerate}
 	
-\section{Definition of Thermodynamic Quantities}
+\section{Thermodynamic Quantities}
 	\subsection{Entropy}
 	\label{subsect:entropy-thermodynamics}
+	One of the most important concept in Statistical Mechanics is entropy. The notion of entropy was first introduced in physics by a German scientist Rudolf Clausius who laid the foundation for the second law of thermodynamics in 1850 by examining the relation between heat transfer and work.
+	The second law of thermodynamics states that the total entropy of an isolated system can never decrease over time. Therefore the direction toward which entropy increases monotonically is the direction of time. Monotonically means that it can increase or keep constant but never decrease. 
+	The term entropy	is used in many other branches of science, sometimes distant from physics or mathematics (such	as sociology), where it no longer maintains its rigorous quantitative character. Usually, it roughly	means disorder, chaos, decay of diversity or tendency toward uniform distribution of kinds \cite{Downarowicz2009}.
+	
 	Entropy is considered as a quantity about the disorderness of a system. This kind of disorder is the number of states a system can take on. So what are the states of a system? Imagine a cube of volume $1cm^3$, filled with one particular gas. At a particular time if we can label all the molecules of the gas uniquely then at next moment most of the molecule will change their positions due to their random motion. Then we will not be able to identify each molecule with their previous label. This process of identifying the labels of the molecules are easier if it's a liquid and even more easier in it's solid form. Since temperature increases the random motion of the molecules, as the temprature rises it is more difficult to identify those molecules. Thus at high temperature a system has higher entropy. Another thing to mention about it's volume. If a larger volume is selected then obviously the number of possible states will increase therefore entropy will increase.\\
 	Example:\\
 	If we were ot compare the entropy of the moon and the sun, the above discussion tells us that the sun has higher entropy than the moon. The reason is that the sun is much much larger than the moon and has much higher temperature than the moon. Therefor the number of possible states will be larger for the sun than the moon.\\
 	
+	In Classical Physics, entropy is seen as a magnitude which in every time is proportional to	the quantity of energy that at that time cannot be transformed into mechanical work. Using the	above interpretation, entropy plays a central role in the formulation of the second law of thermodynamics which states that in an isolated physical system, any transformation leads to an increase	of its entropy. 
 	
+	In Probability Theory, the entropy of a random variable measures the uncertainty over the	values which can be reached by the variable.
+	
+	In Information Theory, the entropy of the compression of a message (for example, of a file	from a computer), quantifies the content of the information of the message to have the minimum	lost of information in the compression process previous to its transmission.
+	
+	In Abstract Theory of Dynamical Systems, the entropy measures the exponential complexity	of the system or the average flow of information per unit of time \cite{Balibrea2016}.
+	
+	So it is already explicit that the concept of entropy is not easy to grasp and frequently entropy is seen as very mysterious quantity and that’s why it received a very large number of interpretations,
+	explications, applications. In order to understand how the complex concept of entropy emerged,
+	in this chapter we will give a brief history and will review the works of Clausius, Boltzmann,
+	Shannon and Rényi.
+
+	\subsubsection{Clausius Entropy}	
+	As mentioned Earlier in this section The concept and name of entropy originated in the early
+	1850s in the work of Rudolf Julius Emmanuel Clausius $(1822-1888)$ and that work was at first	primarily concerned with the question of which cycle is best suited for the conversion of heat into	work and which substance is best used for the conversion \cite{Clausius1867}.
+	
+	Clausius based his argument on the plausible axiom that heat cannot pass by itself from a cold to a hot body. In order to exploit that axiom Clausius considered two competing Carnot cycles (see figure	\ref{fig:carnot-engines}) working in the same temperature range, one as a heat engine and one as a refrigerator;	the refrigerator consumes the work the engine provides. By comparing the amounts of heat $Q$	passed from top to bottom and vice versa, he came to the conclusion that among all efficiencies	the efficiency of a Carnot cycle is maximum and universal.	'Maximum' means that no cycle in the same range of temperature has a bigger efficiency than a	Carnot cycle, and 'universal' means that all working substances provide the same efficiency in a	Carnot cycle \cite{Carnot1890}.	It is easy to calculate the efficiency of the Carnot engine of an ideal gas:
+	\begin{figure}
+		\centering
+		\includegraphics[width=10cm]{{{carnot-cycle-heat-engine-refrigerator}}}
+		\caption{Two competing Carnot engines, pressure (P) versus volume (V) - diagrams \cite{Greven2003}}
+		\label{fig:carnot-engines}
+	\end{figure}
+	\begin{align}
+		\eta &= \frac{W}{Q_{boiler}} \nonumber\\
+		     &= \frac{Q_{boiler} - Q_{cooler}}{Q_{boiler}} \nonumber\\
+		     &= 1 - \frac{Q_{cooler}}{Q_{boiler}} \\
+		     &= 1 - \frac{T_{cooler}}{T_{boiler}}
+		     \label{eqn:efficiency-carnot}
+	\end{align}
+	where $T$ is the Kelvin temperature. And, since by Clausius’ result this efficiency is universal, it	holds not only for ideal gases but for all substances, be they water, mercury, sulphur, or steel.
+	Nicolas L\'{e}onard Sadi Carnot anticipated Clausius by 30 years, but no one could understand	Carnot's reasoning. Carnot believed in the caloric theory of heat, by which the heat passing through	the cycle from boiler to cooler is unchanged in amount. This is quite wrong and it is a kind of miracle that Carnot, despite his erroneous concepts, obtained a correct result. Carnot's trouble was	that he did not know the balance of energy, or the first law of thermodynamics, which states that
+	\begin{align}
+		dU &= dQ - dW \\
+		   &= dQ - P dV
+	\end{align}
+	since
+	\begin{equation}
+		dW = P dV
+	\end{equation}
+	This equation holds, if the work is expended reversibly for the volume change. With that superior	knowledge Clausius showed that it is not the heat that passes through the cycle from boiler to	cooler unchanged in amount. He proved that from equation \ref{eqn:efficiency-carnot}
+	\begin{equation}
+		\frac{Q}{T}\at[\Big]{\text{boiler}} =
+		\frac{Q}{T}\at[\Big]{\text{heater}}
+	\end{equation}
+	nd decided to define the entropy change to be the ratio of heat flow to temperature: \cite{Sethna2006}
+	\begin{equation}
+		\Delta S_{\text{thermo}} = \frac{Q}{T}
+	\end{equation}
+	He also showed that in an arbitrary process, the change of entropy, satisfies the inequality
+	\begin{equation}
+		dS \geq \frac{dQ}{T}
+		\label{eqn:2nd-law-of-themodynamics}
+	\end{equation}
+	This important relation is known as the second law of thermodynamics. We will now discuss the significance of this law.
+	First, we stick to reversible process, where the equality holds in equation \ref{eqn:2nd-law-of-themodynamics}. We may then eliminate $dQ$ between the first and second laws, we obtain the Gibbs equation
+	\begin{equation}
+		dS = \frac{1}{T} \left(dU + P dV\right)
+	\end{equation}
+	In an adiabatic irreversible process, $dQ = 0$ and equation \ref{eqn:2nd-law-of-themodynamics} one has the fundamental relation between entropy and irresponsibility. In words\\
+	\textbf{In a closed system (adiabatic), the entropy cannot decrease, it remains constant or increase \cite{Benguigui2013}}
+	But the irreversible increase of entropy is not a property of the microscopic laws of nature. Because the microscopic laws of nature are time-reversal invariant. For example the Maxwell's equations are time reversible or the laws governing the motion of electrons of atoms are also time reversible. Thus the direction of time cannot be determined from microscopic laws of nature. But since entropy always increase monotonically, the direction in which entropy increases (or remains constant) is the direction of time \cite{Sethna2006}.
+	%----------------------------------------------
+	\subsubsection{Boltzmann Entropy}
+	Another intuitive interpretation of entropy is as a measure of the disorder in a system.  Liquids have higher entropy	than crystals intuitively because their atomic positions are less orderly \cite{Sethna2006}. Ludwig Boltzmann	interpreted the entropy function as statistical entropy using probability theory.	Around 1900 there was a fierce debate going on between scientists whether atoms really existed	or not. Boltzmann was convinced that they existed and realized that models that relied on atoms	and molecules and their energy distribution and their speed and momentum, could be of great	help to understand physical phenomena. Because atoms where supposed to be very small, even	in relatively small systems, one faces already a tremendous number of atoms. For example: one
+	mole of water contains about $6.023 \times 10^{23}$ molecules! Clearly it is impossible to track the energy	and velocity of each individual atom. Therefore, Boltzmann introduced a mathematical treatment	using statistical mechanical methods to describe the properties of a given physical system (for example the relationship between temperature, pressure and volume of one liter of air). 
+	
+	Boltzmann's	idea behind statistical mechanics was to describe the properties of matter from the mechanical	properties of atoms or molecules. In doing so, he was finally able to derive the Second Law of	Thermodynamics around 1890 and showed the relationship between the atomic properties and the	value of the entropy for a given system. It was Max Planck who formulated the expression of entropy of the ideal gas system based on Boltzmann’s results \cite{Schmitz2007}. The Boltzmann entropy formula	or Boltzmann-Planck entropy formula is
+	\begin{equation}
+		S = k_B \log\Omega
+		\label{eqn:boltzmann-entropy}
+	\end{equation}
+
+	$S$ is called the Planck entropy or Boltzmann entropy. Here $k_B$ is the Boltzmann constant
+	(ideal gas constant $R$ divided by Avogadro's number $N$) which equals to $1.4 \times 10^{-23}$ $J/K$), and $\Omega$, comes from the German \textit{Wahrscheinlichkeit}, meaning probability, which is often referred to as	disorder. In another way we can define it as the number of microstates (often modeled as quantum	states) with the given macrostate. Macrostate is any particular arrangement of atoms where we	look only on average quantities. Any individual arrangement defining the properties (e.g. positions	and velocities) of all the atoms for a given macrostate is a microstate. For a microstate it matters	what individual particles do, for the macrostate it does not.
+	
+	
+	The logarithm is used because it simplifies the computations and reproduced the property of additivity of entropy, in the sense that the entropy of two systems sums instead of multiplies. In	equation \ref{eqn:boltzmann-entropy}, the entropy $S$ increases when $\Omega$ does. The more microstates are, the more disorder	and more entropy are. Besides for only one possible microstate, entropy is zero. The notion of	disorder is an intuitive notion depending of the system to be considered. In the case of a gas, it	is considered it in a ordered state if its molecules have a distribution of energies or positions very	different of those random which means the Boltzmann distribution. The most disordered states are	the most probable and as consequence have the most entropy. Another consequence is that in the	universe the disorder tends to increase \cite{Balibrea2016}.
+	
+	
+	From there, it is a short conceptual jump to the second Law (total entropy tends to increase, and	all spontaneous processes increase entropy). In summary, the thermodynamic definition of entropy provides the experimental definition of entropy, while the probabilistic definition of entropy	extends the concept, providing an explanation and a deeper understanding of its nature \cite{Alam2016}.
+	
+	These definitions of entropy is of no use in our model. However we can use the Boltzmann entropy with a few modification to get Shannon entropy \cite{shanon_entropy}. This process of getting Shannon entropy from Boltzmann entropy and how does it help us is described in section \ref{subsect:percolation-entropy}.
 	
 	\subsection{latent heat}
 	The latent heat associated with the phase transition is , where and are the entropies just above and below the phase transition. Since the entropy is continuous at the phase transition, the latent heat is zero. The latent heat is always zero for a second order phase transition.
@@ -413,4 +500,3 @@ Old models of phase transition : Ising model 1D and 2D. Bragg Willium model.
 \section{Models}
 	\subsection{Ising model in 1D lattice}
 	\subsection{Ising model in 2D lattice}
-	\subsection{Bragg William Model}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{56}
+\begin{thebibliography}{82}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -49,6 +49,35 @@ Joan Adler.
 \newblock \doi{10.1016/0378-4371(91)90295-n}.
 \newblock URL \url{https://doi.org/10.1016/0378-4371(91)90295-n}.
 
+\bibitem[Alam(2016)]{Alam2016}
+Didarul Alam.
+\newblock Entropy,specific heat,susceptibility and rushbrooke inequality: New
+  insights in percolation, 2016.
+\newblock Master's thesis,.
+
+\bibitem[Andreas~Greven(2003)]{Greven2003}
+Gerald~Warnecke Andreas~Greven, Gerhard~Keller.
+\newblock \emph{Entropy (Princeton Series in Applied Mathematics)}.
+\newblock Princeton University Press, 2003.
+\newblock ISBN 9780691113388.
+
+\bibitem[Balibrea(2016)]{Balibrea2016}
+Francisco Balibrea.
+\newblock On clausius, boltzmann and shannon notions of entropy.
+\newblock \emph{Journal of Modern Physics}, 07\penalty0 (02):\penalty0
+  219--227, 2016.
+\newblock \doi{10.4236/jmp.2016.72022}.
+\newblock URL \url{https://doi.org/10.4236/jmp.2016.72022}.
+
+\bibitem[Bansal et~al.(2007)Bansal, Grenfell, and Meyers]{Bansal2007}
+S.~Bansal, B.~T Grenfell, and L.~A. Meyers.
+\newblock When individual behaviour matters: homogeneous and network models in
+  epidemiology.
+\newblock \emph{Journal of The Royal Society Interface}, 4\penalty0
+  (16):\penalty0 879--891, oct 2007.
+\newblock \doi{10.1098/rsif.2007.1100}.
+\newblock URL \url{https://doi.org/10.1098/rsif.2007.1100}.
+
 \bibitem[Bauer and Golinelli(2001)]{Bauer2001}
 M.~Bauer and O.~Golinelli.
 \newblock Core percolation in random graphs: a critical phenomena analysis.
@@ -56,6 +85,14 @@ M.~Bauer and O.~Golinelli.
   339--352, dec 2001.
 \newblock \doi{10.1007/s10051-001-8683-4}.
 \newblock URL \url{https://doi.org/10.1007/s10051-001-8683-4}.
+
+\bibitem[Benguigui(2013)]{Benguigui2013}
+L~Benguigui.
+\newblock The different paths to entropy.
+\newblock \emph{European Journal of Physics}, 34\penalty0 (2):\penalty0
+  303--321, jan 2013.
+\newblock \doi{10.1088/0143-0807/34/2/303}.
+\newblock URL \url{https://doi.org/10.1088/0143-0807/34/2/303}.
 
 \bibitem[Blume(1966)]{Blume1966}
 M.~Blume.
@@ -93,6 +130,13 @@ B{\'{e}}la Bollob{\'{a}}s and Oliver Riordan.
 \newblock \doi{10.1007/978-3-642-14444-8_3}.
 \newblock URL \url{https://doi.org/10.1007/978-3-642-14444-8_3}.
 
+\bibitem[Breskin et~al.(2006)Breskin, Soriano, Moses, and Tlusty]{Breskin2006}
+Ilan Breskin, Jordi Soriano, Elisha Moses, and Tsvi Tlusty.
+\newblock Percolation in living neural networks.
+\newblock \emph{Physical Review Letters}, 97\penalty0 (18), oct 2006.
+\newblock \doi{10.1103/physrevlett.97.188102}.
+\newblock URL \url{https://doi.org/10.1103/physrevlett.97.188102}.
+
 \bibitem[Broadbent and Hammersley(1957)]{Broadbent1957}
 S.~R. Broadbent and J.~M. Hammersley.
 \newblock Percolation processes.
@@ -117,6 +161,12 @@ John Cardy.
 \newblock \doi{10.1017/cbo9781316036440}.
 \newblock URL \url{https://doi.org/10.1017/cbo9781316036440}.
 
+\bibitem[Carnot et~al.(1890)]{Carnot1890}
+Nicolas L\'{e}onard~Sadi Carnot et~al.
+\newblock \emph{Reflections on the motive power of heat : and on machines
+  fitted to develop that power}.
+\newblock 1890.
+
 \bibitem[Chalupa et~al.(1979)Chalupa, Leath, and Reich]{Chalupa1979}
 J~Chalupa, P~L Leath, and G~R Reich.
 \newblock Bootstrap percolation on a bethe lattice.
@@ -125,12 +175,42 @@ J~Chalupa, P~L Leath, and G~R Reich.
 \newblock \doi{10.1088/0022-3719/12/1/008}.
 \newblock URL \url{https://doi.org/10.1088/0022-3719/12/1/008}.
 
+\bibitem[Cipra(1987)]{Cipra1987}
+Barry~A. Cipra.
+\newblock An introduction to the ising model.
+\newblock \emph{The American Mathematical Monthly}, 94\penalty0 (10):\penalty0
+  937, dec 1987.
+\newblock \doi{10.2307/2322600}.
+\newblock URL \url{https://doi.org/10.2307/2322600}.
+
+\bibitem[Clausius(1867)]{Clausius1867}
+Rudolf Clausius.
+\newblock \emph{The Mechanical Theory Of Heat (1879)}.
+\newblock J. Van Voorst- Steam-engines, 1867.
+
 \bibitem[Cohen et~al.(2002)Cohen, ben Avraham, and Havlin]{Cohen2002}
 Reuven Cohen, Daniel ben Avraham, and Shlomo Havlin.
 \newblock Percolation critical exponents in scale-free networks.
 \newblock \emph{Physical Review E}, 66\penalty0 (3), sep 2002.
 \newblock \doi{10.1103/physreve.66.036113}.
 \newblock URL \url{https://doi.org/10.1103/physreve.66.036113}.
+
+\bibitem[Coleman and Pietronero(1992)]{Coleman1992}
+Paul~H. Coleman and Luciano Pietronero.
+\newblock The fractal structure of the universe.
+\newblock \emph{Physics Reports}, 213\penalty0 (6):\penalty0 311--389, may
+  1992.
+\newblock \doi{10.1016/0370-1573(92)90112-d}.
+\newblock URL \url{https://doi.org/10.1016/0370-1573(92)90112-d}.
+
+\bibitem[Coniglio et~al.(1976)Coniglio, Nappi, Peruggi, and
+  Russo]{Coniglio1976}
+Antonio Coniglio, Chiara~Rosanna Nappi, Fulvio Peruggi, and Lucio Russo.
+\newblock Percolation and phase transitions in the ising model.
+\newblock \emph{Communications in Mathematical Physics}, 51\penalty0
+  (3):\penalty0 315--323, oct 1976.
+\newblock \doi{10.1007/bf01617925}.
+\newblock URL \url{https://doi.org/10.1007/bf01617925}.
 
 \bibitem[Csermely et~al.(2013)Csermely, London, Wu, and Uzzi]{Csermely2013}
 P.~Csermely, A.~London, L.-Y. Wu, and B.~Uzzi.
@@ -155,6 +235,13 @@ S.~N. Dorogovtsev, A.~V. Goltsev, and J.~F.~F. Mendes.
 \newblock \emph{Physical Review Letters}, 96\penalty0 (4), feb 2006.
 \newblock \doi{10.1103/physrevlett.96.040601}.
 \newblock URL \url{https://doi.org/10.1103/physrevlett.96.040601}.
+
+\bibitem[Downarowicz(2009)]{Downarowicz2009}
+Tomasz Downarowicz.
+\newblock \emph{Entropy in Dynamical Systems}.
+\newblock Cambridge University Press, 2009.
+\newblock \doi{10.1017/cbo9780511976155}.
+\newblock URL \url{https://doi.org/10.1017/cbo9780511976155}.
 
 \bibitem[Erd{\H{o}}s and R{\'{e}}nyi(1964)]{Erdos1964}
 P.~Erd{\H{o}}s and A.~R{\'{e}}nyi.
@@ -189,6 +276,37 @@ Paul~J. Flory.
 \newblock \doi{10.1021/ja01856a062}.
 \newblock URL \url{https://doi.org/10.1021/ja01856a062}.
 
+\bibitem[Fortuin(1972{\natexlab{a}})]{Fortuin1972b}
+C.M. Fortuin.
+\newblock On the random-cluster model {II}. the percolation model.
+\newblock \emph{Physica}, 58\penalty0 (3):\penalty0 393--418, apr
+  1972{\natexlab{a}}.
+\newblock \doi{10.1016/0031-8914(72)90161-9}.
+\newblock URL \url{https://doi.org/10.1016/0031-8914(72)90161-9}.
+
+\bibitem[Fortuin(1972{\natexlab{b}})]{Fortuin1972c}
+C.M. Fortuin.
+\newblock On the random-cluster model.
+\newblock \emph{Physica}, 59\penalty0 (4):\penalty0 545--570, jun
+  1972{\natexlab{b}}.
+\newblock \doi{10.1016/0031-8914(72)90087-0}.
+\newblock URL \url{https://doi.org/10.1016/0031-8914(72)90087-0}.
+
+\bibitem[Fortuin and Kasteleyn(1972)]{Fortuin1972a}
+C.M. Fortuin and P.W. Kasteleyn.
+\newblock On the random-cluster model.
+\newblock \emph{Physica}, 57\penalty0 (4):\penalty0 536--564, feb 1972.
+\newblock \doi{10.1016/0031-8914(72)90045-6}.
+\newblock URL \url{https://doi.org/10.1016/0031-8914(72)90045-6}.
+
+\bibitem[Friedenberg and Silverman(2011)]{Friedenberg2011}
+Jay~D. Friedenberg and Gordon~W. Silverman.
+\newblock \emph{Cognitive Science: An Introduction to the Study of Mind}.
+\newblock SAGE Publications, Inc, 2011.
+\newblock ISBN 1412977614.
+\newblock URL
+  \url{https://www.amazon.com/Cognitive-Science-Introduction-Study-Mind/dp/1412977614?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1412977614}.
+
 \bibitem[Furuberg et~al.(1996)Furuberg, M{\aa}l{\o}y, and Feder]{Furuberg1996}
 Liv Furuberg, Knut~J{\o}rgen M{\aa}l{\o}y, and Jens Feder.
 \newblock Intermittent behavior in slow drainage.
@@ -204,6 +322,14 @@ Peter Hall.
   (4):\penalty0 1250--1266, 1985.
 \newblock \doi{110.2307/2244176}.
 
+\bibitem[Hartley(1928)]{Hartley1928}
+R.~V.~L. Hartley.
+\newblock Transmission of information1.
+\newblock \emph{Bell System Technical Journal}, 7\penalty0 (3):\penalty0
+  535--563, jul 1928.
+\newblock \doi{10.1002/j.1538-7305.1928.tb01236.x}.
+\newblock URL \url{https://doi.org/10.1002/j.1538-7305.1928.tb01236.x}.
+
 \bibitem[Hassan()]{nesm-lecture-notes}
 M.~K. Hassan.
 \newblock Lecture notes on statistical mechanics of non-equilibrium phenomena.
@@ -216,6 +342,22 @@ J.~Hoshen and R.~Kopelman.
   1976.
 \newblock \doi{10.1103/physrevb.14.3438}.
 \newblock URL \url{https://doi.org/10.1103/physrevb.14.3438}.
+
+\bibitem[Hu et~al.(2009)Hu, Myers, Colizza, and Vespignani]{Hu2009}
+H.~Hu, S.~Myers, V.~Colizza, and A.~Vespignani.
+\newblock {WiFi} networks and malware epidemiology.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 106\penalty0
+  (5):\penalty0 1318--1323, jan 2009.
+\newblock \doi{10.1073/pnas.0811973106}.
+\newblock URL \url{https://doi.org/10.1073/pnas.0811973106}.
+
+\bibitem[Hughes(1958)]{Hughes1958}
+John~R. Hughes.
+\newblock Post-tetanic potentiation.
+\newblock \emph{Physiological Reviews}, 38\penalty0 (1):\penalty0 91--113, jan
+  1958.
+\newblock \doi{10.1152/physrev.1958.38.1.91}.
+\newblock URL \url{https://doi.org/10.1152/physrev.1958.38.1.91}.
 
 \bibitem[{Kasteleyn} and {Fortuin}(1969)]{Kasteleyn1969}
 P.~W. {Kasteleyn} and C.~M. {Fortuin}.
@@ -303,6 +445,15 @@ Benoit~B. Mandelbrot.
 \newblock URL
   \url{https://www.amazon.com/Fractal-Geometry-Nature-Benoit-Mandelbrot/dp/0910321647?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0910321647}.
 
+\bibitem[Meyers(2006)]{Meyers2006}
+Lauren~Ancel Meyers.
+\newblock Contact network epidemiology: Bond percolation applied to infectious
+  disease prediction and control.
+\newblock \emph{Bulletin of the American Mathematical Society}, 44\penalty0
+  (01):\penalty0 63--87, oct 2006.
+\newblock \doi{10.1090/s0273-0979-06-01148-7}.
+\newblock URL \url{https://doi.org/10.1090/s0273-0979-06-01148-7}.
+
 \bibitem[Moore and Newman(2000)]{Moore2000}
 Cristopher Moore and M.~E.~J. Newman.
 \newblock Exact solution of site and bond percolation on small-world networks.
@@ -326,6 +477,22 @@ M.~E.~J. Newman and R.~M. Ziff.
 \newblock \emph{Physical Review E}, 64\penalty0 (1), jun 2001.
 \newblock \doi{10.1103/physreve.64.016706}.
 \newblock URL \url{https://doi.org/10.1103/physreve.64.016706}.
+
+\bibitem[Nyquist(1924)]{Nyquist1924}
+H.~Nyquist.
+\newblock Certain factors affecting telegraph speed.
+\newblock \emph{Transactions of the American Institute of Electrical
+  Engineers}, {XLIII}:\penalty0 412--422, jan 1924.
+\newblock \doi{10.1109/t-aiee.1924.5060996}.
+\newblock URL \url{https://doi.org/10.1109/t-aiee.1924.5060996}.
+
+\bibitem[Nyquist(2002)]{Nyquist2002}
+H.~Nyquist.
+\newblock Certain topics in telegraph transmission theory.
+\newblock \emph{Proceedings of the {IEEE}}, 90\penalty0 (2):\penalty0 280--305,
+  2002.
+\newblock \doi{10.1109/5.989875}.
+\newblock URL \url{https://doi.org/10.1109/5.989875}.
 
 \bibitem[Palla et~al.(2005)Palla, Der{\'{e}}nyi, Farkas, and Vicsek]{Palla2005}
 Gergely Palla, Imre Der{\'{e}}nyi, Ill{\'{e}}s Farkas, and Tam{\'{a}}s Vicsek.
@@ -371,6 +538,24 @@ M~Sahini and M~Sahimi.
 \newblock URL
   \url{https://www.amazon.com/Applications-Percolation-Theory-M-Sahini/dp/0748400761?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0748400761}.
 
+\bibitem[Sander et~al.(2002)Sander, Warren, Sokolov, Simon, and
+  Koopman]{Sander2002}
+L.M. Sander, C.P. Warren, I.M. Sokolov, C.~Simon, and J.~Koopman.
+\newblock Percolation on heterogeneous networks as a model for epidemics.
+\newblock \emph{Mathematical Biosciences}, 180\penalty0 (1-2):\penalty0
+  293--305, nov 2002.
+\newblock \doi{10.1016/s0025-5564(02)00117-7}.
+\newblock URL \url{https://doi.org/10.1016/s0025-5564(02)00117-7}.
+
+\bibitem[Schmitz(2007)]{Schmitz2007}
+John~E.J. Schmitz.
+\newblock \emph{The Second Law of Life: Energy, Technology, and the Future of
+  Earth As We Know It}.
+\newblock William Andrew, 2007.
+\newblock ISBN 0815515375.
+\newblock URL
+  \url{https://www.amazon.com/Second-Law-Life-Energy-Technology/dp/0815515375?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0815515375}.
+
 \bibitem[Schrenk et~al.(2013)Schrenk, Ara{\'{u}}jo, and Herrmann]{Schrenk2013}
 K.~J. Schrenk, N.~A.~M. Ara{\'{u}}jo, and H.~J. Herrmann.
 \newblock Stacked triangular lattice: Percolation properties.
@@ -386,12 +571,29 @@ N.~Schwartz, R.~Cohen, D.~ben Avraham, A.-L. Barab{\'{a}}si, and S.~Havlin.
 \newblock \doi{10.1103/physreve.66.015104}.
 \newblock URL \url{https://doi.org/10.1103/physreve.66.015104}.
 
+\bibitem[Seiden and Schulman(1990)]{Seiden1990}
+Philip~E. Seiden and Lawrence~S. Schulman.
+\newblock Percolation model of galactic structure.
+\newblock \emph{Advances in Physics}, 39\penalty0 (1):\penalty0 1--54, feb
+  1990.
+\newblock \doi{10.1080/00018739000101461}.
+\newblock URL \url{https://doi.org/10.1080/00018739000101461}.
+
 \bibitem[Seidman(1983)]{Seidman1983}
 Stephen~B. Seidman.
 \newblock Network structure and minimum degree.
 \newblock \emph{Social Networks}, 5\penalty0 (3):\penalty0 269--287, sep 1983.
 \newblock \doi{10.1016/0378-8733(83)90028-x}.
 \newblock URL \url{https://doi.org/10.1016/0378-8733(83)90028-x}.
+
+\bibitem[Sethna(2006)]{Sethna2006}
+James~P. Sethna.
+\newblock \emph{Statistical Mechanics: Entropy, Order Parameters and Complexity
+  (Oxford Master Series in Physics)}.
+\newblock Oxford University Press, 2006.
+\newblock ISBN 0198566778.
+\newblock URL
+  \url{https://www.amazon.com/Statistical-Mechanics-Entropy-Parameters-Complexity/dp/0198566778?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0198566778}.
 
 \bibitem[Shannon(1948)]{shanon_entropy}
 C.~E. Shannon.

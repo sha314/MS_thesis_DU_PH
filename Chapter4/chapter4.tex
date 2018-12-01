@@ -24,6 +24,17 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 	percolation. The theory which simulates this kind of phenomenon is known as Percolation Theory. It provides a quantitative description of the nature of continuous pathways through space. The usual objective of research implementing this phenomenon	is to characterize some aspect of the critical phenomena of the phase transition between finite and infinite range connectivity. This is actually non-trivial when the space	is randomly disordered and the connected regions acquire fractal properties \cite{Zimm1949, Mandelbrot1983}.
 	\begin{figure}
 		\centering
+		\captionsetup[subfigure]{width=0.9\textwidth}
+		\begin{subfigure}[t]{.45\textwidth}
+			\centering
+			\includegraphics[width=0.8\linewidth]{{{square-lattice-spanning-cluster-0}}}
+			\caption{One step away to flow current from top to bottom only if the gray site is next to be occupied.}
+		\end{subfigure}
+		\begin{subfigure}[t]{.45\textwidth}
+			\centering
+			\includegraphics[width=0.8\linewidth]{{{square-lattice-spanning-cluster-1}}}
+			\caption{Current flows from top to bottom for the first time, i.e. $p=p_c$.}
+		\end{subfigure}
 		\caption{percolation phenomena in square structure. No current if $p<p_c$.}
 	\end{figure}
 
@@ -71,7 +82,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		
 		
 		\subsubsection{Lattice}
-		Percolation was mainly studied on different types of lattice. For example, Honeycomb lattice, Bethe lattice, Simple Cubic lattice, Body-Centered-Cubic lattice, Face-Centered-Cubic lattice. In $1998$ Christian D. Lorenz et al. did extensive Monte Carlo simulation to study bond percolation on the simple cubic, face-centered-cubic and body-centered-cubic lattices using epidemic approach. There simulations provide very precise values of the critical thresholds \cite{Lorenz1998}. They calculated Fisher exponent, $\tau$, the finite-size correction exponent, $\Omega$ and the scaling function exponent, $\sigma$ confirmed to be universal. They also did percolation on the HCP (hexagonal closed packed) lattice \cite{Lorenz2000}. Before that in 1981 JC Wireman studied bond percolation on honeycomb and triangular lattices \cite{Wierman1981}.
+		Percolation was mainly studied on different types of lattice. For example, Honeycomb lattice, Bethe lattice, Simple Cubic lattice, Body-Centered-Cubic lattice, Face-Centered-Cubic lattice. In $1998$ Christian D. Lorenz et al. did extensive Monte Carlo simulation to study bond percolation on the simple cubic, face-centered-cubic and body-centered-cubic lattices using epidemic approach. There simulations provide very precise values of the critical thresholds \cite{Lorenz1998}. They calculated Fisher exponent, $\tau$, the finite-size correction exponent, $\Omega$ and the scaling function exponent, $\sigma$ confirmed to be universal. They also did percolation on the HCP (hexagonal closed packed) lattice \cite{Lorenz2000}. Before that in $1981$ JC Wireman studied bond percolation on honeycomb and triangular lattices \cite{Wierman1981}.
 		\begin{figure}
 			\centering
 			\includegraphics[width=\linewidth]{{{cubic}}}
@@ -105,7 +116,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		Reuvan Cohen et al. studied scale free networks close to the percolation threshold \cite{Cohen2002}. N. Schwartz et al. worked on percolation problem in directed scale free		networks \cite{Schwartz2002}. Filippo Radicchi and Santo Fortunato studied scale-free networks		constructed via a cooperative Achlioptas Growth Process \cite{Achlioptas2009}. They showed that	networks constructed via this biased procedure show a percolation transition which		strongly differes from the one observed in standard percolation, where links were introduced just randomly.
 		\begin{figure}
 			\centering
-			\includegraphics[width=\linewidth]{{{scale-free-network}}}
+			\includegraphics[height=10cm]{{{scale-free-network}}}
 			\caption{Scale Free Network \cite{scale-free-network}}
 			\label{fig:scale-free-network}
 		\end{figure}
@@ -178,8 +189,11 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 
 
 
-	\subsection{Entropy, $H(p,L)$}
-	Entropy in one of the key feature of a phase transition model. But thermodynamic entropy cannot be calculated for any model such as our percolation on a square lattice model. So we take our approach in another way. Information entropy or the Shanon entropy is best suited for our model. The concept of information entropy was introduced by Claude Shannon in his 1948 paper "A Mathematical Theory of Communication" \cite{shanon_entropy}. The Defition is
+	\subsection{Entropy, $H(p,L)$} 
+	\label{subsect:percolation-entropy}
+	Entropy in one of the key feature of a phase transition model. But thermodynamic entropy, e.g. Boltzmann entropy or Clausius entropy, cannot be calculated for any model that depends on a probabilistic theory such as our percolation on a square lattice model. So we take our approach in another way. Information entropy or the \textit{Shanon entropy} is best suited for our model. The	concept of Shannon entropy in information theory describes how much information there is in	a signal or event. This concept of information entropy was introduced by Claude Shannon in his 1948 \cite{shanon_entropy}. The seminal work of Shannon based on papers by	Nyquist \cite{Nyquist1924, Nyquist2002} and Hartley \cite{Hartley1928}. He rationalized these early efforts into a coherent mathematical	theory of communication.
+	
+	The Defition of Shannon entropy is
 	\begin{align}
 		H = - \sum_{i} \mu_i \log \mu_i	
 		\label{def:shannon-entropy-def}
@@ -204,6 +218,8 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		\log \Omega = -M \sum_{i=1}^{m} \mu_i \log \mu_i = M H(\mu)
 	\end{equation}
 	where $H(\mu)$ is nothing but the Shannon entropy $H(p)$ and clearly it is the degree of uncertainty per attempt. Total entropy	or information is therefore equal to $NH$ if we consider $M = N$. In the case when each site has distinct color	then each site will have the equal chance of being picked.	It means $\mu_i = 1/N \forall i$ and hence $H(\mu) = N \log(N )$	which is the average entropy or degree of disorder and	the total entropy is $N H(\mu)$. Now initially if we had $N$	distinct color then the system would have the maximum	entropy $S = N \log N$. On the other hand, if all the sites	had the same color then the system would have minimum	entropy $S = 0$. Thus percolation is indeed an order-disorder transition where disorder is equivalent to degree of confusion \cite{redefinition-of-site-percolation}.
+	Now recall the definition of Boltzmann entropy in equation \ref{eqn:boltzmann-entropy}. If we consider $K_B=1$ then we get Shannon entropy to represent Boltzmann entropy.
+	
 	\begin{figure}
 		\centering
 		\captionsetup[subfigure]{width=0.9\textwidth}
@@ -226,7 +242,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		\label{fig:system-of-12-sites}
 	\end{figure}
 	
-	
+	\subsubsection{worked out example}
 	Say we have a coin with a head and a tail. If the coin is unbiased then the probability of getting the head or the tail is 50\% or 0.5. Now what's the entropy of this system? The Shanon entropy is the one that can be used here. For convenience $\log_{2}$ will be used for evaluating logarithms here, after all $\log_{2} = const. \log_{10} = const. \log_{e}$. Here, $\mu_i = 0.5$ and $\log_{2} (0.5) = -1$, Therefore we have
 	\begin{align}
 		H &= - (0.5 \log_{2} (0.5) + 0.5 \log_{2} (0.5)) \nonumber \\ 
@@ -442,7 +458,8 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 	\subsubsection{Bethe Lattice}
 	In order to construct Bethe lattice for any $z$ we start with a central point which will be connected to $z$ sites. For example if $z=3$ then we will have a central site connected to $3$ sites by a branch and when we go to next layer each branch will be divided to $2$ more branches and this process will be continued up to $r$ layers \ref{fig:bethe-lattice}. Only at the surface of the lattice, where the branching is stopped, is only one bond or branch connecting the surface site to the interior. There is only open loops in this structure, which means	that if we never change direction always reach new site if we never go back.Number of sites in the Bethe lattice increases exponentially with the distance from the origin, whereas in any $d$-dimensional lattice structure it	would increase with distance $d$ . In the case of Bethe lattice with $z=3$, the origin is surrounded by a shell of three sites ("first generation"), in the second shell we have six sites followed by a third	generation of twelve sites, etc.
 	\begin{figure}
-		\includegraphics[width=\linewidth]{{{bethe-lattice}}}
+		\centering
+		\includegraphics[width=10cm]{{{bethe-lattice}}}
 		\caption{Bethe Lattice for $z=3$}
 		\label{fig:bethe-lattice}
 	\end{figure}
@@ -560,6 +577,57 @@ In the classical Hosen-Kopelman algorithm for percolation model \cite{Hoshen1976
 \section{Relation of Phase Transition with Percolation}
 
 \section{Application}\label{sect:application}
+	Ever since the percolation phenomena was discovered it has been extensively used in wide range of science. Some of it is discussed here. Though limited, this discussion gives us the significance of percolation and enables us to appreciate it.
+	\subsection{Epidemiology}
+	Many diseases spread through human populations via close physical interactions. The interpersonal contact patterns that underlie disease transmission can naturally be thought to form a network, where links join individuals who interact with each other. During an outbreak, disease then spreads along these links. All epidemiological models make assumptions about the underlying	network of interactions, often without explicitly stating them.
+	
+	Percolation has long been an important tool in infectious disease epidemiology \cite{Bansal2007}. L Meyers gave a wonderful insight of contact	network epidemiology, a more powerful approach that applies bond percolation on random graphs	to model the spread of infectious disease through heterogeneous populations \cite{Meyers2006}.
+	
+	Before that	in 2000, Moore et al. studied some simple models of disease transmission on small-world networks \cite{Moore2000}. They showed that the resulting models display epidemic behavior when the infection	or transmission probability rises above the threshold for site or bond percolation on the network,	and they gave exact solutions for the position of this threshold in a variety of cases. 
+	
+	Alessandro	Vespignani and his team studied wifi networks and malware epidemiology. They developed an	epidemiological model that takes into consideration prevalent security flaws on these routers.They	simulated spread of such a contagion on real-world data for georeferenced wireless routers \cite{Hu2009}.
+	
+	Sander et al. considered a spatial model related to bond percolation for the spread of a disease that	includes variation in the susceptibility to infection. They worked on a lattice with random bond	strengths and showed that with strong heterogeneity, i.e. a wide range of variation of susceptibility, patchiness in the spread of the epidemic is very likely, and the criterion for epidemic outbreak	depends strongly on the heterogeneity. Their results were qualitatively different from those of standard models in epidemiology, but correspond to real effects \cite{Sander2002}.
+	
+	After the birth of scale free	network the study of epidemics has become even more popular among statistical physicists.
+	
+	
+	\subsection{Neural Network and Cognitive Psychology}
+	Percolation is used to understand the way activation and diffusion of neural activity occur within neural networks \cite{Friedenberg2011}. Iian Breskin's team in 2006 studied living neural networks by measuring the neurons' response to a global electrical stimulation. They showed through analysis that neural connectivity is lowered by reducing the synaptic strength, chemically blocking neurotransmitter receptors. They used a graph-theoretic approach to show that the connectivity undergoes a percolation transition. This occurs as the giant component disintegrates, characterized by a power law with an exponent $\beta \simeq 0.65$	 \cite{Breskin2006}.\\
+	
+	It is easiest to understand percolation theory by explaining its use in epidemiology \cite{Moore2000}. Individuals that are infected with a disease can spread it knowingly or unknowingly via social or physical interaction. It's easy to say that the more social a person is the more it is likely that he will spread more disease than the unsocial one. Therefore some factors, e.g., occupation, size of social circle etc, influence the rate of infection. \\
+	
+	
+	Now, if one were to think of neurons as the individuals and synaptic connections as the social bonds between people, then one can determine how easily	messages between neurons will spread \cite{Friedenberg2011} When a neuron fires, the message is transmitted along	all synaptic connections to other neurons until it can no longer continue.
+	
+	 Synaptic connections are	considered either open or closed (like a social or unsocial person) and messages will flow along	any and all open connections until they can go no further. Just like occupation and sociability play	a key role in the spread of disease, so does the number of neurons, synaptic plasticity \cite{Hughes1958} and	long-term potentiation when talking about neural percolation. Percolating clusters are a single large	group of neurons that are all connected by open bonds and take up the majority of the network.	Any signals that originate at any point within the percolating cluster will have a great impact and	diffusion across the network than signals that original outside of the cluster.
+	  This is much like	how a teacher is more likely to spread an infection to a whole community through contact with the	students and subsequently with the families than an isolated businessman that works from home.
+	
+	
+	\subsection{Ferromagnetism}
+	One of the most studied phase transition phenomena of physics is that para-magnetic to ferromagnetic transition. The magnetic spins of a magnetic material, e.g., nickel, interact with each other:	the energy is lower if the two spins on adjacent nickel atoms are parallel than if they are anti-parallel. This lower energy tends to cause the spins to be parallel and below a temperature called	the Curie temperature,$T_c$ , most of the spins in the nickel are parallel, their magnetic moments then	add up constructively and the piece of nickel has a net magnetic moment: it is a ferromagnetic.
+	 Above the Curie temperature on average half the spins point in one direction and the other half in	the opposite direction. Then their magnetic moments cancels out, and the nickel has no net magnetic	moment. It is then a para-magnet. Thus at $T_c$ the nickel goes from having no magnetic moment to	having a magnetic moment. This is a sudden qualitative change and when this happens we say that	a phase transition has occurred. Here the phase transition occurs when the magnetic moment goes	from zero to non-zero. It is from the para-magnetic phase to the ferromagnetic phase.	So, this critical value $T_c$ of the temperature marking the borderline between the existence and	non-existence of so called spontaneous magnetization. A standard mathematical model for this	phenomenon is the Ising model \cite{Cipra1987}. It turns out that there are two parameters which specify	the conditional probabilities: the 'external magnetic field' $h$, and the strength $J$ of interaction	between neighbors. If $J = 0$, the states of different vertices are independent, and the process is	equivalent to site percolation \cite{Coniglio1976}. The relationship between the Ising model and bond percolation	is rather strong. It turns out that they are linked via a type of 'generalized percolation' called the other considerations \cite{Coleman1992, Seiden1990}. 
+	 Studing the random-cluster model,
+	 one can obtain conclusions valid simultaneously for percolation and the Ising model.
+	 This discovery was made in 1970 by Fortuin and Kastelyn \cite{Fortuin1972a, Fortuin1972b, Fortuin1972c}, and it has
+	 greatly influenced part of the current view of disordered physical systems
+	 
+	 
+	\subsection{Cosmology}
+	We know mass distribution and motions of the components of a galaxy are determined by gravity,	it has not been clear what is responsible for the striking morphology of a spiral galaxy such as	shown in the figure.
+	\begin{figure}
+		\centering
+		\includegraphics[width=10cm]{{{galaxy}}}
+		\caption{NGC $4414$, a typical spiral galaxy in the constellation Coma Berenices, is about $55,000$ light-years in diameter and approximately $60$ million light-years away from Earth.}
+		\label{galaxy}
+	\end{figure}
+	 The spiral arms extend over 16,000 parsecs (1 parsecs equals 3.26 light-years), and the traditional view is that it is necessary to have a long-range interaction like gravity, which interacts with object that have mass,	to create such long-range order. However, in condensed matter physics it is well known that long-range order can be induced by a short-range interaction, and this is a characteristic feature of a	continuous phase transition [48].
+	 
+	The structural features of spiral galaxies arises from a percolation phase transition that underlies the phenomenon of propagating star formation. According to this	view, the appearance of spiral arms is a consequence of the differential rotation of the galaxy	and the characteristic divergence of correlation lengths for continuous phase transitions.
+	
+	 Other	structural properties of spiral galaxies, such as the distribution of the gaseous components and the	luminosity, arise directly from a feedback mechanism that pins the star formation rate close to the	critical point of the phase transition. At least for some galaxies, morphological and other features	are already fixed by general properties of phase transitions, irrespective of detailed dynamic or	other considerations \cite{Seiden1990, Coleman1992}.
+	
+	
 	
 Definitions of some quantities used in percolation.
 Basic Algorithm
