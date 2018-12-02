@@ -40,95 +40,97 @@
 \contentsline {subsection}{\numberline {3.5.1}List of Thermodynamic Quantities that Follows Power Law}{39}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Rushbrooke Inequality}{39}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}Griffiths Inequality}{39}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Models}{40}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Ising model in 1D lattice}{40}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Ising model in 2D lattice}{40}{subsection.3.6.2}
-\contentsline {chapter}{\numberline {4}Percolation Theory}{41}{chapter.4}
-\contentsline {section}{\numberline {4.1}Percolation Phenomena}{42}{section.4.1}
-\contentsline {section}{\numberline {4.2}Historical Overview}{43}{section.4.2}
-\contentsline {section}{\numberline {4.3}Classifications and Playground}{44}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Types of Percolation}{44}{subsection.4.3.1}
-\contentsline {subsubsection}{Bond Percolation}{44}{section*.21}
-\contentsline {subsubsection}{Site Percolation}{44}{section*.22}
-\contentsline {subsubsection}{Explosive Percolation}{45}{section*.23}
-\contentsline {subsubsection}{K-Core Percolation}{45}{section*.24}
-\contentsline {subsubsection}{Bootstrap Percolation}{46}{section*.25}
-\contentsline {subsubsection}{Other}{46}{section*.26}
-\contentsline {subsection}{\numberline {4.3.2}Types of Playground}{46}{subsection.4.3.2}
-\contentsline {subsubsection}{Lattice}{47}{section*.27}
-\contentsline {subsubsection}{Graph or Network}{48}{section*.30}
-\contentsline {section}{\numberline {4.4}Basic Elements}{48}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Occupation Probability}{48}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Cluster}{49}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Spanning cluster}{49}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Observable Quantities}{49}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Percolation Threshold, $p_c$}{50}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Spanning Probability, $w(p,L)$}{51}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Entropy, $H(p,L)$}{51}{subsection.4.5.3}
-\contentsline {subsubsection}{worked out example}{54}{section*.35}
-\contentsline {subsection}{\numberline {4.5.4}Specific Heat, $C(p,L)$}{54}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}Order Parameter, $P(p,L)$}{55}{subsection.4.5.5}
-\contentsline {subsection}{\numberline {4.5.6}Susceptibility, $\chi (p,L)$}{56}{subsection.4.5.6}
-\contentsline {subsection}{\numberline {4.5.7}Mean Cluster Size, S}{56}{subsection.4.5.7}
-\contentsline {subsection}{\numberline {4.5.8}Cluster Size Distribution Function, $n_s$}{56}{subsection.4.5.8}
-\contentsline {subsection}{\numberline {4.5.9}Correlation Function, $g(r)$}{57}{subsection.4.5.9}
-\contentsline {subsection}{\numberline {4.5.10}Correlation length, $\xi $}{57}{subsection.4.5.10}
-\contentsline {subsection}{\numberline {4.5.11}Fractal Dimension, $d_f$}{57}{subsection.4.5.11}
-\contentsline {section}{\numberline {4.6}Exact Solutions}{57}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}One Dimension}{57}{subsection.4.6.1}
-\contentsline {subsubsection}{Threshold}{57}{section*.37}
-\contentsline {subsubsection}{Cluster Size}{58}{section*.39}
-\contentsline {subsubsection}{Mean Cluster Size}{58}{section*.40}
-\contentsline {subsubsection}{Correlation Function and Correlation Length}{61}{section*.41}
-\contentsline {subsection}{\numberline {4.6.2}Infinite Dimension}{61}{subsection.4.6.2}
-\contentsline {subsubsection}{Properties of infinite dimensional object}{61}{section*.42}
-\contentsline {subsubsection}{Bethe Lattice}{62}{section*.43}
-\contentsline {subsubsection}{Percolation Threshold}{63}{section*.45}
-\contentsline {subsubsection}{Percolation Strength}{64}{section*.46}
-\contentsline {subsubsection}{Mean Cluster Size}{65}{section*.47}
-\contentsline {subsubsection}{Correlation Function and Correlation Length}{66}{section*.48}
-\contentsline {section}{\numberline {4.7}Algorithm}{67}{section.4.7}
-\contentsline {section}{\numberline {4.8}Relation of Phase Transition with Percolation}{67}{section.4.8}
-\contentsline {section}{\numberline {4.9}Application}{67}{section.4.9}
-\contentsline {subsection}{\numberline {4.9.1}Epidemiology}{67}{subsection.4.9.1}
-\contentsline {subsection}{\numberline {4.9.2}Neural Network and Cognitive Psychology}{68}{subsection.4.9.2}
-\contentsline {subsection}{\numberline {4.9.3}Ferromagnetism}{69}{subsection.4.9.3}
-\contentsline {subsection}{\numberline {4.9.4}Cosmology}{70}{subsection.4.9.4}
-\contentsline {subsection}{\numberline {4.9.5}Square Lattice}{71}{subsection.4.9.5}
-\contentsline {subsection}{\numberline {4.9.6}Site Percolation}{71}{subsection.4.9.6}
-\contentsline {subsection}{\numberline {4.9.7}Bond Percolation}{73}{subsection.4.9.7}
-\contentsline {chapter}{\numberline {5}Ballistic Deposition on Square Lattice}{75}{chapter.5}
-\contentsline {section}{\numberline {5.1}Site Percolation Redefined}{76}{section.5.1}
-\contentsline {section}{\numberline {5.2}Structure and Algorithm}{76}{section.5.2}
-\contentsline {section}{\numberline {5.3}Finite Size Scaling in Percolation Theory}{77}{section.5.3}
-\contentsline {section}{\numberline {5.4}Finding Numerical Values}{77}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Critical occupation probability, $p_c$}{77}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Spanning Probability and finding $1/\nu $}{78}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Entropy, Specific Heat and finding $\alpha $}{79}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Order Parameter and finding $\beta $}{80}{subsection.5.4.4}
-\contentsline {subsection}{\numberline {5.4.5}Susceptibility and finding $\gamma $}{82}{subsection.5.4.5}
-\contentsline {subsection}{\numberline {5.4.6}Cluster Size Distribution}{83}{subsection.5.4.6}
-\contentsline {subsection}{\numberline {5.4.7}Cluster Rank Size Distribution}{84}{subsection.5.4.7}
-\contentsline {subsection}{\numberline {5.4.8}Order-Disorder Transition}{84}{subsection.5.4.8}
-\contentsline {subsection}{\numberline {5.4.9}Fractal Dimension}{85}{subsection.5.4.9}
-\contentsline {chapter}{\numberline {6}Summary and Discussion}{87}{chapter.6}
-\contentsline {chapter}{References}{89}{chapter*.72}
-\contentsline {chapter}{Appendix \numberline {A}Percolation}{97}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Algorithm}{97}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Code}{97}{section.a.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Index}{97}{subsection.a.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Site and Bond}{102}{subsection.a.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Lattice}{111}{subsection.a.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Cluster}{137}{subsection.a.A.2.4}
-\contentsline {subsection}{\numberline {A.2.5}Percolation}{145}{subsection.a.A.2.5}
-\contentsline {subsection}{\numberline {A.2.6}Utility}{145}{subsection.a.A.2.6}
-\contentsline {subsection}{\numberline {A.2.7}Tests}{145}{subsection.a.A.2.7}
-\contentsline {subsection}{\numberline {A.2.8}Main}{145}{subsection.a.A.2.8}
-\contentsline {chapter}{Appendix \numberline {B}Convolution}{147}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}Algorithm}{147}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Code}{147}{section.a.B.2}
-\contentsline {chapter}{Appendix \numberline {C}Finding Exponents}{149}{Appendix.a.C}
-\contentsline {section}{\numberline {C.1}Algorithm}{149}{section.a.C.1}
-\contentsline {subsection}{\numberline {C.1.1}Specific Heat and Susceptibility}{149}{subsection.a.C.1.1}
-\contentsline {subsubsection}{exponent for scaling the $y$-values}{149}{section*.73}
-\contentsline {subsubsection}{exponent for scaling the $x$-values}{150}{section*.74}
+\contentsline {section}{\numberline {3.6}Ising Model}{40}{section.3.6}
+\contentsline {chapter}{\numberline {4}Percolation Theory}{43}{chapter.4}
+\contentsline {section}{\numberline {4.1}Percolation Phenomena}{44}{section.4.1}
+\contentsline {section}{\numberline {4.2}Historical Overview}{45}{section.4.2}
+\contentsline {section}{\numberline {4.3}Classifications and Playground}{46}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Types of Percolation}{46}{subsection.4.3.1}
+\contentsline {subsubsection}{Bond Percolation}{46}{section*.21}
+\contentsline {subsubsection}{Site Percolation}{46}{section*.22}
+\contentsline {subsubsection}{Explosive Percolation}{47}{section*.23}
+\contentsline {subsubsection}{K-Core Percolation}{47}{section*.24}
+\contentsline {subsubsection}{Bootstrap Percolation}{48}{section*.25}
+\contentsline {subsubsection}{Other}{48}{section*.26}
+\contentsline {subsection}{\numberline {4.3.2}Types of Playground}{48}{subsection.4.3.2}
+\contentsline {subsubsection}{Lattice}{49}{section*.27}
+\contentsline {subsubsection}{Graph or Network}{50}{section*.30}
+\contentsline {section}{\numberline {4.4}Basic Elements}{50}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Occupation Probability}{50}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Cluster}{51}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Spanning cluster}{51}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Observable Quantities}{51}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Percolation Threshold, $p_c$}{52}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Spanning Probability, $w(p,L)$}{53}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Entropy, $H(p,L)$}{53}{subsection.4.5.3}
+\contentsline {subsubsection}{worked out example}{56}{section*.35}
+\contentsline {subsection}{\numberline {4.5.4}Specific Heat, $C(p,L)$}{56}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}Order Parameter, $P(p,L)$}{57}{subsection.4.5.5}
+\contentsline {subsection}{\numberline {4.5.6}Susceptibility, $\chi (p,L)$}{58}{subsection.4.5.6}
+\contentsline {subsection}{\numberline {4.5.7}Mean Cluster Size, S}{58}{subsection.4.5.7}
+\contentsline {subsection}{\numberline {4.5.8}Cluster Size Distribution Function, $n_s$}{58}{subsection.4.5.8}
+\contentsline {subsection}{\numberline {4.5.9}Correlation Function, $g(r)$}{59}{subsection.4.5.9}
+\contentsline {subsection}{\numberline {4.5.10}Correlation length, $\xi $}{59}{subsection.4.5.10}
+\contentsline {subsection}{\numberline {4.5.11}Fractal Dimension, $d_f$}{59}{subsection.4.5.11}
+\contentsline {section}{\numberline {4.6}Exact Solutions}{59}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}One Dimension}{59}{subsection.4.6.1}
+\contentsline {subsubsection}{Threshold}{59}{section*.37}
+\contentsline {subsubsection}{Cluster Size}{60}{section*.39}
+\contentsline {subsubsection}{Mean Cluster Size}{60}{section*.40}
+\contentsline {subsubsection}{Correlation Function and Correlation Length}{63}{section*.41}
+\contentsline {subsection}{\numberline {4.6.2}Infinite Dimension}{63}{subsection.4.6.2}
+\contentsline {subsubsection}{Properties of infinite dimensional object}{63}{section*.42}
+\contentsline {subsubsection}{Bethe Lattice}{64}{section*.43}
+\contentsline {subsubsection}{Percolation Threshold}{65}{section*.45}
+\contentsline {subsubsection}{Percolation Strength}{66}{section*.46}
+\contentsline {subsubsection}{Mean Cluster Size}{67}{section*.47}
+\contentsline {subsubsection}{Correlation Function and Correlation Length}{68}{section*.48}
+\contentsline {section}{\numberline {4.7}Algorithm}{69}{section.4.7}
+\contentsline {section}{\numberline {4.8}Relation of Phase Transition with Percolation}{69}{section.4.8}
+\contentsline {section}{\numberline {4.9}Application}{69}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}Epidemiology}{69}{subsection.4.9.1}
+\contentsline {subsection}{\numberline {4.9.2}Neural Network and Cognitive Psychology}{70}{subsection.4.9.2}
+\contentsline {subsection}{\numberline {4.9.3}Ferromagnetism}{71}{subsection.4.9.3}
+\contentsline {subsection}{\numberline {4.9.4}Cosmology}{72}{subsection.4.9.4}
+\contentsline {subsection}{\numberline {4.9.5}Square Lattice}{73}{subsection.4.9.5}
+\contentsline {subsection}{\numberline {4.9.6}Site Percolation}{73}{subsection.4.9.6}
+\contentsline {subsection}{\numberline {4.9.7}Bond Percolation}{75}{subsection.4.9.7}
+\contentsline {chapter}{\numberline {5}Ballistic Deposition on Square Lattice}{77}{chapter.5}
+\contentsline {section}{\numberline {5.1}Site Percolation Redefined}{78}{section.5.1}
+\contentsline {section}{\numberline {5.2}Structure and Algorithm}{78}{section.5.2}
+\contentsline {section}{\numberline {5.3}Finite Size Scaling in Percolation Theory}{79}{section.5.3}
+\contentsline {section}{\numberline {5.4}Finding Numerical Values}{79}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Critical occupation probability, $p_c$}{79}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Spanning Probability and finding $1/\nu $}{80}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Entropy, Specific Heat and finding $\alpha $}{81}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Order Parameter and finding $\beta $}{82}{subsection.5.4.4}
+\contentsline {subsection}{\numberline {5.4.5}Susceptibility and finding $\gamma $}{84}{subsection.5.4.5}
+\contentsline {subsection}{\numberline {5.4.6}Cluster Size Distribution}{85}{subsection.5.4.6}
+\contentsline {subsection}{\numberline {5.4.7}Cluster Rank Size Distribution}{86}{subsection.5.4.7}
+\contentsline {subsection}{\numberline {5.4.8}Order-Disorder Transition}{86}{subsection.5.4.8}
+\contentsline {subsection}{\numberline {5.4.9}Fractal Dimension}{87}{subsection.5.4.9}
+\contentsline {chapter}{\numberline {6}Summary and Discussion}{89}{chapter.6}
+\contentsline {chapter}{References}{91}{chapter*.72}
+\contentsline {chapter}{Appendix \numberline {A}Percolation}{99}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Algorithm}{99}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Code}{99}{section.a.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Index}{99}{subsection.a.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Site}{104}{subsection.a.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Bond}{107}{subsection.a.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Lattice}{112}{subsection.a.A.2.4}
+\contentsline {subsection}{\numberline {A.2.5}Exception}{133}{subsection.a.A.2.5}
+\contentsline {subsection}{\numberline {A.2.6}Cluster}{135}{subsection.a.A.2.6}
+\contentsline {subsection}{\numberline {A.2.7}Percolation}{140}{subsection.a.A.2.7}
+\contentsline {subsection}{\numberline {A.2.8}Utilities}{192}{subsection.a.A.2.8}
+\contentsline {subsection}{\numberline {A.2.9}Test}{196}{subsection.a.A.2.9}
+\contentsline {subsection}{\numberline {A.2.10}Main}{200}{subsection.a.A.2.10}
+\contentsline {subsection}{\numberline {A.2.11}CMakeLists}{202}{subsection.a.A.2.11}
+\contentsline {subsection}{\numberline {A.2.12}complete code}{203}{subsection.a.A.2.12}
+\contentsline {chapter}{Appendix \numberline {B}Convolution}{205}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}Algorithm}{205}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Code}{205}{section.a.B.2}
+\contentsline {chapter}{Appendix \numberline {C}Finding Exponents}{207}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}Algorithm}{207}{section.a.C.1}
+\contentsline {subsection}{\numberline {C.1.1}Specific Heat and Susceptibility}{207}{subsection.a.C.1.1}
+\contentsline {subsubsection}{exponent for scaling the $y$-values}{207}{section*.73}
+\contentsline {subsubsection}{exponent for scaling the $x$-values}{208}{section*.74}

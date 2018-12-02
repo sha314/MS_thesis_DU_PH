@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  1 DEC 2018 10:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  3 DEC 2018 00:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1260,7 +1260,7 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 \PHD@crest=\box33
-<Figs/Dhaka_University_logo.png, id=450, 1204.5pt x 1511.6475pt>
+<Figs/Dhaka_University_logo.png, id=458, 1204.5pt x 1511.6475pt>
 File: Figs/Dhaka_University_logo.png Graphic file (type png)
 <use Figs/Dhaka_University_logo.png>
 Package pdftex.def Info: Figs/Dhaka_University_logo.png  used on input line 113
@@ -1414,7 +1414,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter2/Figs/area_vs_arm-eps-convert
 ed-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> a
 llowed
-<Chapter2/Figs/area_vs_arm-eps-converted-to.pdf, id=808, 361.35pt x 361.35pt>
+<Chapter2/Figs/area_vs_arm-eps-converted-to.pdf, id=819, 361.35pt x 361.35pt>
 File: Chapter2/Figs/area_vs_arm-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter2/Figs/area_vs_arm-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter2/Figs/area_vs_arm-eps-converted-to.pdf  used o
@@ -1442,7 +1442,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter2/Figs/data_collapse-eps-conve
 rted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5>
  allowed
-<Chapter2/Figs/data_collapse-eps-converted-to.pdf, id=809, 361.35pt x 361.35pt>
+<Chapter2/Figs/data_collapse-eps-converted-to.pdf, id=820, 361.35pt x 361.35pt>
 
 File: Chapter2/Figs/data_collapse-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter2/Figs/data_collapse-eps-converted-to.pdf>
@@ -1456,14 +1456,14 @@ Overfull \hbox (24.0pt too wide) in paragraph at lines 113--126
 
 [8] [9 <./Chapter2/Figs/area_vs_arm-eps-converted-to.pdf> <./Chapter2/Figs/data
 _collapse-eps-converted-to.pdf>] [10]
-<Chapter2/Figs/self-similarity/cauliflower.jpg, id=879, 3288.285pt x 3288.285pt
+<Chapter2/Figs/self-similarity/cauliflower.jpg, id=889, 3288.285pt x 3288.285pt
 >
 File: Chapter2/Figs/self-similarity/cauliflower.jpg Graphic file (type jpg)
 <use Chapter2/Figs/self-similarity/cauliflower.jpg>
 Package pdftex.def Info: Chapter2/Figs/self-similarity/cauliflower.jpg  used on
  input line 190.
 (pdftex.def)             Requested size: 349.97023pt x 349.9715pt.
-<Chapter2/Figs/self-similarity/cauliflower_disected.jpg, id=880, 1606.0pt x 106
+<Chapter2/Figs/self-similarity/cauliflower_disected.jpg, id=890, 1606.0pt x 106
 0.96375pt>
 File: Chapter2/Figs/self-similarity/cauliflower_disected.jpg Graphic file (type
  jpg)
@@ -1475,26 +1475,26 @@ Package pdftex.def Info: Chapter2/Figs/self-similarity/cauliflower_disected.jpg
 
 LaTeX Warning: Float too large for page by 12.08119pt on input line 203.
 
-<Chapter2/Figs/self-similarity/leaf.jpg, id=881, 1254.6875pt x 632.3625pt>
+<Chapter2/Figs/self-similarity/leaf.jpg, id=891, 1254.6875pt x 632.3625pt>
 File: Chapter2/Figs/self-similarity/leaf.jpg Graphic file (type jpg)
 <use Chapter2/Figs/self-similarity/leaf.jpg>
 Package pdftex.def Info: Chapter2/Figs/self-similarity/leaf.jpg  used on input 
 line 210.
 (pdftex.def)             Requested size: 170.71565pt x 142.25612pt.
-<Chapter2/Figs/self-similarity/snowflake.jpg, id=882, 726.715pt x 545.03625pt>
+<Chapter2/Figs/self-similarity/snowflake.jpg, id=892, 726.715pt x 545.03625pt>
 File: Chapter2/Figs/self-similarity/snowflake.jpg Graphic file (type jpg)
 <use Chapter2/Figs/self-similarity/snowflake.jpg>
 Package pdftex.def Info: Chapter2/Figs/self-similarity/snowflake.jpg  used on i
 nput line 215.
 (pdftex.def)             Requested size: 170.7115pt x 142.26329pt.
-<Chapter2/Figs/self-similarity/Blood_vessels.jpg, id=883, 461.725pt x 288.07625
+<Chapter2/Figs/self-similarity/Blood_vessels.jpg, id=893, 461.725pt x 288.07625
 pt>
 File: Chapter2/Figs/self-similarity/Blood_vessels.jpg Graphic file (type jpg)
 <use Chapter2/Figs/self-similarity/Blood_vessels.jpg>
 Package pdftex.def Info: Chapter2/Figs/self-similarity/Blood_vessels.jpg  used 
 on input line 220.
 (pdftex.def)             Requested size: 170.7158pt x 142.2663pt.
-<Chapter2/Figs/self-similarity/leafless-tree.jpg, id=884, 814.30986pt x 586.303
+<Chapter2/Figs/self-similarity/leafless-tree.jpg, id=894, 814.30986pt x 586.303
 1pt>
 File: Chapter2/Figs/self-similarity/leafless-tree.jpg Graphic file (type jpg)
 <use Chapter2/Figs/self-similarity/leafless-tree.jpg>
@@ -1548,7 +1548,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--90
  []
 
 [23] [24]
-<Chapter3/Figs/carnot-cycle-heat-engine-refrigerator.png, id=1013, 249.3315pt x
+<Chapter3/Figs/carnot-cycle-heat-engine-refrigerator.png, id=1023, 249.3315pt x
  101.178pt>
 File: Chapter3/Figs/carnot-cycle-heat-engine-refrigerator.png Graphic file (typ
 e png)
@@ -1575,7 +1575,7 @@ cs/decreasing-eps-converted-to.pdf Chapter3/Figs/thermodynamics/decreasing.eps>
 
 (epstopdf)             \includegraphics on input line 244.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter3/Figs/thermodynamics/decreasing-eps-converted-to.pdf, id=1088, 239.896
+<Chapter3/Figs/thermodynamics/decreasing-eps-converted-to.pdf, id=1098, 239.896
 26pt x 257.96375pt>
 File: Chapter3/Figs/thermodynamics/decreasing-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -1596,7 +1596,7 @@ cs/increasing-eps-converted-to.pdf Chapter3/Figs/thermodynamics/increasing.eps>
 
 (epstopdf)             \includegraphics on input line 249.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter3/Figs/thermodynamics/increasing-eps-converted-to.pdf, id=1089, 241.903
+<Chapter3/Figs/thermodynamics/increasing-eps-converted-to.pdf, id=1099, 241.903
 75pt x 257.96375pt>
 File: Chapter3/Figs/thermodynamics/increasing-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -1615,7 +1615,7 @@ onverted-to.pdf>
 cs/concave-eps-converted-to.pdf Chapter3/Figs/thermodynamics/concave.eps>
 (epstopdf)             \includegraphics on input line 261.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter3/Figs/thermodynamics/concave-eps-converted-to.pdf, id=1091, 243.91125p
+<Chapter3/Figs/thermodynamics/concave-eps-converted-to.pdf, id=1101, 243.91125p
 t x 257.96375pt>
 File: Chapter3/Figs/thermodynamics/concave-eps-converted-to.pdf Graphic file (t
 ype pdf)
@@ -1634,7 +1634,7 @@ nverted-to.pdf>
 cs/convex-eps-converted-to.pdf Chapter3/Figs/thermodynamics/convex.eps>
 (epstopdf)             \includegraphics on input line 266.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter3/Figs/thermodynamics/convex-eps-converted-to.pdf, id=1092, 240.9pt x 2
+<Chapter3/Figs/thermodynamics/convex-eps-converted-to.pdf, id=1102, 240.9pt x 2
 57.96375pt>
 File: Chapter3/Figs/thermodynamics/convex-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -1657,7 +1657,7 @@ cs/free_energy-eps-converted-to.pdf Chapter3/Figs/thermodynamics/free_energy.ep
 s>
 (epstopdf)             \includegraphics on input line 285.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter3/Figs/thermodynamics/free_energy-eps-converted-to.pdf, id=1118, 259.97
+<Chapter3/Figs/thermodynamics/free_energy-eps-converted-to.pdf, id=1128, 259.97
 125pt x 233.87375pt>
 File: Chapter3/Figs/thermodynamics/free_energy-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1678,7 +1678,7 @@ cs/entropy_1st-eps-converted-to.pdf Chapter3/Figs/thermodynamics/entropy_1st.ep
 s>
 (epstopdf)             \includegraphics on input line 296.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter3/Figs/thermodynamics/entropy_1st-eps-converted-to.pdf, id=1120, 266.99
+<Chapter3/Figs/thermodynamics/entropy_1st-eps-converted-to.pdf, id=1130, 266.99
 75pt x 263.98625pt>
 File: Chapter3/Figs/thermodynamics/entropy_1st-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1699,7 +1699,7 @@ cs/entropy_2nd-eps-converted-to.pdf Chapter3/Figs/thermodynamics/entropy_2nd.ep
 s>
 (epstopdf)             \includegraphics on input line 301.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter3/Figs/thermodynamics/entropy_2nd-eps-converted-to.pdf, id=1121, 236.88
+<Chapter3/Figs/thermodynamics/entropy_2nd-eps-converted-to.pdf, id=1131, 236.88
 5pt x 262.9825pt>
 File: Chapter3/Figs/thermodynamics/entropy_2nd-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1725,7 +1725,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter3/Figs/thermodynamics/specific
 _heat-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at mos
 t version <1.5> allowed
-<Chapter3/Figs/thermodynamics/specific_heat-eps-converted-to.pdf, id=1123, 239.
+<Chapter3/Figs/thermodynamics/specific_heat-eps-converted-to.pdf, id=1133, 239.
 89626pt x 260.975pt>
 File: Chapter3/Figs/thermodynamics/specific_heat-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -1786,7 +1786,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter3/Figs/power_law_functions/fig
 1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<Chapter3/Figs/power_law_functions/fig1-eps-converted-to.pdf, id=1187, 462.7287
+<Chapter3/Figs/power_law_functions/fig1-eps-converted-to.pdf, id=1197, 462.7287
 4pt x 346.29375pt>
 File: Chapter3/Figs/power_law_functions/fig1-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -1811,7 +1811,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter3/Figs/power_law_functions/fig
 2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<Chapter3/Figs/power_law_functions/fig2-eps-converted-to.pdf, id=1188, 462.7287
+<Chapter3/Figs/power_law_functions/fig2-eps-converted-to.pdf, id=1198, 462.7287
 4pt x 346.29375pt>
 File: Chapter3/Figs/power_law_functions/fig2-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -1830,7 +1830,7 @@ LaTeX Warning: Reference `??' on page 36 undefined on input line 381.
 
 LaTeX Warning: Reference `??' on page 37 undefined on input line 422.
 
-[37] [38] [39]) [40]
+[37] [38] [39] [40] [41]) [42]
 \openout2 = `Chapter4/chapter4.aux'.
 
  (./Chapter4/chapter4.tex
@@ -1845,7 +1845,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[41
+[43
 
 
 
@@ -1868,7 +1868,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/square-lattice-spanning
 -cluster-0-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but a
 t most version <1.5> allowed
-<Chapter4/Figs/square-lattice-spanning-cluster-0-eps-converted-to.pdf, id=1289,
+<Chapter4/Figs/square-lattice-spanning-cluster-0-eps-converted-to.pdf, id=1324,
  352.31625pt x 353.32pt>
 File: Chapter4/Figs/square-lattice-spanning-cluster-0-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -1894,7 +1894,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/square-lattice-spanning
 -cluster-1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but a
 t most version <1.5> allowed
-<Chapter4/Figs/square-lattice-spanning-cluster-1-eps-converted-to.pdf, id=1290,
+<Chapter4/Figs/square-lattice-spanning-cluster-1-eps-converted-to.pdf, id=1325,
  352.31625pt x 353.32pt>
 File: Chapter4/Figs/square-lattice-spanning-cluster-1-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -1902,42 +1902,42 @@ hic file (type pdf)
 Package pdftex.def Info: Chapter4/Figs/square-lattice-spanning-cluster-1-eps-co
 nverted-to.pdf  used on input line 35.
 (pdftex.def)             Requested size: 157.48552pt x 157.93045pt.
-[42] [43 <./Chapter4/Figs/square-lattice-spanning-cluster-0-eps-converted-to.pd
+[44] [45 <./Chapter4/Figs/square-lattice-spanning-cluster-0-eps-converted-to.pd
 f> <./Chapter4/Figs/square-lattice-spanning-cluster-1-eps-converted-to.pdf>]
-[44] [45]
-<Chapter4/Figs/playground/cubic.png, id=1381, 561.09625pt x 238.8925pt>
+[46] [47]
+<Chapter4/Figs/playground/cubic.png, id=1415, 561.09625pt x 238.8925pt>
 File: Chapter4/Figs/playground/cubic.png Graphic file (type png)
 <use Chapter4/Figs/playground/cubic.png>
 Package pdftex.def Info: Chapter4/Figs/playground/cubic.png  used on input line
  88.
 (pdftex.def)             Requested size: 437.46112pt x 186.25154pt.
- [46]
-<Chapter4/Figs/playground/triangular.png, id=1404, 851.18pt x 471.7625pt>
+ [48]
+<Chapter4/Figs/playground/triangular.png, id=1438, 851.18pt x 471.7625pt>
 File: Chapter4/Figs/playground/triangular.png Graphic file (type png)
 <use Chapter4/Figs/playground/triangular.png>
 Package pdftex.def Info: Chapter4/Figs/playground/triangular.png  used on input
  line 98.
 (pdftex.def)             Requested size: 196.85616pt x 109.10056pt.
-<Chapter4/Figs/playground/honeycomb.png, id=1407, 527.9725pt x 400.49625pt>
+<Chapter4/Figs/playground/honeycomb.png, id=1441, 527.9725pt x 400.49625pt>
 File: Chapter4/Figs/playground/honeycomb.png Graphic file (type png)
 <use Chapter4/Figs/playground/honeycomb.png>
 Package pdftex.def Info: Chapter4/Figs/playground/honeycomb.png  used on input 
 line 103.
 (pdftex.def)             Requested size: 196.85616pt x 149.32405pt.
- [47 <./Chapter4/Figs/playground/cubic.png> <./Chapter4/Figs/playground/triangu
+ [49 <./Chapter4/Figs/playground/cubic.png> <./Chapter4/Figs/playground/triangu
 lar.png (PNG copy)> <./Chapter4/Figs/playground/honeycomb.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
-<Chapter4/Figs/playground/scale-free-network.jpg, id=1429, 1027.84pt x 912.4087
+<Chapter4/Figs/playground/scale-free-network.jpg, id=1464, 1027.84pt x 912.4087
 5pt>
 File: Chapter4/Figs/playground/scale-free-network.jpg Graphic file (type jpg)
 <use Chapter4/Figs/playground/scale-free-network.jpg>
 Package pdftex.def Info: Chapter4/Figs/playground/scale-free-network.jpg  used 
 on input line 119.
 (pdftex.def)             Requested size: 320.50914pt x 284.52756pt.
-[48] [49 <./Chapter4/Figs/playground/scale-free-network.jpg>]
+[50] [51 <./Chapter4/Figs/playground/scale-free-network.jpg>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 141.
 
@@ -1970,7 +1970,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/square-lattice-clusters
 2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<Chapter4/Figs/square-lattice-clusters2-eps-converted-to.pdf, id=1456, 352.3162
+<Chapter4/Figs/square-lattice-clusters2-eps-converted-to.pdf, id=1491, 352.3162
 5pt x 353.32pt>
 File: Chapter4/Figs/square-lattice-clusters2-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -1995,7 +1995,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/square-lattice-clusters
 -eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most ver
 sion <1.5> allowed
-<Chapter4/Figs/square-lattice-clusters-eps-converted-to.pdf, id=1457, 352.31625
+<Chapter4/Figs/square-lattice-clusters-eps-converted-to.pdf, id=1492, 352.31625
 pt x 353.32pt>
 File: Chapter4/Figs/square-lattice-clusters-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -2006,7 +2006,7 @@ Package pdftex.def Info: Chapter4/Figs/square-lattice-clusters-eps-converted-to
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[50 <./Chapter4/Figs/square-lattice-clusters2-eps-converted-to.pdf> <./Chapter4
+[52 <./Chapter4/Figs/square-lattice-clusters2-eps-converted-to.pdf> <./Chapter4
 /Figs/square-lattice-clusters-eps-converted-to.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2024,7 +2024,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 192.
 
-[51] [52]
+[53] [54]
 Package epstopdf Info: Source file: <Chapter4/Figs/entropy_cluster/12object-ent
 ropy-max.eps>
 (epstopdf)                    date: 2018-11-17 15:54:15
@@ -2044,7 +2044,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/entropy_cluster/12objec
 t-entropy-max-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
 <Chapter4/Figs/entropy_cluster/12object-entropy-max-eps-converted-to.pdf, id=15
-04, 201.75375pt x 145.54375pt>
+38, 201.75375pt x 145.54375pt>
 File: Chapter4/Figs/entropy_cluster/12object-entropy-max-eps-converted-to.pdf G
 raphic file (type pdf)
 <use Chapter4/Figs/entropy_cluster/12object-entropy-max-eps-converted-to.pdf>
@@ -2070,7 +2070,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/entropy_cluster/12objec
 t-entropy-mid-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
 <Chapter4/Figs/entropy_cluster/12object-entropy-mid-eps-converted-to.pdf, id=15
-05, 201.75375pt x 145.54375pt>
+39, 201.75375pt x 145.54375pt>
 File: Chapter4/Figs/entropy_cluster/12object-entropy-mid-eps-converted-to.pdf G
 raphic file (type pdf)
 <use Chapter4/Figs/entropy_cluster/12object-entropy-mid-eps-converted-to.pdf>
@@ -2101,7 +2101,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/entropy_cluster/12objec
 t-entropy-min-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
 <Chapter4/Figs/entropy_cluster/12object-entropy-min-eps-converted-to.pdf, id=15
-06, 201.75375pt x 145.54375pt>
+40, 201.75375pt x 145.54375pt>
 File: Chapter4/Figs/entropy_cluster/12object-entropy-min-eps-converted-to.pdf G
 raphic file (type pdf)
 <use Chapter4/Figs/entropy_cluster/12object-entropy-min-eps-converted-to.pdf>
@@ -2113,22 +2113,22 @@ Underfull \hbox (badness 1377) in paragraph at lines 239--239
 \T1/ptm/m/n/10.95 (+20) sys-tem of max-i-mum en-
  []
 
-[53 <./Chapter4/Figs/entropy_cluster/12object-entropy-max-eps-converted-to.pdf>
+[55 <./Chapter4/Figs/entropy_cluster/12object-entropy-max-eps-converted-to.pdf>
  <./Chapter4/Figs/entropy_cluster/12object-entropy-mid-eps-converted-to.pdf> <.
 /Chapter4/Figs/entropy_cluster/12object-entropy-min-eps-converted-to.pdf>]
-<Chapter4/Figs/entropy_cluster/step1.png, id=1519, 142.6128pt x 68.1747pt>
+<Chapter4/Figs/entropy_cluster/step1.png, id=1554, 142.6128pt x 68.1747pt>
 File: Chapter4/Figs/entropy_cluster/step1.png Graphic file (type png)
 <use Chapter4/Figs/entropy_cluster/step1.png>
 Package pdftex.def Info: Chapter4/Figs/entropy_cluster/step1.png  used on input
  line 263.
 (pdftex.def)             Requested size: 109.36528pt x 52.2814pt.
-<Chapter4/Figs/entropy_cluster/step2.png, id=1520, 139.9629pt x 69.1383pt>
+<Chapter4/Figs/entropy_cluster/step2.png, id=1555, 139.9629pt x 69.1383pt>
 File: Chapter4/Figs/entropy_cluster/step2.png Graphic file (type png)
 <use Chapter4/Figs/entropy_cluster/step2.png>
 Package pdftex.def Info: Chapter4/Figs/entropy_cluster/step2.png  used on input
  line 267.
 (pdftex.def)             Requested size: 109.36528pt x 54.02365pt.
-<Chapter4/Figs/entropy_cluster/step3.png, id=1521, 77.5698pt x 73.2336pt>
+<Chapter4/Figs/entropy_cluster/step3.png, id=1556, 77.5698pt x 73.2336pt>
 File: Chapter4/Figs/entropy_cluster/step3.png Graphic file (type png)
 <use Chapter4/Figs/entropy_cluster/step3.png>
 Package pdftex.def Info: Chapter4/Figs/entropy_cluster/step3.png  used on input
@@ -2147,7 +2147,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 278.
 
-[54]
+[56]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 287.
@@ -2156,7 +2156,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 287.
 
-[55 <./Chapter4/Figs/entropy_cluster/step1.png> <./Chapter4/Figs/entropy_cluste
+[57 <./Chapter4/Figs/entropy_cluster/step1.png> <./Chapter4/Figs/entropy_cluste
 r/step2.png> <./Chapter4/Figs/entropy_cluster/step3.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2214,7 +2214,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 324.
 
-[56]
+[58]
 Package epstopdf Info: Source file: <Chapter4/Figs/1d_lattice.eps>
 (epstopdf)                    date: 2018-11-11 22:55:44
 (epstopdf)                    size: 18431 bytes
@@ -2231,14 +2231,14 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/1d_lattice-eps-converte
 d-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> al
 lowed
-<Chapter4/Figs/1d_lattice-eps-converted-to.pdf, id=1549, 271.0125pt x 10.0375pt
+<Chapter4/Figs/1d_lattice-eps-converted-to.pdf, id=1583, 271.0125pt x 10.0375pt
 >
 File: Chapter4/Figs/1d_lattice-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter4/Figs/1d_lattice-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter4/Figs/1d_lattice-eps-converted-to.pdf  used on
  input line 332.
 (pdftex.def)             Requested size: 437.46112pt x 16.20288pt.
-[57 <./Chapter4/Figs/1d_lattice-eps-converted-to.pdf>] [58] [59] [60] [61]
+[59 <./Chapter4/Figs/1d_lattice-eps-converted-to.pdf>] [60] [61] [62] [63]
 Package epstopdf Info: Source file: <Chapter4/Figs/bethe-lattice.eps>
 (epstopdf)                    date: 2018-11-11 23:09:52
 (epstopdf)                    size: 12041 bytes
@@ -2255,15 +2255,15 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/bethe-lattice-eps-conve
 rted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5>
  allowed
-<Chapter4/Figs/bethe-lattice-eps-converted-to.pdf, id=1606, 251.94125pt x 247.9
+<Chapter4/Figs/bethe-lattice-eps-converted-to.pdf, id=1640, 251.94125pt x 247.9
 2625pt>
 File: Chapter4/Figs/bethe-lattice-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter4/Figs/bethe-lattice-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter4/Figs/bethe-lattice-eps-converted-to.pdf  used
  on input line 462.
 (pdftex.def)             Requested size: 284.52756pt x 279.9945pt.
-[62] [63 <./Chapter4/Figs/bethe-lattice-eps-converted-to.pdf>] [64] [65]
-[66] [67]
+[64] [65 <./Chapter4/Figs/bethe-lattice-eps-converted-to.pdf>] [66] [67]
+[68] [69]
 Underfull \hbox (badness 10000) in paragraph at lines 596--597
 
  []
@@ -2273,13 +2273,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 598--599
 
  []
 
-[68] [69]
-<Chapter4/Figs/galaxy.jpg, id=1707, 728.7225pt x 601.24625pt>
+[70] [71]
+<Chapter4/Figs/galaxy.jpg, id=1742, 728.7225pt x 601.24625pt>
 File: Chapter4/Figs/galaxy.jpg Graphic file (type jpg)
 <use Chapter4/Figs/galaxy.jpg>
 Package pdftex.def Info: Chapter4/Figs/galaxy.jpg  used on input line 620.
 (pdftex.def)             Requested size: 284.52756pt x 234.75114pt.
- [70 <./Chapter4/Figs/galaxy.jpg>]
+ [72 <./Chapter4/Figs/galaxy.jpg>]
 Package epstopdf Info: Source file: <Chapter4/Figs/square_lattice_5.eps>
 (epstopdf)                    date: 2018-10-02 03:49:14
 (epstopdf)                    size: 67375 bytes
@@ -2291,7 +2291,7 @@ ed-to.pdf>
 ce_5-eps-converted-to.pdf Chapter4/Figs/square_lattice_5.eps>
 (epstopdf)             \includegraphics on input line 639.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter4/Figs/square_lattice_5-eps-converted-to.pdf, id=1723, 227.85126pt x 22
+<Chapter4/Figs/square_lattice_5-eps-converted-to.pdf, id=1757, 227.85126pt x 22
 7.85126pt>
 File: Chapter4/Figs/square_lattice_5-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -2310,7 +2310,7 @@ pdf>
 ps-converted-to.pdf Chapter4/Figs/site_empty.eps>
 (epstopdf)             \includegraphics on input line 647.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter4/Figs/site_empty-eps-converted-to.pdf, id=1724, 13.04875pt x 13.04875p
+<Chapter4/Figs/site_empty-eps-converted-to.pdf, id=1758, 13.04875pt x 13.04875p
 t>
 File: Chapter4/Figs/site_empty-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter4/Figs/site_empty-eps-converted-to.pdf>
@@ -2328,7 +2328,7 @@ to.pdf>
 d-eps-converted-to.pdf Chapter4/Figs/site_occupied.eps>
 (epstopdf)             \includegraphics on input line 652.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter4/Figs/site_occupied-eps-converted-to.pdf, id=1725, 13.04875pt x 13.048
+<Chapter4/Figs/site_occupied-eps-converted-to.pdf, id=1759, 13.04875pt x 13.048
 75pt>
 File: Chapter4/Figs/site_occupied-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter4/Figs/site_occupied-eps-converted-to.pdf>
@@ -2346,7 +2346,7 @@ pdf>
 ps-converted-to.pdf Chapter4/Figs/bond_empty.eps>
 (epstopdf)             \includegraphics on input line 657.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter4/Figs/bond_empty-eps-converted-to.pdf, id=1726, 22.0825pt x 7.02625pt>
+<Chapter4/Figs/bond_empty-eps-converted-to.pdf, id=1760, 22.0825pt x 7.02625pt>
 
 File: Chapter4/Figs/bond_empty-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter4/Figs/bond_empty-eps-converted-to.pdf>
@@ -2364,7 +2364,7 @@ to.pdf>
 d-eps-converted-to.pdf Chapter4/Figs/bond_occupied.eps>
 (epstopdf)             \includegraphics on input line 662.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter4/Figs/bond_occupied-eps-converted-to.pdf, id=1727, 22.0825pt x 8.03pt>
+<Chapter4/Figs/bond_occupied-eps-converted-to.pdf, id=1761, 22.0825pt x 8.03pt>
 
 File: Chapter4/Figs/bond_occupied-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter4/Figs/bond_occupied-eps-converted-to.pdf>
@@ -2381,7 +2381,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 645--665
 []$ $[]$ 
  []
 
-[71] [72 <./Chapter4/Figs/square_lattice_5-eps-converted-to.pdf> <./Chapter4/Fi
+[73] [74 <./Chapter4/Figs/square_lattice_5-eps-converted-to.pdf> <./Chapter4/Fi
 gs/site_empty-eps-converted-to.pdf> <./Chapter4/Figs/site_occupied-eps-converte
 d-to.pdf> <./Chapter4/Figs/bond_empty-eps-converted-to.pdf> <./Chapter4/Figs/bo
 nd_occupied-eps-converted-to.pdf>]
@@ -2398,7 +2398,7 @@ ite_percolation_1_0-eps-converted-to.pdf Chapter4/Figs/sq_lattice_site_percolat
 ion_1_0.eps>
 (epstopdf)             \includegraphics on input line 684.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter4/Figs/sq_lattice_site_percolation_1_0-eps-converted-to.pdf, id=1767, 2
+<Chapter4/Figs/sq_lattice_site_percolation_1_0-eps-converted-to.pdf, id=1802, 2
 27.85126pt x 227.85126pt>
 File: Chapter4/Figs/sq_lattice_site_percolation_1_0-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2419,7 +2419,7 @@ ite_percolation_1_1-eps-converted-to.pdf Chapter4/Figs/sq_lattice_site_percolat
 ion_1_1.eps>
 (epstopdf)             \includegraphics on input line 689.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter4/Figs/sq_lattice_site_percolation_1_1-eps-converted-to.pdf, id=1768, 2
+<Chapter4/Figs/sq_lattice_site_percolation_1_1-eps-converted-to.pdf, id=1803, 2
 27.85126pt x 227.85126pt>
 File: Chapter4/Figs/sq_lattice_site_percolation_1_1-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2440,7 +2440,7 @@ ite_percolation_1_2-eps-converted-to.pdf Chapter4/Figs/sq_lattice_site_percolat
 ion_1_2.eps>
 (epstopdf)             \includegraphics on input line 694.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter4/Figs/sq_lattice_site_percolation_1_2-eps-converted-to.pdf, id=1769, 2
+<Chapter4/Figs/sq_lattice_site_percolation_1_2-eps-converted-to.pdf, id=1804, 2
 27.85126pt x 227.85126pt>
 File: Chapter4/Figs/sq_lattice_site_percolation_1_2-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2461,7 +2461,7 @@ ite_percolation_1_3-eps-converted-to.pdf Chapter4/Figs/sq_lattice_site_percolat
 ion_1_3.eps>
 (epstopdf)             \includegraphics on input line 699.
 Package epstopdf Info: Output file is already uptodate.
-<Chapter4/Figs/sq_lattice_site_percolation_1_3-eps-converted-to.pdf, id=1770, 2
+<Chapter4/Figs/sq_lattice_site_percolation_1_3-eps-converted-to.pdf, id=1805, 2
 27.85126pt x 227.85126pt>
 File: Chapter4/Figs/sq_lattice_site_percolation_1_3-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2479,7 +2479,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 682--702
 []$ $[]$ 
  []
 
-[73 <./Chapter4/Figs/sq_lattice_site_percolation_1_0-eps-converted-to.pdf> <./C
+[75 <./Chapter4/Figs/sq_lattice_site_percolation_1_0-eps-converted-to.pdf> <./C
 hapter4/Figs/sq_lattice_site_percolation_1_1-eps-converted-to.pdf> <./Chapter4/
 Figs/sq_lattice_site_percolation_1_2-eps-converted-to.pdf> <./Chapter4/Figs/sq_
 lattice_site_percolation_1_3-eps-converted-to.pdf>]
@@ -2501,7 +2501,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/sq_lattice_bond_percola
 tion_1_0-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at 
 most version <1.5> allowed
-<Chapter4/Figs/sq_lattice_bond_percolation_1_0-eps-converted-to.pdf, id=1831, 2
+<Chapter4/Figs/sq_lattice_bond_percolation_1_0-eps-converted-to.pdf, id=1865, 2
 27.85126pt x 227.85126pt>
 File: Chapter4/Figs/sq_lattice_bond_percolation_1_0-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2527,7 +2527,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/sq_lattice_bond_percola
 tion_1_1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at 
 most version <1.5> allowed
-<Chapter4/Figs/sq_lattice_bond_percolation_1_1-eps-converted-to.pdf, id=1832, 2
+<Chapter4/Figs/sq_lattice_bond_percolation_1_1-eps-converted-to.pdf, id=1866, 2
 27.85126pt x 227.85126pt>
 File: Chapter4/Figs/sq_lattice_bond_percolation_1_1-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2553,7 +2553,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/sq_lattice_bond_percola
 tion_1_2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at 
 most version <1.5> allowed
-<Chapter4/Figs/sq_lattice_bond_percolation_1_2-eps-converted-to.pdf, id=1833, 2
+<Chapter4/Figs/sq_lattice_bond_percolation_1_2-eps-converted-to.pdf, id=1867, 2
 27.85126pt x 227.85126pt>
 File: Chapter4/Figs/sq_lattice_bond_percolation_1_2-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2579,7 +2579,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: /usr/bin/pdflatex (file ./Chapter4/Figs/sq_lattice_bond_percola
 tion_1_3-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at 
 most version <1.5> allowed
-<Chapter4/Figs/sq_lattice_bond_percolation_1_3-eps-converted-to.pdf, id=1834, 2
+<Chapter4/Figs/sq_lattice_bond_percolation_1_3-eps-converted-to.pdf, id=1868, 2
 27.85126pt x 227.85126pt>
 File: Chapter4/Figs/sq_lattice_bond_percolation_1_3-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2597,7 +2597,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 719--739
 []$ $[]$ 
  []
 
-) [74 <./Chapter4/Figs/sq_lattice_bond_percolation_1_0-eps-converted-to.pdf> <.
+) [76 <./Chapter4/Figs/sq_lattice_bond_percolation_1_0-eps-converted-to.pdf> <.
 /Chapter4/Figs/sq_lattice_bond_percolation_1_1-eps-converted-to.pdf> <./Chapter
 4/Figs/sq_lattice_bond_percolation_1_2-eps-converted-to.pdf> <./Chapter4/Figs/s
 q_lattice_bond_percolation_1_3-eps-converted-to.pdf>]
@@ -2610,7 +2610,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
 
-[75
+[77
 
 
 
@@ -2619,7 +2619,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[76]
+[78]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 53.
@@ -2647,7 +2647,7 @@ y-pc0.5927.eps>
 (epstopdf)             \includegraphics on input line 59.
 Package epstopdf Info: Output file is already uptodate.
 <Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-occupation_probability-
-pc0.5927-eps-converted-to.pdf, id=1930, 361.35pt x 361.35pt>
+pc0.5927-eps-converted-to.pdf, id=1965, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-occupation_probabi
 lity-pc0.5927-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-occupation_probabil
@@ -2677,7 +2677,7 @@ olation_ballistic_deposition_L1_periodic_-occupation_probability-pc0.5782-eps-c
 onverted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
 <Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
--occupation_probability-pc0.5782-eps-converted-to.pdf, id=1931, 361.35pt x 361.
+-occupation_probability-pc0.5782-eps-converted-to.pdf, id=1966, 361.35pt x 361.
 35pt>
 File: Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_peri
 odic_-occupation_probability-pc0.5782-eps-converted-to.pdf Graphic file (type p
@@ -2710,7 +2710,7 @@ olation_ballistic_deposition_L2_periodic_-occupation_probability-pc0.5701-eps-c
 onverted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
 <Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_
--occupation_probability-pc0.5701-eps-converted-to.pdf, id=1932, 361.35pt x 361.
+-occupation_probability-pc0.5701-eps-converted-to.pdf, id=1967, 361.35pt x 361.
 35pt>
 File: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_peri
 odic_-occupation_probability-pc0.5701-eps-converted-to.pdf Graphic file (type p
@@ -2721,7 +2721,7 @@ Package pdftex.def Info: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic
 _deposition_L2_periodic_-occupation_probability-pc0.5701-eps-converted-to.pdf  
 used on input line 69.
 (pdftex.def)             Requested size: 143.92241pt x 143.91989pt.
-[77]
+[79]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 77.
@@ -2735,7 +2735,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 77.
 
 
-LaTeX Warning: Reference `label' on page 78 undefined on input line 82.
+LaTeX Warning: Reference `label' on page 80 undefined on input line 82.
 
 Package epstopdf Info: Source file: <Chapter5/Figs/L0/sq_lattice_site_percolati
 on_periodic_-occupation_probability-data_collapse-pc0.5927-ex0.7500.eps>
@@ -2753,7 +2753,7 @@ _-occupation_probability-data_collapse-pc0.5927-ex0.7500.eps>
 (epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
 <Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-occupation_probability-
-data_collapse-pc0.5927-ex0.7500-eps-converted-to.pdf, id=1944, 361.35pt x 361.3
+data_collapse-pc0.5927-ex0.7500-eps-converted-to.pdf, id=1980, 361.35pt x 361.3
 5pt>
 File: Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-occupation_probabi
 lity-data_collapse-pc0.5927-ex0.7500-eps-converted-to.pdf Graphic file (type pd
@@ -2789,7 +2789,7 @@ pc0.5782-ex0.7360-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>
 , but at most version <1.5> allowed
 <Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
 -occupation_probability-data_collapse-pc0.5782-ex0.7360-eps-converted-to.pdf, i
-d=1945, 361.35pt x 361.35pt>
+d=1981, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_peri
 odic_-occupation_probability-data_collapse-pc0.5782-ex0.7360-eps-converted-to.p
 df Graphic file (type pdf)
@@ -2825,7 +2825,7 @@ pc0.5701-ex0.7210-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>
 , but at most version <1.5> allowed
 <Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_
 -occupation_probability-data_collapse-pc0.5701-ex0.7210-eps-converted-to.pdf, i
-d=1946, 361.35pt x 361.35pt>
+d=1982, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_peri
 odic_-occupation_probability-data_collapse-pc0.5701-ex0.7210-eps-converted-to.p
 df Graphic file (type pdf)
@@ -2836,7 +2836,7 @@ Package pdftex.def Info: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic
 _deposition_L2_periodic_-occupation_probability-data_collapse-pc0.5701-ex0.7210
 -eps-converted-to.pdf  used on input line 96.
 (pdftex.def)             Requested size: 143.92241pt x 143.91989pt.
-[78 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-occupation_probab
+[80 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-occupation_probab
 ility-pc0.5927-eps-converted-to.pdf> <./Chapter5/Figs/L1/sq_lattice_site_percol
 ation_ballistic_deposition_L1_periodic_-occupation_probability-pc0.5782-eps-con
 verted-to.pdf> <./Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposi
@@ -2854,7 +2854,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 103.
 
 
-LaTeX Warning: Reference `label' on page 79 undefined on input line 105.
+LaTeX Warning: Reference `label' on page 81 undefined on input line 105.
 
 Package epstopdf Info: Source file: <Chapter5/Figs/L0/sq_lattice_site_percolati
 on_periodic_-entropy.eps>
@@ -2870,7 +2870,7 @@ attice_site_percolation_periodic_-entropy.eps>
 (epstopdf)             \includegraphics on input line 109.
 Package epstopdf Info: Output file is already uptodate.
 <Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-entropy-eps-converted-t
-o.pdf, id=2087, 361.35pt x 361.35pt>
+o.pdf, id=2122, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-entropy-eps-conver
 ted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-entropy-eps-convert
@@ -2898,7 +2898,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./Chapter5/Figs/L1/sq_lattice_site_perc
 olation_ballistic_deposition_L1_periodic_-entropy-eps-converted-to.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
 <Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
--entropy-eps-converted-to.pdf, id=2088, 361.35pt x 361.35pt>
+-entropy-eps-converted-to.pdf, id=2123, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_peri
 odic_-entropy-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_perio
@@ -2926,7 +2926,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./Chapter5/Figs/L2/sq_lattice_site_perc
 olation_ballistic_deposition_L2_periodic_-entropy-eps-converted-to.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
 <Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_
--entropy-eps-converted-to.pdf, id=2089, 361.35pt x 361.35pt>
+-entropy-eps-converted-to.pdf, id=2124, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_peri
 odic_-entropy-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_perio
@@ -2935,7 +2935,7 @@ Package pdftex.def Info: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic
 _deposition_L2_periodic_-entropy-eps-converted-to.pdf  used on input line 119.
 (pdftex.def)             Requested size: 143.92241pt x 143.91989pt.
 
-LaTeX Warning: Reference `' on page 79 undefined on input line 125.
+LaTeX Warning: Reference `' on page 81 undefined on input line 125.
 
 Package epstopdf Info: Source file: <Chapter5/Figs/L0/sq_lattice_site_percolati
 on_periodic__specific_heat-pc0.5927.eps>
@@ -2951,7 +2951,7 @@ r5/Figs/L0/sq_lattice_site_percolation_periodic__specific_heat-pc0.5927.eps>
 (epstopdf)             \includegraphics on input line 129.
 Package epstopdf Info: Output file is already uptodate.
 <Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__specific_heat-pc0.5927-
-eps-converted-to.pdf, id=2091, 361.35pt x 361.35pt>
+eps-converted-to.pdf, id=2126, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__specific_heat-pc0.
 5927-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__specific_heat-pc0.5
@@ -2981,7 +2981,7 @@ olation_ballistic_deposition_L1_periodic__specific_heat-pc0.5782-eps-converted-
 to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allo
 wed
 <Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
-_specific_heat-pc0.5782-eps-converted-to.pdf, id=2092, 361.35pt x 361.35pt>
+_specific_heat-pc0.5782-eps-converted-to.pdf, id=2127, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_peri
 odic__specific_heat-pc0.5782-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_perio
@@ -3012,7 +3012,7 @@ olation_ballistic_deposition_L2_periodic__specific_heat-pc0.5701-eps-converted-
 to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allo
 wed
 <Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_
-_specific_heat-pc0.5701-eps-converted-to.pdf, id=2093, 361.35pt x 361.35pt>
+_specific_heat-pc0.5701-eps-converted-to.pdf, id=2128, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_peri
 odic__specific_heat-pc0.5701-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_perio
@@ -3026,7 +3026,7 @@ Package caption Warning: \label without proper reference on input line 162.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:specific-heat-x-scaled-graph' on page 79 undefine
+LaTeX Warning: Reference `fig:specific-heat-x-scaled-graph' on page 81 undefine
 d on input line 145.
 
 Package epstopdf Info: Source file: <Chapter5/Figs/sq_lattice_site_percolation_
@@ -3051,7 +3051,7 @@ tion_periodic__specific_heat-x-scaled-pc0.5927_alpha_0.6799_nu_0.750-eps-conver
 ted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> 
 allowed
 <Chapter5/Figs/sq_lattice_site_percolation_periodic__specific_heat-x-scaled-pc0
-.5927_alpha_0.6799_nu_0.750-eps-converted-to.pdf, id=2096, 361.35pt x 361.35pt>
+.5927_alpha_0.6799_nu_0.750-eps-converted-to.pdf, id=2131, 361.35pt x 361.35pt>
 
 File: Chapter5/Figs/sq_lattice_site_percolation_periodic__specific_heat-x-scale
 d-pc0.5927_alpha_0.6799_nu_0.750-eps-converted-to.pdf Graphic file (type pdf)
@@ -3085,8 +3085,8 @@ tion_ballistic_deposition_L1_periodic__specific_heat-x-scaled-pc0.5782_alpha_0.
 6712_nu_0.736-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
 <Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L1_periodic__sp
-ecific_heat-x-scaled-pc0.5782_alpha_0.6712_nu_0.736-eps-converted-to.pdf, id=20
-97, 361.35pt x 361.35pt>
+ecific_heat-x-scaled-pc0.5782_alpha_0.6712_nu_0.736-eps-converted-to.pdf, id=21
+32, 361.35pt x 361.35pt>
 File: Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L1_periodi
 c__specific_heat-x-scaled-pc0.5782_alpha_0.6712_nu_0.736-eps-converted-to.pdf G
 raphic file (type pdf)
@@ -3120,8 +3120,8 @@ tion_ballistic_deposition_L2_periodic__specific_heat-x-scaled-pc0.5701_alpha_0.
 6631_nu_0.721-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
 <Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L2_periodic__sp
-ecific_heat-x-scaled-pc0.5701_alpha_0.6631_nu_0.721-eps-converted-to.pdf, id=20
-98, 361.35pt x 361.35pt>
+ecific_heat-x-scaled-pc0.5701_alpha_0.6631_nu_0.721-eps-converted-to.pdf, id=21
+33, 361.35pt x 361.35pt>
 File: Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L2_periodi
 c__specific_heat-x-scaled-pc0.5701_alpha_0.6631_nu_0.721-eps-converted-to.pdf G
 raphic file (type pdf)
@@ -3147,7 +3147,7 @@ odic__specific_heat-data_collapse-pc0.5927_alpha_0.6799_nu_0.750.eps>
 (epstopdf)             \includegraphics on input line 169.
 Package epstopdf Info: Output file is already uptodate.
 <Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__specific_heat-data_coll
-apse-pc0.5927_alpha_0.6799_nu_0.750-eps-converted-to.pdf, id=2100, 361.35pt x 3
+apse-pc0.5927_alpha_0.6799_nu_0.750-eps-converted-to.pdf, id=2135, 361.35pt x 3
 61.35pt>
 File: Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__specific_heat-data
 _collapse-pc0.5927_alpha_0.6799_nu_0.750-eps-converted-to.pdf Graphic file (typ
@@ -3183,7 +3183,7 @@ alpha_0.6712_nu_0.736-with-eps-converted-to.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
 <Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
 _specific_heat-data_collapse-pc0.5782_alpha_0.6712_nu_0.736-with-eps-converted-
-to.pdf, id=2101, 361.35pt x 361.35pt>
+to.pdf, id=2136, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_peri
 odic__specific_heat-data_collapse-pc0.5782_alpha_0.6712_nu_0.736-with-eps-conve
 rted-to.pdf Graphic file (type pdf)
@@ -3219,7 +3219,7 @@ alpha_0.6712_nu_0.721-with-eps-converted-to.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
 <Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_
 _specific_heat-data_collapse-pc0.5701_alpha_0.6712_nu_0.721-with-eps-converted-
-to.pdf, id=2102, 361.35pt x 361.35pt>
+to.pdf, id=2137, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_peri
 odic__specific_heat-data_collapse-pc0.5701_alpha_0.6712_nu_0.721-with-eps-conve
 rted-to.pdf Graphic file (type pdf)
@@ -3230,7 +3230,7 @@ Package pdftex.def Info: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic
 _deposition_L2_periodic__specific_heat-data_collapse-pc0.5701_alpha_0.6712_nu_0
 .721-with-eps-converted-to.pdf  used on input line 179.
 (pdftex.def)             Requested size: 143.92241pt x 143.91989pt.
-[79 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-occupation_probab
+[81 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-occupation_probab
 ility-data_collapse-pc0.5927-ex0.7500-eps-converted-to.pdf> <./Chapter5/Figs/L1
 /sq_lattice_site_percolation_ballistic_deposition_L1_periodic_-occupation_proba
 bility-data_collapse-pc0.5782-ex0.7360-eps-converted-to.pdf> <./Chapter5/Figs/L
@@ -3253,7 +3253,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 185.
 
 
-LaTeX Warning: Reference `def:order-parameter-2' on page 80 undefined on input 
+LaTeX Warning: Reference `def:order-parameter-2' on page 82 undefined on input 
 line 187.
 
 Package epstopdf Info: Source file: <Chapter5/Figs/L0/sq_lattice_site_percolati
@@ -3271,7 +3271,7 @@ rameter-pc0.5927.eps>
 (epstopdf)             \includegraphics on input line 191.
 Package epstopdf Info: Output file is already uptodate.
 <Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-spanning-_order_paramet
-er-pc0.5927-eps-converted-to.pdf, id=2358, 361.35pt x 361.35pt>
+er-pc0.5927-eps-converted-to.pdf, id=2392, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-spanning-_order_pa
 rameter-pc0.5927-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-spanning-_order_par
@@ -3302,7 +3302,7 @@ olation_ballistic_deposition_L1_periodic_-spanning-_order_parameter-pc0.5782-ep
 s-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
 n <1.5> allowed
 <Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
--spanning-_order_parameter-pc0.5782-eps-converted-to.pdf, id=2359, 361.35pt x 3
+-spanning-_order_parameter-pc0.5782-eps-converted-to.pdf, id=2393, 361.35pt x 3
 61.35pt>
 File: Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_peri
 odic_-spanning-_order_parameter-pc0.5782-eps-converted-to.pdf Graphic file (typ
@@ -3335,7 +3335,7 @@ olation_ballistic_deposition_L2_periodic_-spanning-_order_parameter-pc0.5701-ep
 s-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
 n <1.5> allowed
 <Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_
--spanning-_order_parameter-pc0.5701-eps-converted-to.pdf, id=2360, 361.35pt x 3
+-spanning-_order_parameter-pc0.5701-eps-converted-to.pdf, id=2394, 361.35pt x 3
 61.35pt>
 File: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_peri
 odic_-spanning-_order_parameter-pc0.5701-eps-converted-to.pdf Graphic file (typ
@@ -3366,7 +3366,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./Chapter5/Figs/sq_lattice_site_percola
 tion_periodic_-spanning-_order_parameter-x-scaled-pc0.5927-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <Chapter5/Figs/sq_lattice_site_percolation_periodic_-spanning-_order_parameter-
-x-scaled-pc0.5927-eps-converted-to.pdf, id=2363, 361.35pt x 361.35pt>
+x-scaled-pc0.5927-eps-converted-to.pdf, id=2397, 361.35pt x 361.35pt>
 File: Chapter5/Figs/sq_lattice_site_percolation_periodic_-spanning-_order_param
 eter-x-scaled-pc0.5927-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/sq_lattice_site_percolation_periodic_-spanning-_order_parame
@@ -3399,7 +3399,7 @@ tion_ballistic_deposition_L1_periodic_-spanning-_order_parameter-x-scaled-pc0.5
 782-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most 
 version <1.5> allowed
 <Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_-sp
-anning-_order_parameter-x-scaled-pc0.5782-eps-converted-to.pdf, id=2364, 361.35
+anning-_order_parameter-x-scaled-pc0.5782-eps-converted-to.pdf, id=2398, 361.35
 pt x 361.35pt>
 File: Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L1_periodi
 c_-spanning-_order_parameter-x-scaled-pc0.5782-eps-converted-to.pdf Graphic fil
@@ -3434,7 +3434,7 @@ tion_ballistic_deposition_L2_periodic_-spanning-_order_parameter-x-scaled-pc0.5
 701-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most 
 version <1.5> allowed
 <Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_-sp
-anning-_order_parameter-x-scaled-pc0.5701-eps-converted-to.pdf, id=2365, 361.35
+anning-_order_parameter-x-scaled-pc0.5701-eps-converted-to.pdf, id=2399, 361.35
 pt x 361.35pt>
 File: Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L2_periodi
 c_-spanning-_order_parameter-x-scaled-pc0.5701-eps-converted-to.pdf Graphic fil
@@ -3463,7 +3463,7 @@ ation_periodic_-spanning-_order_parameter-data_collapse-pc0.5927_beta_0.103_nu_
 (epstopdf)             \includegraphics on input line 233.
 Package epstopdf Info: Output file is already uptodate.
 <Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-spanning-_order_paramet
-er-data_collapse-pc0.5927_beta_0.103_nu_0.750-eps-converted-to.pdf, id=2370, 36
+er-data_collapse-pc0.5927_beta_0.103_nu_0.750-eps-converted-to.pdf, id=2404, 36
 1.35pt x 361.35pt>
 File: Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-spanning-_order_pa
 rameter-data_collapse-pc0.5927_beta_0.103_nu_0.750-eps-converted-to.pdf Graphic
@@ -3499,7 +3499,7 @@ se-pc0.5782_beta_0.103_nu_0.736-eps-converted-to.pdf): PDF inclusion: found PDF
  version <1.7>, but at most version <1.5> allowed
 <Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
 -spanning-_order_parameter-data_collapse-pc0.5782_beta_0.103_nu_0.736-eps-conve
-rted-to.pdf, id=2371, 361.35pt x 361.35pt>
+rted-to.pdf, id=2405, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_peri
 odic_-spanning-_order_parameter-data_collapse-pc0.5782_beta_0.103_nu_0.736-eps-
 converted-to.pdf Graphic file (type pdf)
@@ -3535,7 +3535,7 @@ se-pc0.5701_beta_0.098_nu_0.721-eps-converted-to.pdf): PDF inclusion: found PDF
  version <1.7>, but at most version <1.5> allowed
 <Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_
 -spanning-_order_parameter-data_collapse-pc0.5701_beta_0.098_nu_0.721-eps-conve
-rted-to.pdf, id=2372, 361.35pt x 361.35pt>
+rted-to.pdf, id=2406, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_peri
 odic_-spanning-_order_parameter-data_collapse-pc0.5701_beta_0.098_nu_0.721-eps-
 converted-to.pdf Graphic file (type pdf)
@@ -3546,7 +3546,7 @@ Package pdftex.def Info: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic
 _deposition_L2_periodic_-spanning-_order_parameter-data_collapse-pc0.5701_beta_
 0.098_nu_0.721-eps-converted-to.pdf  used on input line 243.
 (pdftex.def)             Requested size: 143.92241pt x 143.91989pt.
-[80 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__specific_heat-pc0
+[82 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__specific_heat-pc0
 .5927-eps-converted-to.pdf> <./Chapter5/Figs/L1/sq_lattice_site_percolation_bal
 listic_deposition_L1_periodic__specific_heat-pc0.5782-eps-converted-to.pdf> <./
 Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic__
@@ -3556,7 +3556,7 @@ converted-to.pdf> <./Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposi
 tion_L1_periodic__specific_heat-x-scaled-pc0.5782_alpha_0.6712_nu_0.736-eps-con
 verted-to.pdf> <./Chapter5/Figs/sq_lattice_site_percolation_ballistic_depositio
 n_L2_periodic__specific_heat-x-scaled-pc0.5701_alpha_0.6631_nu_0.721-eps-conver
-ted-to.pdf>] [81 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__spec
+ted-to.pdf>] [83 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__spec
 ific_heat-data_collapse-pc0.5927_alpha_0.6799_nu_0.750-eps-converted-to.pdf> <.
 /Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
 _specific_heat-data_collapse-pc0.5782_alpha_0.6712_nu_0.736-with-eps-converted-
@@ -3594,7 +3594,7 @@ er5/Figs/L0/sq_lattice_site_percolation_periodic__susceptibility-pc0.5927.eps>
 (epstopdf)             \includegraphics on input line 254.
 Package epstopdf Info: Output file is already uptodate.
 <Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__susceptibility-pc0.5927
--eps-converted-to.pdf, id=2846, 361.35pt x 361.35pt>
+-eps-converted-to.pdf, id=2880, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__susceptibility-pc0
 .5927-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__susceptibility-pc0.
@@ -3624,7 +3624,7 @@ olation_ballistic_deposition_L1_periodic__susceptibility-pc0.5782-eps-converted
 -to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> all
 owed
 <Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
-_susceptibility-pc0.5782-eps-converted-to.pdf, id=2847, 361.35pt x 361.35pt>
+_susceptibility-pc0.5782-eps-converted-to.pdf, id=2881, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_peri
 odic__susceptibility-pc0.5782-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_perio
@@ -3655,7 +3655,7 @@ olation_ballistic_deposition_L2_periodic__susceptibility-pc0.5701-eps-converted
 -to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> all
 owed
 <Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_
-_susceptibility-pc0.5701-eps-converted-to.pdf, id=2848, 361.35pt x 361.35pt>
+_susceptibility-pc0.5701-eps-converted-to.pdf, id=2882, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_peri
 odic__susceptibility-pc0.5701-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_perio
@@ -3686,7 +3686,7 @@ tion_periodic__susceptibility-x-scaled-pc0.5927_gamma_0.6407_nu_0.750-eps-conve
 rted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5>
  allowed
 <Chapter5/Figs/sq_lattice_site_percolation_periodic__susceptibility-x-scaled-pc
-0.5927_gamma_0.6407_nu_0.750-eps-converted-to.pdf, id=2849, 361.35pt x 361.35pt
+0.5927_gamma_0.6407_nu_0.750-eps-converted-to.pdf, id=2883, 361.35pt x 361.35pt
 >
 File: Chapter5/Figs/sq_lattice_site_percolation_periodic__susceptibility-x-scal
 ed-pc0.5927_gamma_0.6407_nu_0.750-eps-converted-to.pdf Graphic file (type pdf)
@@ -3721,7 +3721,7 @@ tion_ballistic_deposition_L1_periodic__susceptibility-x-scaled-pc0.5782_gamma_0
 ut at most version <1.5> allowed
 <Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L1_periodic__su
 sceptibility-x-scaled-pc0.5782_gamma_0.6287_nu_0.736-eps-converted-to.pdf, id=2
-850, 361.35pt x 361.35pt>
+884, 361.35pt x 361.35pt>
 File: Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L1_periodi
 c__susceptibility-x-scaled-pc0.5782_gamma_0.6287_nu_0.736-eps-converted-to.pdf 
 Graphic file (type pdf)
@@ -3756,7 +3756,7 @@ tion_ballistic_deposition_L2_periodic__susceptibility-x-scaled-pc0.5701_gamma_0
 ut at most version <1.5> allowed
 <Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L2_periodic__su
 sceptibility-x-scaled-pc0.5701_gamma_0.6362_nu_0.721-eps-converted-to.pdf, id=2
-851, 361.35pt x 361.35pt>
+885, 361.35pt x 361.35pt>
 File: Chapter5/Figs/sq_lattice_site_percolation_ballistic_deposition_L2_periodi
 c__susceptibility-x-scaled-pc0.5701_gamma_0.6362_nu_0.721-eps-converted-to.pdf 
 Graphic file (type pdf)
@@ -3782,7 +3782,7 @@ iodic__susceptibility-data_collapse-pc0.5927_gamma_0.6407_nu_0.750.eps>
 (epstopdf)             \includegraphics on input line 292.
 Package epstopdf Info: Output file is already uptodate.
 <Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__susceptibility-data_col
-lapse-pc0.5927_gamma_0.6407_nu_0.750-eps-converted-to.pdf, id=2852, 361.35pt x 
+lapse-pc0.5927_gamma_0.6407_nu_0.750-eps-converted-to.pdf, id=2886, 361.35pt x 
 361.35pt>
 File: Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__susceptibility-dat
 a_collapse-pc0.5927_gamma_0.6407_nu_0.750-eps-converted-to.pdf Graphic file (ty
@@ -3818,7 +3818,7 @@ _gamma_0.6287_nu_0.736-eps-converted-to.pdf): PDF inclusion: found PDF version
 <1.7>, but at most version <1.5> allowed
 <Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
 _susceptibility-data_collapse-pc0.5782_gamma_0.6287_nu_0.736-eps-converted-to.p
-df, id=2853, 361.35pt x 361.35pt>
+df, id=2887, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_peri
 odic__susceptibility-data_collapse-pc0.5782_gamma_0.6287_nu_0.736-eps-converted
 -to.pdf Graphic file (type pdf)
@@ -3854,7 +3854,7 @@ _gamma_0.6362_nu_0.721-eps-converted-to.pdf): PDF inclusion: found PDF version
 <1.7>, but at most version <1.5> allowed
 <Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_
 _susceptibility-data_collapse-pc0.5701_gamma_0.6362_nu_0.721-eps-converted-to.p
-df, id=2854, 361.35pt x 361.35pt>
+df, id=2888, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_peri
 odic__susceptibility-data_collapse-pc0.5701_gamma_0.6362_nu_0.721-eps-converted
 -to.pdf Graphic file (type pdf)
@@ -3865,7 +3865,7 @@ Package pdftex.def Info: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic
 _deposition_L2_periodic__susceptibility-data_collapse-pc0.5701_gamma_0.6362_nu_
 0.721-eps-converted-to.pdf  used on input line 302.
 (pdftex.def)             Requested size: 143.92241pt x 143.91989pt.
-[82 <./Chapter5/Figs/sq_lattice_site_percolation_periodic_-spanning-_order_para
+[84 <./Chapter5/Figs/sq_lattice_site_percolation_periodic_-spanning-_order_para
 meter-x-scaled-pc0.5927-eps-converted-to.pdf> <./Chapter5/Figs/sq_lattice_site_
 percolation_ballistic_deposition_L1_periodic_-spanning-_order_parameter-x-scale
 d-pc0.5782-eps-converted-to.pdf> <./Chapter5/Figs/sq_lattice_site_percolation_b
@@ -3882,10 +3882,10 @@ Package caption Warning: \label without proper reference on input line 336.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:ordered-disordered-transition' on page 83 undefin
+LaTeX Warning: Reference `fig:ordered-disordered-transition' on page 85 undefin
 ed on input line 318.
 
-[83 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__susceptibility-pc
+[85 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__susceptibility-pc
 0.5927-eps-converted-to.pdf> <./Chapter5/Figs/L1/sq_lattice_site_percolation_ba
 llistic_deposition_L1_periodic__susceptibility-pc0.5782-eps-converted-to.pdf> <
 ./Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic
@@ -3895,7 +3895,7 @@ eps-converted-to.pdf> <./Chapter5/Figs/sq_lattice_site_percolation_ballistic_de
 position_L1_periodic__susceptibility-x-scaled-pc0.5782_gamma_0.6287_nu_0.736-ep
 s-converted-to.pdf> <./Chapter5/Figs/sq_lattice_site_percolation_ballistic_depo
 sition_L2_periodic__susceptibility-x-scaled-pc0.5701_gamma_0.6362_nu_0.721-eps-
-converted-to.pdf>] [84 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic
+converted-to.pdf>] [86 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic
 __susceptibility-data_collapse-pc0.5927_gamma_0.6407_nu_0.750-eps-converted-to.
 pdf> <./Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_pe
 riodic__susceptibility-data_collapse-pc0.5782_gamma_0.6287_nu_0.736-eps-convert
@@ -3924,7 +3924,7 @@ olation_periodic__entropy_by_site-entropy-order_parameter-L400-eps-converted-to
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
 <Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__entropy_by_site-entropy
--order_parameter-L400-eps-converted-to.pdf, id=3401, 361.35pt x 361.35pt>
+-order_parameter-L400-eps-converted-to.pdf, id=3437, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__entropy_by_site-en
 tropy-order_parameter-L400-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__entropy_by_site-ent
@@ -3955,7 +3955,7 @@ olation_ballistic_deposition_L1_periodic_-entropy-order_parameter-L400-eps-conv
 erted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5
 > allowed
 <Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
--entropy-order_parameter-L400-eps-converted-to.pdf, id=3402, 361.35pt x 361.35p
+-entropy-order_parameter-L400-eps-converted-to.pdf, id=3438, 361.35pt x 361.35p
 t>
 File: Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_peri
 odic_-entropy-order_parameter-L400-eps-converted-to.pdf Graphic file (type pdf)
@@ -3988,7 +3988,7 @@ olation_ballistic_deposition_L2_periodic_-entropy-order_parameter-L400-eps-conv
 erted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5
 > allowed
 <Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_
--entropy-order_parameter-L400-eps-converted-to.pdf, id=3403, 361.35pt x 361.35p
+-entropy-order_parameter-L400-eps-converted-to.pdf, id=3439, 361.35pt x 361.35p
 t>
 File: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_peri
 odic_-entropy-order_parameter-L400-eps-converted-to.pdf Graphic file (type pdf)
@@ -4004,7 +4004,7 @@ Package caption Warning: \label without proper reference on input line 365.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:fractal-dimension' on page 85 undefined on input 
+LaTeX Warning: Reference `fig:fractal-dimension' on page 87 undefined on input 
 line 348.
 
 Package epstopdf Info: Source file: <Chapter5/Figs/L0/sq_lattice_site_percolati
@@ -4027,7 +4027,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./Chapter5/Figs/L0/sq_lattice_site_perc
 olation_periodic_-fractal_dimension_1.89394-eps-converted-to.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
 <Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-fractal_dimension_1.893
-94-eps-converted-to.pdf, id=3406, 361.35pt x 361.35pt>
+94-eps-converted-to.pdf, id=3442, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-fractal_dimension_
 1.89394-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-fractal_dimension_1
@@ -4057,7 +4057,7 @@ olation_ballistic_deposition_L1_periodic_-fractal_dimension_1.8995-eps-converte
 d-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> al
 lowed
 <Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_
--fractal_dimension_1.8995-eps-converted-to.pdf, id=3407, 361.35pt x 361.35pt>
+-fractal_dimension_1.8995-eps-converted-to.pdf, id=3443, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_peri
 odic_-fractal_dimension_1.8995-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L1/sq_lattice_site_percolation_ballistic_deposition_L1_perio
@@ -4088,7 +4088,7 @@ olation_ballistic_deposition_L2_periodic_-fractal_dimension_1.9081-eps-converte
 d-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> al
 lowed
 <Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_
--fractal_dimension_1.9081-eps-converted-to.pdf, id=3408, 361.35pt x 361.35pt>
+-fractal_dimension_1.9081-eps-converted-to.pdf, id=3444, 361.35pt x 361.35pt>
 File: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_peri
 odic_-fractal_dimension_1.9081-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_perio
@@ -4097,12 +4097,12 @@ Package pdftex.def Info: Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic
 _deposition_L2_periodic_-fractal_dimension_1.9081-eps-converted-to.pdf  used on
  input line 362.
 (pdftex.def)             Requested size: 143.92241pt x 143.91989pt.
-) [85 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__entropy_by_site
+) [87 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic__entropy_by_site
 -entropy-order_parameter-L400-eps-converted-to.pdf> <./Chapter5/Figs/L1/sq_latt
 ice_site_percolation_ballistic_deposition_L1_periodic_-entropy-order_parameter-
 L400-eps-converted-to.pdf> <./Chapter5/Figs/L2/sq_lattice_site_percolation_ball
 istic_deposition_L2_periodic_-entropy-order_parameter-L400-eps-converted-to.pdf
->] [86 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-fractal_dimens
+>] [88 <./Chapter5/Figs/L0/sq_lattice_site_percolation_periodic_-fractal_dimens
 ion_1.89394-eps-converted-to.pdf> <./Chapter5/Figs/L1/sq_lattice_site_percolati
 on_ballistic_deposition_L1_periodic_-fractal_dimension_1.8995-eps-converted-to.
 pdf> <./Chapter5/Figs/L2/sq_lattice_site_percolation_ballistic_deposition_L2_pe
@@ -4113,18 +4113,18 @@ riodic_-fractal_dimension_1.9081-eps-converted-to.pdf>]
 (./Chapter6/chapter6.tex
 Chapter 6.
 
-LaTeX Warning: Reference `' on page 87 undefined on input line 4.
+LaTeX Warning: Reference `' on page 89 undefined on input line 4.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-) [87
+) [89
 
 
 
-] [88] (./thesis.bbl
+] [90] (./thesis.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 23--26
 []\T1/ptm/m/n/12 (+20) Honeycomb lat-tice.  URL [][]$https : / / www . quora . 
 com /
@@ -4133,138 +4133,156 @@ com /
 LaTeX Font Info:    Try loading font information for TS1+ptm on input line 38.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [89
+) [91
 
 
 
-] [90] [91]
-Underfull \hbox (badness 10000) in paragraph at lines 303--309
+] [92] [93]
+Underfull \hbox (badness 10000) in paragraph at lines 309--315
 \T1/ptm/m/n/12 (+20) URL [][]$https : / / www . amazon . com / Cognitive-[]Scie
 nce-[]Introduction-[]Study-[]Mind / dp /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--309
+Underfull \hbox (badness 10000) in paragraph at lines 309--315
 \T1/ptm/m/n/12 (+20) 1412977614 ? SubscriptionId = AKIAIOBINVZYXZQZ2U3A & tag =
  chimbori05-[]20 &
  []
 
-[92]
-Underfull \hbox (badness 10000) in paragraph at lines 441--447
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 455--461
 []\T1/ptm/m/n/12 (+20) Benoit B. Man-del-brot.  \T1/ptm/m/it/12 (+20) The Frac-
 tal Ge-om-e-try of Na-ture\T1/ptm/m/n/12 (+20) .  W. H.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--447
+Underfull \hbox (badness 10000) in paragraph at lines 455--461
 \T1/ptm/m/n/12 (+20) Free-man, 1983.  ISBN 0716711869.  URL [][]$https : / / ww
 w . amazon . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--447
+Underfull \hbox (badness 10000) in paragraph at lines 455--461
 \T1/ptm/m/n/12 (+20) Fractal-[]Geometry-[]Nature-[]Benoit-[]Mandelbrot / dp / 0
 910321647 ? SubscriptionId =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--447
+Underfull \hbox (badness 10000) in paragraph at lines 455--461
 \T1/ptm/m/n/12 (+10) AKIAIOBINVZYXZQZ2U3A & tag = chimbori05-[]20 & linkCode = 
 xm2 & camp = 2025 &
  []
 
-[93]
-Underfull \hbox (badness 3746) in paragraph at lines 534--540
+[95]
+Underfull \hbox (badness 3746) in paragraph at lines 557--563
 []\T1/ptm/m/n/12 (+20) M Sahini and M Sahimi.  \T1/ptm/m/it/12 (+20) Ap-pli-ca-
 tions Of Per-co-la-tion The-ory\T1/ptm/m/n/12 (+20) .  CRC
  []
 
 
-Underfull \hbox (badness 7981) in paragraph at lines 534--540
+Underfull \hbox (badness 7981) in paragraph at lines 557--563
 \T1/ptm/m/n/12 (+20) Press, 1994.  ISBN 9780748400768.  URL [][]$https : / / ww
 w . amazon . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 534--540
+Underfull \hbox (badness 10000) in paragraph at lines 557--563
 \T1/ptm/m/n/12 (+20) Applications-[]Percolation-[]Theory-[]M-[]Sahini / dp / 07
 48400761 ? SubscriptionId =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 534--540
+Underfull \hbox (badness 10000) in paragraph at lines 557--563
 \T1/ptm/m/n/12 (+10) AKIAIOBINVZYXZQZ2U3A & tag = chimbori05-[]20 & linkCode = 
 xm2 & camp = 2025 &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--558
+Underfull \hbox (badness 10000) in paragraph at lines 574--581
 [][]$\T1/ptm/m/n/12 (+20) https : / / www . amazon . com / Second-[]Law-[]Life-
 []Energy-[]Technology / dp / 0815515375 ?
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--558
+Underfull \hbox (badness 10000) in paragraph at lines 574--581
 \T1/ptm/m/n/12 (+20) SubscriptionId = AKIAIOBINVZYXZQZ2U3A & tag = chimbori05-[
 ]20 & linkCode =
  []
 
-[94]
-Underfull \hbox (badness 10000) in paragraph at lines 590--597
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 613--620
 [][]$\T1/ptm/m/n/12 (+5) https : / / www . amazon . com / Statistical-[]Mechani
 cs-[]Entropy-[]Parameters-[]Complexity / dp /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--597
+Underfull \hbox (badness 10000) in paragraph at lines 613--620
 \T1/ptm/m/n/12 (+20) 0198566778 ? SubscriptionId = AKIAIOBINVZYXZQZ2U3A & tag =
  chimbori05-[]20 &
  []
 
-) [95]
+) [97]
 \openout2 = `Appendix1/appendix1.aux'.
 
- (./Appendix1/appendix1.tex [96
+ (./Appendix1/appendix1.tex [98
 
 
 ]
 Appendix A.
+(./Appendix1/codes/index.tex
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-) [97] [98]
-[99]
+) [99] [100]
+[101]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 148.
- [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
-[112]
-Overfull \hbox (44.54358pt too wide) in paragraph at lines 718--719
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
+ [102] [103]) (./Appendix1/codes/site.tex [104] [105] [106])
+(./Appendix1/codes/bond.tex [107] [108] [109] [110] [111])
+(./Appendix1/codes/lattice.tex [112] [113]
+Overfull \hbox (44.54358pt too wide) in paragraph at lines 94--95
 [][][][] 
  []
 
 
-Overfull \hbox (44.54358pt too wide) in paragraph at lines 720--721
+Overfull \hbox (24.54358pt too wide) in paragraph at lines 96--97
+[][][][][][][] 
+ []
+
+[114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125]
+[126] [127] [128]
+Overfull \hbox (44.54358pt too wide) in paragraph at lines 738--739
 [][][][] 
  []
 
-[113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124]
-[125] [126] [127] [128] [129] [130] [131] [132] [133]
-Overfull \hbox (44.54358pt too wide) in paragraph at lines 1574--1575
+
+Overfull \hbox (24.54358pt too wide) in paragraph at lines 740--741
+[][][][][][][] 
+ []
+
+[129] [130] [131] [132]) (./Appendix1/codes/exception.tex [133] [134])
+(./Appendix1/codes/cluster.tex [135] [136] [137] [138] [139])
+(./Appendix1/codes/percolation.tex [140] [141] [142] [143] [144] [145] [146]
+[147]
+Overfull \hbox (50.54364pt too wide) in paragraph at lines 326--327
 [][][][] 
  []
 
-
-Overfull \hbox (44.54358pt too wide) in paragraph at lines 1576--1577
-[][][][] 
- []
-
-[134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144]) [145]
+[148] [149] [150] [151] [152] [153] [154] [155])
+(./Appendix1/codes/site-percolation.tex [156] [157] [158] [159] [160] [161]
+[162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173]
+[174] [175] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185]
+[186] [187] [188] [189] [190] [191]) (./Appendix1/codes/printer.tex [192]
+[193]) (./Appendix1/codes/time_tracking.tex [194] [195])
+(./Appendix1/codes/type.tex) (./Appendix1/codes/test.tex [196] [197] [198]
+[199]) (./Appendix1/codes/main.tex [200] [201])
+(./Appendix1/codes/cmakelists.tex [202])) [203]
 \openout2 = `Appendix2/appendix2.aux'.
 
-
-(./Appendix2/appendix2.tex [146
+ (./Appendix2/appendix2.tex
+[204
 
 
 
@@ -4275,22 +4293,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--179
 
  []
 
-[147]
+[205]
 \openout2 = `Appendix3/appendix3.aux'.
 
- (./Appendix3/appendix3.tex [148
+ (./Appendix3/appendix3.tex [206
 
 
 
 ]
 Appendix C.
-[149] [150]
+[207] [208]
 
-LaTeX Warning: Reference `fig:left_right_dillema' on page 151 undefined on inpu
+LaTeX Warning: Reference `fig:left_right_dillema' on page 209 undefined on inpu
 t line 56.
 
 <Appendix3/figs/network_ba_explosive_M3_susceptibility_minimizing_one_by_nu.png
-, id=6062, 361.35pt x 361.35pt>
+, id=8611, 361.35pt x 361.35pt>
 File: Appendix3/figs/network_ba_explosive_M3_susceptibility_minimizing_one_by_n
 u.png Graphic file (type png)
 <use Appendix3/figs/network_ba_explosive_M3_susceptibility_minimizing_one_by_nu
@@ -4299,10 +4317,10 @@ Package pdftex.def Info: Appendix3/figs/network_ba_explosive_M3_susceptibility_
 minimizing_one_by_nu.png  used on input line 59.
 (pdftex.def)             Requested size: 218.73056pt x 218.73045pt.
 
-LaTeX Warning: Reference `fig:left_right_dillema' on page 151 undefined on inpu
+LaTeX Warning: Reference `fig:left_right_dillema' on page 209 undefined on inpu
 t line 61.
 
-[151 <./Appendix3/figs/network_ba_explosive_M3_susceptibility_minimizing_one_by
+[209 <./Appendix3/figs/network_ba_explosive_M3_susceptibility_minimizing_one_by
 _nu.png>]
 File: Appendix3/figs/network_ba_explosive_M3_susceptibility_minimizing_one_by_n
 u.png Graphic file (type png)
@@ -4311,7 +4329,7 @@ u.png Graphic file (type png)
 Package pdftex.def Info: Appendix3/figs/network_ba_explosive_M3_susceptibility_
 minimizing_one_by_nu.png  used on input line 75.
 (pdftex.def)             Requested size: 218.73056pt x 218.73045pt.
-) [152]
+) [210]
 No file thesis.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 187.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
@@ -4324,20 +4342,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 187.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 187.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 09B9416D6D876C5B6069526EB8F2D432;21122.
+(rerunfilecheck)             Checksum: 907B018A4542178B3E2D0EDE11CA38EE;21237.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 22112 strings out of 494923
- 357472 string characters out of 6180741
- 604927 words of memory out of 5000000
- 21937 multiletter control sequences out of 15000+600000
- 112883 words of font info for 355 fonts, out of 8000000 for 9000
+ 25177 strings out of 494923
+ 408444 string characters out of 6180741
+ 595776 words of memory out of 5000000
+ 22634 multiletter control sequences out of 15000+600000
+ 116226 words of font info for 365 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,16n,99p,2268b,2118s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,16n,99p,2268b,2134s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -4347,10 +4365,10 @@ urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (170 pages, 4080295 bytes).
+Output written on thesis.pdf (228 pages, 4318049 bytes).
 PDF statistics:
- 6668 PDF objects out of 7423 (max. 8388607)
- 4773 compressed objects within 48 object streams
- 2633 named destinations out of 2984 (max. 500000)
- 54090 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 9687 PDF objects out of 10688 (max. 8388607)
+ 7704 compressed objects within 78 object streams
+ 4956 named destinations out of 5155 (max. 500000)
+ 55642 words of extra memory for PDF output out of 61914 (max. 10000000)
 

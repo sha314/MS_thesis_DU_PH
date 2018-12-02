@@ -1,0 +1,190 @@
+%!TEX root = ../thesis.tex
+% ******************************* Thesis Appendix A ****************************
+
+The \textbf{src/percolation/cluster.h} file
+
+\begin{lstlisting}[style=CStyle]
+#ifndef SITEPERCOLATION_CLUSTER_H
+#define SITEPERCOLATION_CLUSTER_H
+
+#include <vector>
+#include <set>
+#include "../lattice/bond.h"
+#include "../types.h"
+#include "../lattice/site.h"
+
+
+/**
+* Cluster of bonds and sites
+* version 3
+* final goal -> make a template cluster. so that we can use it for Bond cluster or Site cluster
+* root site (bond) is the first site (bond) of the cluster. nedeed for (wrapping) site percolation
+*/
+class Cluster{
+// contains bond and site
+std::vector<BondIndex>  _bond_index; // BondIndex for indexing bonds
+std::vector<Index>      _site_index; // Site index
+
+int _creation_time{-1};  // holds the creation birthTime of a cluster object
+int _id{-1};
+public:
+//    using iterator = std::vector<Bond>::iterator;
+
+~Cluster()                           = default;
+Cluster()                            = default;
+Cluster(Cluster&)                 = default;
+Cluster(Cluster&&)                = default;
+Cluster& operator=(const Cluster&)      = default;
+Cluster& operator=(Cluster&&)     = default;
+
+explicit Cluster(int id){
+
+_id = id;       // may be modified in the program
+
+/*
+* Only readable, not modifiable.
+* when time = 0 => only lattice exists and bonds in site percolation, not any sites
+* When id = 0, time = 1 => we have placed the first site, hence created a cluster with size greater than 1
+*      Only then Cluster constructor is called.
+*
+*/
+_creation_time = id + 1;       // only readable, not modifiable
+}
+
+
+void addSiteIndex(Index );
+void addBondIndex(BondIndex );
+
+Index lastAddedSite(){return _site_index.back();}
+BondIndex lastAddedBond(){return _bond_index.back();}
+
+
+void insert(const std::vector<BondIndex>& bonds);
+void insert(const std::vector<Index>& sites);
+
+void insert(const Cluster& cluster);
+void insert_v2(const Cluster& cluster);
+void insert_with_id_v2(const Cluster& cluster, int id);
+
+
+friend std::ostream& operator<<(std::ostream& os, const Cluster& cluster);
+
+const std::vector<BondIndex>&   getBondIndices()    {return _bond_index;}
+const std::vector<Index>&       getSiteIndices()    {return _site_index;}
+
+const std::vector<BondIndex>&   getBondIndices()  const  {return _bond_index;}
+const std::vector<Index>&       getSiteIndices()  const  {return _site_index;}
+
+value_type numberOfBonds() const { return _bond_index.size();}
+value_type numberOfSites() const { return _site_index.size();}
+int get_ID() const { return _id;}
+void set_ID(int id) { _id = id;}
+
+int birthTime() const {return _creation_time;}
+
+Index getRootSite()const{return _site_index[0];} // for site percolation
+BondIndex getRootBond()const{return _bond_index[0];} // for bond percolation
+bool empty() const { return _bond_index.empty() && _site_index.empty();}
+void clear() {_bond_index.clear(); _site_index.clear(); }
+};
+
+
+#endif //SITEPERCOLATION_CLUSTER_H
+\end{lstlisting}
+
+
+The \textbf{src/percolation/cluster.cpp} file
+
+\begin{lstlisting}[style=CStyle]
+#include "cluster.h"
+
+using namespace std;
+
+// add Site index
+void Cluster::addSiteIndex(Index index) {
+_site_index.push_back(index);
+}
+
+void Cluster::addBondIndex(BondIndex bondIndex) {
+_bond_index.push_back(bondIndex);
+}
+
+
+
+void Cluster::insert(const std::vector<BondIndex>& bonds){
+_bond_index.reserve(bonds.size());
+for(value_type i{} ; i != bonds.size() ; ++i){
+_bond_index.push_back(bonds[i]);
+}
+}
+
+void Cluster::insert(const std::vector<Index>& sites){
+_site_index.reserve(sites.size());
+for(value_type i{} ; i != sites.size() ; ++i){
+_site_index.push_back(sites[i]);
+}
+}
+
+/**
+* Merge two cluster as one
+* All intrinsic property should be considered, e.g., creation time of a cluster must be recalculated
+* @param cluster
+*/
+void Cluster::insert(const Cluster &cluster) {
+if(_id > cluster._id){
+cout << "_id > cluster._id : line " << __LINE__ << endl;
+_id = cluster._id;
+}
+// older time or smaller time is the creation birthTime of the cluster
+//    cout << "Comparing " << _creation_time << " and " << cluster._creation_time;
+_creation_time = _creation_time < cluster._creation_time ? _creation_time : cluster._creation_time;
+//    cout << " Keeping " << _creation_time << endl;
+_bond_index.insert(_bond_index.end(), cluster._bond_index.begin(), cluster._bond_index.end());
+_site_index.insert(_site_index.end(), cluster._site_index.begin(), cluster._site_index.end());
+}
+
+
+/**
+* Merge two cluster as one
+* All intrinsic property should be considered, e.g., creation time of a cluster must be recalculated
+* @param cluster
+*/
+void Cluster::insert_v2(const Cluster &cluster) {
+// older time or smaller time is the creation birthTime of the cluster
+//    cout << "Comparing " << _creation_time << " and " << cluster._creation_time;
+_creation_time = _creation_time < cluster._creation_time ? _creation_time : cluster._creation_time;
+//    cout << " Keeping " << _creation_time << endl;
+_bond_index.insert(_bond_index.end(), cluster._bond_index.begin(), cluster._bond_index.end());
+_site_index.insert(_site_index.end(), cluster._site_index.begin(), cluster._site_index.end());
+}
+
+
+void Cluster::insert_with_id_v2(const Cluster &cluster, int id) {
+_id = id;
+// older time or smaller time is the creation birthTime of the cluster
+//    cout << "Comparing " << _creation_time << " and " << cluster._creation_time;
+_creation_time = _creation_time < cluster._creation_time ? _creation_time : cluster._creation_time;
+//    cout << " Keeping " << _creation_time << endl;
+_bond_index.insert(_bond_index.end(), cluster._bond_index.begin(), cluster._bond_index.end());
+_site_index.insert(_site_index.end(), cluster._site_index.begin(), cluster._site_index.end());
+}
+
+
+std::ostream &operator<<(std::ostream &os, const Cluster &cluster) {
+os << "Sites : size (" << cluster._site_index.size() << ") : ";
+os << '{';
+for(auto a: cluster._site_index){
+os << a << ',';
+}
+os << '}' << endl;
+
+os << "Bonds : size (" << cluster._bond_index.size() <<") : ";
+os << '{';
+for(auto a: cluster._bond_index){
+os << a << ',';
+}
+os << '}';
+
+return os << endl;
+}
+\end{lstlisting}

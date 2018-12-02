@@ -497,6 +497,75 @@ Old models of phase transition : Ising model 1D and 2D. Bragg Willium model.
 								  &= 2 \nonumber \\
 	\end{align}
 	So the Griffiths Inequality is also satisfied. 
-\section{Models}
-	\subsection{Ising model in 1D lattice}
-	\subsection{Ising model in 2D lattice}
+	
+	
+	
+\section{Ising Model}
+	For a very long time scientists have been trying to understand phase transition in different aspects. And for this purpose many different models have been provided for decades. The first model was provided by physicist Ernst Ising as a mathematical model of ferromagnetism in statistical mechanics. 
+	The Ising model was invented by the physicist Wilhelm Lenz (1920), who gave it as a problem to his student Ernst Ising. The one-dimensional Ising model has no phase transition and was solved by Ising (1925) himself in his 1924 thesis \cite{Ising1925}.
+	But he provided a model in 1 dimension and proved that in 1 dimension phase transition is not possible and concluded that it is not possible in higher dimension as well. But it was proved later that in dimension $d \geq 2$ phase transition is possible \cite{Yang1952, Montroll1963} which proved Ising wrong about his conclusion but he certainly gave a good insight for phase transition and hence the naming.
+	
+	Consider a set $\Lambda$ of lattice sites, each with a set of adjacent sites forming a d-dimensional lattice. For each lattice site $k\in\Lambda$ there is a discrete variable $\sigma_k$ such that $\sigma_k \in \{+1, -1\}$, representing the site's spin. A spin configuration $\sigma = \left(\sigma_k\right)_{k\in\Lambda}$ is an assignment of spin value to each lattice site.
+	
+	For any two adjacent sites $i,j \in \Lambda$ there is an interaction $J_{ij}$. Also a site $j\in \Lambda$ has an external magnetic field $h_j$ interacting with it. The energy of a configuration $\sigma$ is given by the Hamiltonian
+	\begin{equation}
+		H(\sigma) = - \sum_{<i j>} J_{ij} \sigma_i \sigma_j - \mu \sum_{j} h_j \sigma_j
+	\end{equation}
+	Where the first sum is over pairs of adjacent spins counting every pair only once. And we use $<ij>$ to indicate that $i$ and $j$ are nearest neighbors. $\mu$ indicates the magnetic moment. The negative sign on the second term is there by convention \cite{Baierlein1999}. The configuration probability is given by the Boltzmann distribution with inverse temperature $\beta \geq 0$
+	\begin{equation}
+		P_\beta (\sigma) = \frac{e^{- \beta H(\sigma)}}{Z_\beta}
+	\end{equation}
+	where $\beta = \left(k_B T\right)^{-1}$ and the normalization constant
+	\begin{equation}
+		Z_\beta = \sum_\sigma e^{-\beta H(\sigma)}
+	\end{equation}
+	is the partition function. For a function $f$ of the spins, which is the observable here, we denote
+	\begin{equation}
+		<f>_{\beta} = \sum_{\sigma} f(\sigma) P_\beta(\sigma)
+	\end{equation}
+	the expectation value of $f$.
+	The configuration probabilities $P_\beta(\sigma)$ represent the probability that the system in in a state with configuration $\sigma$ in equilibrium.
+	
+	
+	The minus sign on each term of the Hamiltonian function $H(\sigma)$ is conventional. Using this sign convention, the Ising models can be classified according to the sign of the interaction: if, for all pairs $i,j$
+	\begin{equation}
+	J_{ij}
+	\begin{cases}
+		 > 0 \text{, ferromagnetic interaction }\\
+		 < 0 \text{, anti-ferromagnetic interaction}\\
+		 = 0 \text{, non-interacting spins}
+	\end{cases}
+	\end{equation}
+	
+	otherwise the system is called non-ferromagnetic.
+	
+	In a ferromagnetic Ising model, spins tend to be aligned, meaning, the configurations in which adjacent spins are of the same sign have higher probability. In an anti-ferromagnetic model, adjacent spins tend to have opposite signs.
+	
+	The sign convention of $H(\sigma)$ also explains how a spin site $j$ interacts with the external field. Namely, the spin site wants to line up with the external field.
+	
+	\begin{equation}
+	h_j
+	\begin{cases}
+		 > 0 \text{,  the spin site $j$ desires to line up in the positive direction} \\
+		 > 0 \text{,  the spin site $j$ desires to line up in the negative direction} \\
+		 = 0 \text{,  no external influence on the spin site}
+	\end{cases}
+	\end{equation}
+
+
+
+	Ising models are often examined without an external field interacting with the lattice, that is, $h = 0$ for all $j$ in the lattice $\Lambda$. Using this simplification, our Hamiltonian becomes:
+	\begin{equation}
+		H(\sigma) = - \sum_{<i j>} J_{i j} \sigma_i \sigma_j
+	\end{equation}
+	When the external field is everywhere zero, $h = 0$, the Ising model is symmetric under switching the value of the spin in all the lattice sites; a non zero field breaks this symmetry.
+	
+	Another common simplification is to assume that all of the nearest neighbors $<ij>$ have the same interaction strength. Then we can set $J_{ij} = J$ for all pairs $i,j$. In this case our Hamiltonian is further simplified to:
+	
+	\begin{equation}
+		H(\sigma) = - J \sum_{<i j>} \sigma_i \sigma_j
+	\end{equation}
+	
+	Ising himself had provided the theory of his model for $1$ dimensional case. He did not find any phase transition and concluded that phase transition is not possible in any dimension. 
+	
+	

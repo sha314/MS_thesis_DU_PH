@@ -1,4 +1,4 @@
-\begin{thebibliography}{82}
+\begin{thebibliography}{86}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -60,6 +60,12 @@ Gerald~Warnecke Andreas~Greven, Gerhard~Keller.
 \newblock \emph{Entropy (Princeton Series in Applied Mathematics)}.
 \newblock Princeton University Press, 2003.
 \newblock ISBN 9780691113388.
+
+\bibitem[Baierlein(1999)]{Baierlein1999}
+Ralph Baierlein.
+\newblock \emph{Thermal Physics}.
+\newblock Cambridge University Press, 1999.
+\newblock ISBN 0521658381.
 
 \bibitem[Balibrea(2016)]{Balibrea2016}
 Francisco Balibrea.
@@ -359,6 +365,14 @@ John~R. Hughes.
 \newblock \doi{10.1152/physrev.1958.38.1.91}.
 \newblock URL \url{https://doi.org/10.1152/physrev.1958.38.1.91}.
 
+\bibitem[Ising(1925)]{Ising1925}
+Ernst Ising.
+\newblock Beitrag zur theorie des ferromagnetismus.
+\newblock \emph{Zeitschrift f\"{u}r Physik}, 31\penalty0 (1):\penalty0
+  253--258, feb 1925.
+\newblock \doi{10.1007/bf02980577}.
+\newblock URL \url{https://doi.org/10.1007/bf02980577}.
+
 \bibitem[{Kasteleyn} and {Fortuin}(1969)]{Kasteleyn1969}
 P.~W. {Kasteleyn} and C.~M. {Fortuin}.
 \newblock Phase transitions in lattice systems with random local properties.
@@ -453,6 +467,15 @@ Lauren~Ancel Meyers.
   (01):\penalty0 63--87, oct 2006.
 \newblock \doi{10.1090/s0273-0979-06-01148-7}.
 \newblock URL \url{https://doi.org/10.1090/s0273-0979-06-01148-7}.
+
+\bibitem[Montroll et~al.(1963)Montroll, Potts, and Ward]{Montroll1963}
+Elliott~W. Montroll, Renfrey~B. Potts, and John~C. Ward.
+\newblock Correlations and spontaneous magnetization of the two-dimensional
+  ising model.
+\newblock \emph{Journal of Mathematical Physics}, 4\penalty0 (2):\penalty0
+  308--322, feb 1963.
+\newblock \doi{10.1063/1.1703955}.
+\newblock URL \url{https://doi.org/10.1063/1.1703955}.
 
 \bibitem[Moore and Newman(2000)]{Moore2000}
 Cristopher Moore and M.~E.~J. Newman.
@@ -627,6 +650,13 @@ D~Wilkinson and J~F Willemsen.
   (14):\penalty0 3365--3376, oct 1983.
 \newblock \doi{10.1088/0305-4470/16/14/028}.
 \newblock URL \url{https://doi.org/10.1088/0305-4470/16/14/028}.
+
+\bibitem[Yang(1952)]{Yang1952}
+C.~N. Yang.
+\newblock The spontaneous magnetization of a two-dimensional ising model.
+\newblock \emph{Physical Review}, 85\penalty0 (5):\penalty0 808--816, mar 1952.
+\newblock \doi{10.1103/physrev.85.808}.
+\newblock URL \url{https://doi.org/10.1103/physrev.85.808}.
 
 \bibitem[Zimm and Stockmayer(1949)]{Zimm1949}
 Bruno~H. Zimm and Walter~H. Stockmayer.
