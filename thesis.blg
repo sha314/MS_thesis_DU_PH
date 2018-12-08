@@ -25,16 +25,16 @@ Repeated entry---line 470 of file References/references.bib.bib
  : @misc{scale-free-network
  :                         ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 698 of file References/references.bib.bib
+I was expecting a `,' or a `}'---line 699 of file References/references.bib.bib
  :  
  :  author = {P. Erd{\H{o}}s and A. R{\'{e}}nyi},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 895 of file References/references.bib.bib
+Repeated entry---line 896 of file References/references.bib.bib
  : @article{Moore2000
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 960 of file References/references.bib.bib
+Repeated entry---line 961 of file References/references.bib.bib
  : @article{Hughes1958
  :                    ,
 I'm skipping whatever remains of this entry
@@ -42,6 +42,8 @@ Warning--I didn't find a database entry for ""
 Warning--to sort, need author or key in cubic-lattices
 Warning--to sort, need author or key in scale-free-network
 Warning--to sort, need author or key in dimension_class_FLT
+Warning--to sort, need author or key in Elsevier1988
+Warning--to sort, need author, editor, or key in Kluwer1994
 Warning--to sort, need author or key in Erdos1959
 Warning--to sort, need author or key in honeycomb-lattice
 Warning--to sort, need author or key in Barabasi1999
@@ -54,51 +56,54 @@ Warning--empty year in cubic-lattices
 Warning--empty year in dimension_class_FLT
 Warning--empty year in honeycomb-lattice
 Warning--empty year in scale-free-network
+Warning--empty author in Elsevier1988
+Warning--empty author and editor in Kluwer1994
 Warning--empty author in Barabasi1999
 Warning--empty title in Barabasi1999
 Warning--empty journal in Barabasi1999
 Warning--empty publisher in Carnot1890
 Warning--empty year in nesm-lecture-notes
 Warning--empty title in Lorenz2000
-You've used 86 entries,
+Warning--empty year in Sabbir
+You've used 101 entries,
             2773 wiz_defined-function locations,
-            1321 strings with 22719 characters,
-and the built_in function-call counts, 38059 in all, are:
-= -- 3688
-> -- 1679
-< -- 59
-+ -- 591
-- -- 504
-* -- 3289
-:= -- 5849
-add.period$ -- 398
-call.type$ -- 86
-change.case$ -- 410
-chr.to.int$ -- 85
-cite$ -- 199
-duplicate$ -- 1711
-empty$ -- 3264
-format.name$ -- 627
-if$ -- 7945
+            1434 strings with 26210 characters,
+and the built_in function-call counts, 44199 in all, are:
+= -- 4293
+> -- 1893
+< -- 71
++ -- 669
+- -- 567
+* -- 3777
+:= -- 6776
+add.period$ -- 470
+call.type$ -- 101
+change.case$ -- 471
+chr.to.int$ -- 100
+cite$ -- 236
+duplicate$ -- 2019
+empty$ -- 3837
+format.name$ -- 711
+if$ -- 9255
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 91
-newline$ -- 577
-num.names$ -- 320
-pop$ -- 715
+missing$ -- 109
+newline$ -- 678
+num.names$ -- 372
+pop$ -- 844
 preamble$ -- 1
-purify$ -- 339
+purify$ -- 390
 quote$ -- 0
-skip$ -- 1196
+skip$ -- 1396
 stack$ -- 0
-substring$ -- 1641
-swap$ -- 155
-text.length$ -- 1
+substring$ -- 1895
+swap$ -- 183
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 886
-warning$ -- 21
-while$ -- 354
+type$ -- 1026
+warning$ -- 26
+while$ -- 412
 width$ -- 0
-write$ -- 1375
+write$ -- 1616
 (There were 5 error messages)

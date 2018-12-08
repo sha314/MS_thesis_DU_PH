@@ -16,9 +16,6 @@ the \textbf{src/index/index.h} file
 #include "../lattice/bond_type.h"
 
 
-/**
-*
-*/
 struct Index{
 value_type row_{};
 value_type column_{};
@@ -31,10 +28,6 @@ Index(value_type x, value_type y) : row_{x}, column_{y} {}
 };
 
 
-/**
-* Template index
-* @tparam T
-*/
 class IndexRelative{
 public:
 int x_{};
@@ -47,9 +40,6 @@ IndexRelative(int x, int y) : x_{x}, y_{y} {}
 
 };
 
-/**
-*
-*/
 struct BondIndex{
 BondType bondType;
 
@@ -94,15 +84,10 @@ std::vector<Index> get_2nn_s_in_1nn_s_direction(Index center, const std::vector<
 
 The \textbf{src/index/index.cpp} file
 \begin{lstlisting}[style=CStyle]
-//
-// Created by shahnoor on 10/2/2017.
-//
-
 #include <iomanip>
 #include "index.h"
 
 using namespace std;
-
 
 ostream& operator<<(ostream& os, const Index& index)
 {
@@ -126,7 +111,6 @@ return index1.column_ < index2.column_;
 }
 return false;
 }
-
 
 ostream& operator<<(ostream& os, const BondIndex& index){
 if(index.horizontal()){
@@ -158,10 +142,6 @@ return false;
 /**
 * Get the 2nd nearest nearest neighbor in the direction of 1st nearest neighbor.
 * Periodicity is not considered here.
-* @param center
-* @param nn_1
-* @param length
-* @return
 */
 Index get_2nn_in_1nn_direction(Index center, Index nn_1, value_type length){
 int delta_c = int(nn_1.column_) - int(center.column_);
@@ -181,10 +161,6 @@ return Index{(nn_1.row_ + delta_r + length) % length, (nn_1.column_ + delta_c + 
 /**
 * Get all second nearest neighbors based on the first nearest neighbors.
 * Periodicity is not considered here
-* @param center
-* @param nn_1
-* @param length
-* @return
 */
 vector<Index> get_2nn_s_in_1nn_s_direction(Index center, const vector<Index> &nn_1, value_type length){
 vector<Index> nn_2(nn_1.size());

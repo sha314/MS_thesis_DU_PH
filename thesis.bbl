@@ -1,4 +1,4 @@
-\begin{thebibliography}{86}
+\begin{thebibliography}{101}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -27,6 +27,20 @@ Honeycomb lattice.
 \bibitem[sca()]{scale-free-network}
 Scale free network.
 \newblock URL \url{https://www.flickr.com/photos/sjcockell/8425835703}.
+
+\bibitem[Els(1988)]{Elsevier1988}
+Introduction to theory of finite-size scaling.
+\newblock In \emph{Finite-Size Scaling}, pages 1--7. Elsevier, 1988.
+\newblock \doi{10.1016/b978-0-444-87109-1.50006-6}.
+\newblock URL \url{https://doi.org/10.1016/b978-0-444-87109-1.50006-6}.
+
+\bibitem[Klu(1994)]{Kluwer1994}
+\emph{Encyclopaedia of Mathematics (Encyclopaedia of Mathematics, 10 Volume
+  Set)}.
+\newblock Kluwer, 1994.
+\newblock ISBN 1556080107.
+\newblock URL
+  \url{https://www.amazon.com/Encyclopaedia-Mathematics-10-Set/dp/1556080107?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1556080107}.
 
 \bibitem[Bar(1999)]{Barabasi1999}
 286\penalty0 (5439):\penalty0 509--512, oct 1999.
@@ -108,6 +122,14 @@ M.~Blume.
 \newblock \doi{10.1103/physrev.141.517}.
 \newblock URL \url{https://doi.org/10.1103/physrev.141.517}.
 
+\bibitem[Blundell and Blundell(2006)]{Blundell2006}
+Stephen~J. Blundell and Katherine~M. Blundell.
+\newblock \emph{Concepts in Thermal Physics}.
+\newblock Oxford University Press, 2006.
+\newblock ISBN 0198567707.
+\newblock URL
+  \url{https://www.amazon.com/Concepts-Thermal-Physics-Stephen-Blundell/dp/0198567707?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0198567707}.
+
 \bibitem[Boccaletti et~al.(2014)Boccaletti, Bianconi, Criado, del Genio,
   G{\'{o}}mez-Garde{\~{n}}es, Romance, Sendi{\~{n}}a-Nadal, Wang, and
   Zanin]{Boccaletti2014}
@@ -150,6 +172,14 @@ S.~R. Broadbent and J.~M. Hammersley.
   Society}, 53\penalty0 (03):\penalty0 629, jul 1957.
 \newblock \doi{10.1017/s0305004100032680}.
 \newblock URL \url{https://doi.org/10.1017/s0305004100032680}.
+
+\bibitem[Buckingham(1914)]{Buckingham1914}
+E.~Buckingham.
+\newblock On physically similar systems; illustrations of the use of
+  dimensional equations.
+\newblock \emph{Physical Review}, 4\penalty0 (4):\penalty0 345--376, oct 1914.
+\newblock \doi{10.1103/physrev.4.345}.
+\newblock URL \url{https://doi.org/10.1103/physrev.4.345}.
 
 \bibitem[Callaway et~al.(2000)Callaway, Newman, Strogatz, and
   Watts]{Callaway2000}
@@ -265,6 +295,15 @@ J~W Essam.
 \newblock \doi{10.1088/0034-4885/43/7/001}.
 \newblock URL \url{https://doi.org/10.1088/0034-4885/43/7/001}.
 
+\bibitem[Family and Vicsek(1985)]{Family1985}
+F~Family and T~Vicsek.
+\newblock Scaling of the active zone in the eden process on percolation
+  networks and the ballistic deposition model.
+\newblock \emph{Journal of Physics A: Mathematical and General}, 18\penalty0
+  (2):\penalty0 L75--L81, feb 1985.
+\newblock \doi{10.1088/0305-4470/18/2/005}.
+\newblock URL \url{https://doi.org/10.1088/0305-4470/18/2/005}.
+
 \bibitem[Fisher(1961)]{Fisher1961}
 Michael~E. Fisher.
 \newblock Critical probabilities for cluster size and percolation problems.
@@ -272,6 +311,14 @@ Michael~E. Fisher.
   620--627, jul 1961.
 \newblock \doi{10.1063/1.1703746}.
 \newblock URL \url{https://doi.org/10.1063/1.1703746}.
+
+\bibitem[Fisher and Barber(1972)]{Fisher1972}
+Michael~E. Fisher and Michael~N. Barber.
+\newblock Scaling theory for finite-size effects in the critical region.
+\newblock \emph{Physical Review Letters}, 28\penalty0 (23):\penalty0
+  1516--1519, jun 1972.
+\newblock \doi{10.1103/physrevlett.28.1516}.
+\newblock URL \url{https://doi.org/10.1103/physrevlett.28.1516}.
 
 \bibitem[Flory(1941)]{Flory1941}
 Paul~J. Flory.
@@ -321,12 +368,29 @@ Liv Furuberg, Knut~J{\o}rgen M{\aa}l{\o}y, and Jens Feder.
 \newblock \doi{10.1103/physreve.53.966}.
 \newblock URL \url{https://doi.org/10.1103/physreve.53.966}.
 
+\bibitem[Gould et~al.(2006)Gould, Tobochnik, and Christian]{Gould2006}
+Harvey Gould, Jan Tobochnik, and Wolfgang Christian.
+\newblock \emph{An Introduction to Computer Simulation Methods: Applications to
+  Physical Systems (3rd Edition)}.
+\newblock Addison-Wesley, 2006.
+\newblock ISBN 0805377581.
+\newblock URL
+  \url{https://www.amazon.com/Introduction-Computer-Simulation-Methods-Applications/dp/0805377581?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0805377581}.
+
 \bibitem[Hall(1985)]{Hall1985}
 Peter Hall.
 \newblock On continuum percolation.
 \newblock \emph{Institute of Mathematical Statistics}, 13\penalty0
   (4):\penalty0 1250--1266, 1985.
 \newblock \doi{110.2307/2244176}.
+
+\bibitem[Halliday et~al.(2013)Halliday, Resnick, and Walker]{Walker2013}
+David Halliday, Robert Resnick, and Jearl Walker.
+\newblock \emph{Fundamentals of Physics}.
+\newblock Wiley, 2013.
+\newblock ISBN 9781118230718.
+\newblock URL
+  \url{https://www.amazon.com/Fundamentals-Physics-David-Halliday/dp/111823071X?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=111823071X}.
 
 \bibitem[Hartley(1928)]{Hartley1928}
 R.~V.~L. Hartley.
@@ -348,6 +412,15 @@ J.~Hoshen and R.~Kopelman.
   1976.
 \newblock \doi{10.1103/physrevb.14.3438}.
 \newblock URL \url{https://doi.org/10.1103/physrevb.14.3438}.
+
+\bibitem[Hu(1992)]{Hu1992}
+Chin-Kun Hu.
+\newblock Histogram monte carlo renormalization-group method for percolation
+  problems.
+\newblock \emph{Physical Review B}, 46\penalty0 (10):\penalty0 6592--6595, sep
+  1992.
+\newblock \doi{10.1103/physrevb.46.6592}.
+\newblock URL \url{https://doi.org/10.1103/physrevb.46.6592}.
 
 \bibitem[Hu et~al.(2009)Hu, Myers, Colizza, and Vespignani]{Hu2009}
 H.~Hu, S.~Myers, V.~Colizza, and A.~Vespignani.
@@ -373,6 +446,15 @@ Ernst Ising.
 \newblock \doi{10.1007/bf02980577}.
 \newblock URL \url{https://doi.org/10.1007/bf02980577}.
 
+\bibitem[Jaeger(1998)]{Jaeger1998}
+Gregg Jaeger.
+\newblock The ehrenfest classification of phase transitions: Introduction and
+  evolution.
+\newblock \emph{Archive for History of Exact Sciences}, 53\penalty0
+  (1):\penalty0 51--81, may 1998.
+\newblock \doi{10.1007/s004070050021}.
+\newblock URL \url{https://doi.org/10.1007/s004070050021}.
+
 \bibitem[{Kasteleyn} and {Fortuin}(1969)]{Kasteleyn1969}
 P.~W. {Kasteleyn} and C.~M. {Fortuin}.
 \newblock Phase transitions in lattice systems with random local properties.
@@ -389,6 +471,14 @@ Harry Kesten.
   (1):\penalty0 109--156, mar 1987.
 \newblock \doi{10.1007/bf01205674}.
 \newblock URL \url{https://doi.org/10.1007/bf01205674}.
+
+\bibitem[Kittel(2004)]{Kittel2004}
+Charles Kittel.
+\newblock \emph{Introduction to Solid State Physics}.
+\newblock Wiley, 2004.
+\newblock ISBN 047141526X.
+\newblock URL
+  \url{https://www.amazon.com/Introduction-Solid-Physics-Charles-Kittel/dp/047141526X?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=047141526X}.
 
 \bibitem[Kivela et~al.(2014)Kivela, Arenas, Barthelemy, Gleeson, Moreno, and
   Porter]{Kivela2014}
@@ -450,6 +540,14 @@ Knut~Jo?rgen M{\aa}lo?y, Liv Furuberg, Jens Feder, and Torstein Jo?ssang.
   2161--2164, apr 1992.
 \newblock \doi{10.1103/physrevlett.68.2161}.
 \newblock URL \url{https://doi.org/10.1103/physrevlett.68.2161}.
+
+\bibitem[Mandelbrot(1967)]{Mandelbrot1967}
+B.~Mandelbrot.
+\newblock How long is the coast of britain? statistical self-similarity and
+  fractional dimension.
+\newblock \emph{Science}, 156\penalty0 (3775):\penalty0 636--638, may 1967.
+\newblock \doi{10.1126/science.156.3775.636}.
+\newblock URL \url{https://doi.org/10.1126/science.156.3775.636}.
 
 \bibitem[Mandelbrot(1983)]{Mandelbrot1983}
 Benoit~B. Mandelbrot.
@@ -517,6 +615,15 @@ H.~Nyquist.
 \newblock \doi{10.1109/5.989875}.
 \newblock URL \url{https://doi.org/10.1109/5.989875}.
 
+\bibitem[Ojovan(2013)]{Ojovan2013}
+Michael~I. Ojovan.
+\newblock Ordering and structural changes at the glass{\textendash}liquid
+  transition.
+\newblock \emph{Journal of Non-Crystalline Solids}, 382:\penalty0 79--86, dec
+  2013.
+\newblock \doi{10.1016/j.jnoncrysol.2013.10.016}.
+\newblock URL \url{https://doi.org/10.1016/j.jnoncrysol.2013.10.016}.
+
 \bibitem[Palla et~al.(2005)Palla, Der{\'{e}}nyi, Farkas, and Vicsek]{Palla2005}
 Gergely Palla, Imre Der{\'{e}}nyi, Ill{\'{e}}s Farkas, and Tam{\'{a}}s Vicsek.
 \newblock Uncovering the overlapping community structure of complex networks in
@@ -552,6 +659,11 @@ G.~R. Reich and P.~L. Leath.
   611--622, dec 1978.
 \newblock \doi{10.1007/bf01011772}.
 \newblock URL \url{https://doi.org/10.1007/bf01011772}.
+
+\bibitem[Sabbir()]{Sabbir}
+Md~Mainul~Hasan Sabbir.
+\newblock Universality class of explosive percolation in random networks.
+\newblock Master's thesis,.
 
 \bibitem[Sahini and Sahimi(1994)]{Sahini1994}
 M~Sahini and M~Sahimi.
@@ -625,6 +737,14 @@ C.~E. Shannon.
   379--423, jul 1948.
 \newblock \doi{10.1002/j.1538-7305.1948.tb01338.x}.
 \newblock URL \url{https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}.
+
+\bibitem[Vicsek and Family(1984)]{Vicsek1984}
+Tam{\'{a}}s Vicsek and Fereydoon Family.
+\newblock Dynamic scaling for aggregation of clusters.
+\newblock \emph{Physical Review Letters}, 52\penalty0 (19):\penalty0
+  1669--1672, may 1984.
+\newblock \doi{10.1103/physrevlett.52.1669}.
+\newblock URL \url{https://doi.org/10.1103/physrevlett.52.1669}.
 
 \bibitem[Wierman(1984)]{Wierman1984}
 J~C Wierman.

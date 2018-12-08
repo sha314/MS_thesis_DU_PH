@@ -305,15 +305,44 @@ site to make space for the incoming perticle to be deposited there.
 			\caption{$\chi L^{\gamma/\nu}$ vs $(p-p_c) L ^{1/\nu}$}
 			\label{fig:susceptibility-data-collapse}
 		\end{figure}
+	
+	
+	
 	\subsection{Cluster Size Distribution}
+		Cluster size $S$ is related to $n_S$ by the relation
+		\begin{equation}
+			n_S \sim S^{-\tau}
+		\end{equation}
+		taking log on both sides gives us
+		\begin{equation}
+			\log n_S = -\tau \log S
+		\end{equation}
+		Thus the exponent $\tau$ gives us the information of the average cluster size. At the critical point all the cluster (apart from the largest ones and smallest ones) follows a pattern. Their size is related to the number times of they appear.
 		\begin{figure}
 			\caption{Number of cluster of size $s$, $n_s$ vs size of the cluster $s$}
 		\end{figure}
 		\begin{figure}
+			\begin{subfigure}{0.329\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_periodic_cluster-size-distribution_cluster_by_bond}}}
+			\caption{L0}
+			\end{subfigure}
+			\begin{subfigure}{0.329\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L1_periodic__cluster_by_bond_cluster-size-distribution-log-log_cluster_by_bond}}}
+			\caption{L1}
+			\end{subfigure}
+			\begin{subfigure}{0.329\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic__cluster_by_bond_cluster-size-distribution-log-log_cluster_by_bond}}}
+			\caption{L2}
+			\end{subfigure}
 			\caption{$\log(n_s)$ vs $\log(s)$}
 		\end{figure}
 	$n_s$ vs $s$ graph
-	\subsection{Cluster Rank Size Distribution}
+
+
+
 	\subsection{Order-Disorder Transition}
 	    Phase transition is an order-disorder transition. There is a critical point which separates the two regions. Before the critical point the system is in disordered phase and after it is in ordered phase when we increase temperature in thermodynamics. Behavior of two phases are completely different. It's astonishing how the behavior changes. In percolation theory, this order disorder transition is different than in thermodynamics. Here disordered means uncertainty, since we are dealing with a system where probability is the control parameter (the occupation probability $p$). When $p$ is minimum all clusters are disconnected and have size of unity. This means that we can to pick a cluster with probability $\frac{1}{2L^2}$, where $L$ is the lattice size and $2L^2$ is the number of bonds in the lattice. That's why entropy is maximum and order parameter is minimum in this region. Now as we keep occupying the lattice clusters of different size arises, and at some point a miracle happens. It is the critical point where the transition occurs. A cluster appears for the first time which spans the entire lattice either horizontally or vertically. And in case of periodic condition the cluster wraps the lattice all the way around it. This cluster is called the spanning (wrapping) cluster in non-periodic (periodic) condition. The probability of picking this cluster at random is always larger than picking any other clusters. Thus system goes to the ordered state. And if we keep occupying the lattice at some point all cluster are joined to form one cluster. Thus picking this cluster at random has no uncertainty, meaning we have reached the entirely ordered phase. Here entropy is minimum and ordered parameter is maximum. A graph \ref{fig:ordered-disordered-transition} containing both entropy and order parameter can show this process. We have normalized the entropy (figure \ref{fig:entropy}) to match with the order parameter (figure \ref{fig:order-parameter}).
 
@@ -340,6 +369,7 @@ site to make space for the incoming perticle to be deposited there.
 		At critical point the square lattice shows the property of a fractal. A fractal is an object which occupies less space than it is embedded. For example a piece of cheese is a 3D fractal, since there are holes in the cheese which is empty. We use the relation
 		\begin{equation}
 			S \sim L^{d_f}
+			\label{eqn:fractal-dim}
 		\end{equation}
 		taking $\log$ we get
 		\begin{equation}
@@ -365,4 +395,4 @@ site to make space for the incoming perticle to be deposited there.
 			\label{fig:fractal-dimension}
 			\caption{$\log(S)$ vs $\log(L)$}
 		\end{figure}
-
+		Fractal dimension gives us the information about the size of the spanning(wrapping) cluster. If the lattice size is known we can estimate the average size of the spanning cluster using $d_f$ and \ref{eqn:fractal-dim}.
