@@ -6,9 +6,9 @@
 
 % **************************** Define Graphics Path **************************
 \ifpdf
-    \graphicspath{{Chapter5/Figs/}{Chapter5/Figs/L0/}{Chapter5/Figs/L1/}{Chapter5/Figs/L2/}}
+    \graphicspath{{Chapter4/Figs/}{Chapter5/Figs/}{Chapter5/Figs/L0/}{Chapter5/Figs/L1/}{Chapter5/Figs/L2/}{Chapter5/Figs/traditional/}}
 \else
-    \graphicspath{{Chapter5/Figs/}{Chapter5/Figs/L0/}{Chapter5/Figs/L1/}{Chapter5/Figs/L2/}}
+    \graphicspath{{Chapter4/Figs/}{Chapter5/Figs/}{Chapter5/Figs/L0/}{Chapter5/Figs/L1/}{Chapter5/Figs/L2/}Chapter5/Figs/traditional/}
 \fi
 
 
@@ -17,7 +17,121 @@ We investigate percolation by random sequential ballistic deposition (RSBD) on a
 Imagine a spherical shaped object, say marble, is thrown on top of a 2D square lattice structure. First possible scenario is that the marble will be deposited in the first encountered site in the lattice . Now if the first encountered site is not empty, the possible scenario is that the marble will go in any of the four direction, $+x$, $-x$, $+y$ or $-y$, assuming no other direction in between is allowed in the lattice.  Now if the first neighbor is not empty then the marble will continue to go on in the previously selected direction and choose the next neighbor. This is the main theme of this thesis.\\
 In our experiment, we occupy a randomly chosen site if it is empty else we select one of its four neighbor to occupy if it is empty else select next neighbor in that direction and occupy that site if it is empty else ignore current iteration and choose another site randomly. This process is repeated until there is no empty site in the lattice. We call this process the ballistic deposition on the square lattice. We introduce 1st and 2nd nearest neighbor interaction in this way.
 
-\section{Site Percolation Redefined}
+
+
+\section{Redefinition of Site Percolation}
+	In site percolation we take a square lattice of length $L$ and we choose sites randomly and occupy them and measure cluster size with the number of site in a cluster. This is the traditional definition of site percolation.
+	
+	First let us discuss about two most important quantities of interests in the		theory of phase transition and critical phenomena are the		entropy $H$ and the order parameter $P$ since they are the		ones which define the order of transition. For instance,		in the first order transition there must be a jump or gap		in entropy at the critical point which is why first order 		transition requires latent heat. Similarly, the order parameter too must suffer a jump or discontinuity at the		critical point and that is the reason why in the first order transition new and old phase can coexist at the same		time. Besides, they are also used as a litmus test to		check whether the transition is accompanied by symmetry breaking or not. In the case of symmetry breaking,		the system undergoes a transition from the disordered		state, which is characterized by maximally high entropy,		to the ordered state, which is characterized by maximally		high order parameter. Such transition happens with an		abrupt or sudden change in $P$ and $H$ but without gap	or discontinuity at $p_c$.	
+	\subsection{The problem with the old definition}
+		If we use the traditional definition of site percolation we encounter some serious problem. Firstly, it violates the second law of thermodynamics which states entropy cannot decrease in a closed system \cite{Benguigui2013} which is discussed in section \ref{subsect:entropy-thermodynamics}. But the traditional definition gives a graph of entropy where entropy is zero at $p=0$ then entropy increases to a maximum value and again decreases to zero at $p=1$. Figure \ref{fig:entropy-traditional} show the graph of entropy using the traditional definition of site percolation. Although ignoring the part where $p \sim 0$ gives us the correct exponent from the derivative of entropy (specific heat) but it surely violates one of the fundamental laws of physics.
+		\begin{figure}
+			\captionsetup[subfigure]{width=0.9\textwidth}
+			\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=7cm]{{{sq_lattice_site_percolation_periodic__entropy_by_site_-entropy}}}
+			\caption{Entropy from the traditional definition of site percolation}
+			\label{fig:entropy-traditional}				
+			\end{subfigure}
+			\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=7cm]{{{sq_lattice_site_percolation_periodic__entropy_by_site-entropy-order_parameter-traditional2-L400}}}
+			\caption{Entropy from the traditional definition of site percolation}
+			\label{fig:order-disorder-transition}
+			\end{subfigure}
+			\caption{Effect of traditional definition of site percolation}
+		\end{figure}
+		
+		Secondly, it give raise to ambiguity at $p=0$. 		 We know phase transition is an order-disorder transition and system goes from ordered state to disordered state or vice versa. Therefore a system cannot be in both ordered state and disordered state at the same time. But the traditional definition of site percolation does not agree with this. We can see this in figure \ref{fig:order-disorder-transition} where normalized entropy and order parameter is plotted together. We can see that at $p=0$entropy, which represents disorder, is minimum  and order parameter, which represents order, is also zero. Thus the system is in both ordered and disordered state at  the same time. Which is a serious problem with the traditional definition of site percolation.
+		
+	\subsection{Solution to the problem}
+		Our problem will be resolved if the entropy is maximum at $p=0$ and gradually decrease to minimum and order parameter is minimum at $p=0$ and gradually increase to maximum. Since bond percolation does not raise this problem, a closer look at it and comparing it with site percolation is the first thing to do.
+		\subsubsection{Bond Percolation}
+		 In bond percolation we occupy bond and measure occupation probability by the fraction of the occupied bond with respect to total number of bonds. And we measure cluster size with the number of sites in it. Here, in the initial state, there is no bond present but all the sites are. We simply occupy bonds to connect sites to form clusters. Thus initially all the clusters are of size $1$ (contains exactly one site) giving maximum entropy and minimum order parameter. 
+		
+		 The algorithm for bond percolation is as follows,
+		 \begin{enumerate}
+		 	\item take a square lattice of length $L$.
+		 	\item fill all $L^2$ the sites initially.
+		 	\item occupy a randomly chosen bond and it will join some clusters.
+		 	\item each time a bond is occupied, it will get connected to two neighboring sites and will form a cluster of size $2$. Here cluster size by number of sites in it.
+		 	\item if a bond is occupied and right next to it there is another occupied bond and they are connected by a site and a cluster of size $3$ will be formed.
+		 	\item this process is repeated until all the bonds are occupied and only one cluster remains
+		 \end{enumerate}
+		 The formation of cluster is visualized in the figure \ref{fig:cluster_growth_bond_percolation}.
+		 \begin{figure}
+		 	\begin{subfigure}{.5\textwidth}
+		 		\centering
+		 		\includegraphics[width=.8\linewidth]{{{sq_lattice_bond_percolation_1_0}}}
+		 		\caption{Initial state}
+		 	\end{subfigure}
+		 	\begin{subfigure}{.5\textwidth}
+		 		\centering
+		 		\includegraphics[width=.8\linewidth]{{{sq_lattice_bond_percolation_1_1}}}
+		 		\caption{Iteraion 1}
+		 	\end{subfigure}
+		 	\begin{subfigure}{.5\textwidth}
+		 		\centering
+		 		\includegraphics[width=.8\linewidth]{{{sq_lattice_bond_percolation_1_2}}}
+		 		\caption{Iteraion 2}
+		 	\end{subfigure}
+		 	\begin{subfigure}{.5\textwidth}
+		 		\centering
+		 		\includegraphics[width=.8\linewidth]{{{sq_lattice_bond_percolation_1_3}}}
+		 		\caption{Iteraion 3}
+		 	\end{subfigure}
+		 	\caption{Growth of a Cluster in Bond Percolation on square Lattice}
+		 	\label{fig:cluster_growth_bond_percolation}
+		 \end{figure}
+		
+		
+		Keeping this in mind one might guess the possible rule for site percolation. We should have a lattice of $2 L^2$ bonds and no sites and we should occupy site and connect bonds with sites to form clusters. As usual the occupation probability will be measured by $n/L^2$ where $n$ is the number of occupied sites. In this way we have maximum entropy and minimum order parameter at $p=0$ see figure \ref{fig:ordered-disordered-transition}.
+		
+		\subsubsection{Site Percolation}
+		The algorithm for site percolation is as follows,
+		\begin{enumerate}
+			\item take a square lattice of length $L$.
+			\item fill all $2 L^2$ bonds initially.
+			\item occupy a randomly chosen site and it will join some clusters.
+			\item each time a site is occupied, it will get connected to four neighboring bonds and will form a cluster of size $4$. Note that we define cluster size by number of bonds in it.
+			\item if a site is occupied and right next to it there is another occupied site and a cluster of size $7$ will be formed.
+			\item this process is repeated until all the sites are occupied and only one cluster remains
+		\end{enumerate}
+		The formation of cluster is visualized in the figure \ref{fig:cluster_growth_site_percolation}.
+		
+		\begin{figure}
+			\begin{subfigure}{.5\textwidth}
+				\centering
+				\includegraphics[width=.8\linewidth]{{{sq_lattice_site_percolation_1_0}}}
+				\caption{Initial state}
+			\end{subfigure}
+			\begin{subfigure}{.5\textwidth}
+				\centering
+				\includegraphics[width=.8\linewidth]{{{sq_lattice_site_percolation_1_1}}}
+				\caption{Iteraion 1}
+			\end{subfigure}
+			\begin{subfigure}{.5\textwidth}
+				\centering
+				\includegraphics[width=.8\linewidth]{{{sq_lattice_site_percolation_1_2}}}
+				\caption{Iteraion 2}
+			\end{subfigure}
+			\begin{subfigure}{.5\textwidth}
+				\centering
+				\includegraphics[width=.8\linewidth]{{{sq_lattice_site_percolation_1_3}}}
+				\caption{Iteraion 3}
+			\end{subfigure}
+			
+			\caption{Growth of a Cluster in Site Percolation on square Lattice}
+			\label{fig:cluster_growth_site_percolation}
+		\end{figure}
+	
+	
+	
+		 Thus we can give the definition of site(bond) percolation. Take a square lattice of length $L$ with $L^2$ sites and $2L^2$ bonds. In site(bond) percolation all the bonds(sites) are present initially and occupy sites(bonds) to connect bonds(sites) in order to form cluster. Measure occupation probability as a fraction of sites(bonds) with respect to total sites(bonds) \cite{redefinition-of-site-percolation}.
+		 
+	\subsection{Impact of the new definition}
+		The new definition resolves the problems of the traditional definition of site percolation. It does not violet the second law of thermodynamics. Which means that initially at $p=0$ the entropy is maximum and the order parameter is minimum. As we occupy sites and form clusters the entropy decreases. At the critical point the rate of decreasing entropy is maximum. At $p=1$, when all the sites are occupied, there exists only one cluster giving minimum entropy and maximum order parameter \ref{fig:entropy}.		Thus ambiguity of being in ordered and disordered state at the same time is resolved \ref{fig:order-disorder-transition}. Also the critical exponents are unchanged by the new definition. Thus site and bond percolation belong to a universality class \cite{Hassan2015, Hassan2016}.
+
 
 \section{Structure and Algorithm}
 Random percolation (RP) model can also be seen as a random sequential adsorption (RSA) process of particles on a given substrate to form monolayers of clusters of complex shape and structures. In RSA, a site is first picked at random and it is occupied if it is empty and the trial attempt is rejected if it is already occupied. We shall first show that this process too reproduce all the existing results of the CRP including the $p_c$ value. We can modify the rejection criterion. First, we assume that the adsorbing particles are hard sphere and impenetrable. Then we assume that if a particle fall onto an already adsorbed particle it is not straightaway rejected. Instead, it is allowed to roll down over the already deposited particle to one of its nearest neighbours at random following the steepest descent path. The particle is then adsorbed permanently if the nearest neighbour is empty else the trial attempt is rejected. This is known as the ballistic deposition (BD) model for $l = 1$. We also consider the case that if the nearest neighbour is occupied then the incoming particle attempt to push the neighbour to its next neighour site along the same line to make room for itself. However, the trial attempt of pushing the neighbour is successful if the next neibhouring site along the same line is empty else the trial attempt is discarded. We regard it as BD model for $l = 2$ while the classical percolation correspond to BD model with $l = 0$. Our primery goal is to prove that the critical exponents of percolation changes as changes as we increase the range of interaction like we find in its thermal counterpart. We numerically find the various necessary critical exponents and find that BD for each different range of interaction belong to different universality class and each universality class
@@ -47,7 +161,8 @@ site to make space for the incoming perticle to be deposited there.
 	\item if the chosen neighbor is empty then occupy it else choose second nearest neighbor in that direction
 	\item if the second nearest neighbor is empty then occupy the site else ignore this step
 \end{enumerate}
-\section{Finite Size Scaling in Percolation Theory}
+
+
 \section{Finding Numerical Values} 
 \label{sect:finding-numerical-values}
 	\subsection{Critical occupation probability, $p_c$} 
@@ -102,7 +217,7 @@ site to make space for the incoming perticle to be deposited there.
 	
 	\subsection{Entropy, Specific Heat and finding $\alpha$}
 	\label{subsect:entropy-specific-heat}
-		For any phase transition model the entropy is crucial. In percolation theory we use Shannon Entropy \cite{shanon_entropy}. Using the definition \ref{label} we get the figure \ref{fig:entropy}
+		For any phase transition model the entropy is crucial. In percolation theory we use Shannon Entropy \cite{Shannon1948}. Using the definition \ref{label} we get the figure \ref{fig:entropy}
 		\begin{figure}
 			\begin{subfigure}{0.329\textwidth}
 				\centering
@@ -362,8 +477,8 @@ site to make space for the incoming perticle to be deposited there.
 				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic_-entropy-order_parameter-L400}}}
 				\caption{L2}
 			\end{subfigure}
-			\label{fig:ordered-disordered-transition}
 			\caption{$H(p,L)/H(0,L)$ or $P(p,L)/P(1,L)$ vs $p$}
+			\label{fig:ordered-disordered-transition}
 		\end{figure}
 	\subsection{Fractal Dimension}
 		At critical point the square lattice shows the property of a fractal. A fractal is an object which occupies less space than it is embedded. For example a piece of cheese is a 3D fractal, since there are holes in the cheese which is empty. We use the relation

@@ -15,26 +15,32 @@ The style file: plainnat.bst
 A level-1 auxiliary file: Appendix1/appendix1.aux
 A level-1 auxiliary file: Appendix2/appendix2.aux
 A level-1 auxiliary file: Appendix3/appendix3.aux
+A level-1 auxiliary file: Appendix4/appendix4.aux
 Database file #1: References/references.bib.bib
-You're missing a field name---line 375 of file References/references.bib.bib
+I was expecting a `,' or a `}'---line 4 of file References/references.bib.bib
+ :  
+ :  doi = {10.1002/j.1538-7305.1948.tb01338.x},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 355 of file References/references.bib.bib
  : 
  : % author = {Albert-L\'{a}szl\'{o} Barab\'{a}si, R\'{e}ka Albert},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 470 of file References/references.bib.bib
+Repeated entry---line 450 of file References/references.bib.bib
  : @misc{scale-free-network
  :                         ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 699 of file References/references.bib.bib
+I was expecting a `,' or a `}'---line 679 of file References/references.bib.bib
  :  
  :  author = {P. Erd{\H{o}}s and A. R{\'{e}}nyi},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 896 of file References/references.bib.bib
+Repeated entry---line 876 of file References/references.bib.bib
  : @article{Moore2000
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 961 of file References/references.bib.bib
+Repeated entry---line 941 of file References/references.bib.bib
  : @article{Hughes1958
  :                    ,
 I'm skipping whatever remains of this entry
@@ -44,6 +50,7 @@ Warning--to sort, need author or key in scale-free-network
 Warning--to sort, need author or key in dimension_class_FLT
 Warning--to sort, need author or key in Elsevier1988
 Warning--to sort, need author, editor, or key in Kluwer1994
+Warning--to sort, need author or key in Shannon1948
 Warning--to sort, need author or key in Erdos1959
 Warning--to sort, need author or key in honeycomb-lattice
 Warning--to sort, need author or key in Barabasi1999
@@ -52,6 +59,11 @@ Warning--empty title in Erdos1959
 Warning--empty journal in Erdos1959
 Warning--empty year in Erdos1959
 Warning--empty year in Erdos1959
+Warning--empty author in Shannon1948
+Warning--empty title in Shannon1948
+Warning--empty journal in Shannon1948
+Warning--empty year in Shannon1948
+Warning--empty year in Shannon1948
 Warning--empty year in cubic-lattices
 Warning--empty year in dimension_class_FLT
 Warning--empty year in honeycomb-lattice
@@ -65,45 +77,45 @@ Warning--empty publisher in Carnot1890
 Warning--empty year in nesm-lecture-notes
 Warning--empty title in Lorenz2000
 Warning--empty year in Sabbir
-You've used 101 entries,
+You've used 105 entries,
             2773 wiz_defined-function locations,
-            1434 strings with 26210 characters,
-and the built_in function-call counts, 44199 in all, are:
-= -- 4293
-> -- 1893
-< -- 71
-+ -- 669
-- -- 567
-* -- 3777
-:= -- 6776
-add.period$ -- 470
-call.type$ -- 101
-change.case$ -- 471
-chr.to.int$ -- 100
-cite$ -- 236
-duplicate$ -- 2019
-empty$ -- 3837
-format.name$ -- 711
-if$ -- 9255
+            1366 strings with 21532 characters,
+and the built_in function-call counts, 44322 in all, are:
+= -- 4147
+> -- 1956
+< -- 74
++ -- 691
+- -- 585
+* -- 3707
+:= -- 6710
+add.period$ -- 395
+call.type$ -- 105
+change.case$ -- 487
+chr.to.int$ -- 104
+cite$ -- 251
+duplicate$ -- 2096
+empty$ -- 3960
+format.name$ -- 738
+if$ -- 9276
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 109
-newline$ -- 678
-num.names$ -- 372
-pop$ -- 844
+missing$ -- 114
+newline$ -- 611
+num.names$ -- 384
+pop$ -- 975
 preamble$ -- 1
-purify$ -- 390
+purify$ -- 404
 quote$ -- 0
-skip$ -- 1396
+skip$ -- 1455
 stack$ -- 0
 substring$ -- 1895
-swap$ -- 183
+swap$ -- 188
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1026
-warning$ -- 26
-while$ -- 412
+type$ -- 1065
+warning$ -- 32
+while$ -- 421
 width$ -- 0
-write$ -- 1616
-(There were 5 error messages)
+write$ -- 1490
+(There were 6 error messages)

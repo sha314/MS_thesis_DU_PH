@@ -1,0 +1,110 @@
+%!TEX root = ../thesis.tex
+% ******************************* Thesis Appendix C ********************************
+\ifpdf
+\graphicspath{{Appendix4/figs/}}
+\else
+\graphicspath{{Appendix4/figs/}}
+\fi
+
+\chapter{Measuring Entropy Efficiently}
+	In percolation we measure the Shannon entropy \cite{Shannon1948} to measure entropy of a system. But measuring Shannon entropy is very costly. Since we have to measure entropy for each value of $p$ (total $L^2$ iteration in site percolation) and there can be at most $2L^2$ cluster in site percolation (initial state). Therefore it would cost as $\mathcal{O} (L^2m)$ where $1 \geq m \geq 2$. Which is not good for taking $1000$s of ensemble.
+
+	To improve the entropy measuring system we can do the following: we measure entropy initially in the traditional way (taking sum over all the clusters) and call it $H_{old}$. We then select a site and without occupying it measure the entropy of the cluster that is related to the site first and call it $H_s$. Then we occupy the site and measure the entropy of the cluster that emerges after occupying the site and call it $H_a$. Therefore at this point the entropy of the system is
+	\begin{equation}
+		H = H_{old} - H_s + H_a
+	\end{equation}
+	Then we set $H_{old} = H$ and repeat the process. This way we don't need to measure entropy for each cluster at each iteration, we only need to measure the change in entropy. Recall that $mu_i=\frac{S_i}{\sum_i S_i}$ where $S_i$ is the size of the $i$-th cluster and $\sum_i S_i = M = 2L^2$ in site percolation.
+	
+	At this point an worked out example is helpful. Say we have a lattice of length $L=8$ then there are $N=64$ sites and $M=128$ bonds \ref{fig:efficient-entropy-1}. And initially there are $M$ clusters of size $1$ (only one bond per cluster). Then the initial entropy $H_{init}$ is
+	\begin{align}
+		H_{init} &= -\sum_{i} \mu_i \log_2 \mu_i \nonumber\\
+		  &= -128 \times \frac{1}{128} \log_2 \frac{1}{128} \nonumber\\
+		  &= -\log_2 \frac{1}{128} \nonumber\\
+		H_{init}  &= \log_2 128 = 7.0
+	\end{align}	
+	Since $\mu_i = 1/128$
+	When we occupy one site it will connect with four bonds to create a cluster of size $4$.
+	\begin{align}
+		H_{s} 
+		&= - \sum_{i=1}^{4} \frac{1}{128} \log_2 \frac{1}{128} \nonumber \\
+		&= \frac{4}{128} \log_2(128) = 0.21875
+	\end{align}
+	\begin{align}
+		H_{a} 
+		&= -\frac{4}{128} \log_2 \frac{4}{128} \nonumber \\
+		&= \frac{4}{128} \log_2 \frac{128}{4} = 0.15625
+	\end{align}
+	
+	Therefore
+	\begin{align}
+		H_{new} 
+		&= H_{init} - H_s + H_a \nonumber
+		\\
+		&= \log_2(128) - \frac{4}{128} \log_2(128) + \frac{4}{128} \log_2 \frac{128}{4} \nonumber \\
+		&= 6.9375
+	\end{align}
+	
+	\begin{figure}
+		\centering
+		\captionsetup[subfigure]{width=0.9\textwidth}
+		\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=6.5cm]{{{square-lattice-8x8-empty}}}
+		\caption{Entropy is maximum. $H=\log_2(128) = 7.0$}
+		\end{subfigure}
+		\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=6.5cm]{{{square-lattice-8x8-1-site}}}
+		\caption{$H_s=\frac{4}{128} \log_2(128)$ for $4$ bonds that are to be connected and $H_a=\frac{4}{128} \log_2 \frac{128}{4}$ for new cluster of $4$ bonds. This gives $H_{new} = H_{old} - H_s + H_a = 0.69375$. Evidently entropy is decreasing.}
+		\end{subfigure}
+		\caption{Entropy of a system in initial state and one step after it.}
+		\label{fig:efficient-entropy-1}
+	\end{figure}
+
+	In the same system after some time there will be less small cluster and more large. Say we are in a state of the system consists of $2$ large cluster. We mark them as green and red cluster. Then entropy for green and led cluster is
+	\begin{align}
+		H_{green} &= -\frac{13}{128} \log \frac{13}{128} \\
+		H_{red} &= -\frac{7}{128} \log \frac{7}{128} 
+	\end{align}
+	Since $S_{green} = 13$ and $S_{red} = 7$.
+	And all other clusters are of size $1$. Therefore the entropy of the clusters of size $1$ is
+	\begin{equation}
+		H_{one} = -\sum_{i=1}{128-7-13} \frac{1}{128} \log_2 \frac{1}{128} = \frac{108}{128} \log_{2} 128
+	\end{equation}
+	Thus the total entropy is $H = H_{one} + H_{green} + H_{red}$ (see figure \ref{fig:efficient-entropy-2a}).
+	
+	Now say we select the site connecting  green and red cluster to occupy. Then
+	\begin{equation}
+		H_s = H_{green} + H_{red}
+	\end{equation}
+	and 
+	\begin{equation}
+		H_a = - \frac{22}{128} \log_{2} \frac{22}{128}
+	\end{equation}
+	since size of the new cluster after occupying the selected site is $22$.
+	
+	Then the entropy of the system is
+	\begin{equation}
+		H = H_{one} 
+	\end{equation}
+	\ref{fig:efficient-entropy-2b}.
+	\begin{figure}
+	\centering
+	\captionsetup[subfigure]{width=0.9\textwidth}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=6.5cm]{{{entropy-square-lattice-8x8-2-cluster-1}}}
+		\caption{$H_{old} = H_{one} + H_{green} + H_{red}$}
+		\label{fig:efficient-entropy-2a}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=6.5cm]{{{entropy-square-lattice-8x8-2-cluster-2}}}
+		\caption{$H_{new} = H_{old} - H_{s} + H_{a}$ where $H_s = H_{green} + H_{red}$ is to be found from figure \ref{fig:efficient-entropy-2a}}
+		\label{fig:efficient-entropy-2b}
+	\end{subfigure}
+	\caption{Entropy of a system in a middle state and one step after.}
+	\label{fig:efficient-entropy-2}
+	\end{figure}
+
+	

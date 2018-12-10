@@ -217,7 +217,7 @@ The term phase transition is generally use to describe the transition between so
 		
 		From there, it is a short conceptual jump to the second Law (total entropy tends to increase, and	all spontaneous processes increase entropy). In summary, the thermodynamic definition of entropy provides the experimental definition of entropy, while the probabilistic definition of entropy	extends the concept, providing an explanation and a deeper understanding of its nature \cite{Alam2016}.
 		
-		These definitions of entropy is of no use in our model. However we can use the Boltzmann entropy with a few modification to get Shannon entropy \cite{shanon_entropy}. This process of getting Shannon entropy from Boltzmann entropy and how does it help us is described in section \ref{subsect:percolation-entropy}.
+		These definitions of entropy is of no use in our model. However we can use the Boltzmann entropy with a few modification to get Shannon entropy \cite{Shannon1948}. This process of getting Shannon entropy from Boltzmann entropy and how does it help us is described in section \ref{subsect:percolation-entropy}.
 
 	
 	\subsection{Specific Heat}
@@ -266,7 +266,9 @@ The term phase transition is generally use to describe the transition between so
 		C = T \frac{dS}{dT}
 		\label{def:specific-heat-thermodynamics}
 	\end{equation}
-	
+	Specific heat is called the response function for a non-magnetic system.
+		
+		
 	\subsection{Order Parameter}
 	An order parameter is a measure of the degree of order across the boundaries in a phase transition system. It's numerical usually ranges between $[0,1]$. At the critical point, the order parameter susceptibility will usually diverge.
 	
@@ -308,6 +310,7 @@ The term phase transition is generally use to describe the transition between so
 		\chi &= \frac{1}{\frac{\partial h}{\partial m}} \nonumber \\
 			 &= \frac{1}{\frac{\partial^2 A}{\partial m ^2}} \label{eqn:susceptibility_def2}
 	\end{align}
+	Susceptibility is called the response function for a magnetic system.
 	
 	
 	%-------------------------------------------------------------------------------------------
@@ -397,30 +400,6 @@ The term phase transition is generally use to describe the transition between so
 	Since diamagnetic substances have negative susceptibilities $(\chi < 0)$; paramagnetic, and ferromagnetic substances have positive susceptibilities $(\chi > 0)$, and we are working for a phase transition model similar to paramagnet and ferromagnet transition, taking susceptibility to be positive is appropriate for our model. Now if susceptibility is positive then from \ref{eqn:susceptibility_def} we get $\left(\frac{\partial^2G}{\partial h ^2}\right) < 0$ which means that the shape of the free energy for this case is concave from the knowledge of \ref{sec:determine_shape_using_calculus}. And from \ref{eqn:magnetization_def} and the fact that the magnetic field $h$ can be positive or negative, as it can change direction, the Gibbs free energy is negative, since it is the lowest binding energy. \\
 	Also from \ref{eqn:susceptibility_def2} we can say $\frac{\partial^2 A}{\partial m ^2}$ is positive giving convex shape of the Helmholtz free energy. And \ref{eqn:mag_field_def} tells us that since $h$ can ve positive or negative, the Helmholtz free energy can have increasing or decreasing slope respectively.
 	
-
-
-%-----------------------------------------------------------------------------------
-\section{Response Functions}
-	\label{sect:response-functions}
-	The Specific heat and Susceptibility are called the response function in thermodynamics and the definitions are as follows. The specific heat $C_p$ or $C_v$ is the derivative of the enthalpy with respect to the temperature at constant pressure or volume respectively.
-	\begin{equation}
-	C_x = \left(\frac{dQ}{dT}\right)_x
-	\label{eqn:def_specific_heat}
-	\end{equation}
-	here $x$ can be $P$ for pressure or $V$ for volume. And from \ref{eqn:def_enthalpy} we can write
-	\begin{equation}
-	C_x = T \left(\frac{dS}{dT}\right)
-	\label{eqn:def2_specific_heat_by_entropy} 
-	\end{equation}
-	To give the following
-	\begin{align}
-	C_v = -T\left(\frac{\partial^2 A}{\partial T^2}\right)_v \\
-	C_p = -T\left(\frac{\partial^2 G}{\partial T^2}\right)_p
-	\label{eqn:def2_specific_heat} 
-	\end{align}
-	
-	Thus we can see that the response functions are the second derivative of the free energy. 
-
 
 
 %------------------------------------------------------------------------------------
@@ -538,6 +517,7 @@ The term phase transition is generally use to describe the transition between so
 		\label{eqn:gamma}
 	\end{equation}
 	\subsection{List of Thermodynamic Quantities that Follows Power Law}
+	\label{subsect:list-of-exponents}
 	
 		The exponent that scales Specific heat is called $\alpha$ 
 		\begin{equation}
@@ -688,7 +668,13 @@ The term phase transition is generally use to describe the transition between so
 	In the thermodynamic limit $N \rightarrow \infty$ the second term always dominates except for $T=0$. Thus in one dimensional lattice there is phase transition at non zero temperature sice we cannot have $\Delta F=0$ (the transition point).
 	
 	
-	Now interesting this happens in case of two dimensional lattice. Say we have a square lattice of size $N$ where there is an island of $L=3$ sites of different spins \ref{}.
+	Now interesting this happens in case of two dimensional lattice. Say we have a square lattice of size $N$ where there is an island of $L=3$ sites of different spins \ref{fig:2d-ising-model}.
+	\begin{figure}
+		\centering
+		\includegraphics[width=5cm]{{{ising-model-2d}}}
+		\caption{2D Ising model with an island of 3 site with opposite spin state}
+		\label{fig:2d-ising-model}
+	\end{figure}
 	\begin{align}
 		\Delta E &= 2 L J \\
 		\Omega &= 3^L N \\

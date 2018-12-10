@@ -49,12 +49,61 @@
 
 \chapter{Percolation} 
 \section{Algorithm}
+	The algorithm for RSBD is quite simple.	Take a lattice of length $L$. It will contain $L^2$ frozen sites and $2L^2$ bond which are always present according to the new definition of site percolation. Then follow only option from below:
+	\begin{enumerate}
+		\item[L0] pick a site randomly and then occupy it if the site is unoccupied and continue this process \ref{fig:L0-interaction}.
+		
+		\item[L1] pick a site randomly and then occupy it if the site is unoccupied and if it is already occupied choose one of the four neighbors to occupy. If the neighbors are unoccupied then occupy them else skip current iteration and  continue this process \ref{fig:L1-interaction}.
+		
+		\item[L2]  pick a site randomly and then occupy it if the site is unoccupied and if it is already occupied choose one of the four neighbors to occupy. If the neighbors are unoccupied then occupy them else choose the site next to the first selected neighbor to occupy. If the 2nd selected neighbor is unoccupied then occupy it else skip current iteration and  continue this process \ref{fig:L2-interaction}.
+	\end{enumerate}
+	\begin{figure}
+		\centering
+		\captionsetup[subfigure]{width=0.9\textwidth}
+		\begin{subfigure}[t]{.32\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{{{square-lattice-5x5-1}}}
+			\caption{one occupied site}
+		\end{subfigure}
+		\begin{subfigure}[t]{.32\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{{{square-lattice-5x5-2}}}
+			\caption{2 occupied sites}
+		\end{subfigure}
+		\begin{subfigure}[t]{.32\textwidth}
+		\centering
+		\includegraphics[width=4.5cm]{{{square-lattice-5x5-3}}}
+		\caption{3 occupied sites}
+		\end{subfigure}
+		\caption{L0 interaction}
+		\label{fig:L0-interaction}
+	\end{figure}
 
-	The UML diagram for the program is 
+	\begin{figure}
+	\centering
+	\captionsetup[subfigure]{width=0.9\textwidth}
+	\begin{subfigure}[t]{.45\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{{{square-lattice-5x5-l1}}}
+		\caption{L1: First the black site is picked then it is picked again in the next iteration. Since it was occupied one of the four neighbors (here green) one is chosen randomly and occupied which was empty previously. Notice that both sites belong to the same cluster.}
+		\label{fig:L1-interaction}
+	\end{subfigure}
+	\begin{subfigure}[t]{.45\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{{{square-lattice-5x5-l2}}}
+		\caption{L2: After L1 another site is occupied and marked as black. Then the lower black site is selected. Since it was occupied we select one of the four neighbor (here green) which is also occupied. Then we select blue one (which is in the direction of the green one) and occupy it.}
+		\label{fig:L2-interaction}
+	\end{subfigure}
+	\caption{L1 and L2 interaction}
+	\end{figure}
+	Note that L1 includes L0 and L2 includes L1 and L0.
+	
+	The UML diagram for the program is given in figue \ref{fig:uml-rsbd}.
 	\begin{figure}
 		\centering
 		\includegraphics[width=16cm]{{{ClassDiagram2}}}
 		\caption{Schematic UML diagram for Site Percolation Ballistic Deposition program. This figure shows the dependencies and inheritance os the Classes and Structs in the program.}
+		\label{fig:uml-rsbd}
 	\end{figure}
 
 \section{Code}
