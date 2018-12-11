@@ -77,45 +77,45 @@ Warning--empty publisher in Carnot1890
 Warning--empty year in nesm-lecture-notes
 Warning--empty title in Lorenz2000
 Warning--empty year in Sabbir
-You've used 105 entries,
+You've used 116 entries,
             2773 wiz_defined-function locations,
-            1366 strings with 21532 characters,
-and the built_in function-call counts, 44322 in all, are:
-= -- 4147
-> -- 1956
-< -- 74
-+ -- 691
-- -- 585
-* -- 3707
-:= -- 6710
-add.period$ -- 395
-call.type$ -- 105
-change.case$ -- 487
-chr.to.int$ -- 104
-cite$ -- 251
-duplicate$ -- 2096
-empty$ -- 3960
-format.name$ -- 738
-if$ -- 9276
+            1438 strings with 23064 characters,
+and the built_in function-call counts, 48685 in all, are:
+= -- 4558
+> -- 2119
+< -- 84
++ -- 750
+- -- 633
+* -- 4043
+:= -- 7393
+add.period$ -- 440
+call.type$ -- 116
+change.case$ -- 532
+chr.to.int$ -- 115
+cite$ -- 273
+duplicate$ -- 2316
+empty$ -- 4366
+format.name$ -- 803
+if$ -- 10188
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 114
-newline$ -- 611
-num.names$ -- 384
-pop$ -- 975
+missing$ -- 129
+newline$ -- 678
+num.names$ -- 428
+pop$ -- 1066
 preamble$ -- 1
-purify$ -- 404
+purify$ -- 442
 quote$ -- 0
-skip$ -- 1455
+skip$ -- 1599
 stack$ -- 0
-substring$ -- 1895
-swap$ -- 188
+substring$ -- 2085
+swap$ -- 206
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1065
+type$ -- 1166
 warning$ -- 32
-while$ -- 421
+while$ -- 466
 width$ -- 0
-write$ -- 1490
+write$ -- 1653
 (There were 6 error messages)

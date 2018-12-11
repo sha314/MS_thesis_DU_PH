@@ -1,4 +1,4 @@
-\begin{thebibliography}{105}
+\begin{thebibliography}{116}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -143,6 +143,13 @@ B{\'{e}}la Bollob{\'{a}}s and Oliver Riordan.
   Springer Berlin Heidelberg, 2010.
 \newblock \doi{10.1007/978-3-642-14444-8_3}.
 
+\bibitem[Bose(1924)]{Bose1924}
+Bose.
+\newblock Plancks gesetz und lichtquantenhypothese.
+\newblock \emph{Zeitschrift for Physik}, 26\penalty0 (1):\penalty0 178--181,
+  dec 1924.
+\newblock \doi{10.1007/bf01327326}.
+
 \bibitem[Breskin et~al.(2006)Breskin, Soriano, Moses, and Tlusty]{Breskin2006}
 Ilan Breskin, Jordi Soriano, Elisha Moses, and Tsvi Tlusty.
 \newblock Percolation in living neural networks.
@@ -170,6 +177,14 @@ Duncan~S. Callaway, M.~E.~J. Newman, Steven~H. Strogatz, and Duncan~J. Watts.
 \newblock \emph{Physical Review Letters}, 85\penalty0 (25):\penalty0
   5468--5471, dec 2000.
 \newblock \doi{10.1103/physrevlett.85.5468}.
+
+\bibitem[Cannas(1995)]{Cannas1995}
+Sergio~A. Cannas.
+\newblock One-dimensional ising model with long-range interactions: A
+  renormalization-group treatment.
+\newblock \emph{Physical Review B}, 52\penalty0 (5):\penalty0 3034--3037, aug
+  1995.
+\newblock \doi{10.1103/physrevb.52.3034}.
 
 \bibitem[Cardy(1996)]{Cardy1996}
 John Cardy.
@@ -256,6 +271,13 @@ P.~Erd{\H{o}}s and A.~R{\'{e}}nyi.
 \newblock \emph{Acta Mathematica Academiae Scientiarum Hungaricae}, 12\penalty0
   (1-2):\penalty0 261--267, mar 1964.
 \newblock \doi{10.1007/bf02066689}.
+
+\bibitem[Essam et~al.(1978)Essam, Gaunt, and Guttmann]{Essam1978}
+I~W Essam, D~S Gaunt, and A~J Guttmann.
+\newblock Percolation theory at the critical dimension.
+\newblock \emph{Journal of Physics A: Mathematical and General}, 11\penalty0
+  (10):\penalty0 1983--1990, oct 1978.
+\newblock \doi{10.1088/0305-4470/11/10/016}.
 
 \bibitem[Essam(1980)]{Essam1980}
 J~W Essam.
@@ -372,6 +394,13 @@ M.~K. Hassan and M.~M. Rahman.
 \newblock \emph{Physical Review E}, 94\penalty0 (4), oct 2016.
 \newblock \doi{10.1103/physreve.94.042109}.
 
+\bibitem[Hiley and Joyce(1965)]{Hiley1965}
+B~J Hiley and G~S Joyce.
+\newblock The ising model with long-range interactions.
+\newblock \emph{Proceedings of the Physical Society}, 85\penalty0 (3):\penalty0
+  493--507, mar 1965.
+\newblock \doi{10.1088/0370-1328/85/3/310}.
+
 \bibitem[Hoshen and Kopelman(1976)]{Hoshen1976}
 J.~Hoshen and R.~Kopelman.
 \newblock Percolation and cluster distribution. i. cluster multiple labeling
@@ -394,6 +423,12 @@ H.~Hu, S.~Myers, V.~Colizza, and A.~Vespignani.
 \newblock \emph{Proceedings of the National Academy of Sciences}, 106\penalty0
   (5):\penalty0 1318--1323, jan 2009.
 \newblock \doi{10.1073/pnas.0811973106}.
+
+\bibitem[Huang(1987)]{Huang1987}
+Kerson Huang.
+\newblock \emph{Statistical Mechanics, 2nd Edition}.
+\newblock John Wiley \& Sons, 1987.
+\newblock ISBN 0471815187.
 
 \bibitem[Hughes(1958)]{Hughes1958}
 John~R. Hughes.
@@ -446,6 +481,18 @@ M.~Kivela, A.~Arenas, M.~Barthelemy, J.~P. Gleeson, Y.~Moreno, and M.~A.
 \newblock \emph{Journal of Complex Networks}, 2\penalty0 (3):\penalty0
   203--271, jul 2014.
 \newblock \doi{10.1093/comnet/cnu016}.
+
+\bibitem[Kleinert and Schulte-Frohlinde(2001)]{Kleinert2001}
+Hagen Kleinert and Verena Schulte-Frohlinde.
+\newblock \emph{Critical Properties of o4 Theories}.
+\newblock World Scientific Pub Co Inc, 2001.
+\newblock ISBN 9810246587.
+
+\bibitem[Landau(1941)]{Landau1941}
+L.~Landau.
+\newblock Theory of the superfluidity of helium {II}.
+\newblock \emph{Physical Review}, 60\penalty0 (4):\penalty0 356--358, aug 1941.
+\newblock \doi{10.1103/physrev.60.356}.
 
 \bibitem[Leath(1976)]{Leath1976}
 P.~L. Leath.
@@ -578,11 +625,25 @@ M.~D. Penrose.
   (4):\penalty0 435--436, jul 1998.
 \newblock \doi{10.1112/s0024609397243808}.
 
+\bibitem[Perrot(1998)]{Perrot1998}
+Pierre Perrot.
+\newblock \emph{A to Z of Thermodynamics (Supplementary Series; 27)}.
+\newblock Oxford University Press, 1998.
+\newblock ISBN 9780198565529.
+
 \bibitem[Porter and Gleeson(2016)]{Porter2016}
 Mason Porter and James Gleeson.
 \newblock \emph{Dynamical Systems on Networks}.
 \newblock Springer International Publishing, 2016.
 \newblock \doi{10.1007/978-3-319-26641-1}.
+
+\bibitem[Rahman and Hassan(2017)]{Rahman2017}
+M.~M. Rahman and M.~K. Hassan.
+\newblock Explosive percolation on a scale-free multifractal weighted planar
+  stochastic lattice.
+\newblock \emph{Physical Review E}, 95\penalty0 (4), apr 2017.
+\newblock \doi{10.1103/physreve.95.042133}.
+\newblock URL \url{https://doi.org/10.1103/physreve.95.042133}.
 
 \bibitem[Rahman and Hassan(2018)]{redefinition-of-site-percolation}
 M.~S. Rahman and M.~K. Hassan.
@@ -660,6 +721,21 @@ James~P. Sethna.
   (Oxford Master Series in Physics)}.
 \newblock Oxford University Press, 2006.
 \newblock ISBN 0198566778.
+
+\bibitem[Stanley(1987)]{Stanley1987}
+H.~Eugene Stanley.
+\newblock \emph{Introduction to Phase Transitions and Critical Phenomena
+  (International Series of Monographs on Physics)}.
+\newblock Oxford University Press, 1987.
+\newblock ISBN 0195053168.
+
+\bibitem[Stanley(1999)]{Stanley1999}
+H.~Eugene Stanley.
+\newblock Scaling, universality, and renormalization: Three pillars of modern
+  critical phenomena.
+\newblock \emph{Reviews of Modern Physics}, 71\penalty0 (2):\penalty0
+  S358--S366, mar 1999.
+\newblock \doi{10.1103/revmodphys.71.s358}.
 
 \bibitem[Stauffer and Aharony(1994)]{Stauffer1994}
 Dietrich Stauffer and Ammon Aharony.

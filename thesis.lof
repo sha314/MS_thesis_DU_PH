@@ -1,61 +1,61 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Application of Buckingham $\Pi $ theorem in a right triangle\relax }}{9}{figure.caption.7}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Self-Similarity in Cauliflower\relax }}{12}{figure.caption.8}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Self-Similarity examples\relax }}{12}{figure.caption.9}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Application of Buckingham $\Pi $ theorem in a right triangle\relax }}{11}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Self-Similarity in Cauliflower\relax }}{14}{figure.caption.8}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Self-Similarity examples\relax }}{14}{figure.caption.9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Two competing Carnot engines, pressure (P) versus volume (V) - diagrams \cite {Greven2003}\relax }}{25}{figure.caption.14}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces shape of $f(x)$ from $f^{\prime }(x)$\relax }}{31}{figure.caption.16}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces shape of $f(x)$ from $f^{\prime \prime }(x)$\relax }}{32}{figure.caption.17}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Shape of the free energy\relax }}{32}{figure.caption.18}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Shape of entropy\relax }}{33}{figure.caption.19}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Shape of Specific Heat and Susceptibility\relax }}{34}{figure.caption.20}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Function showing power law\relax }}{35}{figure.caption.21}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces General shape of Order Parameter\relax }}{36}{figure.caption.22}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces 1 dimensional Ising model\relax }}{41}{figure.caption.23}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces 2D Ising model with an island of 3 site with opposite spin state\relax }}{42}{figure.caption.24}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Two competing Carnot engines, pressure (P) versus volume (V) - diagrams \cite {Greven2003}\relax }}{29}{figure.caption.14}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces shape of $f(x)$ from $f^{\prime }(x)$\relax }}{35}{figure.caption.16}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces shape of $f(x)$ from $f^{\prime \prime }(x)$\relax }}{36}{figure.caption.17}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Shape of the free energy\relax }}{36}{figure.caption.18}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Shape of entropy\relax }}{37}{figure.caption.19}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Shape of Specific Heat and Susceptibility\relax }}{38}{figure.caption.20}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Function showing power law\relax }}{39}{figure.caption.21}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces General shape of Order Parameter\relax }}{40}{figure.caption.22}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces 1 dimensional Ising model\relax }}{45}{figure.caption.23}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces 2D Ising model with an island of 3 site with opposite spin state\relax }}{46}{figure.caption.24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces percolation phenomena in square structure. No current if $p<p_c$.\relax }}{47}{figure.caption.25}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Different types of cubic lattice \cite {cubic-lattices}\relax }}{51}{figure.caption.33}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Different types of cubic lattice\relax }}{51}{figure.caption.34}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Scale Free Network \cite {scale-free-network}\relax }}{53}{figure.caption.36}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces A square lattice of length $L=10$. Demonstrating the appearance of the wrapping cluster\relax }}{56}{figure.caption.37}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces A system of $12$ cluster\relax }}{59}{figure.caption.39}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces entropy of a system of $8$ particles\relax }}{60}{figure.caption.41}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces One Dimensional Lattice. Empty ones are white and filled ones are black.\relax }}{63}{figure.caption.43}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Bethe Lattice for $z=3$\relax }}{69}{figure.caption.49}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Square Lattie (empty) of length 6\relax }}{74}{figure.caption.54}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Site and Bond symbol (empty and occupied).\relax }}{74}{figure.caption.55}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces NGC $4414$, a typical spiral galaxy in the constellation Coma Berenices, is about $55,000$ light-years in diameter and approximately $60$ million light-years away from Earth.\relax }}{77}{figure.caption.56}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces percolation phenomena in square structure. No current if $p<p_c$.\relax }}{51}{figure.caption.25}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Different types of cubic lattice \cite {cubic-lattices}\relax }}{55}{figure.caption.33}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Different types of cubic lattice\relax }}{55}{figure.caption.34}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Scale Free Network \cite {scale-free-network}\relax }}{57}{figure.caption.36}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces A square lattice of length $L=10$. Demonstrating the appearance of the wrapping cluster\relax }}{60}{figure.caption.37}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces A system of $12$ cluster\relax }}{63}{figure.caption.39}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces entropy of a system of $8$ particles\relax }}{64}{figure.caption.41}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces One Dimensional Lattice. Empty ones are white and filled ones are black.\relax }}{67}{figure.caption.43}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Bethe Lattice for $z=3$\relax }}{73}{figure.caption.49}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Square Lattie (empty) of length 6\relax }}{78}{figure.caption.54}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Site and Bond symbol (empty and occupied).\relax }}{78}{figure.caption.55}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces NGC $4414$, a typical spiral galaxy in the constellation Coma Berenices, is about $55,000$ light-years in diameter and approximately $60$ million light-years away from Earth.\relax }}{81}{figure.caption.56}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Effect of traditional definition of site percolation\relax }}{81}{figure.caption.57}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Growth of a Cluster in Bond Percolation on square Lattice\relax }}{82}{figure.caption.59}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Growth of a Cluster in Site Percolation on square Lattice\relax }}{84}{figure.caption.61}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Spanning Probability, $w(p,L)$ vs Occupation Probability, $p$\relax }}{87}{figure.caption.62}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces $w(p,L)$ vs $(p-p_c) L^{1/\nu }$\relax }}{88}{figure.caption.63}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Entropy, $H(p,L)$ vs Occupation Probability, $p$\relax }}{88}{figure.caption.64}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Specific Heat, $C(p,L)$ vs Occupation Probability, $p$\relax }}{89}{figure.caption.65}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces $C(p,L)$ vs $(p-p_c) L^{1/\nu }$\relax }}{89}{figure.caption.66}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces $C L^{-\alpha /\nu }$ vs $(p-p_c) L^{1/\nu }$\relax }}{90}{figure.caption.67}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Order Parameter, $P(p,L)$ vs Occupation Probability, $p$\relax }}{90}{figure.caption.68}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Order Parameter, $P(p,L)$ vs Occupation Probability, $p$\relax }}{91}{figure.caption.69}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces $P(p,L)$ vs $(p-p_c) L ^{1/\nu }$\relax }}{91}{figure.caption.69}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces $P L^{\beta /\nu }$ vs $(p-p_c) L ^{1/\nu }$\relax }}{91}{figure.caption.70}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Susceptibility, $\chi (p,L)$ vs Occupation Probability, $p$\relax }}{92}{figure.caption.71}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces $\chi (p,L)$ vs $(p-p_c) L ^{1/\nu }$\relax }}{92}{figure.caption.72}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces $\chi L^{\gamma /\nu }$ vs $(p-p_c) L ^{1/\nu }$\relax }}{93}{figure.caption.73}
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Number of cluster of size $s$, $n_s$ vs size of the cluster $s$\relax }}{93}{figure.caption.74}
-\contentsline {figure}{\numberline {5.18}{\ignorespaces $\qopname \relax o{log}(n_s)$ vs $\qopname \relax o{log}(s)$\relax }}{93}{figure.caption.75}
-\contentsline {figure}{\numberline {5.19}{\ignorespaces $H(p,L)/H(0,L)$ or $P(p,L)/P(1,L)$ vs $p$\relax }}{94}{figure.caption.76}
-\contentsline {figure}{\numberline {5.20}{\ignorespaces $\qopname \relax o{log}(S)$ vs $\qopname \relax o{log}(L)$\relax }}{95}{figure.caption.77}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces L0 interaction\relax }}{108}{figure.caption.82}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces L1 and L2 interaction\relax }}{108}{figure.caption.83}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Schematic UML diagram for Site Percolation Ballistic Deposition program. This figure shows the dependencies and inheritance os the Classes and Structs in the program.\relax }}{109}{figure.caption.84}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Effect of traditional definition of site percolation\relax }}{85}{figure.caption.57}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Growth of a Cluster in Bond Percolation on square Lattice\relax }}{86}{figure.caption.59}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Growth of a Cluster in Site Percolation on square Lattice\relax }}{88}{figure.caption.61}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Spanning Probability, $w(p,L)$ vs Occupation Probability, $p$\relax }}{91}{figure.caption.62}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces $w(p,L)$ vs $(p-p_c) L^{1/\nu }$\relax }}{92}{figure.caption.63}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Entropy, $H(p,L)$ vs Occupation Probability, $p$\relax }}{92}{figure.caption.64}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Specific Heat, $C(p,L)$ vs Occupation Probability, $p$\relax }}{93}{figure.caption.65}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces $C(p,L)$ vs $(p-p_c) L^{1/\nu }$\relax }}{93}{figure.caption.66}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces $C L^{-\alpha /\nu }$ vs $(p-p_c) L^{1/\nu }$\relax }}{94}{figure.caption.67}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Order Parameter, $P(p,L)$ vs Occupation Probability, $p$\relax }}{94}{figure.caption.68}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Order Parameter, $P(p,L)$ vs Occupation Probability, $p$\relax }}{95}{figure.caption.69}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces $P(p,L)$ vs $(p-p_c) L ^{1/\nu }$\relax }}{95}{figure.caption.69}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces $P L^{\beta /\nu }$ vs $(p-p_c) L ^{1/\nu }$\relax }}{95}{figure.caption.70}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Susceptibility, $\chi (p,L)$ vs Occupation Probability, $p$\relax }}{96}{figure.caption.71}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces $\chi (p,L)$ vs $(p-p_c) L ^{1/\nu }$\relax }}{96}{figure.caption.72}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces $\chi L^{\gamma /\nu }$ vs $(p-p_c) L ^{1/\nu }$\relax }}{97}{figure.caption.73}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Number of cluster of size $s$, $n_s$ vs size of the cluster $s$\relax }}{97}{figure.caption.74}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces $\qopname \relax o{log}(n_s)$ vs $\qopname \relax o{log}(s)$\relax }}{97}{figure.caption.75}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces $H(p,L)/H(0,L)$ or $P(p,L)/P(1,L)$ vs $p$\relax }}{98}{figure.caption.76}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces $\qopname \relax o{log}(S)$ vs $\qopname \relax o{log}(L)$\relax }}{99}{figure.caption.77}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Minimizing exponent for scaling $x$-values\relax }}{222}{figure.caption.87}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces L0 interaction\relax }}{112}{figure.caption.82}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces L1 and L2 interaction\relax }}{112}{figure.caption.83}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Schematic UML diagram for Site Percolation Ballistic Deposition program. This figure shows the dependencies and inheritance os the Classes and Structs in the program.\relax }}{113}{figure.caption.84}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Entropy of a system in initial state and one step after it.\relax }}{225}{figure.caption.88}
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Entropy of a system in a middle state and one step after.\relax }}{226}{figure.caption.89}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Minimizing exponent for scaling $x$-values\relax }}{226}{figure.caption.87}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Entropy of a system in initial state and one step after it.\relax }}{229}{figure.caption.88}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Entropy of a system in a middle state and one step after.\relax }}{230}{figure.caption.89}

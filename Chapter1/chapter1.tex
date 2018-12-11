@@ -11,12 +11,55 @@
 
 \chapter{Introduction}  %Title of the First Chapter
 %********************************** %First Section  **************************************
-Percolation is one of the most studied problems in statistical physics. Its idea was first conceived by Paul Flory in the early 1940s in the context of gelation in polymers \cite{Flory1941}. Since then it has come a long way holding the hands of respected scientists. Physicists are always interested in describing natural phenomena in a simplified way. Phase transition is one of the most studied problem in physics and using percolation phenomena we can mimic phase transition in real system. Phase transition always includes at least one critical point below which the system behaves in one way and above it the system behaves in a completely different way. For example liquid to gas transition. Phase transition as of two kinds: first order and second order, which is classified in terms of discontinuity of derivatives of thermodynamic potentials.
+	Percolation is one of the most studied problems in statistical physics. Its idea was first conceived by Paul Flory in the early 1940s in the context of gelation in polymers \cite{Flory1941}. Since then it has come a long way holding the hands of respected scientists. Physicists are always interested in describing natural phenomena in a simplified way. Phase transition is one of the most studied problem in physics and using percolation phenomena we can mimic phase transition in real system. Phase transition always includes at least one critical point below which the system behaves in one way and above it the system behaves in a completely different way. For example liquid to gas transition. Phase transition as of two kinds: first order and second order, which is classified in terms of discontinuity of derivatives of thermodynamic potentials.
+	The
+	transitions between solid, liquid and gaseous phases are the examples of first order
+	phase transitions and paramagnetic-ferromagnetic transition, Bose-Einstein condensation \cite{Bose1924}, superconductivity, superfluidity \cite{Landau1941} are some examples of the second order phase
+	transition.
+	
+	
+	In todays time the definition of transition is given in terms of entropy and order parameter. If we plot entropy versus temperature for a certain transition and if it shows a discontinuity at the critical point, we classify it as a first order transition and continuity is for second order transition. The reason behind this is the fact that first order transition requires latent heat \cite{Perrot1998} and second order does not. We can definite the type of the transition using order parameter which is a measure of how ordered the system is at a particular temperature. A system is said to be more ordered in the low temperature region and highly disordered or less ordered in the high temperature region. Thus the order parameter is considered as zero in one phase and non-zero in the other and varies below, at and above the critical point, $T_c$ \cite{Rahman2017}. One thing we need to understand that a system is almost always disordered at $T > T_c$ phase where there is a higher degree of symmetry in the system. Now the system becomes more ordered in $T < T_c$ phase which is why there must be some kind of symmetry breaking involved. 
+	Thus we have both entropy and order parameter to be discontinuous at the critical point. This continuity is followed by a jump in the entropy and parameter due to the involvement of latent heat. Now symmetry may or may not be broken in such transition. But, on the other hand, in second order phase transitions, the order parameter is continuous across the critical point which have made us refer to these transitions as continuous phase transition. Symmetry must be broken for such transitions to occur.
+	
+	Now it is found that in continuous phase transition order parameter $P$, specific heat $C$ and susceptibility $\chi$ follows power law.
+	\begin{eqnarray}
+		P &\sim \epsilon^\beta \\
+		C &\sim \epsilon^\alpha \\
+		\chi &\sim \epsilon^\gamma
+	\end{eqnarray}
+	where
+	
+	\begin{equation}
+		\epsilon \sim (T-T_c)
+	\end{equation} 
+	
+	 and the correlation length
+	 \begin{equation}
+		 \xi \sim \epsilon^{-\nu}
+	 \end{equation}
+	 Thus these quantities diverges at $T_c$ and the exponents $\alpha, \beta, \gamma, \nu$ are said to be universal and they follow the Rushbrooke inequality $\alpha + 2 \beta + \gamma \geq 2$ which reduces to equality under static scaling hypothesis \cite{Stanley1999}. Many actual experiments and exactly
+	 solved models suggest that the Rushbrooke inequality holds as an equality \cite{Essam1978} and
+	 the observations we made in our research actually provides evidence to it. Thus these exponents are bound by scaling relations no matter what the system is.
+	 
+	 Now in percolation we take a lattice (graph) consists of sites and bonds (nodes and link). In bond percolation we pick bonds sequentially and occupy it with probability $p$ and keep it empty with probability $(1-p)$. And we visit the entire lattice doing so. For a certain probability $p_c$ there emerges a giant cluster called the spanning cluster which spans the entire lattice. This probability is the critical point and called critical occupation probability $p_c$. In site percolation we occupy sites and get similar results. The process described here is a very slow algorithm and a better alternative is to use NZ algorithm \cite{Newman2000, Newman2001}. The interesting this is that at critical point the order parameter, specific heat and susceptibility follows power law with different exponents. We are interested in finding those exponents mainly.
+	 
+	 
+
+
 
 %********************************** %Second Section  *************************************
-\section{Motivation and Objective} %Section - 1.2
+\section{Motivation and Objective} 
+	The traditional definition of site percolation states that we occupy site and measure cluster size with the number of sits in the cluster. This definition results in a serious violation of the second law of thermodynamics. It also gives ambiguity to the initial states of the system. Solving this problem does not affect the current results of site percolation, it just make it consistent.
+	
+	Another important point is that in site percolation we only occupy the randomly chosen site which we say a close or short range interaction. But the successful model of phase transition in statistical mechanics, i.e. Ising model, has been studied for long range interaction as well \cite{Hiley1965, Cannas1995}. This gives us idea of long range interaction. We call it Random Sequential Ballistic Deposition or RSBD for short.
+	
+	Traditionally, in site percolation, so far we have been choosing a site and occupying it without considering the state it's neighbor. If we don't consider the neighbor we have a system with sort range interaction. If we, however, consider the neighbor when occupying sites we get a rather long range interaction. The process is quite simple. We choose a site at random according to NZ algorithm and occupy it if it is empty. If it is already occupied then we choose one of it's neighbor and occupy it if the neighbor is empty and we call it $L1$ interaction. But if the neighbor is also occupied by any previous process then we choose the next one in the direction of the first neighbor to occupy if it is empty else we just skip the step and we call it $L2$ interaction. Note that $L1$ denotes interaction up to first neighbor and $L2$ denotes interaction up to 2nd neighbor.  We investigate some properties and we find that $L0, L1, L2$ belongs to their own universality classes.
+	
 
 %********************************** % Third Section  *************************************
 \section{Method of Study}  %Section - 1.3 
+The observation for our model was done through computer simulation. We have used $C++$ language to write a program which generates a virtual lattice with sites and bonds and perform percolation according to the given rules. $C++$ is used for simulation because we need lots and lots of data and the language is very fast since it is compiled language. Data was generated for $20,000$ independent realization. Some of the data we processed using binomial distribution \cite{Newman2001} to get data for canonical ensemble. And then they we analyzed using \textit{python} language because it comes with different types of data analyzing and visualization tools. The codes that are used for generating data is given in Appendix \ref{appen`dix1} and link for full code is provided there. The code for convolution is given in Appendix \ref{appendix2} and link for it is provided there.
 
 \section{Organization of Chapters}
+	This thesis consists of five chapters apart from this chapter. We discuss basic tools that we use, e.g. similarity, self-similarity, Buckingham $\pi$ Theorem, scaling hypothesis and homogeneous functions, in chapter \ref{chapter2}. In chapter \ref{chapter3} we discuss basic concepts of phase transition and it's classification and the shapes of thermodynamic quantities and a model that can describe phase transition, i.e. Ising model. In chapter \ref{chapter:percolation-theory} we discuss percolation phenomena and how calculate quantities in percolation. Exact solution is given in this chapter. Then we get to chapter \ref{chapter:ballistic-deposition} where we have done our work on RSBD model and we describe the process of finding exponents and data collapse and how we get universality classes. Finally in chapter \ref{chapter:summary} we summarize the results and briefly describe it's significance.
+
