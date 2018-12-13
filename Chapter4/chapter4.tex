@@ -3,18 +3,28 @@
 %****************************** Fourth Chapter **********************************
 %*******************************************************************************
 \chapter{Percolation Theory}
-\label{chapter:percolation-theory}
+\label{chapter.percolation-theory}
 % **************************** Define Graphics Path **************************
 \ifpdf
-    \graphicspath{{Chapter4/Figs/}{Chapter4/Figs/playground/}{Chapter4/Figs/entropy_cluster/}}
+    \graphicspath{
+    	{Chapter4/Figs/}
+    	{Chapter4/Figs/playground/}
+    	{Chapter4/Figs/entropy_cluster/}
+	    {Chapter5/Figs/lattice/}    
+}
 \else
-    \graphicspath{{Chapter4/Figs/}{Chapter4/Figs/playground/}{Chapter4/Figs/entropy_cluster/}}
+    \graphicspath{
+        {Chapter4/Figs/}
+	    {Chapter4/Figs/playground/}
+	    {Chapter4/Figs/entropy_cluster/}
+	    {Chapter5/Figs/lattice/} 	
+    }
 \fi
 
 Percolation has been studied extensively in statistical physics due to the simplicity of its definition and the versatility of its application in seemingly disparate complex systems \cite{Sahini1994}. New models and variants of existing model is always welcome due to its importance and of wide interdisciplinary interests. In recent decades there has been a surge of research activities in studying percolation thanks to the emergence of network which has been used as the skeleton for percolation which can mimic structure of many natural and man-made systems.\\
 
 
-There are several reason to study percolation. First, it is easy to formulate and simple to implement as there is only one control parameter, called occupation probability $p$ \ref{subsect:occupation-probability}. The reason for its simplicity is that it requires neither quantum nor many particle interaction effects and yet it can describe phase transition and critical phenomena \cite{Saberi2015, Stauffer1994}.  Second, scientists use it as a theoretical model for phase transition, just like architects use geometric model before building large expensive structure, because of its simplicity. Third, it is well endowed with beautiful features and conjectures like finite-size scaling, universality just like its thermal counterpart. Fourth, besides being the paradigmatic model for phase transition, it has been found that the notion of percolation is omnipresent in a wide range of many seemingly disperate systems \ref{sect:application}.\\
+There are several reason to study percolation. First, it is easy to formulate and simple to implement as there is only one control parameter, called occupation probability $p$ (\ref{subsect:occupation-probability}). The reason for its simplicity is that it requires neither quantum nor many particle interaction effects and yet it can describe phase transition and critical phenomena \cite{Saberi2015, Stauffer1994}.  Second, scientists use it as a theoretical model for phase transition, just like architects use geometric model before building large expensive structure, because of its simplicity. Third, it is well endowed with beautiful features and conjectures like finite-size scaling, universality just like its thermal counterpart. Fourth, besides being the paradigmatic model for phase transition, it has been found that the notion of percolation is omnipresent in a wide range of many seemingly disperate systems (\ref{sect:application}).\\
 
 To study percolation theoretically, the first thing that one need is to choose a skeleton or playground, namely an empty lattice (or a graph/network), consisting of sites (or nodes) and bonds (or links). The definition of the percolation model is then so simple that it merely needs a sentence to define it. Each site or bond of the chosen skeleton, depending on whether we want to study site or bond type percolation, is either occupied with probability p or remains empty with probability $1-p$ independent of the state of its neighbors. Recently, percolation has received a renewed attention due to widening scope for using complex networks as a skeleton and due to widening extent of using various variants as a rule. In percolation most observable quantities this way or another is connected to clusters, group of contiguous occupied sites form a cluster, or to their distribution function. As the occupation probability p is tuned starting from $p = 0$, one finds that at certain value of $p=p_c$ the observable quantities undergoes a sudden and sharp change which is always regarded as a sign of phase transition. Indeed, the value at which such change occurs is called threshold or critical value which is equivalent to critical temperature of its thermal counterpart. The phase transition that percolation describes
 is purely geometrical in nature. It requires no consideration of quantum and many particle interaction effects and hence we can use it as a model for thermal Continuous Phase Transition (CPT) like artichect use model before constructing large and complicated structure
@@ -128,7 +138,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 	In this section we discuss some of the basic elements of percolation. All the observable quantities depends on these elements.
 	
 	\subsection{Occupation Probability} \label{subsect:occupation-probability}
-	The probability at which each site (bond) is occupied is called occupation probability in site (bond) percolation and it is denoted as $p$. In section \ref{sect:algorithm} we discuss who we determine $p$ in percolation. Simply saying, instead of fixing $p$ for one experiment we can find all quantity for each values of $p$ using the famous Ziff algorithm \cite{Newman2000, Newman2001}.
+	The probability at which each site (bond) is occupied is called occupation probability in site (bond) percolation and it is denoted as $p$. In section (\ref{sect:algorithm}) we discuss who we determine $p$ in percolation. Simply saying, instead of fixing $p$ for one experiment we can find all quantity for each values of $p$ using the famous Ziff algorithm \cite{Newman2000, Newman2001}.
 	
 	\subsection{Cluster}
 	Cluster is a collection of sites and bonds. In bond percolation we occupy bond and measure cluster size in terms of the number of sites in it. And following this idea we measure the cluster size in terms of the number of bonds in it. Which is the new definition of site percolation \cite{redefinition-of-site-percolation}. Measuring cluster size in terms of the number of bonds in it in site percolation reproduces all known results and it is consistent with laws of thermodynamics.
@@ -139,7 +149,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 
 \section{Finite Size Scaling}
 	\label{sect:fss}
-	We discussed Finite Size Scaling hypothesis in section \ref{subsect:FSS} and commented that it is very useful in percolation theory. Here we will be making use of the FSS hypothesis for using in our work.
+	We discussed Finite Size Scaling hypothesis in section (\ref{subsect:FSS}) and commented that it is very useful in percolation theory. Here we will be making use of the FSS hypothesis for using in our work.
 	
 	The correlation length is finite and defined as 
 	\begin{equation}
@@ -158,11 +168,11 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 	\begin{equation}
 		X \sim (p-p_c)^{-a}
 	\end{equation}
-	Using \ref{eqn:fss-eqn-1} we get
+	Using (\ref{eqn:fss-eqn-1}) we get
 	\begin{equation}
 		X \sim L^{a/\nu}
 	\end{equation}
-	We notice that $X$ and $(p-p_c)$ both depends on $L$. At this point we introduce the Buckingham $\pi$ theorem \ref{sect:buckingham-pi-thm} and define two dimensionless parameter as
+	We notice that $X$ and $(p-p_c)$ both depends on $L$. At this point we introduce the Buckingham $\pi$ theorem (\ref{sect:buckingham-pi-thm}) and define two dimensionless parameter as
 	\begin{align}
 		\Pi_1 &= \frac{(p-p_c)}{L^{-1/\nu}} \\
 		\Pi   &= \frac{X}{L^{a/\nu}}
@@ -184,7 +194,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 	
 	
 	\subsection{Percolation Threshold, $p_c$}
-	The idea of percolation threshold is a mathematical concept that deals with formation of long range connectivity in random systems. While there are no existence of a giant connected component that are talked about below the threshold, its existence is well present above it. As the occupation probability increases from $0$ toward $1$, average cluster size also increases and among all cluster one cluster pops up to be the spanning cluster at $p_c$. Hence $p_c$ is the percolation threshold or critical point. In the thermodynamic limit this cluster becomes infinitely large. Thus for $p<p_c$ there is no spanning cluster and for $p\geq p_c$ there is one. The spanning cluster is a special type of cluster which spans the entire lattice. In periodic case we call it wrapping cluster. A figure illustrating this process is given here \ref{fig:percolation-threshold}.
+	The idea of percolation threshold is a mathematical concept that deals with formation of long range connectivity in random systems. While there are no existence of a giant connected component that are talked about below the threshold, its existence is well present above it. As the occupation probability increases from $0$ toward $1$, average cluster size also increases and among all cluster one cluster pops up to be the spanning cluster at $p_c$. Hence $p_c$ is the percolation threshold or critical point. In the thermodynamic limit this cluster becomes infinitely large. Thus for $p<p_c$ there is no spanning cluster and for $p\geq p_c$ there is one. The spanning cluster is a special type of cluster which spans the entire lattice. In periodic case we call it wrapping cluster. A figure illustrating this process is given here (\ref{fig:percolation-threshold}).
 	\begin{figure}
 		\centering
 		\captionsetup[subfigure]{width=0.9\textwidth}
@@ -202,7 +212,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		\caption{A square lattice of length $L=10$. Demonstrating the appearance of the wrapping cluster}
 		\label{fig:percolation-threshold}
 	\end{figure}
-	Percolation threshold has been determined for different types of lattices. The table \ref{tab:percolation-threshold} shows some of them.
+	Percolation threshold has been determined for different types of lattices. The table (\ref{tab:percolation-threshold}) shows some of them.
 	
 	\begin{table}[h]
 		\centering
@@ -224,13 +234,13 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 	\begin{equation}
 		p_{c_{avg}} = \lim_{M\rightarrow\infty}\frac{1}{M} \sum_{i} p_{c_i}
 	\end{equation}
-	But performing infinite number of experiment is not possible. So we use another approach which is described in section \ref{subsect:spanning-probability} and \ref{subsect:finding-pc}
+	But performing infinite number of experiment is not possible. So we use another approach which is described in section (\ref{subsect:spanning-probability}) and (\ref{subsect:finding-pc})
 	
 	
 	
 	\subsection{Spanning Probability, $w(p,L)$}
 	\label{subsect:spanning-probability}
-	The best quantity for finding the critical exponent $\nu$	is the spanning probability $W(p,L)$. It describes the likelihood of finding a cluster that spans across the entire system of length $L$ either horizontally or vertically at a given occupation probability $p$. To find $W(p,L)$ we perform say $M$ independent realizations under the same identical conditions. In each realization for a given finite system size	we take record of the $p_c$ value at which there appears a	spanning cluster for the first time. If there is a spanning	cluster at $p=p_{c_i}$ then it means that there exists a spanning cluster for all $p_{c_i} \leq p \leq 1$. To find a regularity or a	pattern among all the $M$ numbers of $p_c$ values recorded,	one usually looks at the relative frequency of occurrence	within a class or width $\Delta p$. To find $W(p,L)$, we can process the data containing $M$ number of $p_c$ values to plot	histogram displaying normalized relative frequency as a	function of class of width $\Delta p$ chosen as per convenience	\cite{redefinition-of-site-percolation}. Figure \ref{fig:spanning-probability} shows spanning probability $w(p,L)$ as a function of $p$ and $L$. Clearly all curves meet at a specific point regardless of system length $L$. Thus we can say if $L \rightarrow \infty$ the curve would still go through that point and that's how we get the $p_c$ value. Then if we apply scaling on the $x$-axis by $(p-p_c)L^{1/\nu}$ we would get a perfect data collapse for a specific $1/nu$ that is our exponent. This process is discussed further in section \ref{subsect:finding-pc} and \ref{subsect:spanning-probability-and-one-by-nu}.
+	The best quantity for finding the critical exponent $\nu$	is the spanning probability $W(p,L)$. It describes the likelihood of finding a cluster that spans across the entire system of length $L$ either horizontally or vertically at a given occupation probability $p$. To find $W(p,L)$ we perform say $M$ independent realizations under the same identical conditions. In each realization for a given finite system size	we take record of the $p_c$ value at which there appears a	spanning cluster for the first time. If there is a spanning	cluster at $p=p_{c_i}$ then it means that there exists a spanning cluster for all $p_{c_i} \leq p \leq 1$. To find a regularity or a	pattern among all the $M$ numbers of $p_c$ values recorded,	one usually looks at the relative frequency of occurrence	within a class or width $\Delta p$. To find $W(p,L)$, we can process the data containing $M$ number of $p_c$ values to plot	histogram displaying normalized relative frequency as a	function of class of width $\Delta p$ chosen as per convenience	\cite{redefinition-of-site-percolation}. Figure (\ref{fig:spanning-probability}) shows spanning probability $w(p,L)$ as a function of $p$ and $L$. Clearly all curves meet at a specific point regardless of system length $L$. Thus we can say if $L \rightarrow \infty$ the curve would still go through that point and that's how we get the $p_c$ value. Then if we apply scaling on the $x$-axis by $(p-p_c)L^{1/\nu}$ we would get a perfect data collapse for a specific $1/nu$ that is our exponent. This process is discussed further in section (\ref{subsect:finding-pc}) and (\ref{subsect:spanning-probability-and-one-by-nu}).
 
 
 
@@ -244,7 +254,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		\label{def:shannon-entropy-def}
 	\end{align}
 	where, $\mu_i$ is the probability of getting $i$-th element.\\
-	As we have seen in section \ref{subsect:entropy-thermodynamics} that the entropy measures disorderness of a system. It is also easy to understand	order and disorder in solid to liquid transition. But it is not that easy in percolation since the idea of order and disorder in percolation is not yet clear. To understand	disorder, let us consider that at $p=0$ we have $12$ isolated	sites and each has different color to identify them visually, figure \ref{fig:system-of-12-sites}. Thus each color corresponds to one distinct cluster. Occupation of a bond means merging of two colors into	one. If one of the components is bigger in size than the	other then the newly merged cluster will take the color	of the bigger cluster and if they are equal then we choose	one at random. If we now continue to occupy all the	frozen bonds then we will finally have one cluster of one	color. Initially at $p = 0$ we have $12$ different colors and	hence it can easily be regarded as the most disordered	state. On the other hand, at the other extreme we will	have only one cluster represented by one color which can	be regarded as the ordered state. We can easily extend	the problem to a system that contains N number of sites	but colored with $12$ colors only such that $n_1, n_2, \ldots, n_{12}$ of them are red, orange, ..., violet respectively and hence	we can define $\mu_i = n_i /N$ . We now make $M$ number of	independent attempts to pick one site at each attempt	from $N$ sites at random with uniform probability. Say, that we found $n_1^\prime$ times red, $n_1^\prime$ times orange, and so on	such that $\sum_{i=1}^{m} n_i^\prime = M$. We assume that both $N$ and $M$ are sufficiently large and $M \approx N$ . The total number	of ways we could have $M$ outcomes are
+	As we have seen in section (\ref{subsect:entropy-thermodynamics}) that the entropy measures disorderness of a system. It is also easy to understand	order and disorder in solid to liquid transition. But it is not that easy in percolation since the idea of order and disorder in percolation is not yet clear. To understand	disorder, let us consider that at $p=0$ we have $12$ isolated	sites and each has different color to identify them visually, figure (\ref{fig:system-of-12-sites}). Thus each color corresponds to one distinct cluster. Occupation of a bond means merging of two colors into	one. If one of the components is bigger in size than the	other then the newly merged cluster will take the color	of the bigger cluster and if they are equal then we choose	one at random. If we now continue to occupy all the	frozen bonds then we will finally have one cluster of one	color. Initially at $p = 0$ we have $12$ different colors and	hence it can easily be regarded as the most disordered	state. On the other hand, at the other extreme we will	have only one cluster represented by one color which can	be regarded as the ordered state. We can easily extend	the problem to a system that contains N number of sites	but colored with $12$ colors only such that $n_1, n_2, \ldots, n_{12}$ of them are red, orange, ..., violet respectively and hence	we can define $\mu_i = n_i /N$ . We now make $M$ number of	independent attempts to pick one site at each attempt	from $N$ sites at random with uniform probability. Say, that we found $n_1^\prime$ times red, $n_1^\prime$ times orange, and so on	such that $\sum_{i=1}^{m} n_i^\prime = M$. We assume that both $N$ and $M$ are sufficiently large and $M \approx N$ . The total number	of ways we could have $M$ outcomes are
 	\begin{equation}
 		\Omega = \frac{M!}{\left(M_{\mu_1}\right)! \left(M_{\mu_2}\right)!\ldots\left(M_{\mu_m}\right)!}
 	\end{equation}
@@ -263,7 +273,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		\log \Omega = -M \sum_{i=1}^{m} \mu_i \log \mu_i = M H(\mu)
 	\end{equation}
 	where $H(\mu)$ is nothing but the Shannon entropy $H(p)$ and clearly it is the degree of uncertainty per attempt. Total entropy	or information is therefore equal to $NH$ if we consider $M = N$. In the case when each site has distinct color	then each site will have the equal chance of being picked.	It means $\mu_i = 1/N \forall i$ and hence $H(\mu) = N \log(N )$	which is the average entropy or degree of disorder and	the total entropy is $N H(\mu)$. Now initially if we had $N$	distinct color then the system would have the maximum	entropy $S = N \log N$. On the other hand, if all the sites	had the same color then the system would have minimum	entropy $S = 0$. Thus percolation is indeed an order-disorder transition where disorder is equivalent to degree of confusion \cite{redefinition-of-site-percolation}.
-	Now recall the definition of Boltzmann entropy in equation \ref{eqn:boltzmann-entropy}. If we consider $K_B=1$ then we get Shannon entropy to represent Boltzmann entropy.
+	Now recall the definition of Boltzmann entropy in equation (\ref{eqn:boltzmann-entropy}). If we consider $K_B=1$ then we get Shannon entropy to represent Boltzmann entropy.
 	
 	\begin{figure}
 		\centering
@@ -321,17 +331,18 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 	
 
 	\subsection{Specific Heat, $C(p,L)$}
-	According to the definition of specific heat in thermodynamics \ref{def:specific-heat-thermodynamics}  we can find specific heat if we know the temperature and entropy. In percolation theory we measure the Shannon entropy, $H(p,L)$. And we use $(1-p)$ as the analogue of temperature which gives
+	\label{subsect.percolation.specific-heat}
+	According to the definition of specific heat in thermodynamics (\ref{def:specific-heat-thermodynamics})  we can find specific heat if we know the temperature and entropy. In percolation theory we measure the Shannon entropy, $H(p,L)$. And we use $(1-p)$ as the analogue of temperature which gives
 	\begin{align}
 		C &= (1-p) \frac{dH}{d(1-p)} \\
 		  &= -(1-p) \frac{dH}{dp}
 		  \label{def:specific-heat-percolation}
 	\end{align}
-	using this definition we can easily find the specific heat of the percolating system. And from specific heat we obtain the critical exponent $\alpha$ from the scaling relation in section \ref{subsect:list-of-exponents} which turns out to be
+	using this definition we can easily find the specific heat of the percolating system. And from specific heat we obtain the critical exponent $\alpha$ from the scaling relation in section (\ref{subsect:list-of-exponents}) which turns out to be
 	\begin{equation}
 		C = L^{\alpha/\nu} \phi_C(\left(p-p_c\right)L^{1/\nu})
 	\end{equation}
-	Here we have used FSS hypothesis \ref{sect:fss}.
+	Here we have used FSS hypothesis (\ref{sect:fss}).
 	Therefore plotting $C L^{-\alpha/\nu}$ vs $\left(p-p_c\right)L^{1/\nu}$ would give us a data collapse.
 			
 	
@@ -345,7 +356,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		\begin{equation}
 			P = \frac{\text{number of nodes in the largest cluster}}{\text{total number of nodes in the network}}
 		\end{equation}
-		Both definition, though looks a bit different when plotted, gives the same critical exponent $\beta$. How to find this exponent is shown in section \ref{subsect:order-parameter}.
+		Both definition, though looks a bit different when plotted, gives the same critical exponent $\beta$. How to find this exponent is shown in section (\ref{subsect:order-parameter}).
 		
 	    Mathematically
 		\begin{align}
@@ -363,11 +374,11 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 			\sum_{i} k_i = L(L-1)
 		\end{equation}
 		
-		Order parameter is related to the exponent $\beta$		from the scaling relation in section \ref{subsect:list-of-exponents} which turns out to be
+		Order parameter is related to the exponent $\beta$		from the scaling relation in section (\ref{subsect:list-of-exponents}) which turns out to be
 		\begin{equation}
 		P = L^{-\beta/\nu} \phi_P(\left(p-p_c\right)L^{1/\nu})
 		\end{equation}
-		Here we have used FSS hypothesis \ref{sect:fss}.
+		Here we have used FSS hypothesis (\ref{sect:fss}).
 		Therefore plotting $P L^{\beta/\nu}$ vs $\left(p-p_c\right)L^{1/\nu}$ would give us a data collapse.
 			 
 			 
@@ -379,17 +390,17 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		for a lattice of length $L$ there are $L^2$ sites and occupying one site increase $p$ by $1/L^2$ therefore for site percolation $\Delta p = 1 /L^2$ and for bond percolation it is $\Delta p = 1 / 2 L^2$.		Susceptibility can also be measured by differentiating the order parameter $P$ with respect to $p$ and it would give the same exponent upon measurement.
 		
 		
-		Susceptibility is related to the exponent $\gamma$		from the scaling relation in section \ref{subsect:list-of-exponents} which turns out to be
+		Susceptibility is related to the exponent $\gamma$		from the scaling relation in section (\ref{subsect:list-of-exponents}) which turns out to be
 		\begin{equation}
 		\chi = L^{\gamma/\nu} \phi_\chi(\left(p-p_c\right)L^{1/\nu})
 		\end{equation}
-		Here we have used FSS hypothesis \ref{sect:fss}.
+		Here we have used FSS hypothesis (\ref{sect:fss}).
 		 Therefore plotting $\chi L^{-\gamma/\nu}$ vs $\left(p-p_c\right)L^{1/\nu}$ would give us a data collapse.
 		 
 
 	\subsection{Fractal Dimension, $d_f$} 
 		\label{subsect:fractal-dim}
-		The spanning cluster is a unique cluster that spans the entire lattice (or wraps around the lattice). But the size of the spanning cluster varies with the size of the lattice and it is related as
+		 A fractal \cite{Falconer2003} is an object which occupies less space than it is embedded. For example a piece of cheese is a 3D fractal, since there are holes in the cheese which is empty. The spanning cluster shows a behaviour to be a fractal.		The spanning cluster is a unique cluster that spans the entire lattice (or wraps around the lattice). But the size of the spanning cluster varies with the size of the lattice and it is related as
 		\begin{equation}
 			S \sim L^{-d_f}
 		\end{equation}
@@ -437,7 +448,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 			n_s = p^s (1-p)^s
 			\label{eqn:n_s-1d}
 		\end{equation}
-		$n_s$ is also the number of $s$-clusters per lattice site. Note that the state of one particular site is independent of any other sites, that's why we multiply probabilities. Further manipulation of equation \ref{eqn:n_s-1d} gives
+		$n_s$ is also the number of $s$-clusters per lattice site. Note that the state of one particular site is independent of any other sites, that's why we multiply probabilities. Further manipulation of equation (\ref{eqn:n_s-1d}) gives
 		\begin{equation}
 			n_s = (1-p)^2 \exp (s \ln p) = (1-p)^2 \exp(-s/\xi)
 		\end{equation}
@@ -454,7 +465,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 			\sum_{s=1}^{\infty} s n_s = \frac{\text{number of total occupied sites}}{\text{number of total lattice sites}} = p
 			\label{eqn:occupation-probability-in-mean-cluster-size}
 		\end{equation}
-		A quick check of the validity of equation \ref{eqn:occupation-probability-in-mean-cluster-size} can be performed using equation \ref{eqn:n_s-1d}.
+		A quick check of the validity of equation (\ref{eqn:occupation-probability-in-mean-cluster-size}) can be performed using equation (\ref{eqn:n_s-1d}).
 		\begin{align}
 			\sum_{s=1}^{\infty}	s n_s \nonumber
 			&=  \sum_{s} s (1-p)^2 p^s \nonumber \\
@@ -465,7 +476,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 			&= (1-p)^2 p \left(\frac{1}{1-p} + \frac{p}{(1-p)^2}\right) \nonumber \\
 			&= p 
 		\end{align}
-		Here we have used the series sum \ref{eqn:series-sum-1}.
+		Here we have used the series sum (\ref{eqn:series-sum-1}).
 		\begin{align}
 			\sum_s p^s 
 			&= p + p^2 + p^3 + \ldots \nonumber \\
@@ -486,7 +497,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		\begin{equation}
 			\bar{x} = \int x p(x) dx
 		\end{equation}
-		using equation \ref{eqn:arbitrary-cluster-exactly-s-sites} we get
+		using equation (\ref{eqn:arbitrary-cluster-exactly-s-sites}) we get
 		\begin{align}
 			S 
 			&= \frac{\sum_{s} n_s s^2}{\sum_{s} n_s s} \nonumber \\
@@ -520,7 +531,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		\begin{equation}
 			g(r) = \exp (\ln(p^r)) = \exp(-r/\xi)
 		\end{equation}
-		where $\xi$ is the correlation length \ref{eqn:correlation-length-def}.\\
+		where $\xi$ is the correlation length (\ref{eqn:correlation-length-def}).\\
 		Now that we have correlation function, we can define mean cluster size in terms of it
 		\begin{equation}
 			S = 1 + \sum_{r=1}^{\infty} g(r)
@@ -529,7 +540,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 		At this point it is evident that the cutoff cluster size $s_\xi$ , mean cluster size $S(p)$, and correlation length $\xi$ diverges at the percolation threshold. The divergence has the form of a	simple power law of the distance from the critical occupation probability. In higher dimensional percolation problem this observation is also valid.
 		
 	\subsection{Infinite Dimension}
-	Apart from one dimension percolation problem can be solved in infinite dimension. For this we need a suitable playground such as Bethe lattice. Bethe lattice lattice is a special type of lattice  where each site has $z$ neighbors and each branch gives rise to $(z-1)$ other branches. Figure \ref{fig:bethe-lattice} shows the Bethe lattice for $z=3$. Note that for $z=2$ we have nothing but the one dimensional lattice. \subsubsection{Properties of infinite dimensional object}
+	Apart from one dimension percolation problem can be solved in infinite dimension. For this we need a suitable playground such as Bethe lattice. Bethe lattice lattice is a special type of lattice  where each site has $z$ neighbors and each branch gives rise to $(z-1)$ other branches. Figure (\ref{fig:bethe-lattice}) shows the Bethe lattice for $z=3$. Note that for $z=2$ we have nothing but the one dimensional lattice. \subsubsection{Properties of infinite dimensional object}
 	For a 3D object the surface area is has dimension to $L^2$ and volume as dimension $L^3$. The same pattern is true of object in any dimension. If we denote area by $A$ and volume by $V$ for any dimension we have
 	\begin{equation}
 		A \propto V^{1-1/d}
@@ -540,7 +551,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 	\end{equation}
 	Therefore if we find that the area of any object is proportional to its volume we can say it is an infinite dimensional object.
 	\subsubsection{Bethe Lattice}
-	In order to construct Bethe lattice for any $z$ we start with a central point which will be connected to $z$ sites. For example if $z=3$ then we will have a central site connected to $3$ sites by a branch and when we go to next layer each branch will be divided to $2$ more branches and this process will be continued up to $r$ layers \ref{fig:bethe-lattice}. Only at the surface of the lattice, where the branching is stopped, is only one bond or branch connecting the surface site to the interior. There is only open loops in this structure, which means	that if we never change direction always reach new site if we never go back.Number of sites in the Bethe lattice increases exponentially with the distance from the origin, whereas in any $d$-dimensional lattice structure it	would increase with distance $d$ . In the case of Bethe lattice with $z=3$, the origin is surrounded by a shell of three sites ("first generation"), in the second shell we have six sites followed by a third	generation of twelve sites, etc.
+	In order to construct Bethe lattice for any $z$ we start with a central point which will be connected to $z$ sites. For example if $z=3$ then we will have a central site connected to $3$ sites by a branch and when we go to next layer each branch will be divided to $2$ more branches and this process will be continued up to $r$ layers (\ref{fig:bethe-lattice}). Only at the surface of the lattice, where the branching is stopped, is only one bond or branch connecting the surface site to the interior. There is only open loops in this structure, which means	that if we never change direction always reach new site if we never go back.Number of sites in the Bethe lattice increases exponentially with the distance from the origin, whereas in any $d$-dimensional lattice structure it	would increase with distance $d$ . In the case of Bethe lattice with $z=3$, the origin is surrounded by a shell of three sites ("first generation"), in the second shell we have six sites followed by a third	generation of twelve sites, etc.
 	\begin{figure}
 		\centering
 		\includegraphics[width=10cm]{{{bethe-lattice}}}
@@ -646,7 +657,7 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 			 &= \frac{z}{z-1} \left(p(z-1)\right)^r \\
 			 &= \frac{z}{z-1} \exp \left[\log\left[p(z-1)\right]\right]
 	\end{align}
-	The value of percolation threshold for Bethe lattice can be found by analyzing the behaviour of the correlation function at large distances, i.e. at r $\rightarrow \infty$. For $p(z-1) < 1$, $g(r)$ decreases exponentially, on the other hand for $p(z-1)>1$, the correlation function diverges which signifies the existence of an infinite cluster. Mathematical treatment yields the correlation length from \ref{eqn:correlation-length-def}
+	The value of percolation threshold for Bethe lattice can be found by analyzing the behaviour of the correlation function at large distances, i.e. at r $\rightarrow \infty$. For $p(z-1) < 1$, $g(r)$ decreases exponentially, on the other hand for $p(z-1)>1$, the correlation function diverges which signifies the existence of an infinite cluster. Mathematical treatment yields the correlation length from (\ref{eqn:correlation-length-def})
 	\begin{align}
 		\xi &= \frac{-1}{\log[p(1-z)]} \nonumber \\
 			&= \frac{-1}{\log(p/p_c)} \nonumber \\
@@ -659,42 +670,148 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 	In the classical Hosen-Kopelman algorithm for percolation model \cite{Hoshen1976}, one first choose an occupation probability $p$ and then generate a number $r$ for each site of the lattice. The site is occupied if $r \leq p$ and remain empty if $r > p$. One therefore create an entire new state of a given lattice size for every different value of $p$. Note that the number of occupied sites $n$ for a given $p$ may very in each realization. However, the expected or ensemble average over $M$ experiments will give $n = p M$ in the limit $M \rightarrow$. Thus the number of occupied bonds or sites is also a measure of $p$. Using this idea Ziff and Newman \cite{Newman2001} proposed an algorithm which generate states for each value of $n$ from zero up to some maximum value $n = L^2$ for site percolation on $L\times L$ square lattice for instance. In this way, one can save some effort by noticing the fact that a new state with $n + 1$ occupied sites or bonds can be created by adding one extra randomly chosen site or bond to the state containing n sites or bonds. The first step of their algorithm is to decide an order in which the bonds or sites are to be occupied. That is, every attempt to occupy a bond/site is successful.
 	
 	\subsection{Square Lattice}
-	A square lattice is an ideal playground for percolation. If it has length $L$ then number of sites in the lattice is $L^2$ and number of bonds in the lattice is $2 L^2$. All sites are equally separated from each other at a certain distance. And all sites have exactly four neighbor. Since with the periodic boundary condition the sites in the left edge are connected with the sites in the right edge and same rule for sites in the top and bottom edges. If the sites are densely spaced the experiment will be accurate, meaning, the larger the size of the lattice the accurate the results will be. It implies that a lattice of infinite size should be used which is practically impossible. The simple solution to this problem is to use number of large lengths, (say $L = \{L_1, L_2, \ldots L_n \}$, where $n$ is a finite number and $L_1 < L_2 < \ldots < L_n$), and extrapolate the results for infinite lattice. The visual structure of the square lattice is as follows \ref{fig:sq_lattiec_empty}. This is and empty lattice structure. Filled circles are for occupied site and filled bonds are for occupied bonds \ref{fig:site_bond_symbol}.
+	A square lattice is an ideal playground for percolation. 	A square lattice of linear size $L$ has 
+	$L^2$ sites connected by $2L^2$  bonds with periodic boundary condition and by
+	$2L(L-1)$ bonds without periodic boundary condition. All sites are equally separated from each other at a certain distance. And all sites have exactly four neighbor. Since with the periodic boundary condition the sites in the left edge are connected with the sites in the right edge and same rule for sites in the top and bottom edges. We always want our experimental result in the thermodynamic limit. This means that we want the results for a lattice where $L\rightarrow \infty$. In other words the sites are densely spaced. But that is practically impossible. The simple solution to this problem is to use number of large lengths, (say $L = \{L_1, L_2, \ldots L_n \}$, where $n$ is a finite number and $L_1 < L_2 < \ldots < L_n$), and extrapolate the results for infinite lattice. The visual structure of the square lattice is as follows (\ref{fig:sq_lattiec_empty}). This is and empty lattice structure. Filled circles are for occupied site and filled bonds are for occupied bonds (\ref{fig:site_bond_symbol}).
 	
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics{{{square_lattice_5}}}
-		\caption{Square Lattie (empty) of length 6}
-		\label{fig:sq_lattiec_empty}
-	\end{figure}
-	
-	\begin{figure}
+		\begin{subfigure}{.8\textwidth}
+			\centering
+			\includegraphics{{{square-lattice-5x5_skeleton}}}
+			\caption{}
+			\label{fig:sq_lattiec_empty}
+		\end{subfigure}
 		\begin{subfigure}{.2\textwidth}
 			\centering
 			\includegraphics[width=.1\linewidth]{{{site_empty}}}
-			\caption{Empty Site}
+			\caption{}
 		\end{subfigure}
 		\begin{subfigure}{.2\textwidth}
 			\centering
 			\includegraphics[width=0.1\linewidth]{{{site_occupied}}}
-			\caption{Occupied Site}
+			\caption{}
 		\end{subfigure}
 		\begin{subfigure}{.2\textwidth}
 			\centering
 			\includegraphics[width=.1\linewidth]{{{bond_empty}}}
-			\caption{Empty Bond}
+			\caption{}
 		\end{subfigure}
 		\begin{subfigure}{.2\textwidth}
 			\centering
 			\includegraphics[width=.1\linewidth]{{{bond_occupied}}}
-			\caption{Occupied Bond}
+			\caption{}
 		\end{subfigure}
-		\caption{Site and Bond symbol (empty and occupied).}
+		\caption{ (a) Square Lattice (empty skeleton) of length $L=5$ where all sites and bonds are empty(b) Empty site (c) Occupied site (d) Empty bond (e) Occupied bond.}
 		\label{fig:site_bond_symbol}
 	\end{figure}
+	Percolation 
+	is known as site or bond type depending on whether we occupy sites or bonds respectively. Here we describe bond percolation process in detail and site percolation in brief.
+
+	\subsection{Bond Percolation}
+		\label{bond-percolation}
+		One of the famous percolation type is random bond percolation on square lattice. Here we assume that all the labeled
+		bonds are initially frozen. The rule  is then  to choose 
+		one frozen bond at each step randomly with uniform probability and occupy it. We continue the process one by one till the 
+		occupation probability $p$, fraction of the total bonds being occupied, reaches to unity. 
+		At $p=0$ each site is a cluster of its own size and as $p$ is tuned towards increasing $p$
+		then we observe clusters, a group of sites connected by occupied bonds, are continuously
+		formed and grown on the average. In the process there 
+		comes a critical state when occupation of just one more bond results in the emergence of a 
+		cluster that spans 
+		across the entire system for the first time. This process of cluster growth is shown in figure (\ref{fig:cluster-growth-bond}).
+		\begin{figure}[h]
+			\centering
+			\captionsetup[subfigure]{width=0.9\textwidth}
+			\begin{subfigure}[t]{0.325\textwidth}
+				\centering
+				\includegraphics[width=0.95\linewidth]{{{bond-square-lattice-5x5_step0}}}
+				\caption{Initial state of a square lattice of linear length $L=5$. Total $5^2$ sites and $2\times 5^2$ frozen bonds.}
+			\end{subfigure}
+			\begin{subfigure}[t]{0.325\textwidth}
+				\centering
+				\includegraphics[width=0.95\linewidth]{{{bond-square-lattice-5x5_step1}}}
+				\caption{One bond is occupied and it connects two cluster of size one to create one cluster of size two.}
+			\end{subfigure}
+			\begin{subfigure}[t]{0.325\textwidth}
+				\centering
+				\includegraphics[width=0.95\linewidth]{{{bond-square-lattice-5x5_step2}}}
+				\caption{Another bond is occupied and it connect two cluster of size two and one to create one cluster of size three.}
+			\end{subfigure}
+			\caption{Cluster growth in bond percolation in initial state.}
+			\label{fig:cluster-growth-bond}
+		\end{figure}
+		Notice that if occupying a bond can be of two kind. one is intercluster connection where two distinct cluster is connected to form a larger cluster whose size is the sum of the connecting cluster. Another is the intracluster connection where two end of same cluster is connected but the cluster size remains invariant. Figure (\ref{fig:cluster-growth-bond-inter-intra}) demonstrate this process.
+		
+		\begin{figure}[h]
+			\centering
+			\captionsetup[subfigure]{width=0.9\textwidth}
+			\begin{subfigure}[t]{0.325\textwidth}
+				\centering
+				\includegraphics[width=0.95\linewidth]{{{bond-square-lattice-5x5_cluster-1}}}
+				\caption{Two cluster is present. Red one has size  $5$ and green one has size $3$.}
+			\end{subfigure}
+			\begin{subfigure}[t]{0.325\textwidth}
+				\centering
+				\includegraphics[width=0.95\linewidth]{{{bond-square-lattice-5x5_cluster-2}}}
+				\caption{Intracluster connection results in only increase of the occupation probability. Cluster size remains the same.}
+			\end{subfigure}
+			\begin{subfigure}[t]{0.325\textwidth}
+				\centering
+				\includegraphics[width=0.95\linewidth]{{{bond-square-lattice-5x5_cluster-3}}}
+				\caption{Intercluster connection. Red cluster of size $5$ and green cluster of  size $3$ merges to form a new cluster (red) of size $8$. }
+			\end{subfigure}
+			\caption{Intercluster and intracluster connection.}
+			\label{fig:cluster-growth-bond-inter-intra}
+		\end{figure}
+		
+		Using this process in mind we measure various quantity, for example Entropy, Spanning probability, Order Parameter etc., and the we use the scaling relation to obtain the exponents which is done in chapter (\ref{chapter:ballistic-deposition}) for site percolation.
+		
+		
+		
+	\subsection{Site Percolation}
+		Here we discuss the traditional definition of site percolation and in section (\ref{sect.redefinition-site-percolation}) we discuss what goes wrong if we use this definition and how we can resolve them in detail which is one of the purpose of this thesis.
+		
+		Now in site percolation we take a square lattice of linear length $L$ which have $L^2$ sites. We occupy each site with probability $p$ and keep it empty with probability $(1-p)$. Thus after we have visited all the sites in the lattice we get to measure any quantity of this system for probability $p$. Here we measure the cluster size by number of sites in the cluster as we do in bond percolation. In this way we get to measure a quantity for a fixed probability $p$ in each realization which is the classical Hoshen-Koppelman (HK) algorithm \cite{Hoshen1976}. 
+		
+		Instead we we Newman-ziff algorithm so that we can measure various observable quantities over the entire range of $p$ in every 
+		realization instead of measuring them for a fixed probability $p$ in each realization \cite{Newman2001}. In NZ algorithm we pick a site at random with uniform probability and occupy it. Thus if we occupy $n$ sites we get a system with occupation probability $p=n/N$ where $N=L^2$. This process is further discussed in the next section (\ref{subsect.nz-algrithm}).
+	
+	\subsection{Newman-Ziff (NZ) algorithm}	
+		\label{subsect.nz-algrithm}
+		To study random percolation, we use Newman-Ziff (NZ) algorithm as 
+		it helps calculating various observable quantities over the entire range of $p$ in every 
+		realization instead of measuring them for a fixed probability $p$ in each realization \cite{Newman2001}.
+		On the other hand, in classical Hoshen-Koppelman (HK) we can only measure an observable quantity
+		for a given $p$ in every realization and this is why NZ is more efficient than HK \cite{Hoshen1976}.
+		To illustrate the idea we consider the case of bond percolation first. 
+		According to the NZ algorithm, all the labelled bonds $i=1,2,3,..., M$ 
+		are first randomized and then arranged in an order 
+		in which they will be occupied. Note that the number of bonds with periodic
+		boundary condition is $M=2L^2$. In this way we 
+		can create percolation states consisting of $n+1$ occupied bonds
+		simply by occupying one more bond to its immediate past state consisting of $n$ occupied 
+		bonds. Initially, there are $N=L^2$ clusters of size one.
+		Occupying the first bond  means forming a cluster of size two (four). However, 
+		as we keep occupying thereafter, average or mean cluster size keep growing 
+		at the expense of decreasing cluster number. Interestingly, all the observables in percolation, this
+		way or another, related to cluster size and hence proper definition of cluster is crucial.
+		One of the advantages of the NZ algorithm is that we calculate an observable, say $X_n$, as 
+		a function of the number of occupied bonds (sites) $n$ and use the resulting data in the convolution relation
+		\begin{equation}
+		\label{eq:convolution}
+		X(p)=\sum_{n=1}^N p^n(1-p)^{N-n} X_n,
+		\end{equation}
+		to obtain $X(p)$ for any value of $p$. 
+		The appropriate weight factor for each $n$ at a given $p$ is $\sum_{n=1}^N p^n(1-p)^{N-n}$ \cite{Newman2001}. 
+		The convolution relation takes care of that weight factor and hence helps obtaining a smooth curve for $X(p)$.
+		
+		The detail discussion of the use of convolution relation and how we can efficiently implement in a program is discussed in Appendix (\ref{appendix.convolution}).
 
 
-\section{Application}\label{sect:application}
+
+\section{Application}
+\label{sect:application}
 	Ever since the percolation phenomena was discovered it has been extensively used in wide range of science. Some of it is discussed here. Though limited, this discussion gives us the significance of percolation and enables us to appreciate it.
 	\subsection{Epidemiology}
 	Many diseases spread through human populations via close physical interactions. The interpersonal contact patterns that underlie disease transmission can naturally be thought to form a network, where links join individuals who interact with each other. During an outbreak, disease then spreads along these links. All epidemiological models make assumptions about the underlying	network of interactions, often without explicitly stating them.
@@ -744,6 +861,14 @@ is purely geometrical in nature. It requires no consideration of quantum and man
 	The structural features of spiral galaxies arises from a percolation phase transition that underlies the phenomenon of propagating star formation. According to this	view, the appearance of spiral arms is a consequence of the differential rotation of the galaxy	and the characteristic divergence of correlation lengths for continuous phase transitions.
 	
 	 Other	structural properties of spiral galaxies, such as the distribution of the gaseous components and the	luminosity, arise directly from a feedback mechanism that pins the star formation rate close to the	critical point of the phase transition. At least for some galaxies, morphological and other features	are already fixed by general properties of phase transitions, irrespective of detailed dynamic or	other considerations \cite{Seiden1990, Coleman1992}.
+	 
+	 \subsection{Others}
+	 Percolation model 
+	 has also been applied to a wide variety of natural and social phenomena  such as the spread of
+	 disease in a population \cite{Murray2007}, flow of fluid through porous media \cite{Dapp2016}, 
+	 conductor-insulator composite materials \cite{McLachlan1990}, resilience of systems \cite{Barabasi2000, PastorSatorras2001}, 
+	 dilute magnets  \cite{Bergqvist2004}, the formation of public opinion \cite{Watts2002, Shao2009, Morone2015}
+	 and spread of biological and computer viruses leading to epidemic \cite{Newman1999, Moore2000}
 	
 	
 	

@@ -1,4 +1,4 @@
-\begin{thebibliography}{116}
+\begin{thebibliography}{137}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -64,6 +64,12 @@ Didarul Alam.
   insights in percolation, 2016.
 \newblock Master's thesis,.
 
+\bibitem[Albert et~al.(2000)Albert, Jeong, and Barab{\'{a}}si]{Barabasi2000}
+R{\'{e}}ka Albert, Hawoong Jeong, and Albert-L{\'{a}}szl{\'{o}} Barab{\'{a}}si.
+\newblock Error and attack tolerance of complex networks.
+\newblock \emph{Nature}, 406\penalty0 (6794):\penalty0 378--382, jul 2000.
+\newblock \doi{10.1038/35019019}.
+
 \bibitem[Andreas~Greven(2003)]{Greven2003}
 Gerald~Warnecke Andreas~Greven, Gerhard~Keller.
 \newblock \emph{Entropy (Princeton Series in Applied Mathematics)}.
@@ -104,6 +110,21 @@ L~Benguigui.
 \newblock \emph{European Journal of Physics}, 34\penalty0 (2):\penalty0
   303--321, jan 2013.
 \newblock \doi{10.1088/0143-0807/34/2/303}.
+
+\bibitem[Bergqvist et~al.(2004)Bergqvist, Eriksson, Kudrnovsk{\'{y}}, Drchal,
+  Korzhavyi, and Turek]{Bergqvist2004}
+L.~Bergqvist, O.~Eriksson, J.~Kudrnovsk{\'{y}}, V.~Drchal, P.~Korzhavyi, and
+  I.~Turek.
+\newblock Magnetic percolation in diluted magnetic semiconductors.
+\newblock \emph{Physical Review Letters}, 93\penalty0 (13), sep 2004.
+\newblock \doi{10.1103/physrevlett.93.137202}.
+
+\bibitem[Binney et~al.(1992)Binney, Dowrick, Fisher, and Newman]{Binney1992}
+J.~J. Binney, N.~J. Dowrick, A.~J. Fisher, and M.~E.~J. Newman.
+\newblock \emph{The Theory of Critical Phenomena: An Introduction to the
+  Renormalization Group (Oxford Science Publications)}.
+\newblock Clarendon Press, 1992.
+\newblock ISBN 0198513933.
 
 \bibitem[Blume(1966)]{Blume1966}
 M.~Blume.
@@ -205,6 +226,13 @@ J~Chalupa, P~L Leath, and G~R Reich.
   (1):\penalty0 L31--L35, jan 1979.
 \newblock \doi{10.1088/0022-3719/12/1/008}.
 
+\bibitem[Choi et~al.(1995)Choi, Talbot, Tarjus, and Viot]{Choi1995}
+H.~S. Choi, J.~Talbot, G.~Tarjus, and P.~Viot.
+\newblock Percolation and structural properties of particle deposits.
+\newblock \emph{Physical Review E}, 51\penalty0 (2):\penalty0 1353--1363, feb
+  1995.
+\newblock \doi{10.1103/physreve.51.1353}.
+
 \bibitem[Cipra(1987)]{Cipra1987}
 Barry~A. Cipra.
 \newblock An introduction to the ising model.
@@ -244,6 +272,12 @@ P.~Csermely, A.~London, L.-Y. Wu, and B.~Uzzi.
 \newblock \emph{Journal of Complex Networks}, 1\penalty0 (2):\penalty0 93--123,
   oct 2013.
 \newblock \doi{10.1093/comnet/cnt016}.
+
+\bibitem[Dapp and M\"{u}ser(2016)]{Dapp2016}
+Wolf~B. Dapp and Martin~H. M\"{u}ser.
+\newblock Fluid leakage near the percolation threshold.
+\newblock \emph{Scientific Reports}, 6\penalty0 (1), feb 2016.
+\newblock \doi{10.1038/srep19513}.
 
 \bibitem[Der{\'{e}}nyi et~al.(2005)Der{\'{e}}nyi, Palla, and
   Vicsek]{Dernyi2005}
@@ -285,6 +319,12 @@ J~W Essam.
 \newblock \emph{Reports on Progress in Physics}, 43\penalty0 (7):\penalty0
   833--912, jul 1980.
 \newblock \doi{10.1088/0034-4885/43/7/001}.
+
+\bibitem[Falconer(2003)]{Falconer2003}
+Kenneth Falconer.
+\newblock \emph{Fractal Geometry: Mathematical Foundations and Applications}.
+\newblock Wiley, 2003.
+\newblock ISBN 0470848626.
 
 \bibitem[Family and Vicsek(1985)]{Family1985}
 F~Family and T~Vicsek.
@@ -387,12 +427,12 @@ M.~K. Hassan and M.~M. Rahman.
 \newblock \emph{Physical Review E}, 92\penalty0 (4), oct 2015.
 \newblock \doi{10.1103/physreve.92.040101}.
 
-\bibitem[Hassan and Rahman(2016)]{Hassan2016}
-M.~K. Hassan and M.~M. Rahman.
-\newblock Universality class of site and bond percolation on multifractal
-  scale-free planar stochastic lattice.
-\newblock \emph{Physical Review E}, 94\penalty0 (4), oct 2016.
-\newblock \doi{10.1103/physreve.94.042109}.
+\bibitem[Hassan et~al.(2017)Hassan, Alam, Jitu, and Rahman]{Hassan2017}
+M.~K. Hassan, D.~Alam, Z.~I. Jitu, and M.~M. Rahman.
+\newblock Entropy, specific heat, susceptibility, and rushbrooke inequality in
+  percolation.
+\newblock \emph{Physical Review E}, 96\penalty0 (5), nov 2017.
+\newblock \doi{10.1103/physreve.96.050101}.
 
 \bibitem[Hiley and Joyce(1965)]{Hiley1965}
 B~J Hiley and G~S Joyce.
@@ -451,6 +491,13 @@ Gregg Jaeger.
 \newblock \emph{Archive for History of Exact Sciences}, 53\penalty0
   (1):\penalty0 51--81, may 1998.
 \newblock \doi{10.1007/s004070050021}.
+
+\bibitem[Jullien and Meakin(1992)]{Jullien1992}
+R~Jullien and P~Meakin.
+\newblock Random sequential adsorption with restructuring in two dimensions.
+\newblock \emph{Journal of Physics A: Mathematical and General}, 25\penalty0
+  (4):\penalty0 L189--L194, feb 1992.
+\newblock \doi{10.1088/0305-4470/25/4/007}.
 
 \bibitem[{Kasteleyn} and {Fortuin}(1969)]{Kasteleyn1969}
 P.~W. {Kasteleyn} and C.~M. {Fortuin}.
@@ -552,6 +599,21 @@ Benoit~B. Mandelbrot.
 \newblock W. H. Freeman, 1983.
 \newblock ISBN 0716711869.
 
+\bibitem[Manna(2012)]{Manna2012}
+S.S. Manna.
+\newblock About the fastest growth of the order parameter in models of
+  percolation.
+\newblock \emph{Physica A: Statistical Mechanics and its Applications},
+  391\penalty0 (9):\penalty0 2833--2841, 2012.
+
+\bibitem[McLachlan et~al.(1990)McLachlan, Blaszkiewicz, and
+  Newnham]{McLachlan1990}
+David~S. McLachlan, Michael Blaszkiewicz, and Robert~E. Newnham.
+\newblock Electrical resistivity of composites.
+\newblock \emph{Journal of the American Ceramic Society}, 73\penalty0
+  (8):\penalty0 2187--2203, aug 1990.
+\newblock \doi{10.1111/j.1151-2916.1990.tb07576.x}.
+
 \bibitem[Meyers(2006)]{Meyers2006}
 Lauren~Ancel Meyers.
 \newblock Contact network epidemiology: Bond percolation applied to infectious
@@ -574,6 +636,27 @@ Cristopher Moore and M.~E.~J. Newman.
 \newblock \emph{Physical Review E}, 62\penalty0 (5):\penalty0 7059--7064, nov
   2000.
 \newblock \doi{10.1103/physreve.62.7059}.
+
+\bibitem[Morone and Makse(2015)]{Morone2015}
+Flaviano Morone and Hern{\'{a}}n~A. Makse.
+\newblock Influence maximization in complex networks through optimal
+  percolation.
+\newblock \emph{Nature}, 524\penalty0 (7563):\penalty0 65--68, jul 2015.
+\newblock \doi{10.1038/nature14604}.
+
+\bibitem[Murray(2007)]{Murray2007}
+James~D. Murray.
+\newblock \emph{Mathematical Biology: I. An Introduction (Interdisciplinary
+  Applied Mathematics Book 17)}.
+\newblock Springer New York, 2007.
+\newblock ISBN 978-0-387-22437-4.
+
+\bibitem[Newman and Watts(1999)]{Newman1999}
+M.~E.~J. Newman and D.~J. Watts.
+\newblock Scaling and percolation in the small-world network model.
+\newblock \emph{Physical Review E}, 60\penalty0 (6):\penalty0 7332--7342, dec
+  1999.
+\newblock \doi{10.1103/physreve.60.7332}.
 
 \bibitem[Newman and Ziff(2000)]{Newman2000}
 M.~E.~J. Newman and R.~M. Ziff.
@@ -618,6 +701,13 @@ Gergely Palla, Imre Der{\'{e}}nyi, Ill{\'{e}}s Farkas, and Tam{\'{a}}s Vicsek.
 \newblock \emph{Nature}, 435\penalty0 (7043):\penalty0 814--818, jun 2005.
 \newblock \doi{10.1038/nature03607}.
 
+\bibitem[Pastor-Satorras and Vespignani(2001)]{PastorSatorras2001}
+Romualdo Pastor-Satorras and Alessandro Vespignani.
+\newblock Epidemic spreading in scale-free networks.
+\newblock \emph{Physical Review Letters}, 86\penalty0 (14):\penalty0
+  3200--3203, apr 2001.
+\newblock \doi{10.1103/physrevlett.86.3200}.
+
 \bibitem[Penrose(1998)]{Penrose1998}
 M.~D. Penrose.
 \newblock {CONTINUUM} {PERCOLATION} (cambridge tracts in mathematics 119).
@@ -656,6 +746,13 @@ G.~R. Reich and P.~L. Leath.
 \newblock \emph{Journal of Statistical Physics}, 19\penalty0 (6):\penalty0
   611--622, dec 1978.
 \newblock \doi{10.1007/bf01011772}.
+
+\bibitem[Sabbir and Hassan(2018)]{Sabbir2018}
+M.~M.~H. Sabbir and M.~K. Hassan.
+\newblock Product-sum universality and rushbrooke inequality in explosive
+  percolation.
+\newblock \emph{Physical Review E}, 97\penalty0 (5), may 2018.
+\newblock \doi{10.1103/physreve.97.050102}.
 
 \bibitem[Sabbir()]{Sabbir}
 Md~Mainul~Hasan Sabbir.
@@ -722,6 +819,12 @@ James~P. Sethna.
 \newblock Oxford University Press, 2006.
 \newblock ISBN 0198566778.
 
+\bibitem[Shao et~al.(2009)Shao, Havlin, and Stanley]{Shao2009}
+Jia Shao, Shlomo Havlin, and H.~Eugene Stanley.
+\newblock Dynamic opinion model and invasion percolation.
+\newblock \emph{Physical Review Letters}, 103\penalty0 (1), jul 2009.
+\newblock \doi{10.1103/physrevlett.103.018701}.
+
 \bibitem[Stanley(1987)]{Stanley1987}
 H.~Eugene Stanley.
 \newblock \emph{Introduction to Phase Transitions and Critical Phenomena
@@ -743,12 +846,33 @@ Dietrich Stauffer and Ammon Aharony.
 \newblock Taylor \& Francis, 1994.
 \newblock ISBN 0748402535.
 
+\bibitem[Talbot and Ricci(1992)]{Talbot1992}
+J.~Talbot and S.~M. Ricci.
+\newblock Analytic model for a ballistic deposition process.
+\newblock \emph{Physical Review Letters}, 68\penalty0 (7):\penalty0 958--961,
+  feb 1992.
+\newblock \doi{10.1103/physrevlett.68.958}.
+
 \bibitem[Vicsek and Family(1984)]{Vicsek1984}
 Tam{\'{a}}s Vicsek and Fereydoon Family.
 \newblock Dynamic scaling for aggregation of clusters.
 \newblock \emph{Physical Review Letters}, 52\penalty0 (19):\penalty0
   1669--1672, may 1984.
 \newblock \doi{10.1103/physrevlett.52.1669}.
+
+\bibitem[Viot et~al.(1993)Viot, Tarjus, and Talbot]{Viot1993}
+P.~Viot, G.~Tarjus, and J.~Talbot.
+\newblock Exact solution of a generalized ballistic-deposition model.
+\newblock \emph{Physical Review E}, 48\penalty0 (1):\penalty0 480--488, jul
+  1993.
+\newblock \doi{10.1103/physreve.48.480}.
+
+\bibitem[Watts(2002)]{Watts2002}
+D.~J. Watts.
+\newblock A simple model of global cascades on random networks.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 99\penalty0
+  (9):\penalty0 5766--5771, apr 2002.
+\newblock \doi{10.1073/pnas.082090499}.
 
 \bibitem[Wierman(1984)]{Wierman1984}
 J~C Wierman.
@@ -777,6 +901,26 @@ C.~N. Yang.
 \newblock The spontaneous magnetization of a two-dimensional ising model.
 \newblock \emph{Physical Review}, 85\penalty0 (5):\penalty0 808--816, mar 1952.
 \newblock \doi{10.1103/physrev.85.808}.
+
+\bibitem[Ziff(1992)]{Ziff1992}
+Robert~M. Ziff.
+\newblock Spanning probability in 2d percolation.
+\newblock \emph{Physical Review Letters}, 69\penalty0 (18):\penalty0
+  2670--2673, nov 1992.
+\newblock \doi{10.1103/physrevlett.69.2670}.
+
+\bibitem[Ziff(2009)]{Ziff2009}
+Robert~M. Ziff.
+\newblock Explosive growth in biased dynamic percolation on two-dimensional
+  regular lattice networks.
+\newblock \emph{Physical Review Letters}, 103\penalty0 (4), jul 2009.
+\newblock \doi{10.1103/physrevlett.103.045701}.
+
+\bibitem[Ziff(2010)]{Ziff2010}
+Robert~M. Ziff.
+\newblock Scaling behavior of explosive percolation on the square lattice.
+\newblock \emph{Physical Review E}, 82\penalty0 (5), nov 2010.
+\newblock \doi{10.1103/physreve.82.051105}.
 
 \bibitem[Zimm and Stockmayer(1949)]{Zimm1949}
 Bruno~H. Zimm and Walter~H. Stockmayer.

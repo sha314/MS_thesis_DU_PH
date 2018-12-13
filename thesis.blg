@@ -44,6 +44,10 @@ Repeated entry---line 941 of file References/references.bib.bib
  : @article{Hughes1958
  :                    ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 1617 of file References/references.bib.bib
+ : @article{Moore2000
+ :                   ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for ""
 Warning--to sort, need author or key in cubic-lattices
 Warning--to sort, need author or key in scale-free-network
@@ -77,45 +81,45 @@ Warning--empty publisher in Carnot1890
 Warning--empty year in nesm-lecture-notes
 Warning--empty title in Lorenz2000
 Warning--empty year in Sabbir
-You've used 116 entries,
+You've used 137 entries,
             2773 wiz_defined-function locations,
-            1438 strings with 23064 characters,
-and the built_in function-call counts, 48685 in all, are:
-= -- 4558
-> -- 2119
-< -- 84
-+ -- 750
-- -- 633
-* -- 4043
-:= -- 7393
-add.period$ -- 440
-call.type$ -- 116
-change.case$ -- 532
-chr.to.int$ -- 115
-cite$ -- 273
-duplicate$ -- 2316
-empty$ -- 4366
-format.name$ -- 803
-if$ -- 10188
+            1572 strings with 26242 characters,
+and the built_in function-call counts, 58132 in all, are:
+= -- 5431
+> -- 2609
+< -- 97
++ -- 918
+- -- 780
+* -- 4870
+:= -- 8870
+add.period$ -- 523
+call.type$ -- 137
+change.case$ -- 641
+chr.to.int$ -- 136
+cite$ -- 315
+duplicate$ -- 2738
+empty$ -- 5150
+format.name$ -- 983
+if$ -- 12141
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 129
-newline$ -- 678
-num.names$ -- 428
-pop$ -- 1066
+missing$ -- 153
+newline$ -- 803
+num.names$ -- 512
+pop$ -- 1250
 preamble$ -- 1
-purify$ -- 442
+purify$ -- 533
 quote$ -- 0
-skip$ -- 1599
+skip$ -- 1898
 stack$ -- 0
-substring$ -- 2085
-swap$ -- 206
+substring$ -- 2465
+swap$ -- 244
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1166
+type$ -- 1382
 warning$ -- 32
-while$ -- 466
+while$ -- 552
 width$ -- 0
-write$ -- 1653
-(There were 6 error messages)
+write$ -- 1963
+(There were 7 error messages)

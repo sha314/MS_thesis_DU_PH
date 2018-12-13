@@ -9,7 +9,7 @@
 \fi
 
 \chapter{Scaling, Scale-Invariance and Self-Similarity}
-\label{chapter2}
+\label{chapter.scaling-similarity}
 In physics we observe a natural phenomena and try to understand it using the existing knowledge. To do this we need to assign numbers to the observable quantities. If we can express it in numbers only then we can say we have acquired some knowledge about that quantity. And if we cannot do this then our knowledge is not complete about that quantity. This reveals the fact that physics is all about observation and measurement of physical quantities with the desire to acquire some knowledge about it and then use that knowledge to predict something that is yet to observe. For example, Albert Einstein predicted the existence of gravitational waves in 1916 in his general theory of relativity and the first direct observation of gravitational waves was made on 14 September 2015 and was announced by the LIGO and Virgo collaborations on 11 February 2016. Now, in order to understand the observation of a natural or artificial phenomena we need some tools. Since here we are trying to understand phase transition, finite size scaling (FSS) hypothesis is a great tool for the investigation. In this chapter we will try to understand the fundamentals which is based on Buckingham $\pi$ theorem, self similarity and homogeneous functions.
 
 
@@ -46,7 +46,7 @@ The dimension of the governed parameter $a$ must also be expressible in terms of
 	\left[a\right] = \left[a_{k+1}\right]^{\alpha} \ldots \left[a_n\right]^{\gamma}
 	\label{dimension_relation}
 \end{equation}
-Thus, there exist number $\alpha$, $\gamma$ such that \ref{dimension_relation} holds. We have set of governing parameters.
+Thus, there exist number $\alpha$, $\gamma$ such that Eqn. (\ref{dimension_relation}) holds. We have set of governing parameters.
 \begin{align}
 	\Pi_1 &= \frac{a_1}{\left[a_{k+1}\right]^{\alpha_1} \ldots \left[a_{n}\right]^{\gamma_1}} \\
 	\Pi_2 &= \frac{a_2}{\left[a_{k+1}\right]^{\alpha_2} \ldots \left[a_{n}\right]^{\gamma_2}} \\
@@ -60,17 +60,17 @@ and a dimensionless governed parameter
 &=\frac{f(\Pi_1, \ldots \Pi_k, a_{k+1}, \ldots, a_n)}{\left[a_{k+1}\right]^{\alpha} \ldots \left[a_n\right]^{\gamma}}
 \label{dimensionless-pi-1}
 \end{align}
-The right hand side of equation \ref{dimensionless-pi-1} clearly reveals that the dimensionless quantity $\Pi$ is a function of $a_{k+1},\ldots,a_n,\Pi_1,\ldots,\Pi_k$, i.e.,
+The right hand side of equation (\ref{dimensionless-pi-1}) clearly reveals that the dimensionless quantity $\Pi$ is a function of $a_{k+1},\ldots,a_n,\Pi_1,\ldots,\Pi_k$, i.e.,
 \begin{equation}
 	\Pi \equiv F(a_{k+1}, \ldots, a_n, \Pi_1,\ldots,\Pi_k)
 	\label{dimensionless-relation}
 \end{equation}
-The quantities $\Pi, \Pi_1,\ldots, \Pi_k$ are obviously dimensionless, and hence upon transition from one system of unit to another inside a given class their numerical values must remain unchanged. At the same time, according to the above, one can pass to a system of units of measurement such that any of the parameters of $a_{k+1}, \ldots, a_n$, say for example, $a_{k+1}$, is changed by an arbitrary factor, and the remaining ones are unchanged. Upon such transition the first argument of $F$ is unchanged arbitrarily, and all other arguments of the function remain unchanged as well as its value $\Pi$. Hence, it follows $\frac{\delta F}{\delta_{a_{k+1}}} = 0$ and entirely analogously $\frac{\delta F}{\delta_{a_{k+2}}} = 0, \ldots , \frac{\delta F}{\delta_{a_n}}=0$. Therefore, the relation \ref{dimensionless-relation} is in fact represented by a function of $k$ arguments and proves it is independent of $a_{k+1}, \ldots, a_n$, that is,
+The quantities $\Pi, \Pi_1,\ldots, \Pi_k$ are obviously dimensionless, and hence upon transition from one system of unit to another inside a given class their numerical values must remain unchanged. At the same time, according to the above, one can pass to a system of units of measurement such that any of the parameters of $a_{k+1}, \ldots, a_n$, say for example, $a_{k+1}$, is changed by an arbitrary factor, and the remaining ones are unchanged. Upon such transition the first argument of $F$ is unchanged arbitrarily, and all other arguments of the function remain unchanged as well as its value $\Pi$. Hence, it follows $\frac{\delta F}{\delta_{a_{k+1}}} = 0$ and entirely analogously $\frac{\delta F}{\delta_{a_{k+2}}} = 0, \ldots , \frac{\delta F}{\delta_{a_n}}=0$. Therefore, the relation (\ref{dimensionless-relation}) is in fact represented by a function of $k$ arguments and proves it is independent of $a_{k+1}, \ldots, a_n$, that is,
 \begin{equation}
 	\Pi = \Phi(\Pi_1, \ldots, \Pi_k)
 	\label{eqn:pi-phi-dimensionless}
 \end{equation}
-and the function $f$ can be written in the following special form (by combining \ref{dimensionless-pi-1, dimensionless-relation,eqn:pi-phi-dimensionless})
+and the function $f$ can be written in the following special form (by combining (\ref{dimensionless-pi-1}, \ref{dimensionless-relation}, \ref{eqn:pi-phi-dimensionless}))
 \begin{equation}
 f(a_1,\ldots,a_k,\ldots,a_n) = a^{\alpha}_{k+1} \ldots a^{\gamma}_n \Phi(\Pi_1, \ldots, \Pi_k)
 \label{special_form}
@@ -105,7 +105,7 @@ equation \ref{special_form} is known as the Buckingham $\Pi$ theorem. It constit
 		S = c^2 \phi(\theta)
 		\label{universal-character-triangle}
 	\end{equation}
-	where the scaling function $\phi(\theta)$ is universal in character. In order to further capture the significance of equation \ref{universal-character-triangle} we rewrite it as
+	where the scaling function $\phi(\theta)$ is universal in character. In order to further capture the significance of equation (\ref{universal-character-triangle}) we rewrite it as
 	\begin{equation}
 		\frac{S}{c^2} \sim \phi(\theta)
 	\end{equation}
@@ -219,7 +219,7 @@ equation \ref{special_form} is known as the Buckingham $\Pi$ theorem. It constit
 		\label{fig:cauliflower-self-similarity}
 	\end{figure}
 	
-	The cauliflower head contains branches or parts, which	when removed and compared with the whole found to be very much	the same except it is scaled down. These isolated branches can again	be decomposed into smaller parts, which again look very similar to the	whole as well as of the branches. Such self-similarity can easily be carried through for about three to four stages. After that the structures are	too small to go for further dissection. Of course, from the mathematical	point of view the property of self-similarity may be continued through	an infinite stages though in real world such property sustain only a few	stages \ref{fig:cauliflower-self-similarity}.
+	The cauliflower head contains branches or parts, which	when removed and compared with the whole found to be very much	the same except it is scaled down. These isolated branches can again	be decomposed into smaller parts, which again look very similar to the	whole as well as of the branches. Such self-similarity can easily be carried through for about three to four stages. After that the structures are	too small to go for further dissection. Of course, from the mathematical	point of view the property of self-similarity may be continued through	an infinite stages though in real world such property sustain only a few	stages (\ref{fig:cauliflower-self-similarity}).
 	
 	\begin{figure}
 		\centering
@@ -252,7 +252,7 @@ equation \ref{special_form} is known as the Buckingham $\Pi$ theorem. It constit
 	\end{figure}
 
 
-	There are plenty of other examples of self similarity in nature. Snowflakes exhibit self-similar branching patterns \ref{fig:example-self-similarity}. The growth in aggregating colloidal particles are statistically self-similar. A leafless tree branches \ref{fig:example-self-similarity} in a self-similar fashion, each length splitting into two or more branches. This branch pattern is repeated on smaller and smaller length scales till the tree top is reached. The veins of the leaves also branch in a self similar manner \ref{fig:example-self-similarity}. The decimal number system is a construct that uses the idea of self-similarity. If we look a meter stick, we shall see that a decimeter range with its marks looks like a meter range with its marks, only smaller by a factor of 10. This pattern of meter stick makes it very easy to note readings. The human brain is also a complex network of neurons which organize in self-similar patterns. From quantum particle paths, lightning bolts, blood vessels \ref{fig:example-self-similarity}, aggregation of bacteria all are example of self-similarity.
+	There are plenty of other examples of self similarity in nature. Snowflakes exhibit self-similar branching patterns (\ref{fig:example-self-similarity}). The growth in aggregating colloidal particles are statistically self-similar. A leafless tree branches (\ref{fig:example-self-similarity}) in a self-similar fashion, each length splitting into two or more branches. This branch pattern is repeated on smaller and smaller length scales till the tree top is reached. The veins of the leaves also branch in a self similar manner (\ref{fig:example-self-similarity}). The decimal number system is a construct that uses the idea of self-similarity. If we look a meter stick, we shall see that a decimeter range with its marks looks like a meter range with its marks, only smaller by a factor of 10. This pattern of meter stick makes it very easy to note readings. The human brain is also a complex network of neurons which organize in self-similar patterns. From quantum particle paths, lightning bolts, blood vessels (\ref{fig:example-self-similarity}), aggregation of bacteria all are example of self-similarity.
 	
 	One thing must be mentioned although it is understandable from the above discussion is that a system is to be called self-similar in the statistical sense even if it is not visible to the eye \cite{Mandelbrot1967}.
 	
@@ -272,7 +272,7 @@ equation \ref{special_form} is known as the Buckingham $\Pi$ theorem. It constit
 	\end{equation}
 	where $x$ is consider independent variable.
 	
-	Buckingham $\pi$-theorem can provide a systematic processing procedure to obtain the dynamic scaling form and at the same time appreciate the fact that the second form is not mathematically sound. An interesting aspect of the structure of the dynamic scaling form given by equation \ref{dynamic scaling definition} is that the distribution function $f(x,t)$ at various moments of time can be obtained from one another by a similarity transformation
+	Buckingham $\pi$-theorem can provide a systematic processing procedure to obtain the dynamic scaling form and at the same time appreciate the fact that the second form is not mathematically sound. An interesting aspect of the structure of the dynamic scaling form given by equation (\ref{dynamic scaling definition}) is that the distribution function $f(x,t)$ at various moments of time can be obtained from one another by a similarity transformation
 	\begin{align}
 		x \rightarrow \lambda^z x \\
 		t \rightarrow \lambda t \\
@@ -284,7 +284,7 @@ equation \ref{special_form} is known as the Buckingham $\Pi$ theorem. It constit
 	\begin{equation}
 	x \sim t^z
 	\end{equation}
-	It implies that we can choose $t^z$ as unit of measurement or yard-stick and quantify $x$ in terms of dimensionless quantity $\xi=x/t^z$. Here, the	quantity $\xi$ is a number that tells how many $t^z$ we need to measure $x$.	If $t$ is independent quantity then we can also express $f$ in units of $t^\theta$	to obtain yet another dimensionless quantity $\phi = f (x, t)/t^\theta$ where the	exponent $\theta$ is fixed by the dimensional requirement $\left[f\right] = \left[t^\theta\right]$. Since $\phi$ is a dimensionless quantity its numerical value can only depend on dimensionless quantity $\xi$ not on a dimensional quantity $t$. We	can then immediately obtain the scaling form given by Eq. \ref{dynamic scaling definition}. On	the other hand, had we choose $x$ to be independent parameter instead of	$t$ then following the same argument we would have the following scaling \ref{dynamic scaling definition 2}.
+	It implies that we can choose $t^z$ as unit of measurement or yard-stick and quantify $x$ in terms of dimensionless quantity $\xi=x/t^z$. Here, the	quantity $\xi$ is a number that tells how many $t^z$ we need to measure $x$.	If $t$ is independent quantity then we can also express $f$ in units of $t^\theta$	to obtain yet another dimensionless quantity $\phi = f (x, t)/t^\theta$ where the	exponent $\theta$ is fixed by the dimensional requirement $\left[f\right] = \left[t^\theta\right]$. Since $\phi$ is a dimensionless quantity its numerical value can only depend on dimensionless quantity $\xi$ not on a dimensional quantity $t$. We	can then immediately obtain the scaling form given by Eq. (\ref{dynamic scaling definition}). On	the other hand, had we choose $x$ to be independent parameter instead of	$t$ then following the same argument we would have the following scaling (\ref{dynamic scaling definition 2}).
 	
 	
 	\subsection{Finite Size Scaling}
@@ -333,7 +333,7 @@ equation \ref{special_form} is known as the Buckingham $\Pi$ theorem. It constit
 	\begin{equation}
 		f(\epsilon, L) \sim L^\theta \phi((T-T_c)L^{1/\nu})
 	\end{equation}
-	which is the same as the traditional scaling form given by \ref{fss 1} if we find $\theta$ negative and it is related to the exponent $\nu$ via $\theta=-\omega/\nu$.\\
+	which is the same as the traditional scaling form given by (\ref{fss 1}) if we find $\theta$ negative and it is related to the exponent $\nu$ via $\theta=-\omega/\nu$.\\
 	A quantitative way of interpreting how the experimental data exhibits finite-size scaling is done by invoking the idea of data-collapse method - an idea that goes back to the original observation of Rushbrooke. That is, the values of $f(\epsilon,L)$ for different system size $L$ can be	made to collapse on a single curve if $f L^{\omega/\nu}$ is plotted against $\epsilon L ^{1/\nu}$ . It	implies that systems of different sizes are all similar that also include	system where $L \rightarrow \infty$. The method of data-collapse therefore comes as	a powerful means of establishing scaling. It is extensively used to analyze and extract exponents especially from numerical simulations. We	shall elucidate it further in the upcoming chapters.
 	
 	
@@ -350,13 +350,14 @@ equation \ref{special_form} is known as the Buckingham $\Pi$ theorem. It constit
 	
 	
 	\subsection{One variable function}
+	\label{subsect.one-variable-function}
 	A function is called scale-invariant or scale-free if it retains its form keeping all its characteristic features intact even if we change the measurement unit or scale. Mathematically, a function $f(r)$ is called scale-invariant or scale-free if it satisfies
 	\begin{equation}
 		f(\lambda x) = g(\lambda) f(x) \ \forall \lambda
 		\label{scale free eqn}
 	\end{equation}
-	where $g(\lambda)$ is yet unspecified function. That is, one is interested in the shape of $f(\lambda x)$ for some scale factor $\lambda$ which can be taken to be a length or size rescaling. For instance dimensional functions of physical quantity are always scale-free since they obey power monomial law. It can be rigorously proved that the function that satisfies \ref{scale free eqn} should always have power law of the form $f(x) \sim x^{-\alpha}$.\\
-	Let us first set $r=1$ to obtain $f(\lambda) = g(\lambda)f(1)$. Thus $g(\lambda)=f(\lambda)/f(1)$ and equation \ref{scale free eqn} can be written as
+	where $g(\lambda)$ is yet unspecified function. That is, one is interested in the shape of $f(\lambda x)$ for some scale factor $\lambda$ which can be taken to be a length or size rescaling. For instance dimensional functions of physical quantity are always scale-free since they obey power monomial law. It can be rigorously proved that the function that satisfies (\ref{scale free eqn}) should always have power law of the form $f(x) \sim x^{-\alpha}$.\\
+	Let us first set $r=1$ to obtain $f(\lambda) = g(\lambda)f(1)$. Thus $g(\lambda)=f(\lambda)/f(1)$ and equation (\ref{scale free eqn}) can be written as
 	\begin{equation}
 		f(\lambda x) = \frac{f(\lambda) f(x)}{f(1)}
 	\end{equation}
@@ -372,7 +373,7 @@ equation \ref{special_form} is known as the Buckingham $\Pi$ theorem. It constit
 	\begin{equation}
 		f(x) = f(1) x^{-\alpha}
 	\end{equation}
-	where $\alpha = - f(1) / f^\prime (1)$. There it is proven that the power law is the only solution that can satisfy \ref{scale free eqn}. We can also prove that $g(\lambda)$ has a power law form as well.\\
+	where $\alpha = - f(1) / f^\prime (1)$. There it is proven that the power law is the only solution that can satisfy (\ref{scale free eqn}). We can also prove that $g(\lambda)$ has a power law form as well.\\
 	Power law distribution of the form $f(x) \sim x^{-\alpha}$ are said to be scale free since the ratio $\frac{f(\lambda r)}{f(x)}$ depends on $\lambda$ alone. Thus the distribution does not need a characteristic scale. If we change the unit of measurement of $x$ by a factor of $\lambda$, the numerical value of $f(x)$ will change by a factor of $g(\lambda)$, without affecting the shape of the function $f$. 
 	
 	
@@ -383,7 +384,7 @@ equation \ref{special_form} is known as the Buckingham $\Pi$ theorem. It constit
 		f(\lambda^a x, \lambda^b y) = \lambda f(x,y)
 		\label{generalized homogeneous function}
 	\end{equation}
-	where $a,b$ are arbitrary numbers. In contrast to the homogeneous functions defined in the previous section \ref{label} generalized homogeneous functions can not be written as $f(\lambda x, \lambda y) = \lambda^p f(x,y)$, because \ref{generalized homogeneous function} can not be generalized any further to the following form,
+	where $a,b$ are arbitrary numbers. In contrast to the homogeneous functions defined in the previous section (\ref{subsect.one-variable-function}) generalized homogeneous functions can not be written as $f(\lambda x, \lambda y) = \lambda^p f(x,y)$, because (\ref{generalized homogeneous function}) can not be generalized any further to the following form,
 	\begin{equation}
 		f(\lambda^a x, \lambda^b y) = \lambda^p f(x,y)
 	\end{equation}
@@ -391,7 +392,7 @@ equation \ref{special_form} is known as the Buckingham $\Pi$ theorem. It constit
 	\begin{equation}
 		f(\lambda^{a/p} x, \lambda^{b/p} y) = \lambda f(x,y)
 	\end{equation}
-	Similarly an statement converse is also valid and the equation above is no more general than the form in the equation \ref{generalized homogeneous function}. Another equivalent form of \ref{generalized homogeneous function}  is as follows,
+	Similarly an statement converse is also valid and the equation above is no more general than the form in the equation (\ref{generalized homogeneous function}). Another equivalent form of (\ref{generalized homogeneous function})  is as follows,
 	\begin{equation}
 		f(\lambda x, \lambda^b y) = \lambda^p f(x,y)
 	\end{equation}
@@ -399,7 +400,7 @@ equation \ref{special_form} is known as the Buckingham $\Pi$ theorem. It constit
 	\begin{equation}
 		f(\lambda^a x, \lambda y) = \lambda^p f(x,y)
 	\end{equation}
-	Note that there are at least two undetermined parameters $a$ and $b$ for a generalized homogeneous function. Now let use see what happens if we choose $\lambda^a = 1/x$ to set in equation \ref{generalized homogeneous function},
+	Note that there are at least two undetermined parameters $a$ and $b$ for a generalized homogeneous function. Now let use see what happens if we choose $\lambda^a = 1/x$ to set in equation (\ref{generalized homogeneous function}),
 	\begin{align}
 		f(1, \frac{y}{x^{b/a}}) &= x^{-\frac{p}{a}} \\
 		f(x,y) &= x^{p/a} f(y/x^{b/a})

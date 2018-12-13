@@ -1,0 +1,711 @@
+\documentclass[twocolumn,showpacs,preprintnumbers,amsmath,amssymb]{article}
+%\documentclass[preprint,showpacs,preprintnumbers,amsmath,amssymb]{revtex4}
+
+% Some other (several out of many) possibilities
+%\documentclass[preprint,aps]{revtex4}
+%\documentclass[preprint,aps,draft]{revtex4}
+%\documentclass[prb]{revtex4}% Physical Review B
+
+%\usepackage{graphics}
+\usepackage[unicode]{hyperref}
+\usepackage[caption=false]{subfig}
+\usepackage{graphicx}
+%\usepackage{epstopdf}
+%\usepackage{epsfig}
+%\usepackage{graphicx}% Include figure files
+\graphicspath{ {./images/} }
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage[caption=false]{subfig}
+%\graphicspath{ /home/MK-Hassan/Digonto_paper/ }
+%\nofiles
+
+
+
+\begin{document}
+
+%\preprint{APS/123-QED}
+\title{Redefinition of site percolation in light of entropy and the second law of thermodynamics  
+}%
+
+\author{ M. S. Rahman and M. K. Hassan 
+}%
+%\email[REVTeX Support: ]{revtex@aps.org}
+%\affiliation{1 Research Road, Ridge, NY 11961}
+\date{\today}%
+
+%\affiliation{
+%University of Dhaka, Department of Physics, Theoretical Physics Group, Dhaka 1000, Bangladesh \\
+%}
+
+\begin{abstract}
+In this article, we revisit random site and bond percolation in square lattice focusing primarily 
+on entropy which quantifies the degree of disorder and order parameter
+that measures the extent of order. Note that being two opposite quantities they can neither be
+minimum nor be maximum at the same time which is perfectly consistent 
+with bond percolation. However, the same is  not true for traditional site
+percolation as we find that entropy and order parameter are both zero at occupation 
+probability $p=0$ and the way entropy behaves it violates the second law of thermodynamics. To overcome this we redefine the site percolation 
+where we occupy sites to connect bonds and we measure cluster size by the number of bonds connected by occupied sites. 
+This resolves the problem without affecting any of the existing known results whatsoever.
+\end{abstract}
+
+%\pacs{61.43.Hv, 64.60.Ht, 68.03.Fg, 82.70.Dd}
+
+\maketitle
+
+\section{Introduction}
+
+Percolation has been studied extensively in statistical physics due to the simplicity of its 
+definition and the versatility of its application in seemingly disparate complex systems. 
+The reason for its simplicity is that it requires neither quantum nor
+many particle interaction effects and yet it can describe phase transition
+and critical phenomena \cite{ref.Stauffer, ref.saberi}. 
+To define it we first need to choose a skeleton. It can either be an abstract graph which is now
+better known as network or be a spatially embedded lattice
+which are consist of nodes or site and links or bonds.  
+A square lattice of linear size $L$ has 
+$L^2$ sites connected by $2L^2$  bonds with periodic boundary condition and by
+$2L(L-1)$ bonds without periodic boundary condition. Percolation 
+is known as site or bond type depending on whether we occupy sites or bonds respectively.
+In the case of random bond percolation, we assume that all the labelled
+bonds are initially frozen. The rule  is then  to choose 
+one frozen bond at each step randomly with uniform probability and occupy it. We continue the process one by one till the 
+occupation probability $p$, fraction of the total bonds being occupied, reaches to unity. 
+At $p=0$ each site is a cluster of its own size and as $p$ is tuned towards increasing $p$
+then we observe clusters, a group of sites connected by occupied bonds, are continuously
+formed and grown on the average. In the process there 
+comes a critical state when occupation of just one more bond results in the emergence of a 
+cluster that spans 
+across the entire system for the first time. Interestingly, we find that the way the 
+relative size of the spanning cluster $P=s_{{\rm span}}/N$ varies 
+with $p$ such that $P=0$ for $p\geq p_c$ and $P\sim (p-p_c)^\beta$. This is reminiscent of the order parameter of continuous phase transition
+and hence $P$ is regarded as the order parameter for percolation \cite{ref.Stanley, ref.Binney}.
+This is one of the reasons why scientists in general and physicists in particular find percolation theory so attractive. 
+ 
+%%%%%%%%%%%
+
+We still have many unresolved issues in percolation.  For instance, we know that the
+order parameter measures the extent of order but we do not yet 
+know what order really is in percolation. Note that $P=0$
+in the entire disordered phase at least in the thermodynamic limit. We therefore need another
+quantity that can quantify the degree of disorder in the disordered phase. 
+The obvious choice is entropy without which
+any model for phase transition is incomplete since, like order parameter, it is also used to define
+the order of transition. In the case of first order transition, entropy is discontinuous
+at the critical point and the corresponding gap is proportional to the latent heat.
+Despite being such an important quantity, its definition remained elusive in percolation until our 
+recent work in 2017 \cite{ref.hassan_didar, ref.hassan_sabbir}. 
+ Note that both entropy and the order
+parameter cannot be minimally low or maximally high at the same time since no system 
+can be in the ordered and disordered at the same time. Thus, they form such a pair that 
+when one is minimally low the other has to be maximally
+high and vice versa. Moreover, the two quantities together characterize whether the transition 
+is accompanied by symmetry breaking or not. 
+Recall that in the continuous thermal phase transition, such as paramagnetic to 
+ferromagnetic transition, the order parameter is maximum, $m\rightarrow 1$ 
+as temperature $T\rightarrow 0$, where entropy is minimum there. On the other hand, the order parameter 
+is zero or minimum where the entropy is maximally high. Meanwhile at and near the critical 
+point both the quantities undergo an abrupt change. It implies that the paramagnetic
+to ferromagnetic transition is an order-disorder transition which also means that the transition
+is accompanied by symmetry breaking. Besides phase transition the percolation model 
+has also been applied to a wide variety of natural and social phenomena  such as the spread of
+disease in a population \cite{ref.Murray}, flow of fluid through porous media \cite{ref.fluids}, 
+conductor-insulator composite materials \cite{ref.McLachlan}, resilience of systems \cite{ref.barabasi_1, ref.pastor}, 
+dilute magnets  \cite{ref.Bergqvist}, the formation of public opinion \cite{ref.Watts, ref.Shao, ref.opinon_1}
+and spread of biological and computer viruses leading to epidemic \cite{ref.Newman_virus, ref.Moore_virus}.
+
+
+
+
+In this article, we revisit the random bond and site percolation in the square lattice. 
+Our primary focus is on entropy and order parameter. For bond percolation,
+we find that entropy is maximum where order parameter is minimum and vice versa. 
+However, the same is not true for the traditional site percolation as 
+we find that initially both entropy and order parameter are equal to zero which 
+is absurd since it means that the system is in ordered and disordered state at the same time.
+Moreover, we find that entropy first increases from zero to its maximum value and
+then decreases to zero again which violates the second law of thermodynamics which
+states that entropy of an isolated system can never increase and then decrease again.
+We therefore give a new definition for site percolation 
+where we assume that bonds are already present in the system and we occupy sites to connect the bonds.
+In this new definition we measure cluster size in terms of the number 
+of connected bonds it contains. Note that currently a cluster in site percolation
+is defined as the number of contiguous occupied sites which means initially the there is no cluster
+at all. This redefinition solves the problem we just stated as we find that entropy and order parameter are now exactly like
+bond percolation which is consistent with the second-law of thermodynamics.
+We then attempt to give a physical interpretation of order and disorder for percolation.
+Furthermore, the opposing nature of order parameter and entropy suggest that percolation
+transition is accompanied by symmetry breaking like ferromagnetic transition. 
+ Besides, we reproduce all the known results for redefined site percolation which confirms that 
+random bond and re-defined site percolation belong to the same universality class. 
+
+The rest of the articles is organised as follows. 
+
+
+\section{Newman-Ziff (NZ) algorithm}
+
+To study random percolation, we use Newman-Ziff (NZ) algorithm as 
+it helps calculating various observable quantities over the entire range of $p$ in every 
+realization instead of measuring them for a fixed probability $p$ in each realization \cite{ref.Ziff}.
+On the other hand, in classical Hoshen-Koppelman (HK) we can only measure an observable quantity
+for a given $p$ in every realization and this is why NZ is more efficient than HK \cite{ref.hoshen}.
+To illustrate the idea we consider the case of bond percolation first. 
+According to the NZ algorithm, all the labelled bonds $i=1,2,3,..., M$ 
+are first randomized and then arranged in an order 
+in which they will be occupied. Note that the number of bonds with periodic
+boundary condition is $M=2L^2$. In this way we 
+can create percolation states consisting of $n+1$ occupied bonds
+simply by occupying one more bond to its immediate past state consisting of $n$ occupied 
+bonds. Initially, there are $N=L^2$ clusters of size one.
+Occupying the first bond  means forming a cluster of size two (four). However, 
+as we keep occupying thereafter, average or mean cluster size keep growing 
+at the expense of decreasing cluster number. Interestingly, all the observables in percolation, this
+way or another, related to cluster size and hence proper definition of cluster is crucial.
+One of the advantages of the NZ algorithm is that we calculate an observable, say $X_n$, as 
+a function of the number of occupied bonds (sites) $n$ and use the resulting data in the convolution relation
+\begin{equation}
+\label{eq:convolution}
+X(p)=\sum_{n=1}^N p^n(1-p)^{N-n} X_n,
+\end{equation}
+to obtain $X(p)$ for any value of $p$. 
+The appropriate weight factor for each $n$ at a given $p$ is $\sum_{n=1}^N p^n(1-p)^{N-n}$ \cite{ref.Ziff}. 
+The convolution relation takes care of that weight factor and hence helps obtaining a smooth curve for $X(p)$.  
+
+
+
+
+
+\section{Definition of Entropy and Order Parameter}
+
+The two most important quantities of interests in the theory of phase transition and critical phenomena 
+are the entropy $H$ and the order parameter $P$ since they are the ones
+which define the nature of transition. In the first order or discontinuous phase transition,
+ entropy must suffers a jump or discontuinity at the critical point which is 
+why first order transition
+requires latent heat. Similarly, the order parameter too must suffer a jump or discontinuity at
+the critical point and that is the why new and old 
+phase can coexist at the same time in the first order transition. Besides, they are also used as a litmus test to check
+whether the transition is accompanied by symmetry breaking or not. In the case of symmetry breaking,
+the system undergoes a transition from the disordered state, which is characterized by maximally high
+entropy, to the ordered state, which is characterized by maximally high order parameter. 
+Such transition happens with an abrupt or sudden
+change in $P$ and $H$ but without gap or discontinuity at $p_c$. 
+Percolation being a probabilistic model for phase transition, there is
+absolutely no room for considering thermal entropy. To this end, the 
+best candidate is definitely the Shannon entropy  
+\begin{equation}
+\label{eq:shannon_entropy}
+H(t)=-K\sum_i^m \mu_i\log \mu_i,
+\end{equation} 
+where we choose $K=1$ since it merely amounts to a choice of a unit of measure of entropy 
+\cite{ref.shannon}. 
+
+
+%\section{Order parameter}
+
+On the other hand, the strength $P(p,L)$ of the spanning cluster for system size $L$
+is define as 
+\begin{equation}
+\label{eq:pp1}
+P={{{\rm Number \ of \ bonds \ in \ the \ spanning \ cluster}}\over{{\rm Total \ 
+number \ of \ bonds }=2L^2}}.
+\end{equation}
+Essentially, it describes the probability that a site 
+picked at random belongs to the spanning cluster at occupation probability $p$ for system size $L$.
+It has been found that in the limit $L\rightarrow \infty$ the probability $P(p,L)=0$ 
+for $p\leq p_c$ and it reaches to its maximum value $P(p,L)=1$ 
+following power-law $P\sim (p-p_c)^\beta$ near but above $p_c$. This is reminiscent 
+of the order parameter in the continuous thermal phase transition like magnetization
+during the ferromagnetic transition.  However, for finite system size $P(p,L)$ may have non-zero
+value at $p<p_c$. However, as we increase the size $L$ of the system it always shows a clear sign
+of becoming zero. There exists yet another definition where 
+we can use the size of the largest cluster instead of the spanning cluster. Note that both the definitions 
+behave in the same fashion and have all the properties of the order parameter. That is,  
+in the limit $L\rightarrow \infty$, 
+$P=0$ for $p\leq p_c$ and it rises from $P=0$ at $p_c$ to $P=1$ continuously and monotonically like $P\sim (p-p_c)^\beta$. 
+Such behavior is reminiscent of order parameter like magnetization $m$ in the ferromagnetic transition and
+hence $P$ is regarded as the order parameter in percolation theory. 
+
+
+
+\begin{figure}
+
+\centering
+
+
+%\subfloat[]
+%{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{sq_lattice_bond_percolation_2.eps}
+%\label{fig:bond_a}
+%}
+
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{sq_latt_bond_perco_periodic_entropy.eps}
+\label{fig:1a}
+}
+
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{sq_traditional_site_percolation.eps}
+\label{fig:1b}
+}
+
+\caption{(a) Entropy $H$ versus $t$ for bond percolation. (b) Entropy (blue) and order parameter (orange) 
+for traditional site percolation. 
+} 
+
+\label{fig:1ab}
+\end{figure}
+
+
+\section{Problem for entropy with traditional site percolation}
+
+We first measure entropy for random bond percolation
+where initially every site is a cluster of its own size. As 
+we keep occupying or reactivating frozen bonds, clusters are continuously formed and
+their sizes on average are grown. Consider that at an arbitrary step of the process
+there are $m$ distinct, disjoint, and indivisible labelled clusters $i=1,2,...,m$ 
+whose sizes are $s_1,s_2,....,s_m$ respectively. We can therefore define 
+ $\mu_i=s_i/\sum_i s_i$ as the corresponding cluster picking probability (CPP),
+that a site picked at random belongs to the cluster $i$, which is naturally normalized  $\sum_j s_j=N$  
+\cite{ref.hassan_didar, ref.Hassan_Rahman_1}. Thus, at $p=0$ we have 
+$\mu_i=1/N$ for all the sites $i=1,2,...,N=L^2$ which is exactly like the state 
+of the isolated ideal gas where all the allowed microstates are equally likely.
+It is thus expected that entropy is maximum $H=\log N$ at $p=0$ revealing  that we are in a state of 
+maximum uncertainty just like the state of the isolated ideal gas.  
+On the other hand, as we go to the other extreme at $p=1$ we find that all the 
+sites belong to one cluster that makes  $\mu_1=1$. It implies
+that entropy is zero at $p=1$ and hence we are in a state of zero uncertainty just like the perfectly 
+ordered crystal structure. In order to see how entropy interpolates between $p=0$ and $p=1$,
+we use CPP in Eq. (\ref{eq:shannon_entropy}) and the resulting entropy is shown
+in  Fig. (\ref{fig:1a}) as a function of $p$ for different system size. 
+
+
+
+
+
+
+
+To see how entropy for random site percolation 
+differs from that of the bond type we now measure entropy for traditional definition of site percolation. In this case,
+ it is assumed that initially all the sites are frozen or empty.
+The process starts with occupation of sites one by one at random and measure
+the cluster size exactly like in the bond percolation.
+It means initially CPP does not exist and after the occupation of the first site $\mu=1$ 
+and hence entropy $H=0$ at $p=1/N$ which is essentially zero
+in the limit $N\rightarrow \infty$.
+As we further occupy sites, we observe a sharp rise in the entropy to its maximum value, 
+see Fig. (\ref{fig:1b}), which happens near $p=0.2$. Thereafter it decreases 
+with $p$ qualitatively in the same way as in the case of random bond type percolation. To see the
+contrast we also show the order parameter also in Fig. (\ref{fig:1b}). This figure
+suggest that at $p\sim 0$ entropy and order parameter  both 
+are zero which cannot be true. Besides, entropy of site percolation violates
+the second law of thermodynamics as it states that entropy of isolated system cannot first
+increase and then decrease again. It thus warrants redefinition of site percolation. 
+
+
+\begin{figure}
+
+\centering
+
+
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{image_sq_lattice_site.eps}
+\label{fig:site_b}
+}
+
+\caption{Illustration of redefined site percolation on square lattice. We assume that process
+starts with isolated bonds (thick black 
+lines)  but sites are empty (white circles).
+} 
+
+\label{fig:site_ab}
+\end{figure}
+
+
+
+\section{Site percolation re-defined}
+
+The questions is: How can we resolve the problem with the definition of traditional site percolation?
+We can get the definition of site percolation
+from the definition of bond percolation simply by replacing bonds with site and vice versa.
+That is, we assume that initially isolated bonds are already
+there in the system which are shown in Fig. (\ref{fig:site_ab}) by the thick black lines and sites
+are empty (white corcles). We then keep picking one site at each step with uniform probability
+and occupy it to connect four bonds around it.   
+We measure cluster size by the number of bonds that it contains and occupation probability as the fraction of the sites
+being occupied. For instance, the cluster of size four is shown in Fig. (\ref{fig:site_b}) by green color.
+Using this renewed definition, we again measure entropy and find entropy is just like
+its bond counterpart. That is, entropy is 
+maximum at $p=0$ and  as $p$ approaches $p_c$ it drops sharply. It then again decreases slowly
+to zero as $p$ reaches its maximum value $p=1$ which is shown in Fig. (\ref{fig:2a}). We
+clearly see that its qualitative behaviour is exactly the same as   Fig. (\ref{fig:1a}) for the bond 
+percolation and hence the problem of absurdity, that entropy and order parameter both
+equal to zero at $p=0$, and the violation of the second law of thermodynamics are resolved.
+
+
+
+\begin{figure}
+
+\centering
+
+
+
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{site_entropy_redefined.eps}
+\label{fig:2a}
+}
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{site_entropy-order_parameter-L400.eps}
+\label{fig:2b}
+}
+
+
+\caption{Illustration of (a) bond and (b) site percolation. Here we plot entropy $H(t)/H(0)$ and order parameter $P(t)/P(1)$
+in the same graph to see the contrast.  It can be easily seen that $P=0$ where
+entropy is maximally high and order parameter is maximally high where entropy is minimally low
+which is reminiscent of order-disorder transition in the ferromagnetic transition.
+} 
+
+\label{fig:bond_site_ab}
+\end{figure}
+
+Perhaps plots of entropy and order parameter
+in the same graph can help us appreciate their opposing nature better than they are shown separately. 
+Note that the numerical value of the maximum 
+entropy, which is equal to $\log (N)$, is much higher than the maximum value of $P$ which is equal to one. 
+We, therefore, measure relative entropy $H(p)/H(0)$ and relative order parameter $P(p)/P(1)$ 
+in an attempt to re-scale their values so that in either cases their respective maximum values become
+unity. The plots of re-scaled entropy and order parameter
+are shown in Fig. (\ref{fig:2b}) which clearly shows that $H$ is maximally high where $P=0$ and the order parameter is maximally high 
+where $H$ is minimally low. Besides, they both undergo a sharp change in the vicinity of the critical point $p_c$ and consistent with the second law of thermodynamics. This is exactly what is expected as order
+parameter measures the extent of order and entropy quantifies the degree of disorder. 
+It means that percolation transition 
+is accompanied by symmetry breaking just like paramagnetic to ferromagnetic
+transition. In other words 
+it is an order-disorder transition since in one phase $P=0$ and $H$ is maximally high revealing
+it corresponds to disordered phase and in the other phase $P$ is maximally height but $H$ is minimally low revealing
+it is the ordered phase.
+
+
+ 
+
+\begin{figure}
+
+\centering
+
+
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{spanning_prob_site.eps}
+\label{fig:3a}
+}
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{Spanning_probability_without.eps}
+\label{fig:3b}
+}
+\caption{(a) Spanning probability $W(p,L)$ vs $p$ for different lattice sizes using new definition
+of site percolation. 
+In (b) we plot dimensionless quantities $W$ vs $(p-p_c)L^{1/\nu}$ using known value of $\nu=4/3$
+and find excellent data-collapse which is a proof that bond-site still belong to the same universality class.
+} 
+
+\label{fig:3ab}
+\end{figure}
+
+
+
+\section{Is site-bond universality still valid?}
+
+
+We now check if the re-defined site percolation still gives the
+same critical point $p_c=0.5927$ and the same the critical exponent $\nu$ of the equivalent
+counterpart of the coorelation length or not.
+The best quantity for finding the critical point $p_c$ and critical exponent $\nu$ is the
+spanning probability $W(p)$. It describes the likelihood of finding a 
+cluster that spans across the entire system
+either horizontally or vertically at a given occupation probability $p$.
+In Fig. (\ref{fig:3a}) we show $W(p)$ as a function of suitable class of width $\Delta p$
+which is essentially the plot os $W(p)$ as a function of
+$p$ for different system sizes $L$. One of the significant features of such plots is that they all 
+meet at one particular value regardless of the value of $L$. It 
+is actually the critical point $p_c=0.5927$
+which is exactly the same known value as for the traditional definition of site percolation. 
+Thus, the value of $p_c$ does not depend on whether we measure the cluster size
+in terms of the number of sites or the number of bond it contains.
+Note that finding the $p_c$ value for different skeletons
+is one of the central problems in percolation theory \cite{ref.ziff_pc_1, ref.ziff_pc_2}. 
+To check whether the $\nu$ value is still the same we use its standard known value
+$\nu=4/3$ \cite{ref.ziff_nu}. We then plot of $W(p)$ vs $(p_c- p)L^{{{1}\over{\nu}}}$ and
+find that all the distinct curves of Fig. (\ref{fig:3a}) collapse into a universal 
+scaling curve as shown in Fig. (\ref{fig:3b}) for $\nu=4/3$. This is a clear testament
+that the critical point $\nu$ is also the same as that of the traditional site percolation.  
+
+
+
+
+\begin{figure}
+
+\centering
+
+
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{Site_order_paramer.eps}
+\label{fig:4a}
+}
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{order_parameter-data_collapse_without.eps}
+\label{fig:4b}
+}
+\caption{(a) Order parameter $P(p,L)$ vs $p$ for re-defined site percolation in the square lattice. 
+(b) We plot $P(p,L)L^{\beta/\nu}$ versus $(p-p_c)L^{1/\nu}$ using know value of $\nu=4/3$ and $\beta=5/36$. 
+An excellent data collapse proves that our way defining site percolation can still reproduce the
+same critical exponents. 
+} 
+
+\label{fig:4ab}
+\end{figure}
+
+
+
+
+Next we attempt to find the critical exponent $\beta$ of the order parameter $P$ using 
+the new definition of site percolation.
+First we plot order parameter $P(p)$ in Fig. (\ref{fig:4a})  as a function of $p$ for different
+lattice size $L$. We now use the
+standard known values for $\nu=4/3$ and $\beta/\nu=0.104$ and plot  $P(p,L)L^{\beta/\nu}$ versus
+$(p-p_c)L^{1/\nu}$ in Fig.  Fig. (\ref{fig:4b}). We get an excellent data collapse revealing that the new definition of site
+percolation reproduces the known value of $\beta=0.1388$ in $2d$ random percolation. 
+It confirms that the site-bond universality
+is not affected by the new definition. Recently, we have also studied random percolation 
+on scale-free lattice and found that $\beta=0.222$ 
+\cite{ref.Hassan_Rahman_1}. 
+This is the only exception that, despite the dimension of the embedding space of the scale-free weighted planar stochastic lattice is two, yet it belongs to different universality class. 
+
+
+
+
+\begin{figure}
+
+\centering
+
+
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{re_defined_specific_heat.eps}
+\label{fig:5a}
+}
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{re_defined_sp_heat_data_collapse.eps}
+\label{fig:5b}
+}
+\caption{Specific heat $C(p,L)$ vs $p$ in square lattice for re-defined site percolation. 
+ In (b) we plot dimensionless quantities $CL^{-\alpha/\nu}$ vs $(p-p_c)L^{1/\nu}$ and we find an excellent data-collapse.
+} 
+
+\label{fig:5ab}
+\end{figure}
+
+
+
+ Knowing the entropy pave the way of obtaining the
+specific heat since we know that it is proportional to the first derivative of entropy
+i.e. $C=TdS/dT$ where $S$ is the thermal entropy. If we now know the exact equivalent 
+counterpart of temperature
+then we can immediately obtain the specific heat for percolation. In our recent work we
+argued that $1-p$ is the equivalent counterpart of temperature and hence the specific
+heat for percolation is 
+\begin{equation}
+C(p)=(1-p){{dH}\over{d(1-p)}}.
+\end{equation}
+ The plots of $C(p)$ as a function of $p$ for different
+system size $L$ is shown in Fig. (\ref{fig:5a}). 
+We already know the value of $\alpha=0.906$ from our recent work on bond percolation in
+the square lattice \cite{ref.hassan_didar}. Using the the same values for $\alpha$ and $\nu$
+we plot $CL^{-\alpha/\nu}$ vs $(p-p_c)L^{1/\nu}$ in Fig. (\ref{fig:5b}) and find an excellent 
+data collapse. It confirms that $\alpha= 0.906$ is indeed the
+same for both bond and redefined site percolation.
+
+
+
+\begin{figure}
+
+\centering
+
+
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{re_def_susceptibility.eps}
+\label{fig:6a}
+}
+
+\subfloat[]
+{
+%\includegraphics[height=6.5 cm, width=8.5 cm, clip=true]
+%{re_def_sus_data_collapse.eps}
+\label{fig:6b}
+}
+\caption{(a) Plots of susceptibility $\chi(p)$ for redefined site percolation as a
+function of $p$ in square lattice of different sizes. 
+ In (b) we plot dimensionless quantities $\chi L^{-\gamma/\nu}$ vs $(p-p_c)L^{1/\nu}$ and we find an excellent data-collapse with $\gamma=0.853$ which is the same as for bond type.
+} 
+
+\label{fig:6ab}
+\end{figure}
+
+
+
+
+In percolation, yet another quantity of interest is the susceptibility. 
+Traditionally, mean cluster size
+has been regarded as the equivalent counterpart of susceptibility. Sometimes variance of the order parameter $\sqrt{\langle P^2\rangle -\langle P\rangle^2}$ too is
+regarded as susceptibility. Neither of the two actually gives respectable value for $\gamma$ to obey the
+Rusbrooke inequality. Recently, we proposed susceptibility $\chi(p,L)$ for percolation as
+the ratio of the change
+in the order parameter $\Delta P$  and the magnitude of the time interval $\Delta t$ during which 
+the change $\Delta P$  occurs.  Essentially it becomes the derivative of the order parameter $P$ since
+$\Delta p\rightarrow 0$ in the limit  $N\rightarrow \infty$ as $\Delta p={{1}\over{2L^2}}$. The idea
+of jump has been studied first by Manna in the context of explosive percolation \cite{ref.manna}.
+ The resulting susceptibility is shown
+in Fig. (\ref{fig:6a}) as a function of $p$. We already know that $\gamma/\nu=0.6407$ for 
+bond percolation in the square lattice. Using the same value for redefined
+site percolation in the plot of $\chi L^{-\gamma/\nu}$ vs $(p-p_c)L^{1/\nu}$ 
+we find that all the distinct curves in Fig. (\ref{fig:6a}) collapse superbly. It implies
+once again that bond and redefined site percolation share the same $\gamma$ value.
+
+
+
+\section{Conclusions}
+
+In this article we first discussed entropy for percolation. Note that percolation
+is a probabilistic model and hence Shannon entropy is the only hope if we want to measure entropy 
+for percolation. To measure the Shannon entropy for percolation we 
+have defined the cluster picking probability $\mu_i$ that a site is picked at random belongs to
+the labelled cluster $i$. It gives entropy which is consistent with the behaviour 
+of the order parameter. Essentially entropy measures 
+the degree of disorder while order parameter measures the extent of order. Thus, entropy and order parameter cannot be minimum or maximum 
+at the same state since the system cannot be in most disordered and most ordered state at the same time.
+However, by measuring entropy and order parameter using existing definition for site percolation, we find
+that at $p=0$ both order parameter and entropy equal 
+to zero which is absurd. It demands immediate correction to the definition of entropy and we obliged. 
+Note that in the bond percolation we occupy bond to connect sites and measure clusters by the
+number of sites. In analogy with that we redefine the site percolation as follows. We occupy sites to connect 
+bonds which are assumed to exist already in the system and measure clusters in terms of the number of bonds. On the other hand, occupation probability in the bond (site) percolation is the fraction of bonds (sites) occupied
+in the system. With this new definition we have found the entropy behaves exactly in the same way as 
+it does in the case of its bond counterpart. Thus the conflict that the system is in ordered and disordered 
+at the same state is resolved. 
+
+
+The question that arises then is: Do we recover all the known results? To verify
+this we obtained all the necessary critical exponents with the new definition for 
+site percolation. Earlier it was well-known that bond and site percolation belong to the
+same universality class regardless of the nature of lattice but have the same dimension.
+We have confirmed that bond and redefined site percolation still belong to the same universality class. 
+Note that scaling theory predicts that the various critical exponents cannot just assume values 
+independently  rather they are bound by some scaling and hyperscaling relations. One
+of the most interesting relations is the Rushbrooke inequality $\alpha+2\beta+\gamma\geq 2$.
+Substituting our values of $\alpha=0.906$, $\gamma=0.853$ and already
+known value of $\beta=5/36$ we find $\alpha+2\beta+\gamma=2.037$. 
+We can thus conclude that the RI holds almost as equality but marginally greater
+than $2$. We hope the present work will have significant impact in the future research of percolation
+theory.
+
+\begin{thebibliography}{99}
+ 
+ 
+\bibitem{ref.Stauffer} D. Stauffer and A. Aharony, {\it Introduction to Percolation Theory} (Taylor 
+$\&$ Francis, London, 1994).
+ \bibitem{ref.saberi} A. A. Saberi, Phys. Rep. {\bf 578} 1 (2015).
+\bibitem{ref.Stanley} H. E. Stanley, {\it Introduction to Phase Transitions and 
+Critical Phenomena} (Oxford University Press, Oxford and New York 1971).
+\bibitem{ref.Binney} J.  J.  Binney,  N.  J.  Dowrick,  A.  J.  Fisher,  and  M.  E.  J.  Newman,  {\it The  Theory  of Critical  Phenomena}  (Oxford University Press, New York, 1992).
+%\bibitem{ref.broadbent} S. R. Broadbent and J. M. Hammersley, Proc. Cambridge Philos. Soc. {\bf 53} 629 (1957).
+\bibitem{ref.hassan_didar} M. K. Hassan, D. Alam, Z. I. Jitu and M. M. Rahman, Phys. Rev. E, {\bf 96} 050101(R) (2017).
+\bibitem{ref.hassan_sabbir} M. M. H. Sabbir and M. K. Hassan, Phys. Rev. E {\bf 97} 050102(R) (2018).
+%\bibitem{ref.Schwabl} F. Schwabl, {\it Statistical Mechanics}, (Springer-Verlag, New York 2006).
+\bibitem{ref.Murray} J. D. Murray, Mathematical Biology, 3rd edn. (Springer,
+Berlin, 2005).
+\bibitem{ref.fluids} W. B. Dapp and M. H. M\"{u}ser, Scientific Reports {\bf 6} 19513 (2016).
+\bibitem{ref.McLachlan} D. S. McLachlan, M. Blaszkiewicz and R. E. Newnham,
+J. Am. Ceram. Soc. {\bf 73} 2187 (1990).
+\bibitem{ref.barabasi_1}  R. Albert, H. Jeong, and A.-L. Barab\'{a}si, Nature {\bf 406} 378 (2000).
+\bibitem{ref.pastor} R. Pastor-Satorras and A. Vespignani, Phys. Rev. Lett. {\bf 86}
+3200 (2001).
+\bibitem{ref.Bergqvist}  L. Bergqvist, O. Eriksson, J. Kudrnovsk4y, V. Drchal,
+P. Korzhavyi and I. Turek Phys. Rev. Lett. {\bf 93} 137202 (2004).
+\bibitem{ref.Watts} D. J. Watts, Proc. Natl. Acad. Sci. 99, 5766 (2002).
+\bibitem{ref.Shao} J. Shao, S. Havlin and H. E. Stanley, Phys. Rev. Lett.
+{\bf 103} 018701 (2009).
+\bibitem{ref.opinon_1} F. Morone  and H. A. Makse,  Nature {\bf 524} 65 (2015).
+\bibitem{ref.Newman_virus} M.E.J. Newman and D.J. Watts, Phys. Rev. E {\bf 60} 7332. (1999).
+\bibitem{ref.Moore_virus}  C. Moore and M.E.J. Newman, Phys. Rev. E {\bf 62} 7059. (2000).
+\bibitem{ref.Ziff} M. E. J. Newman  and R. M. Ziff. Phys. Rev. Lett. {\bf 85} 4104 (2000); {\it ibid} Phys. Rev. E {\bf 64} 016706 (2001).
+%\bibitem{ref.hoshen} J. Hoshen and R. Kopelman, Phys. Rev. B 14, 3438 (1976).
+\bibitem{ref.shannon} C. E. Shannon, Bell System Technical Journal {\bf 27} 379 (1948).
+%\bibitem{ref.tsang} I. R. Tsang and I. J. Tsang, Phys. Rev. E {\bf 60} 2684 (1999).
+%\bibitem{ref.vieira} T. M. Vieira, G. M. Viswanathan, and L. R. da Silva, Eur. Phys. J. B {\bf 88} 213 (2015). 
+\bibitem{ref.Hassan_Rahman_1} M. K. Hassan and M. M. Rahman, Phys. Rev. E {\bf 92} 040101(R) (2015); 
+{\it ibid}  {\bf 94} 042109 (2016).
+\bibitem{ref.fss_1}  D. P. Landau and K. Binder, {\it A Guide to Monte Carlo Simulations in Statistical Physics}, (Cambridge: Cambridge University Press, 2000).
+\bibitem{ref.fss_2} H. E. Stanley, Rev. Mod. Phys. {\bf 71}  S358 (1999).
+\bibitem{ref.fss_3} V. Privman, {\it Finite Size Scaling and Numerical Simulation
+of Statistical Systems} (World Scientific, Singapore, 1990).
+\bibitem{ref.ziff_pc_1} R. M. Ziff, Phys. Rev. Lett. {\bf 103}  045701 (2009).
+\bibitem{ref.ziff_pc_2} R. M. Ziff, Phys. Rev. E {\bf 82} 051105 (2010).
+\bibitem{ref.ziff_nu} R. M. Ziff, Phys. Rev. Lett. {\bf 69} 2670 (1992).
+\bibitem{ref.Mertens} S. Mertens, I. Jensen, R.  M. Ziff  Phys. Rev. E {\bf 96} 052119 (2017).
+%\bibitem{ref.radicchi_1} F. Radicchi and S. Fortunato, Phys. Rev. Lett. {\bf 103} 168701 (2009).
+%\bibitem{ref.Kasteleyn} P. W. Kasteleyn and C. M. Fortuin, J. Phys. Soc. Japan {\bf 26} (Suppl.) ll (1969).
+\bibitem{ref.manna} S. S. Manna, Physica A {\bf 391} 2833 (2012).
+%\bibitem{ref.Hassan_Rahman_explosive}  M. M. Rahman and M. K. Hassan, Phys. Rev. E {\bf 95} 042133 (2017).
+%\bibitem{ref.mori} F. Mori and T. Odagaki, J. Phys. Soc. Jpn. {\bf 70} 2485 (2001).
+%\bibitem{ref.Radicchi_Castellano} F. Radicchi1 and C. Castellano, Nat. Commun. {\bf 6} 10196 (2015).
+%\bibitem{ref.Gaunt} D. S. Gaunt, M. E. Fisher, M. F.  Sykes, J. W. Essam, Phys. Rev. Lett. 
+%{\bf 13} 713 (1964).
+
+
+
+
+
+\end{thebibliography}
+
+\end{document}
+
+ 
+
+
+ 
