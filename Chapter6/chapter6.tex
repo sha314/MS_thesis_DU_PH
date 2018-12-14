@@ -37,16 +37,18 @@ than $2$.
 
 
 
-
-
  %%%%%%%%%%%% RSBD summary
- Then we have investigated percolation by random sequential ballistic deposition (RSBD) on a square lattice with interaction range upto second nearest neighbors. The critical points $p_c$ and all the necessary critical exponents $\alpha$, $\beta$, $\gamma$, $\nu$ etc. are obtained numerically for each range of interactions. Like  in its thermal counterpart, we find that the critical exponents of RSBD depend on the range of interactions and for a given range of interaction they obey the Rushbrooke inequality. Besides, we obtain the exponent $\tau$ which characterizes the cluster size distribution (\ref{}) and the fractal dimension $d_f$ that characterizes the spanning cluster at $p_c$. Our results suggest that the RSBD for each range of interaction belong to a new universality class which is in sharp contrast to earlier results of the only work that exhist on RSBD.
+ Then we have investigated percolation by random sequential ballistic deposition (RSBD) on a square lattice with interaction range upto second nearest neighbors. The critical points $p_c$ and all the necessary critical exponents $\alpha$, $\beta$, $\gamma$, $\nu$ etc. are obtained numerically for each range of interactions. Like  in its thermal counterpart, we find that the critical exponents of RSBD depend on the range of interactions and for a given range of interaction they obey the Rushbrooke inequality. We obtain  the fractal dimension $d_f$ that characterizes the spanning cluster at $p_c$. Our results suggest that the RSBD for each range of interaction belong to a new universality class which is in sharp contrast to earlier results of the only work that exhist on RSBD.
  
 
 We denote $L0,L1,L2$ for expressing direct, first nearest neighbor and second nearest neighbor interaction respectively. Obviously $L0$ denotes the regular kind of site percolation where we choose a site randomly with uniform probability and occupy it if it is empty else we skip the step. And $L1$ is the class where we choose one of the four neighbor to occupy whenever we fail to do $L0$ but only if the neighbor is empty else we skip the step. Finally in $L2$ we choose the neighbor in the direction of the second neighbor, which was picked but was not empty, to occupy if it is empty else we skip the step. We have found that for $L1$ and $L2$ the exponents $\alpha, \beta, \gamma, \nu$ are consistent and they belong to a universality class respectively. 
-Note that  we can use new feature of $L1$ only if the feature of $L0$ is unavailable, i.e., the selected site is already occupied. Similarly we can use new feature of $L2$ only if the feature of $L0$ and $L1$ is unavailable. Using this in mind we perform simulation and we obtain the critical exponents which agree with the laws of thermodynamics and the Rushbrooke inequality is satisfied in all cases.\\
+Note that  we can use new feature of $L1$ only if the feature of $L0$ is unavailable, i.e., the selected site is already occupied. Similarly we can use new feature of $L2$ only if the feature of $L0$ and $L1$ is unavailable. Using this in mind we perform simulation and we obtain the critical exponents which agree with the laws of thermodynamics and the Rushbrooke inequality is satisfied in all cases.
 
-\begin{table}
+\clearpage
+\newpage
+\section{Results}
+Here we list all the exponents found in our investigation of site percolation after redefining it and the RSBD model. Table (\ref{tab:exponents-combined}) Lists all the critical values and exponents as we find them in our exponents. Note that we can get the exponent $a$, for example, from exponent $a/\nu$ simply by dividing them by $1/\nu$ which is shown in table (\ref{tab:rushbrooke}) where we also show that the Rushbrooke inequality is satisfied.
+\begin{table}[h]
 \centering
 \begin{tabular}{|c|c|c|c|c|c|}
 	\hline
@@ -59,7 +61,7 @@ Note that  we can use new feature of $L1$ only if the feature of $L0$ is unavail
 \label{tab:exponents-combined}
 \end{table}
 
-\begin{table}
+\begin{table}[h]
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 	\hline
@@ -72,7 +74,8 @@ Note that  we can use new feature of $L1$ only if the feature of $L0$ is unavail
 \label{tab:rushbrooke}
 \end{table}
 
-\begin{table}
+Finally we list all the fractal dimensions, $d_f$, for different interactions in table (\ref{tab:cluster-info}).
+\begin{table}[h]
 	\centering
 	\begin{tabular}{|c|c|c|}
 		\hline
@@ -86,5 +89,9 @@ Note that  we can use new feature of $L1$ only if the feature of $L0$ is unavail
 	\label{tab:cluster-info}
 \end{table}
 		
-Here we notice that the critical point decreases as we increase the range of interaction. But the fractal dimension increases. This is reasonable since my occupying nearest and second nearest neighbor we are increasing the change of any individual cluster to grow faster. This is the reason for the $p_c$ value to decrease. But it grows in area not in length average meaning when the spanning cluster appears it will contain more sites and bonds than in regular percolation which is evident from the fractal dimension $d_f$. \\
+Here we notice that the critical point decreases as we increase the range of interaction. But the fractal dimension increases. This is reasonable since my occupying nearest and second nearest neighbor we are increasing the change of any individual cluster to grow faster. This is the reason for the $p_c$ value to decrease. But it grows in area not in length average meaning when the spanning cluster appears it will contain more sites and bonds than in regular percolation which is evident from the fractal dimension $d_f$.
 All other exponents changes a bit but their shape is not different. That's why change is not visible to the naked eye and it requires a thorough investigation.
+
+\clearpage
+\section{Further Research}
+	The idea of RSBD molde can be applies to many other lattice structures. Notice that in square lattice we only have four neighbor for a site but in other structures of lattice we may have more or less than four neighbors for one site, e.g. honeycomb lattice, triangular lattice. Here we have only considered interaction up to second nearest neighbor which can be extended to an arbitrary range but it will only be effective if we take the lattice size to be large. Instead of single layer formation we can go for multi-layer formation since in real world if we drop particle (for example sand or grain) in a confined space then it will create multiple layer form. Controlling the velocity parameter at which the particle move to a certain direction can also be an interesting thing to do. We can try to involve particles of different sizes and apply the RSBD model which might give some interesting results.

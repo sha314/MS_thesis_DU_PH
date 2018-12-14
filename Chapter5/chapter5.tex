@@ -14,6 +14,7 @@
     	{Chapter5/Figs/L2/}
     	{Chapter5/Figs/traditional/}
     	{Chapter5/Figs/lattice/}
+    	{Chapter5/Figs/rsbd/}
     }
 \else
     \graphicspath{
@@ -24,6 +25,7 @@
 		{Chapter5/Figs/L2/}
 		{Chapter5/Figs/traditional/}
     	{Chapter5/Figs/lattice/}
+    	{Chapter5/Figs/rsbd/}
     }
 \fi
 
@@ -493,15 +495,50 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 		
 		
 
-
-
 \section{Random Sequential Ballistic Deposition}
-	Imagine a spherical shaped object, say marble, is thrown on top of a 2D square lattice structure. First possible scenario is that the marble will be deposited in the first encountered site in the lattice . Now if the first encountered site is not empty, the possible scenario is that the marble will go in any of the four direction, $+x$, $-x$, $+y$ or $-y$, assuming no other direction in between is allowed in the lattice.  Now if the first neighbor is not empty then the marble will continue to go on in the previously selected direction and choose the next neighbor. This is another topic of this thesis. Others have done some work in this topic \cite{Choi1995, Talbot1992, Jullien1992, Viot1993}. And we have found that for a different range of interaction model they all belong to different universality classes.
+
+	Random sequential adsorption (RSA) refers to a process where particles are randomly introduced in a system, and if they do not overlap any previously adsorbed particle, they adsorb and remain fixed for the rest of the process.	In RSA process we take a surface (say a lattice) and deposit particle (like hard sphere) there sequentially. Each particle cover a certain area and another particle cannot be in that area. Now if a particle is tried to be deposited in the occupied area it is simply rejected \cite{Renyi1958, Widom1966}.	In the ballistic deposition process, as in RSA, disks fall	on a line with a uniform random distribution. However,	unlike the RSA process, a disk landing on top of an adsorbed disk will not be immediately rejected \cite{Talbot1992}.
+
+	Imagine a spherical shaped object, say marble, is thrown on top of a 2D square lattice structure. First possible scenario is that the marble will be deposited in the first encountered site in the lattice which is shown in figure (\ref{fig:rsbd-1}). Now if the first encountered site is not empty, the possible scenario is that the marble will go in any of the four direction, $+x$, $-x$, $+y$ or $-y$, assuming no other direction in between is allowed in the lattice (\ref{fig:rsbd-2}).  Now if the first neighbor is not empty then the marble will continue to go on in the previously selected direction and choose the next neighbor. This is another topic of this thesis. Others have done some work in this topic \cite{Choi1995, Talbot1992, Jullien1992, Viot1993}. And we have found that for a different range of interaction model they all belong to different universality classes.
 	
+	\begin{figure}[h]
+		\centering
+		\captionsetup[subfigure]{width=0.9\textwidth}
+		\begin{subfigure}{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{{{0.1g}}}
+			\caption{}
+		\end{subfigure}
+		\begin{subfigure}{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{{{0.2g}}}
+			\caption{}
+		\end{subfigure}
+		\caption{(a) A spherical object is dropped and the place it was dropped to was empty. (b) Empty place is occupied by the spherical object.}
+		\label{fig:rsbd-1}
+	\end{figure}
+
+
+	\begin{figure}[h]
+		\centering
+		\captionsetup[subfigure]{width=0.9\textwidth}
+		\begin{subfigure}{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{{{1.1g}}}
+			\caption{}
+		\end{subfigure}
+		\begin{subfigure}{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{{{1.2g}}}
+			\caption{}
+		\end{subfigure}
+		\caption{(a) A spherical object is dropped but the location it was dropped to is not empty. (b) Since the location is not empty the object simply falls down to one of the four sides.}
+		\label{fig:rsbd-2}
+	\end{figure}
 	
 	In our experiment, we occupy a randomly chosen site if it is empty else we select one of its four neighbor to occupy if it is empty else select next neighbor in that direction and occupy that site if it is empty else ignore current iteration and choose another site randomly. This process is repeated until there is no empty site in the lattice. We call this process the ballistic deposition on the square lattice. We introduce 1st and 2nd nearest neighbor interaction in this way.
 
-	Random percolation (RP) model can also be seen as a random sequential adsorption (RSA) \cite{Jullien1992} process of particles on a given substrate to form monolayers of clusters of complex shape and structures. In RSA, a site is first picked at random and it is occupied if it is empty and the trial attempt is rejected if it is already occupied. We shall first show that this process too reproduce all the existing results of the CRP including the $p_c$ value. We can modify the rejection criterion. First, we assume that the adsorbing particles are hard sphere and impenetrable. Then we assume that if a particle fall onto an already adsorbed particle it is not straightaway rejected. Instead, it is allowed to roll down over the already deposited particle to one of its nearest neighbours at random following the steepest descent path. The particle is then adsorbed permanently if the nearest neighbour is empty else the trial attempt is rejected. This is known as the ballistic deposition (BD) \cite{Choi1995, Talbot1992, Jullien1992, Viot1993} model for $l = 1$. We also consider the case that if the nearest neighbour is occupied then the incoming particle attempt to push the neighbour to its next neighour site along the same line to make room for itself. However, the trial attempt of pushing the neighbour is successful if the next neibhouring site along the same line is empty else the trial attempt is discarded. We regard it as BD model for $l = 2$ while the classical percolation correspond to BD model with $l = 0$. Our primary goal is to prove that the critical exponents of percolation changes as changes as we increase the range of interaction like we find in its thermal counterpart. We numerically find the various necessary critical exponents and find that BD for each different range of interaction belong to different universality class and each universality class obeys the Rusbrooke inequality.
+	Random percolation (RP) model can also be seen as a random sequential adsorption (RSA) \cite{Jullien1992} process of particles on a given substrate to form monolayers of clusters of complex shape and structures. In RSA, a site is first picked at random and it is occupied if it is empty and the trial attempt is rejected if it is already occupied. We shall first show that this process too reproduce all the existing results of the CRP including the $p_c$ value. We can modify the rejection criterion. First, we assume that the adsorbing particles are hard sphere and impenetrable. Then we assume that if a particle fall onto an already adsorbed particle it is not straightaway rejected. Instead, it is allowed to roll down over the already deposited particle to one of its nearest neighbours at random following the steepest descent path. The particle is then adsorbed permanently if the nearest neighbour is empty else the trial attempt is rejected. This is known as the ballistic deposition (BD) \cite{Choi1995, Talbot1992, Jullien1992, Viot1993} model for $L1$. We also consider the case that if the nearest neighbour is occupied then the incoming particle attempt to push the neighbour to its next neighour site along the same line to make room for itself. However, the trial attempt of pushing the neighbour is successful if the next neibhouring site along the same line is empty else the trial attempt is discarded. We regard it as BD model for $L2$ while the classical percolation correspond to BD model with $L0$. Our primary goal is to prove that the critical exponents of percolation changes as changes as we increase the range of interaction like we find in its thermal counterpart. We numerically find the various necessary critical exponents and find that BD for each different range of interaction belong to different universality class and each universality class obeys the Rusbrooke inequality.
 	
 	Percolation is all about configuration of clusters of deposited particles and the investigation of the emergence of a large-scale connected path created by clusters formed by contiguous diposited particles. We use extensive Monte Carlo simulation on a square lattice with the usual periodic boundary condition to study site percolation according to RSBD rule.\\
 	
@@ -549,8 +586,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 	The quantity $w(p, L)$ is called the spanning probability in a non periodic case and wrapping probability in a periodic case.
 	The question is how do we find the wrapping probability, given that we have a list of $p_c$ for different length. Note that for a certain length $L$, in each realization the $p_c$ is not exact value, instead it is a range of values that contains the $p_c$. For example, say we have a lattice of length $200$ and for that we will have different $p_c$ at each realization. After an infinite number of experimentation we will have to take an average and that will give the exact value of $p_c$. But since it is practically impossible, we can find $p_{c_{avg}}$ for different lattice size then from the graph we can extrapolate the exact value of $p_c$ for infinite lattice. Here $p_{c_{avg}}$ is calculated from a finite set of $p_c$ for a certain length. This process is not good enough. Since it requires  $p_{c_{avg}}$'s for a number of lattice size which is very costly to obtain. But from the data, list of $p_c$'s for different length, we can find the cumulative frequency distribution. It is astonishing  that for all length the wrapping probability coincide at a specific point. This implies that if we could have an infinite system, the wrapping probability for that system would have gone through this same point. This means we have got our critical point, $p_c$, as the intersection of the $W(p,L)$ for different lengths.
 	
-	\clearpage
-	\newpage
+
 	\subsection{Spanning Probability and finding $1/\nu$} \label{subsect:spanning-probability-and-one-by-nu}
 	From the figure (\ref{fig:spanning-probability}) we can see that, as we increase the length of the lattice the wrapping probability $W(p,L)$ moves closer and closer to the critical point. And if we draw a horizontal line at a certain height (close to the bottom), say $y=0.15$, and find the intersection of this line with $W(p,L)$ for each length  and note the $p$ and if we plot $\log(L)$ vs $\log(p-p_c)$ we get the slope $1/\nu$. which is shown in the inset of the figure (\ref{spanning-probability-data-collapse}).
 	\begin{figure}[h]

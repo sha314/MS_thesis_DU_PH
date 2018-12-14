@@ -1,4 +1,4 @@
-\begin{thebibliography}{137}
+\begin{thebibliography}{139}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -28,6 +28,9 @@ Honeycomb lattice.
 \bibitem[sca()]{scale-free-network}
 Scale free network.
 \newblock URL \url{https://www.flickr.com/photos/sjcockell/8425835703}.
+
+\bibitem[Ren(1958)]{Renyi1958}
+3\penalty0 ((109--127)), 1958.
 
 \bibitem[Els(1988)]{Elsevier1988}
 Introduction to theory of finite-size scaling.
@@ -873,6 +876,13 @@ D.~J. Watts.
 \newblock \emph{Proceedings of the National Academy of Sciences}, 99\penalty0
   (9):\penalty0 5766--5771, apr 2002.
 \newblock \doi{10.1073/pnas.082090499}.
+
+\bibitem[Widom(1966)]{Widom1966}
+B.~Widom.
+\newblock Random sequential addition of hard spheres to a volume.
+\newblock \emph{The Journal of Chemical Physics}, 44\penalty0 (10):\penalty0
+  3888--3894, may 1966.
+\newblock \doi{10.1063/1.1726548}.
 
 \bibitem[Wierman(1984)]{Wierman1984}
 J~C Wierman.
