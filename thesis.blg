@@ -17,65 +17,42 @@ A level-1 auxiliary file: Appendix2/appendix2.aux
 A level-1 auxiliary file: Appendix3/appendix3.aux
 A level-1 auxiliary file: Appendix4/appendix4.aux
 Database file #1: References/references.bib.bib
-I was expecting a `,' or a `}'---line 4 of file References/references.bib.bib
- :  
- :  doi = {10.1002/j.1538-7305.1948.tb01338.x},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 355 of file References/references.bib.bib
+You're missing a field name---line 354 of file References/references.bib.bib
  : 
  : % author = {Albert-L\'{a}szl\'{o} Barab\'{a}si, R\'{e}ka Albert},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 450 of file References/references.bib.bib
+Repeated entry---line 449 of file References/references.bib.bib
  : @misc{scale-free-network
  :                         ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 679 of file References/references.bib.bib
- :  
- :  author = {P. Erd{\H{o}}s and A. R{\'{e}}nyi},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 876 of file References/references.bib.bib
+Repeated entry---line 856 of file References/references.bib.bib
  : @article{Moore2000
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 941 of file References/references.bib.bib
+Repeated entry---line 921 of file References/references.bib.bib
  : @article{Hughes1958
  :                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1617 of file References/references.bib.bib
+Repeated entry---line 1597 of file References/references.bib.bib
  : @article{Moore2000
  :                   ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1695 of file References/references.bib.bib
+I was expecting a `,' or a `}'---line 1675 of file References/references.bib.bib
  :  
  :  pages = {30--36},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "dimension_class_FLT"
 Warning--I didn't find a database entry for ""
 Warning--to sort, need author or key in cubic-lattices
 Warning--to sort, need author or key in scale-free-network
 Warning--to sort, need author or key in Renyi1958
-Warning--to sort, need author or key in dimension_class_FLT
 Warning--to sort, need author or key in Elsevier1988
 Warning--to sort, need author, editor, or key in Kluwer1994
-Warning--to sort, need author or key in Shannon1948
-Warning--to sort, need author or key in Erdos1959
 Warning--to sort, need author or key in honeycomb-lattice
 Warning--to sort, need author or key in Barabasi1999
-Warning--empty author in Erdos1959
-Warning--empty title in Erdos1959
-Warning--empty journal in Erdos1959
-Warning--empty year in Erdos1959
-Warning--empty year in Erdos1959
-Warning--empty author in Shannon1948
-Warning--empty title in Shannon1948
-Warning--empty journal in Shannon1948
-Warning--empty year in Shannon1948
-Warning--empty year in Shannon1948
 Warning--empty year in cubic-lattices
-Warning--empty year in dimension_class_FLT
 Warning--empty year in honeycomb-lattice
 Warning--empty year in scale-free-network
 Warning--empty author in Renyi1958
@@ -90,45 +67,45 @@ Warning--empty publisher in Carnot1890
 Warning--empty year in nesm-lecture-notes
 Warning--empty title in Lorenz2000
 Warning--empty year in Sabbir
-You've used 139 entries,
+You've used 138 entries,
             2773 wiz_defined-function locations,
-            1581 strings with 26377 characters,
-and the built_in function-call counts, 58807 in all, are:
-= -- 5496
-> -- 2619
-< -- 98
-+ -- 923
-- -- 783
-* -- 4931
-:= -- 8955
-add.period$ -- 528
-call.type$ -- 139
-change.case$ -- 647
-chr.to.int$ -- 138
-cite$ -- 324
-duplicate$ -- 2777
-empty$ -- 5226
-format.name$ -- 987
-if$ -- 12287
+            1589 strings with 26465 characters,
+and the built_in function-call counts, 58953 in all, are:
+= -- 5521
+> -- 2650
+< -- 100
++ -- 931
+- -- 792
+* -- 4933
+:= -- 9034
+add.period$ -- 531
+call.type$ -- 138
+change.case$ -- 649
+chr.to.int$ -- 137
+cite$ -- 305
+duplicate$ -- 2764
+empty$ -- 5206
+format.name$ -- 1000
+if$ -- 12307
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 155
-newline$ -- 812
-num.names$ -- 516
-pop$ -- 1267
+newline$ -- 813
+num.names$ -- 524
+pop$ -- 1229
 preamble$ -- 1
-purify$ -- 538
+purify$ -- 539
 quote$ -- 0
-skip$ -- 1925
+skip$ -- 1919
 stack$ -- 0
-substring$ -- 2501
-swap$ -- 246
+substring$ -- 2548
+swap$ -- 248
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1404
-warning$ -- 36
-while$ -- 557
+type$ -- 1393
+warning$ -- 22
+while$ -- 566
 width$ -- 0
-write$ -- 1986
-(There were 8 error messages)
+write$ -- 1993
+(There were 6 error messages)

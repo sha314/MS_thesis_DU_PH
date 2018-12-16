@@ -1,29 +1,7 @@
 %!TEX root = ../thesis.tex
 % ******************************* Thesis Appendix B ********************************
-\definecolor{mGreen}{rgb}{0,0.6,0}
-\definecolor{mGray}{rgb}{0.5,0.5,0.5}
-\definecolor{mPurple}{rgb}{0.58,0,0.82}
-\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
 
-\lstdefinestyle{CStyle}{
-	backgroundcolor=\color{backgroundColour},   
-	commentstyle=\color{mGreen},
-	keywordstyle=\color{magenta},
-	numberstyle=\tiny\color{mGray},
-	stringstyle=\color{mPurple},
-	basicstyle=\footnotesize,
-	breakatwhitespace=false,         
-	breaklines=true,                 
-	captionpos=b,                    
-	keepspaces=true,                 
-	numbers=left,                    
-	numbersep=5pt,                  
-	showspaces=false,                
-	showstringspaces=false,
-	showtabs=false,                  
-	tabsize=2,
-	language=C
-}
+\input{style.tex}
 
 
 \chapter{Convolution}
@@ -69,18 +47,14 @@ exactly $n$ occupied sites on the lattice for a canonical percolation ensemble i
 	\begin{lstlisting}[style=CStyle]
 	vector<double> convolution(vector<double>& data_in) {
 	size_t N = data_in.size();
-	
 	std::vector<double> _forward_factor(N);
 	std::vector<double> _backward_factor(N);
-	
 	for (size_t i=0; i < N; ++i)
 	{
 	_forward_factor[i]  = (double) (N - i + 1) / i;
 	_backward_factor[i] = (double) (i + 1) / (N - i);
 	}
-	
 	vector<double> data_out(N);
-
 	long step = N / 1000;
 	#pragma omp parallel for schedule(dynamic)
 	for (long j=0; j <N; ++j) // start from j=1
@@ -91,11 +65,9 @@ exactly $n$ occupied sites on the lattice for a canonical percolation ensemble i
 	double prev     = 0;
 	double bn_tot   = 1; // normalization factor
 	double sum      = data_in[j];
-	
 	// forward iteraion part
 	factor = prob / (1-prob);
 	prev   = 1;
-	
 	for (long i=j+1; i<N; ++i)
 	{
 	binom     = prev * _forward_factor[i] * factor;
@@ -103,11 +75,9 @@ exactly $n$ occupied sites on the lattice for a canonical percolation ensemble i
 	sum      += data_in[i] * binom;
 	prev      = binom;
 	}
-	
 	// backward iteration part
 	factor = (1-prob)/prob;
 	prev   = 1;
-	
 	for (long i=j-1; i>=0; --i)
 	{
 	binom     = prev * _backward_factor[i] * factor;
@@ -115,51 +85,19 @@ exactly $n$ occupied sites on the lattice for a canonical percolation ensemble i
 	sum      += data_in[i] * binom;
 	prev      = binom;
 	}
-	
 	// normalizing data
 	data_out[j] = sum / bn_tot;
 	cout << bn_tot << endl;
-	
 	}
-
 	return data_out;
 	}
 	\end{lstlisting}
 Complete code for convolution is available at 
 \url{https://github.com/sha314/Convolution}.\\
 
-The program linked above works using command line arguments. And the uses is as follows\\
+The program linked above works using command line arguments. For example to perform convolution on a file "data.txt" which contains two columns out of which only second column needed to be convoluted use the following command.
 
-\begin{lstlisting}
-Usage:
-convolution [-f <STRING>] [-a <INT>,<INT>,...[:[<STRING>,<STRING>,...]]] [-b <INT>,<INT>,...[:[<STRING>,<STRING>,...]]] [-h] [-t <INT>] [-i <STRING>]
-perform convolution based on provided options.
-Options                      Description
--a,                        columns that we want in the output file without performing convolution.
-No default value.
--b,                        columns that we want in the output file with performing convolution.
-No default value.
--c,                        If provided the header and comment from the input file will be written
-without modification to the output file. Header is the first line of the
-input file.
--d                         Delimeter to use. Default value is ' '.
--f                         name of the input file that we want to convolute. No default value.
--i                         Info to write as comment in the output file
--o                         name of the output file. If not provided the string '_convoluted.txt' will be
-appended to the input file.
--p, --precision            Floating point precision when writing in the data file. Default value is 10
--s                         Number of rows to skip from the input file. Default value is 0.
--t                         to test the performance of the convolution program. No default value.
---threads              Explicitly specify number of thread to use. Default is the max number of thread
-allowed by the system.
--h, --help                 display this help and exit
--v, --version              output version information and exit
--w                         If provided input b data will be written to the output file.
-The INT argument is an integer.
-The STRING argument is a string of characters.
-A line that begins with '#' is considered a commented line.
-Exit status:
-0  if OK,
-1  if minor problems (e.g., cannot access subdirectory),
-2  if serious trouble (e.g., cannot access command-line argument).
+
+\begin{lstlisting}[language=bash]
+./convolute -f data.txt -a 0 -b 1
 \end{lstlisting}

@@ -4,19 +4,7 @@
 The \textbf{src/test/test\_percolation.h} file
 
 \begin{lstlisting}[style=CStyle]
-#ifndef SQLATTICEPERCOLATION_TEST_PERCOLATION_H
-#define SQLATTICEPERCOLATION_TEST_PERCOLATION_H
-
-#include <iostream>
-#include <string>
-#include <chrono>
-#include "../types.h"
-#include "../percolation/percolation.h"
-#include "../util/time_tracking.h"
-
-
 /**
-*
 * @tparam PType : Template type of percolation class
 * @param argc   : argc from commandline
 * @param argv   : argv from commandline
@@ -125,11 +113,9 @@ auto t_end = std::chrono::system_clock::now();
 std::cout << "Iteration " << i   << " . Elapsed time " << std::chrono::duration<double>(t_end - t_start).count() << " sec" << std::endl;
 
 }
-
 fout_b.close();
 fout_s.close();
 fout_critical.close();
-
 
 
 std::ofstream fout(filename_entropy_order_parameter);
@@ -151,6 +137,4 @@ fout << std::endl;
 }
 fout.close();
 }
-
-#endif //SQLATTICEPERCOLATION_TEST_PERCOLATION_H
 \end{lstlisting}

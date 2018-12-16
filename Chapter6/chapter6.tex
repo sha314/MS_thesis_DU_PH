@@ -41,8 +41,8 @@ than $2$.
  Then we have investigated percolation by random sequential ballistic deposition (RSBD) on a square lattice with interaction range upto second nearest neighbors. The critical points $p_c$ and all the necessary critical exponents $\alpha$, $\beta$, $\gamma$, $\nu$ etc. are obtained numerically for each range of interactions. Like  in its thermal counterpart, we find that the critical exponents of RSBD depend on the range of interactions and for a given range of interaction they obey the Rushbrooke inequality. We obtain  the fractal dimension $d_f$ that characterizes the spanning cluster at $p_c$. Our results suggest that the RSBD for each range of interaction belong to a new universality class which is in sharp contrast to earlier results of the only work that exhist on RSBD.
  
 
-We denote $L0,L1,L2$ for expressing direct, first nearest neighbor and second nearest neighbor interaction respectively. Obviously $L0$ denotes the regular kind of site percolation where we choose a site randomly with uniform probability and occupy it if it is empty else we skip the step. And $L1$ is the class where we choose one of the four neighbor to occupy whenever we fail to do $L0$ but only if the neighbor is empty else we skip the step. Finally in $L2$ we choose the neighbor in the direction of the second neighbor, which was picked but was not empty, to occupy if it is empty else we skip the step. We have found that for $L1$ and $L2$ the exponents $\alpha, \beta, \gamma, \nu$ are consistent and they belong to a universality class respectively. 
-Note that  we can use new feature of $L1$ only if the feature of $L0$ is unavailable, i.e., the selected site is already occupied. Similarly we can use new feature of $L2$ only if the feature of $L0$ and $L1$ is unavailable. Using this in mind we perform simulation and we obtain the critical exponents which agree with the laws of thermodynamics and the Rushbrooke inequality is satisfied in all cases.
+We denote $L_0,L_1,L_2$ for expressing direct, first nearest neighbor and second nearest neighbor interaction respectively. Obviously $L_0$ denotes the regular kind of site percolation where we choose a site randomly with uniform probability and occupy it if it is empty else we skip the step. And $L_1$ is the class where we choose one of the four neighbor to occupy whenever we fail to do $L_0$ but only if the neighbor is empty else we skip the step. Finally in $L_2$ we choose the neighbor in the direction of the second neighbor, which was picked but was not empty, to occupy if it is empty else we skip the step. We have found that for $L_1$ and $L_2$ the exponents $\alpha, \beta, \gamma, \nu$ are consistent and they belong to a universality class respectively. 
+Note that  we can use new feature of $L_1$ only if the feature of $L_0$ is unavailable, i.e., the selected site is already occupied. Similarly we can use new feature of $L_2$ only if the feature of $L_0$ and $L_1$ is unavailable. Using this in mind we perform simulation and we obtain the critical exponents which agree with the laws of thermodynamics and the Rushbrooke inequality is satisfied in all cases.
 
 \clearpage
 \newpage
@@ -53,9 +53,9 @@ Here we list all the exponents found in our investigation of site percolation af
 \begin{tabular}{|c|c|c|c|c|c|}
 	\hline
 	Interaction & $p_c$ & $1/\nu$ & $\alpha/\nu$ & $\beta/\nu$ & $\gamma/\nu$ \\ \hline
-	L0 & 0.5927 & 0.75  & 0.6799 & 0.103  & 0.64071  \\ \hline
-	L1 & 0.5782 & 0.736 & 0.6712 & 0.1026 & 0.6287  \\ \hline
-	L2 & 0.5701 & 0.721 & 0.6631 & 0.0982 & 0.6362  \\ \hline
+	$L_0$ & 0.5927 & 0.75  & 0.6799 & 0.103  & 0.64071  \\ \hline
+	$L_1$ & 0.5782 & 0.736 & 0.6712 & 0.1026 & 0.6287  \\ \hline
+	$L_2$ & 0.5701 & 0.721 & 0.6631 & 0.0982 & 0.6362  \\ \hline
 \end{tabular}
 \caption{List of combined exponents}
 \label{tab:exponents-combined}
@@ -66,9 +66,9 @@ Here we list all the exponents found in our investigation of site percolation af
 \begin{tabular}{|c|c|c|c|c|}
 	\hline
 	Interaction & $\alpha$ & $\beta$ & $\gamma$ & $\alpha+2\beta+\gamma$ \\ \hline
-	L0  & 0.906 & 0.137 & 0.8543 & 2.0347   \\ \hline
-	L1  & 0.911 & 0.139 & 0.8542 & 2.044   \\ \hline
-	L2  & 0.919 & 0.136 & 0.882  & 2.07    \\ \hline
+	$L_0$  & 0.906 & 0.137 & 0.8543 & 2.0347   \\ \hline
+	$L_1$  & 0.911 & 0.139 & 0.8542 & 2.044   \\ \hline
+	$L_2$  & 0.919 & 0.136 & 0.882  & 2.07    \\ \hline
 \end{tabular}
 \caption{Exponents Satisfying Rushbrooke Inequality}
 \label{tab:rushbrooke}
@@ -80,12 +80,12 @@ Finally we list all the fractal dimensions, $d_f$, for different interactions in
 	\begin{tabular}{|c|c|c|}
 		\hline
 		Interaction 	& $d_f$     \\ \hline
-		L0 (standard) 	& 91/48     \\ \hline
-		L0 (obtained)	& 1.8939   \\ \hline
-		L1				& 1.8994      \\ \hline
-		L2				& 1.9081     \\ \hline
+		$L_0$ (standard) 	& 91/48     \\ \hline
+		$L_0$ (obtained)	& 1.8939   \\ \hline
+		$L_1$				& 1.8994      \\ \hline
+		$L_2$				& 1.9081     \\ \hline
 	\end{tabular}
-	\caption{Fractal dimensions for $L0,L1,L2$ respectively.}
+	\caption{Fractal dimensions for $L_0,L_1,L_2$ respectively.}
 	\label{tab:cluster-info}
 \end{table}
 		

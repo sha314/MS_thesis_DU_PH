@@ -1,45 +1,7 @@
 %!TEX root = ../thesis.tex
 % ******************************* Thesis Appendix A ****************************
-\definecolor{mGreen}{rgb}{0,0.6,0}
-\definecolor{mGray}{rgb}{0.5,0.5,0.5}
-\definecolor{mPurple}{rgb}{0.58,0,0.82}
-\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
 
-\lstdefinestyle{CStyle}{
-	backgroundcolor=\color{backgroundColour},   
-	commentstyle=\color{mGreen},
-	keywordstyle=\color{magenta},
-	numberstyle=\tiny\color{mGray},
-	stringstyle=\color{mPurple},
-	basicstyle=\footnotesize,
-	breakatwhitespace=false,         
-	breaklines=true,                 
-	captionpos=b,                    
-	keepspaces=true,                 
-	numbers=left,                    
-	numbersep=5pt,                  
-	showspaces=false,                
-	showstringspaces=false,
-	showtabs=false,                  
-	tabsize=2,
-	language=C
-}
-
-
-\lstdefinestyle{CMakeStyle}{
-	backgroundcolor=\color{backgroundColour},   
-	basicstyle=\footnotesize,
-	breakatwhitespace=false,         
-	breaklines=true,                 
-	captionpos=b,                    
-	keepspaces=true,                 
-	numbers=left,                    
-	numbersep=5pt,                  
-	showspaces=false,                
-	showstringspaces=false,
-	showtabs=false,                  
-	tabsize=2,
-}
+\input{style.tex}
 
 \ifpdf
 \graphicspath{{Appendix1/figs/}}
@@ -108,14 +70,12 @@
 	\end{figure}
 
 \section{Code}
-	
-	Each header file starts with a directive \textit{\#ifndef} and \textit{\#define}, which is necessary because one header file is needed multiple times and including it more than once results in error. These directive prevents it. Of course this directive must be closed by \textit{\#endif}.
+	Here only the declaration of certain classes are presented. All definitions are in the complete code and the link to the complete code is given in section (\ref{sect:complete-code-percolation}).
 	
 	
 	\subsection{Index}
 	Here the notion of index of site and index of bond is defined. Site index has two element which determine row and column. Bond Index had three element describing bond type, row, column. Bond type can be horizontal or vertical.
 	\input{Appendix1/codes/index.tex}	
-	
 	
 	\subsection{Site}
 	The site class contains all information about a site, e.g., if it is active or not and if it is then what is it's group id or relative index.
@@ -140,18 +100,15 @@
 	\subsection{Percolation}
 	The \textit{SqLatticePercolation} class contains generic operation that to performed for percolation on square lattice. It's subclass  \textit{SitePercolation\_ps\_v9} is the class when all required method for general site percolation with our definition is defined. 
 	And it's subclass \textit{SitePercolationBallisticDeposition\_v2}
-	contains some method for ballistic deposition for $l=\{1,2\}$ which extends to two new subclass \textit{SitePercolationBallisticDeposition\_L1\_v2} and \textit{SitePercolationBallisticDeposition\_L2\_v2} with detailed method for ballistic deposition $l=1$ and $l=2$ respectively.
+	contains some method for ballistic deposition for $L_1,L_2$ which extends to two new subclass \textit{SitePercolationBallisticDeposition\_L1\_v2} and \textit{SitePercolationBallisticDeposition\_L2\_v2} with detailed method for ballistic deposition $L_1$ and $L_2$ respectively.
 	
 	\input{Appendix1/codes/percolation.tex}
-	\input{Appendix1/codes/site-percolation.tex}
+%	\input{Appendix1/codes/site-percolation.tex}
 	
 	\subsection{Utilities}
-	We sometimes need to print an array, std::map, std::vector in the console. Some functions for this task is given here. 
-	\input{Appendix1/codes/printer.tex}
-	
 	When generating data file we need to name our data file uniquely so that when all of the data files are in one location, no confusion occurs. A good way to do this is to add the time and data stamp at the end of each data file. Although data filename does share a common pattern.
-	\input{Appendix1/codes/time-tracking.tex}
-	\input{Appendix1/codes/type.tex}
+	%\input{Appendix1/codes/time-tracking.tex}
+	%\input{Appendix1/codes/type.tex}
 	
 	\subsection{Tests}
 	A template function is required to run for $l0, l1, l2$. The template argument is the class name. The other two argument is the length and ensemble size we need for one file. The three template arguments are
@@ -163,7 +120,7 @@
 	\input{Appendix1/codes/test}
 	
 	\subsection{Main}
-	The main function receives 3 additional command line argument. First one is an integer $l\in\{0,1,2\}$ which determine the range of interaction. Second one is the length of the lattice. And third one is the size of the ensemble. For example, $1 200 5000$ will run the program for $l=1$, $L=200$ for ensemble size of $5000$.
+	The main function receives 3 additional command line argument. First one is an integer $\{0,1,2\}$ which determine the range of interaction. Second one is the length of the lattice. For $L_0$ interaction use $0$ and so on. And third one is the size of the ensemble. For example, $1 200 5000$ will run the program for $l=1$, $L=200$ for ensemble size of $5000$.
 	
 	The \textit{run\_in\_main(int, char**)} function is the one where the  \textit{simulate\_site\_percolation\_T<>(size\_t, size\_t)} executes for different classes.
 	
@@ -172,17 +129,17 @@
 	\subsection{CMakeLists}
 	All the header and source files are listed here and how the compiler should link them is generated by running cmake. \url{https://cmake.org/cmake-tutorial/}
 	
-	\input{Appendix1/codes/cmakelists}
+%	\input{Appendix1/codes/cmakelists}
 	
-	\subsection{complete code}
-	Complete code for RSBD model on square lattice is available at
+	\subsection{complete code}\label{sect:complete-code-percolation}
+	Complete code for RSBD model on square lattice is available at\\
 	\url{https://github.com/sha314/SqLattice_RSBD}
-	or use the git link to clone the repository
+	or use the git link to clone the repository\\
 	\url{https://github.com/sha314/SqLattice_RSBD.git}
 	\\
-	Detailed version of the same program with other extensions are available at
+	Detailed version of the same program with other extensions are available at\\
 	\url{https://github.com/sha314/SqLatticePercolation}
-	or the git link
+	or the git link\\
 	\url{https://github.com/sha314/SqLatticePercolation.git}
 
 
