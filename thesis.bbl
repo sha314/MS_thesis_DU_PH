@@ -1,24 +1,14 @@
-\begin{thebibliography}{139}
+\begin{thebibliography}{138}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Erd()]{Erdos1959}
-
-
-\bibitem[Sha()]{Shannon1948}
-
-
 \bibitem[cub()]{cubic-lattices}
 Different kind of cubic lattice.
 \newblock URL
   \url{http://utkarshchemistry.blogspot.com/2012/09/solid-state-2.html}.
-
-\bibitem[dim()]{dimension_class_FLT}
-Fluid mechanics - theory.
-\newblock Basic Dimensions of Common Parameters Table.
 
 \bibitem[hon()]{honeycomb-lattice}
 Honeycomb lattice.
@@ -30,7 +20,7 @@ Scale free network.
 \newblock URL \url{https://www.flickr.com/photos/sjcockell/8425835703}.
 
 \bibitem[Ren(1958)]{Renyi1958}
-3\penalty0 ((109--127)), 1958.
+3\penalty0 (109--127), 1958.
 
 \bibitem[Els(1988)]{Elsevier1988}
 Introduction to theory of finite-size scaling.
@@ -301,6 +291,11 @@ Tomasz Downarowicz.
 \newblock \emph{Entropy in Dynamical Systems}.
 \newblock Cambridge University Press, 2009.
 \newblock \doi{10.1017/cbo9780511976155}.
+
+\bibitem[Erd{\H{o}}s and R{\'{e}}nyi(1959)]{Erdos1959}
+P.~Erd{\H{o}}s and A.~R{\'{e}}nyi.
+\newblock On random graphs. i.
+\newblock \emph{Publicationes Mathematicae}, 6:\penalty0 290–297, 1959.
 
 \bibitem[Erd{\H{o}}s and R{\'{e}}nyi(1964)]{Erdos1964}
 P.~Erd{\H{o}}s and A.~R{\'{e}}nyi.
@@ -821,6 +816,13 @@ James~P. Sethna.
   (Oxford Master Series in Physics)}.
 \newblock Oxford University Press, 2006.
 \newblock ISBN 0198566778.
+
+\bibitem[Shannon(1948)]{Shannon1948}
+C.~E. Shannon.
+\newblock A mathematical theory of communication.
+\newblock \emph{Bell System Technical Journal}, 27\penalty0 (3):\penalty0
+  379--423, jul 1948.
+\newblock \doi{10.1002/j.1538-7305.1948.tb01338.x}.
 
 \bibitem[Shao et~al.(2009)Shao, Havlin, and Stanley]{Shao2009}
 Jia Shao, Shlomo Havlin, and H.~Eugene Stanley.

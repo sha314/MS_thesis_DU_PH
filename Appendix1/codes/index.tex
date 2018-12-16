@@ -10,11 +10,9 @@ the \textbf{src/index/index.h} file
 #include <iostream>
 #include <sstream>
 #include <vector>
-
 #include "../types.h"
 #include "../exception/exceptions.h"
 #include "../lattice/bond_type.h"
-
 
 struct Index{
 value_type row_{};
@@ -26,7 +24,6 @@ Index()                       = default;
 Index(value_type x, value_type y) : row_{x}, column_{y} {}
 
 };
-
 
 class IndexRelative{
 public:
@@ -60,7 +57,6 @@ bool vertical() const { return bondType == BondType::Vertical;}
 
 };
 
-
 std::ostream& operator<<(std::ostream& os, const Index& index);
 bool operator==(const Index& index1, const Index& index2);
 bool operator<(const Index& index1, const Index& index2);
@@ -70,7 +66,6 @@ std::ostream& operator<<(std::ostream& os, const IndexRelative& index);
 std::ostream& operator<<(std::ostream& os, const BondIndex& index);
 bool operator==(BondIndex index1, BondIndex index2);
 bool operator<(BondIndex index1, BondIndex index2);
-
 
 /**
 *  Get 2nd nearest neightbor / sin the direction of 1st nearest neighbor, while @var center is the center
@@ -138,7 +133,6 @@ cout << "not yet defined : line " << __LINE__ << endl;
 return false;
 }
 
-
 /**
 * Get the 2nd nearest nearest neighbor in the direction of 1st nearest neighbor.
 * Periodicity is not considered here.
@@ -156,7 +150,6 @@ else if(delta_c > 1 || delta_r > 1){
 
 return Index{(nn_1.row_ + delta_r + length) % length, (nn_1.column_ + delta_c + length) % length};
 }
-
 
 /**
 * Get all second nearest neighbors based on the first nearest neighbors.

@@ -96,7 +96,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 	The two most important quantities of interests in the theory of phase transition and critical phenomena 
 	are the entropy $H$ and the order parameter $P$ since they are the ones
 	which define the nature of transition. In the first order or discontinuous phase transition,
-	entropy must suffers a jump or discontuinity at the critical point which is 
+	entropy must suffers a jump or discontinuity at the critical point which is 
 	why first order transition
 	requires latent heat. Similarly, the order parameter too must suffer a jump or discontinuity at
 	the critical point and that is the why new and old 
@@ -116,7 +116,6 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 	where we choose $K=1$ since it merely amounts to a choice of a unit of measure of entropy \cite{Shannon1948}. 
 	
 	
-	%\subsection{Order parameter}
 	
 	On the other hand, the strength $P(p,L)$ of the spanning cluster for system size $L$
 	is define as 
@@ -140,6 +139,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 	$P=0$ for $p\leq p_c$ and it rises from $P=0$ at $p_c$ to $P=1$ continuously and monotonically like $P\sim (p-p_c)^\beta$. 
 	Such behavior is reminiscent of order parameter like magnetization $m$ in the ferromagnetic transition and
 	hence $P$ is regarded as the order parameter in percolation theory. 
+	
 	
 	
 	\subsection{Problem for entropy with traditional site percolation}
@@ -324,7 +324,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 		\end{subfigure}
 		\begin{subfigure}[t]{0.4\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{{{L0/sq_lattice_site_percolation_periodic_-occupation_probability-data_collapse-pc0.5927-ex0.7500}}}
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_periodic_-occupation_probability-data_collapse-pc0.5927-ex0.7500}}}
 			\caption{}
 			\label{fig:site-redefine-spanning-probability-b}
 		\end{subfigure}
@@ -368,13 +368,13 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 		\captionsetup[subfigure]{width=0.9\textwidth}
 		\begin{subfigure}[t]{0.4\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{{{L0/sq_lattice_site_percolation_periodic_-spanning-_order_parameter-pc0.5927}}}
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_periodic_-spanning-_order_parameter-pc0.5927}}}
 			\caption{}
 			\label{fig:site-redefine-order-parameter-a}
 		\end{subfigure}
 		\begin{subfigure}[t]{0.4\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{{{L0/sq_lattice_site_percolation_periodic_-spanning-_order_parameter-data_collapse-pc0.5927_beta_0.103_nu_0.750}}}
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_periodic_-spanning-_order_parameter-data_collapse-pc0.5927_beta_0.103_nu_0.750}}}
 			\caption{}
 			\label{fig:site-redefine-order-parameter-b}
 		\end{subfigure}
@@ -411,13 +411,13 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 		\captionsetup[subfigure]{width=0.9\textwidth}
 		\begin{subfigure}[t]{0.4\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{{{L0/sq_lattice_site_percolation_periodic__specific_heat-pc0.5927}}}
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_periodic__specific_heat-pc0.5927}}}
 			\caption{}
 			\label{fig:site-redefine-specific-heat-a}
 		\end{subfigure}
 		\begin{subfigure}[t]{0.4\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{{{L0/sq_lattice_site_percolation_periodic__specific_heat-data_collapse-pc0.5927_alpha_0.6799_nu_0.750}}}
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_periodic__specific_heat-data_collapse-pc0.5927_alpha_0.6799_nu_0.750}}}
 			\caption{}
 			\label{fig:site-redefine-specific-heat-b}
 		\end{subfigure}
@@ -452,7 +452,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 		\captionsetup[subfigure]{width=0.9\textwidth}
 		\begin{subfigure}[t]{0.4\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{{{L0/sq_lattice_site_percolation_periodic__susceptibility-pc0.5927}}}
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_periodic__susceptibility-pc0.5927}}}
 			\caption{}
 			\label{fig:site-redefine-susceptibility-a}
 		\end{subfigure}
@@ -482,7 +482,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 	\begin{equation}
 	\log(S) = d_f \log(L)
 	\end{equation}
-	Here $S$ is the average size of the spanning cluster at critical point. Using this we get the figure (\ref{fig:fractal-dimension}). And we obtain fractal dimension $d_f$ for $L0$ which is listed in (\ref{tab:exponents}). 
+	Here $S$ is the average size of the spanning cluster at critical point. Using this we get the figure (\ref{fig:fractal-dimension}). And we obtain fractal dimension $d_f$ for $L_0$ which is listed in (\ref{tab:exponents}). 
 
 	Fractal dimension gives us the information about the size of the spanning(wrapping) cluster. If the lattice size is known we can estimate the average size of the spanning cluster using $d_f$ and (\ref{eqn:fractal-dim-1}).
 	
@@ -499,8 +499,10 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 
 	Random sequential adsorption (RSA) refers to a process where particles are randomly introduced in a system, and if they do not overlap any previously adsorbed particle, they adsorb and remain fixed for the rest of the process.	In RSA process we take a surface (say a lattice) and deposit particle (like hard sphere) there sequentially. Each particle cover a certain area and another particle cannot be in that area. Now if a particle is tried to be deposited in the occupied area it is simply rejected \cite{Renyi1958, Widom1966}.	In the ballistic deposition process, as in RSA, disks fall	on a line with a uniform random distribution. However,	unlike the RSA process, a disk landing on top of an adsorbed disk will not be immediately rejected \cite{Talbot1992}.
 
-	Imagine a spherical shaped object, say marble, is thrown on top of a 2D square lattice structure. First possible scenario is that the marble will be deposited in the first encountered site in the lattice which is shown in figure (\ref{fig:rsbd-1}). Now if the first encountered site is not empty, the possible scenario is that the marble will go in any of the four direction, $+x$, $-x$, $+y$ or $-y$, assuming no other direction in between is allowed in the lattice (\ref{fig:rsbd-2}).  Now if the first neighbor is not empty then the marble will continue to go on in the previously selected direction and choose the next neighbor. This is another topic of this thesis. Others have done some work in this topic \cite{Choi1995, Talbot1992, Jullien1992, Viot1993}. And we have found that for a different range of interaction model they all belong to different universality classes.
+	Imagine a spherical shaped object, say marble, is thrown on top of a 2D square lattice structure. First possible scenario is that the marble will be deposited in the first encountered site in the lattice which is shown in figure (\ref{fig:rsbd}). Now if the first encountered site is not empty, the possible scenario is that the marble will go in any of the four direction, $+x$, $-x$, $+y$ or $-y$, assuming no other direction in between is allowed in the lattice (\ref{fig:rsbd}).  Now if the first neighbor is not empty then the marble will continue to go on in the previously selected direction and choose the next neighbor. This is another topic of this thesis. Others have done some work in this topic \cite{Choi1995, Talbot1992, Jullien1992, Viot1993}. And we have found that for a different range of interaction model they all belong to different universality classes.
 	
+
+
 	\begin{figure}[h]
 		\centering
 		\captionsetup[subfigure]{width=0.9\textwidth}
@@ -514,14 +516,6 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 			\includegraphics[width=6cm]{{{0.2g}}}
 			\caption{}
 		\end{subfigure}
-		\caption{(a) A spherical object is dropped and the place it was dropped to was empty. (b) Empty place is occupied by the spherical object.}
-		\label{fig:rsbd-1}
-	\end{figure}
-
-
-	\begin{figure}[h]
-		\centering
-		\captionsetup[subfigure]{width=0.9\textwidth}
 		\begin{subfigure}{0.4\textwidth}
 			\centering
 			\includegraphics[width=6cm]{{{1.1g}}}
@@ -532,13 +526,13 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 			\includegraphics[width=6cm]{{{1.2g}}}
 			\caption{}
 		\end{subfigure}
-		\caption{(a) A spherical object is dropped but the location it was dropped to is not empty. (b) Since the location is not empty the object simply falls down to one of the four sides.}
+		\caption{(a)-(b) A schematic diagram to show if a particle fall on a randomly chosen empty site then it is straightaway absorbed there. (c)-(d) If the randomly chosen site is already adsorbed then the trial particle roll over it in one of the four direction at random. If it then find an empty site it is occupied else the attempt is rejected for $L_1$. In the case of $L_2$ it goes one site further along the same line and then it is occupied if it finds an empty site else the trial attempt is permanently rejected.}
 		\label{fig:rsbd-2}
 	\end{figure}
 	
 	In our experiment, we occupy a randomly chosen site if it is empty else we select one of its four neighbor to occupy if it is empty else select next neighbor in that direction and occupy that site if it is empty else ignore current iteration and choose another site randomly. This process is repeated until there is no empty site in the lattice. We call this process the ballistic deposition on the square lattice. We introduce 1st and 2nd nearest neighbor interaction in this way.
 
-	Random percolation (RP) model can also be seen as a random sequential adsorption (RSA) \cite{Jullien1992} process of particles on a given substrate to form monolayers of clusters of complex shape and structures. In RSA, a site is first picked at random and it is occupied if it is empty and the trial attempt is rejected if it is already occupied. We shall first show that this process too reproduce all the existing results of the CRP including the $p_c$ value. We can modify the rejection criterion. First, we assume that the adsorbing particles are hard sphere and impenetrable. Then we assume that if a particle fall onto an already adsorbed particle it is not straightaway rejected. Instead, it is allowed to roll down over the already deposited particle to one of its nearest neighbours at random following the steepest descent path. The particle is then adsorbed permanently if the nearest neighbour is empty else the trial attempt is rejected. This is known as the ballistic deposition (BD) \cite{Choi1995, Talbot1992, Jullien1992, Viot1993} model for $L1$. We also consider the case that if the nearest neighbour is occupied then the incoming particle attempt to push the neighbour to its next neighour site along the same line to make room for itself. However, the trial attempt of pushing the neighbour is successful if the next neibhouring site along the same line is empty else the trial attempt is discarded. We regard it as BD model for $L2$ while the classical percolation correspond to BD model with $L0$. Our primary goal is to prove that the critical exponents of percolation changes as changes as we increase the range of interaction like we find in its thermal counterpart. We numerically find the various necessary critical exponents and find that BD for each different range of interaction belong to different universality class and each universality class obeys the Rusbrooke inequality.
+	Random percolation (RP) model can also be seen as a random sequential adsorption (RSA) \cite{Jullien1992} process of particles on a given substrate to form monolayers of clusters of complex shape and structures. In RSA, a site is first picked at random and it is occupied if it is empty and the trial attempt is rejected if it is already occupied. We shall first show that this process too reproduce all the existing results of the CRP including the $p_c$ value. We can modify the rejection criterion. First, we assume that the adsorbing particles are hard sphere and impenetrable. Then we assume that if a particle fall onto an already adsorbed particle it is not straightaway rejected. Instead, it is allowed to roll down over the already deposited particle to one of its nearest neighbours at random following the steepest descent path. The particle is then adsorbed permanently if the nearest neighbour is empty else the trial attempt is rejected. This is known as the ballistic deposition (BD) \cite{Choi1995, Talbot1992, Jullien1992, Viot1993} model for $L_1$. We also consider the case that if the nearest neighbour is occupied then the incoming particle attempt to push the neighbour to its next neighour site along the same line to make room for itself. However, the trial attempt of pushing the neighbour is successful if the next neibhouring site along the same line is empty else the trial attempt is discarded. We regard it as BD model for $L_2$ while the classical percolation correspond to BD model with $L_0$. Our primary goal is to prove that the critical exponents of percolation changes as changes as we increase the range of interaction like we find in its thermal counterpart. We numerically find the various necessary critical exponents and find that BD for each different range of interaction belong to different universality class and each universality class obeys the Rusbrooke inequality.
 	
 	Percolation is all about configuration of clusters of deposited particles and the investigation of the emergence of a large-scale connected path created by clusters formed by contiguous diposited particles. We use extensive Monte Carlo simulation on a square lattice with the usual periodic boundary condition to study site percolation according to RSBD rule.\\
 	
@@ -558,13 +552,13 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 	neighbour is ocupied too but the next nearest neighbour site is empty then the neighbour move to the empty
 	site to make space for the incoming particle to be deposited there. 
 	
-	In the following sections we study the threshold for $L1$ and $L2$. Then we find out the critical exponents $\alpha, \beta, \gamma, \nu$ for $L1$ and $L2$. We find that they all satisfy the Rushbrooke inequality which is listed in section (\ref{chapter.summary}). Then we find the fractal dimension of the system at threshold.
+	In the following sections we study the threshold for $L_1$ and $L_2$. Then we find out the critical exponents $\alpha, \beta, \gamma, \nu$ for $L_1$ and $L_2$. We find that they all satisfy the Rushbrooke inequality which is listed in section (\ref{chapter.summary}). Then we find the fractal dimension of the system at threshold.
 
 
 	\label{sect:finding-numerical-values}
 	\subsection{Critical occupation probability, $p_c$} 
 	\label{subsect:finding-pc}
-	When we occupy sites of the square lattice, initially, there are only clusters of size $1$. As we keep occupying different size of clusters starts to appear. At a certain point a special cluster appears which spans the entire lattice. We call this cluster the \textit{Spanning Cluster}. It should be noted that the spanning cluster is a special property of the lattice and the appearance of the spanning cluster is considered the phase transition. At the point where the spanning cluster first appears is called the critical point and denoted by $p_c$, meaning the occupation probability at the critical point. The figure (\ref{fig:spanning-probability}) shows the graph of the spanning probability, $W(p,L)$, versus the occupation probability $p$ for different interactions ($L1, L2$) for different lengths. We have found that $p_c$ is $0.5782, 0.5701$ for $L1, L2$ respectively. From figure (\ref{fig:site-redefine-spanning-probability-a}) we know the $p_c$ value for $L0$ and it is $0.5927$. Thus for long range interaction $p_c$ is smaller than for short range interaction. 
+	When we occupy sites of the square lattice, initially, there are only clusters of size $1$. As we keep occupying different size of clusters starts to appear. At a certain point a special cluster appears which spans the entire lattice. We call this cluster the \textit{Spanning Cluster}. It should be noted that the spanning cluster is a special property of the lattice and the appearance of the spanning cluster is considered the phase transition. At the point where the spanning cluster first appears is called the critical point and denoted by $p_c$, meaning the occupation probability at the critical point. The figure (\ref{fig:spanning-probability}) shows the graph of the spanning probability, $W(p,L)$, versus the occupation probability $p$ for different interactions ($L_1, L_2$) for different lengths. We have found that $p_c$ is $0.5782, 0.5701$ for $L_1, L_2$ respectively. From figure (\ref{fig:site-redefine-spanning-probability-a}) we know the $p_c$ value for $L_0$ and it is $0.5927$. Thus for long range interaction $p_c$ is smaller than for short range interaction. 
 		\begin{figure}[h]
 			\centering
 			\captionsetup[subfigure]{width=0.9\textwidth}
@@ -579,7 +573,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 			\caption{}
 			\end{subfigure}
 			\caption{Spanning probability $W(p,L)$ vs $p$ for different lattice sizes using new definition
-				of site percolation for (a) $L1$ and (b) $L2$ interaction. We find the threshold (critical point) which is the intersection of curves of different lattice sizes and we get $0.5782$ and $0.5701$ as $p_c$ for (a) $L1$ and (b) $L2$. 
+				of site percolation for (a) $L_1$ and (b) $L_2$ interaction. We find the threshold (critical point) which is the intersection of curves of different lattice sizes and we get $0.5782$ and $0.5701$ as $p_c$ for (a) $L_1$ and (b) $L_2$. 
 			}
 			\label{fig:spanning-probability}
 		\end{figure}
@@ -611,21 +605,21 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 	W = (p-p_c) L^{1/\nu}
 	\end{equation}
 	and plot $W$ vs $(p-p_c) L^{1/\nu}$ we find excellent data collapse and it is shown in figure (\ref{fig:spanning-probability-with-hline})
-	we get a very good data collapse for $L1,L2$ and got $1/\nu$ as $0.736, 0.721$ respectively which is shown in figure \ref{spanning-probability-data-collapse}. From the discussion of chapter (\ref{chapter.scaling-similarity}) we know that the data collapse means that a system is self-similar, that is for any size of lattice $L$ we will get the exact same collapse if we use the exponent $1/\nu$ obtained here for $L1$ and $L2$.
+	we get a very good data collapse for $L_1,L_2$ and got $1/\nu$ as $0.736, 0.721$ respectively which is shown in figure \ref{spanning-probability-data-collapse}. From the discussion of chapter (\ref{chapter.scaling-similarity}) we know that the data collapse means that a system is self-similar, that is for any size of lattice $L$ we will get the exact same collapse if we use the exponent $1/\nu$ obtained here for $L_1$ and $L_2$.
 	\begin{figure}[h]
 		\centering
 		\captionsetup[subfigure]{width=0.9\textwidth}
 		\begin{subfigure}[t]{0.4\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{{{L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_-occupation_probability-data_collapse-pc0.5782-ex0.7360}}}
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L1_periodic_-occupation_probability-data_collapse-pc0.5782-ex0.7360}}}
 			\caption{}
 		\end{subfigure}
 		\begin{subfigure}[t]{0.4\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{{{L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_-occupation_probability-data_collapse-pc0.5701-ex0.7210}}}
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic_-occupation_probability-data_collapse-pc0.5701-ex0.7210}}}
 			\caption{}
 		\end{subfigure}
-		\caption{We plot dimensionless quantities $W$ vs $(p-p_c)L^{1/\nu}$ using value of $1/\nu=0.736,0.721$ respectively for (a) $L1$ and (b) $L2$ for which we find excellent data-collapse. The values of $1/\nu$ is obtained from figure (\ref{fig:spanning-probability-with-hline}) by plotting $\log(L)$ vs $\log(p-p_c)$ which is shown in the inset of this graph.}
+		\caption{We plot dimensionless quantities $W$ vs $(p-p_c)L^{1/\nu}$ using value of $1/\nu=0.736,0.721$ respectively for (a) $L_1$ and (b) $L_2$ for which we find excellent data-collapse. The values of $1/\nu$ is obtained from figure (\ref{fig:spanning-probability-with-hline}) by plotting $\log(L)$ vs $\log(p-p_c)$ which is shown in the inset of this graph.}
 		\label{spanning-probability-data-collapse}
 	\end{figure}
 	
@@ -633,20 +627,20 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 	\subsection{Entropy, Specific Heat and finding $\alpha$}
 	\label{subsect:entropy-specific-heat}
 		For any phase transition model the entropy is crucial since it determines the type of transition. In percolation theory we use Shannon Entropy \cite{Shannon1948}. Using the definition from section (\ref{subsect:percolation-entropy}) we get the figure (\ref{fig:entropy}).
-		\begin{figure}[h]
+		\begin{figure}
 			\centering
 			\captionsetup[subfigure]{width=0.9\textwidth}
 			\begin{subfigure}{0.4\textwidth}
 				\centering
-				\includegraphics[width=\linewidth]{{{L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic_-entropy}}}
-				\caption{L1}
+				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L1_periodic_-entropy}}}
+				\caption{}
 			\end{subfigure}
 			\begin{subfigure}{0.4\textwidth}
 				\centering
-				\includegraphics[width=\linewidth]{{{L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic_-entropy}}}
-				\caption{L2}
+				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic_-entropy}}}
+				\caption{}
 			\end{subfigure}
-			\caption{Entropy, $H(p,L)$ vs Occupation Probability, $p$ for (a) $L1$ and (b) $L2$ interaction in square lattice whose $p_c$ values are $0.5782$ and $0.5701$ respectively}
+			\caption{Entropy, $H(p,L)$ vs Occupation Probability, $p$ for (a) $L_1$ and (b) $L_2$ interaction in square lattice whose $p_c$ values are $0.5782$ and $0.5701$ respectively}
 			\label{fig:entropy}
 		\end{figure}
 	
@@ -657,15 +651,15 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 		\captionsetup[subfigure]{width=0.9\textwidth}
 			\begin{subfigure}[t]{0.4\textwidth}
 				\centering
-				\includegraphics[width=\linewidth]{{{L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic__specific_heat-pc0.5782}}}
+				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L1_periodic__specific_heat-pc0.5782}}}
 				\caption{}
 			\end{subfigure}
 			\begin{subfigure}[t]{0.4\textwidth}
 				\centering
-				\includegraphics[width=\linewidth]{{{L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic__specific_heat-pc0.5701}}}
+				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic__specific_heat-pc0.5701}}}
 				\caption{}
 			\end{subfigure}
-			\caption{Specific Heat, $C(p,L)$ vs Occupation Probability, $p$ for (a) $L1$ and (b) $L2$ interaction.}
+			\caption{Specific Heat, $C(p,L)$ vs Occupation Probability, $p$ for (a) $L_1$ and (b) $L_2$ interaction.}
 			\label{fig:specific-heat-graph}
 		\end{figure}
 	 Since the specific heat $C(p,L)$ is defined in section (\ref{subsect.percolation.specific-heat}), we simply use the relation (\ref{def:specific-heat-percolation}) to obtain the specific heat for percolation in square lattice. But we get a noisy data and we call it micro-canonical. We apply convolution formula to get specific heat for a canonical ensemble. The process of applying convolution is described in appendix (\ref{appendix.convolution}). After applying convolution we a smooth curve shown in figure (\ref{fig:specific-heat-graph}).
@@ -684,12 +678,12 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic__specific_heat-x-scaled-pc0.5701_alpha_0.6631_nu_0.721}}}
 				\caption{}
 			\end{subfigure}
-			\caption{We plot $C(p,L)$ vs $(p-p_c) L^{1/\nu}$ using values of $1/\nu$ obtained from section (\ref{subsect:spanning-probability-and-one-by-nu}) for (a) $L1$ and (b) $L2$. We then measure height of the curves and call it $C_h$. Then plotting $\log(C_h)$ vs $\log(L)$ gives us the exponent $\alpha/\nu$ which is shown in the inset of figure (\ref{fig:specific-heat-data-collapse-graph})
+			\caption{We plot $C(p,L)$ vs $(p-p_c) L^{1/\nu}$ using values of $1/\nu$ obtained from section (\ref{subsect:spanning-probability-and-one-by-nu}) for (a) $L_1$ and (b) $L_2$. We then measure height of the curves and call it $C_h$. Then plotting $\log(C_h)$ vs $\log(L)$ gives us the exponent $\alpha/\nu$ which is shown in the inset of figure (\ref{fig:specific-heat-data-collapse-graph})
 			}
 			\label{fig:specific-heat-x-scaled-graph}
 		\end{figure}
-	 From this graph we will get the height of each line and call it $C_h$. Since each line corresponds to a specific length $L$ we can plot $\log(C_h)$ versus $\log(L)$ and the absolute value of the graph will give $\alpha/\nu$ and from that we can find the exponent $\alpha$ simply by dividing $\alpha/\nu$ by $1/\nu$. We get $\alpha$ values $0.911,0.919$ for $L1,L2$ correspondingly. and using this value we can apply FSS hypothesis to get data collapse.
-	If we plot $C L^{-\alpha/\nu}$ vs $(p-p_c)L^{1/\nu}$ we get perfect data collapse for $L1,L2$ and it is shown in figure (\ref{fig:specific-heat-data-collapse-graph})
+	 From this graph we will get the height of each line and call it $C_h$. Since each line corresponds to a specific length $L$ we can plot $\log(C_h)$ versus $\log(L)$ and the absolute value of the graph will give $\alpha/\nu$ and from that we can find the exponent $\alpha$ simply by dividing $\alpha/\nu$ by $1/\nu$. We get $\alpha$ values $0.911,0.919$ for $L_1,L_2$ correspondingly. and using this value we can apply FSS hypothesis to get data collapse.
+	If we plot $C L^{-\alpha/\nu}$ vs $(p-p_c)L^{1/\nu}$ we get perfect data collapse for $L_1,L_2$ and it is shown in figure (\ref{fig:specific-heat-data-collapse-graph})
 	\begin{figure}
 		\centering
 		\begin{subfigure}{0.4\textwidth}
@@ -702,12 +696,11 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic__specific_heat-data_collapse-pc0.5701_alpha_0.6712_nu_0.721-with}}}
 			\caption{}
 		\end{subfigure}
-		\caption{Plots of dimensionless quantities $C L^{-\alpha/\nu}$ vs $(p-p_c) L^{1/\nu}$ for different sizes of square lattice for (a) $L1$ and (b) $L2$ interaction. We know the values of $1/\nu$ for corresponding interaction from section (\ref{subsect:spanning-probability-and-one-by-nu}). We find excelent data collapse with $\alpha/\nu=0.6712,0.6631$ for (a) $L1$ and (b) $L2$ interaction respectively. Values of $\alpha/\nu$ is obtained from the graph $\log(C_h)$ vs $\log(L)$ which is shown in the inset and $C_h$ is known to us from figure (\ref{fig:specific-heat-x-scaled-graph})}
+		\caption{Plots of dimensionless quantities $C L^{-\alpha/\nu}$ vs $(p-p_c) L^{1/\nu}$ for different sizes of square lattice for (a) $L_1$ and (b) $L_2$ interaction. We know the values of $1/\nu$ for corresponding interaction from section (\ref{subsect:spanning-probability-and-one-by-nu}). We find excelent data collapse with $\alpha/\nu=0.6712,0.6631$ for (a) $L_1$ and (b) $L_2$ interaction respectively. Values of $\alpha/\nu$ is obtained from the graph $\log(C_h)$ vs $\log(L)$ which is shown in the inset and $C_h$ is known to us from figure (\ref{fig:specific-heat-x-scaled-graph})}
 		\label{fig:specific-heat-data-collapse-graph}
 	\end{figure}
 
-	\clearpage
-	\newpage
+
 	\subsection{Order Parameter and finding $\beta$}
 	\label{subsect:order-parameter}
 		Order parameter, also knows as the percolation strength, is ,along with entropy, an important quantity in the study of phase transition. It is denoted as $P(p,L)$. Using the definition (\ref{def:order-parameter}) we obtain the order parameter for our system and it is shown in the figure (\ref{fig:order-parameter}). Since using spanning cluster and the largest cluster gives the same exponent, it really does not matter which one we use. But in our case there is a boundary of the system, which we define as periodic. Hence using spanning cluster is appropriate.
@@ -717,14 +710,14 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 			\begin{subfigure}{0.4\textwidth}
 				\centering
 				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L1_periodic_-spanning-_order_parameter-pc0.5782}}}
-				\caption{L1}
+				\caption{}
 			\end{subfigure}
 			\begin{subfigure}{0.4\textwidth}
 				\centering
 				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic_-spanning-_order_parameter-pc0.5701}}}
-				\caption{L2}
+				\caption{}
 			\end{subfigure}
-			\caption{Order Parameter, $P(p,L)$ vs Occupation Probability, $p$ for (a) $L1$ and (b) $L2$}
+			\caption{Order Parameter, $P(p,L)$ vs Occupation Probability, $p$ for (a) $L_1$ and (b) $L_2$}
 			\label{fig:order-parameter}
 		\end{figure}
 		Using the exponent $1/\nu$ obtained in section (\ref{subsect:spanning-probability-and-one-by-nu})
@@ -741,7 +734,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic_-spanning-_order_parameter-x-scaled-pc0.5701}}}
 				\caption{}
 			\end{subfigure}
-			\caption{Order Parameter, $P(p,L)$ vs dimensionless quantity $(p-p_c)L^{1/\nu}$ for (a) $L1$ and (b) $L2$ interactions. The values of $1/\nu$ is obtained from section (\ref{subsect:spanning-probability-and-one-by-nu}). We draw a vertical line near the critical point and measure the height of the intersection of the curves of $P$ with the vertical line and call it $P_h$. The plot of $\log(P_h)$ vs $\log(L)$ gives us the exponent $\gamma/\nu$ which is shown in the inset of the figure (\ref{fig:order-parameter-data-collapse})}
+			\caption{Order Parameter, $P(p,L)$ vs dimensionless quantity $(p-p_c)L^{1/\nu}$ for (a) $L_1$ and (b) $L_2$ interactions. The values of $1/\nu$ is obtained from section (\ref{subsect:spanning-probability-and-one-by-nu}). We draw a vertical line near the critical point and measure the height of the intersection of the curves of $P$ with the vertical line and call it $P_h$. The plot of $\log(P_h)$ vs $\log(L)$ gives us the exponent $\gamma/\nu$ which is shown in the inset of the figure (\ref{fig:order-parameter-data-collapse})}
 			\label{fig:order-parameter-x-scaled}
 		\end{figure}
  	    Then in figure (\ref{fig:order-parameter-x-scaled}) we draw a vertical line where there are several horizontal lines. We measure the height of the lines and call it $P_h$ and after plotting $\log(P_h)$ vs $\log(L)$ (inset of figure (\ref{fig:order-parameter-data-collapse}))we get the exponent $\beta/\nu$ from it's slope and obtain exponent $\beta$ by dividing $\beta/\nu$ by $1/\nu$.
@@ -752,14 +745,14 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 			\begin{subfigure}{0.4\textwidth}
 				\centering
 				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L1_periodic_-spanning-_order_parameter-data_collapse-pc0.5782_beta_0.103_nu_0.736}}}
-				\caption{L1}
+				\caption{}
 			\end{subfigure}
 			\begin{subfigure}{0.4\textwidth}
 				\centering
 				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic_-spanning-_order_parameter-data_collapse-pc0.5701_beta_0.098_nu_0.721}}}
-				\caption{L2}
+				\caption{}
 			\end{subfigure}
-			\caption{We plot $P(p,L)L^{\beta/\nu}$ versus $(p-p_c)L^{1/\nu}$ using the values of $1/\nu$ from section (\ref{subsect:spanning-probability-and-one-by-nu}). And the value of the exponent $\beta/\nu$ obtained from the plot in the inset of this graph. To do this we needed values of $P_h$ which is obtained from figure (\ref{fig:order-parameter-x-scaled}).				An excellent data collapse is obtained using the exponents $\beta/\nu=0.1026,0.0982$ for (a) $L1$ and (b) $L2$ respectively.}
+			\caption{We plot $P(p,L)L^{\beta/\nu}$ versus $(p-p_c)L^{1/\nu}$ using the values of $1/\nu$ from section (\ref{subsect:spanning-probability-and-one-by-nu}). And the value of the exponent $\beta/\nu$ obtained from the plot in the inset of this graph. To do this we needed values of $P_h$ which is obtained from figure (\ref{fig:order-parameter-x-scaled}).				An excellent data collapse is obtained using the exponents $\beta/\nu=0.1026,0.0982$ for (a) $L_1$ and (b) $L_2$ respectively.}
 			\label{fig:order-parameter-data-collapse}
 		\end{figure}
 	
@@ -772,57 +765,56 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 		\captionsetup[subfigure]{width=0.9\textwidth}
 			\begin{subfigure}{0.4\textwidth}
 				\centering
-				\includegraphics[width=\linewidth]{{{L1/sq_lattice_site_percolation_ballistic_deposition_L1_periodic__susceptibility-pc0.5782}}}
-				\caption{L1}
+				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L1_periodic__susceptibility-pc0.5782}}}
+				\caption{}
 			\end{subfigure}
 			\begin{subfigure}{0.4\textwidth}
 				\centering
-				\includegraphics[width=\linewidth]{{{L2/sq_lattice_site_percolation_ballistic_deposition_L2_periodic__susceptibility-pc0.5701}}}
-				\caption{L2}
+				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic__susceptibility-pc0.5701}}}
+				\caption{}
 			\end{subfigure}
-			\caption{Plots of susceptibility $\chi(p)$ as a	function of $p$ in square lattice of different sizes for (a) $L1$ and (b) $L2$ interaction.}
+			\caption{Plots of susceptibility $\chi(p)$ as a	function of $p$ in square lattice of different sizes for (a) $L_1$ and (b) $L_2$ interaction.}
 			\label{fig:susceptibility}
 		\end{figure}
 	
 	And if we scale the $x$ values and plot $\chi$ vs $(p-p_c)L^{1/\nu}$ we get all the peak point aligned (figure (\ref{fig:susceptibility-x-scaled})). Note that the value of $1/\nu$ is known from section (\ref{subsect:spanning-probability-and-one-by-nu}). Then we take the reading of the height of each line and call it $\chi_h$. Since each line represents a different lattice size, plotting $\log(\chi_h)$ vs $\log(L)$ gives the slope $\gamma/\nu$. 
-	
-		\begin{figure}[h]
+
+	\begin{figure}
+		\centering
+		\captionsetup[subfigure]{width=0.9\textwidth}
+			
+		\begin{subfigure}{0.45\textwidth}
 			\centering
-			\captionsetup[subfigure]{width=0.9\textwidth}
-				
-			\begin{subfigure}{0.45\textwidth}
-				\centering
-				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L1_periodic__susceptibility-x-scaled-pc0.5782_gamma_0.6287_nu_0.736}}}
-				\caption{}
-			\end{subfigure}
-			\begin{subfigure}{0.45\textwidth}
-				\centering
-				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic__susceptibility-x-scaled-pc0.5701_gamma_0.6362_nu_0.721}}}
-				\caption{}
-			\end{subfigure}
-			\caption{ We plot $\chi(p,L)$ vs $(p-p_c) L ^{1/\nu}$ using the values of $1/\nu$ obtained from section (\ref{subsect:spanning-probability-and-one-by-nu}). Then we measure the height of the curves and call them $\chi_h$ and plotting $\log(\chi_h)$ vs $\log(L)$ gives us the exponent $\gamma/\nu$ which is shown in the inset of figure (\ref{fig:susceptibility-data-collapse}).}
-			\label{fig:susceptibility-x-scaled}
-		\end{figure}
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L1_periodic__susceptibility-x-scaled-pc0.5782_gamma_0.6287_nu_0.736}}}
+			\caption{}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic__susceptibility-x-scaled-pc0.5701_gamma_0.6362_nu_0.721}}}
+			\caption{}
+		\end{subfigure}
+		\caption{ We plot $\chi(p,L)$ vs $(p-p_c) L ^{1/\nu}$ using the values of $1/\nu$ obtained from section (\ref{subsect:spanning-probability-and-one-by-nu}). Then we measure the height of the curves and call them $\chi_h$ and plotting $\log(\chi_h)$ vs $\log(L)$ gives us the exponent $\gamma/\nu$ which is shown in the inset of figure (\ref{fig:susceptibility-data-collapse}).}
+		\label{fig:susceptibility-x-scaled}
+	\end{figure}
 	
 	And using the FSS hypothesis we plot $\chi L^{-\gamma/\nu}$ vs $(p-p_c)L^{1/\nu}$ and obtain a perfect data collapse. It is shown in figure (\ref{fig:susceptibility-data-collapse}). We obtain the values of $\gamma$ to be $0.8542,0.882$.
-	
-		\begin{figure}[h]
+
+	\begin{figure}
+		\centering
+		\captionsetup[subfigure]{width=0.9\textwidth}
+		\begin{subfigure}{0.45\textwidth}
 			\centering
-			\captionsetup[subfigure]{width=0.9\textwidth}
-			\begin{subfigure}{0.45\textwidth}
-				\centering
-				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L1_periodic__susceptibility-data_collapse-pc0.5782_gamma_0.6287_nu_0.736}}}
-				\caption{}
-			\end{subfigure}
-			\begin{subfigure}{0.45\textwidth}
-				\centering
-				\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic__susceptibility-data_collapse-pc0.5701_gamma_0.6362_nu_0.721}}}
-				\caption{}
-			\end{subfigure}
-			\caption{Plots of dimension less quantities $\chi L^{\gamma/\nu}$ vs $(p-p_c) L ^{1/\nu}$ for different sizes of square lattice for (a) $L1$ and (b) $L2$ interaction. We know the values of $1/\nu$ for corresponding interaction from (\ref{subsect:spanning-probability-and-one-by-nu}). We find excelent data collapse with $\gamma/\nu=0.6287,0.6362$ for (a) $L1$ and (b) $L2$ interaction respectively. Values of $\gamma/\nu$ is obtained from the graph $\log(\chi_h)$ vs $\log(L)$ which is shown in the inset and $\chi_h$ is known to us from figure (\ref{fig:susceptibility-x-scaled})}
-			\label{fig:susceptibility-data-collapse}
-		\end{figure}
-	
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L1_periodic__susceptibility-data_collapse-pc0.5782_gamma_0.6287_nu_0.736}}}
+			\caption{}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic__susceptibility-data_collapse-pc0.5701_gamma_0.6362_nu_0.721}}}
+			\caption{}
+		\end{subfigure}
+		\caption{Plots of dimension less quantities $\chi L^{\gamma/\nu}$ vs $(p-p_c) L ^{1/\nu}$ for different sizes of square lattice for (a) $L_1$ and (b) $L_2$ interaction. We know the values of $1/\nu$ for corresponding interaction from (\ref{subsect:spanning-probability-and-one-by-nu}). We find excelent data collapse with $\gamma/\nu=0.6287,0.6362$ for (a) $L_1$ and (b) $L_2$ interaction respectively. Values of $\gamma/\nu$ is obtained from the graph $\log(\chi_h)$ vs $\log(L)$ which is shown in the inset and $\chi_h$ is known to us from figure (\ref{fig:susceptibility-x-scaled})}
+		\label{fig:susceptibility-data-collapse}
+	\end{figure}
 	
 	\clearpage
 	\newpage
@@ -836,7 +828,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 	\begin{equation}
 	\log(S) = d_f \log(L)
 	\end{equation}
-	Here $S$ is the average size of the spanning cluster at critical point. Using this we get the figure (\ref{fig:fractal-dimension}). And we obtain fractal dimension $d_f$ for $L0,L1,L2$ which is listed in (\ref{tab:exponents}). 
+	Here $S$ is the average size of the spanning cluster at critical point. Using this we get the figure (\ref{fig:fractal-dimension}). And we obtain fractal dimension $d_f$ for $L_0,L_1,L_2$ which is listed in (\ref{tab:exponents}). 
 	\begin{figure}[h]
 		\centering
 		\captionsetup[subfigure]{width=0.9\textwidth}
@@ -851,7 +843,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 			\caption{}
 		\end{subfigure}
 		\label{fig:fractal-dimension}
-		\caption{We plot $\log(S)$ vs $\log(L)$ where $S$ is the size of the spanning cluster and $L$ is the length of the lattice. We obtain the slope $1.8995$ and $1.9081$ for (a) $L1$ and (b) $L2$ respectively which are the fractal dimensions of the system for $L1$ and $L2$ interactions respectively.}
+		\caption{We plot $\log(S)$ vs $\log(L)$ where $S$ is the size of the spanning cluster and $L$ is the length of the lattice. We obtain the slope $1.8995$ and $1.9081$ for (a) $L_1$ and (b) $L_2$ respectively which are the fractal dimensions of the system for $L_1$ and $L_2$ interactions respectively.}
 	\end{figure}
 	Fractal dimension gives us the information about the size of the spanning(wrapping) cluster. If the lattice size is known we can estimate the average size of the spanning cluster using $d_f$ and (\ref{eqn:fractal-dim}).
 	
@@ -872,7 +864,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic_-entropy-order_parameter-L400}}}
 			\caption{}
 		\end{subfigure}
-		\caption{We plot normalized entropy $H(p,L)/H(0,L)$ and normalized order parameter $P(p,L)/P(1,L)$ vs $p$ in one graph to see the order disorder transition in square lattice for (a) $L1$ (b) $L2$ interaction. We had to normalize entropy to make order parameter and entropy comparable.}
+		\caption{We plot normalized entropy $H(p,L)/H(0,L)$ and normalized order parameter $P(p,L)/P(1,L)$ vs $p$ in one graph to see the order disorder transition in square lattice for (a) $L_1$ (b) $L_2$ interaction. We had to normalize entropy to make order parameter and entropy comparable.}
 		\label{fig:ordered-disordered-transition}
 	\end{figure}
 	

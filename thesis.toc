@@ -36,13 +36,13 @@
 \contentsline {subsection}{\numberline {3.2.4}Susceptibility}{34}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}Shapes of the Thermodynamic Quantities}{35}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Calculus to determine the shapes}{35}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Free Energy}{35}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Free Energy}{36}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Entropy and Specific Heat}{36}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Order Parameter and Susceptibility}{37}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.4}Order Parameter and Susceptibility}{38}{subsection.3.3.4}
 \contentsline {section}{\numberline {3.4}Critical Exponents}{38}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}List of Thermodynamic Quantities that Follows Power Law}{42}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Rushbrooke Inequality}{42}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Griffiths Inequality}{42}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.2}Rushbrooke Inequality}{43}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Griffiths Inequality}{43}{subsection.3.4.3}
 \contentsline {section}{\numberline {3.5}Ising Model}{43}{section.3.5}
 \contentsline {chapter}{\numberline {4}Percolation Theory}{49}{chapter.4}
 \contentsline {section}{\numberline {4.1}Percolation Phenomena}{50}{section.4.1}
@@ -108,35 +108,35 @@
 \contentsline {subsection}{\numberline {5.2.1}Critical occupation probability, $p_c$}{100}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Spanning Probability and finding $1/\nu $}{101}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Entropy, Specific Heat and finding $\alpha $}{102}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Order Parameter and finding $\beta $}{106}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Susceptibility and finding $\gamma $}{108}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}Fractal Dimension}{110}{subsection.5.2.6}
-\contentsline {subsection}{\numberline {5.2.7}Order-Disorder Transition}{110}{subsection.5.2.7}
-\contentsline {chapter}{\numberline {6}Summary and Discussion}{113}{chapter.6}
-\contentsline {section}{\numberline {6.1}Results}{115}{section.6.1}
-\contentsline {section}{\numberline {6.2}Further Research}{116}{section.6.2}
-\contentsline {chapter}{References}{117}{chapter*.86}
-\contentsline {chapter}{Appendix \numberline {A}Percolation}{127}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Algorithm}{127}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Code}{127}{section.a.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Index}{130}{subsection.a.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Site}{134}{subsection.a.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Bond}{137}{subsection.a.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Lattice}{142}{subsection.a.A.2.4}
-\contentsline {subsection}{\numberline {A.2.5}Exception}{163}{subsection.a.A.2.5}
-\contentsline {subsection}{\numberline {A.2.6}Cluster}{165}{subsection.a.A.2.6}
-\contentsline {subsection}{\numberline {A.2.7}Percolation}{170}{subsection.a.A.2.7}
-\contentsline {subsection}{\numberline {A.2.8}Utilities}{222}{subsection.a.A.2.8}
-\contentsline {subsection}{\numberline {A.2.9}Tests}{226}{subsection.a.A.2.9}
-\contentsline {subsection}{\numberline {A.2.10}Main}{230}{subsection.a.A.2.10}
-\contentsline {subsection}{\numberline {A.2.11}CMakeLists}{232}{subsection.a.A.2.11}
-\contentsline {subsection}{\numberline {A.2.12}complete code}{233}{subsection.a.A.2.12}
-\contentsline {chapter}{Appendix \numberline {B}Convolution}{235}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}Algorithm}{236}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Code}{236}{section.a.B.2}
-\contentsline {chapter}{Appendix \numberline {C}Finding Exponents}{239}{Appendix.a.C}
-\contentsline {section}{\numberline {C.1}Algorithm}{239}{section.a.C.1}
-\contentsline {subsection}{\numberline {C.1.1}Specific Heat and Susceptibility}{239}{subsection.a.C.1.1}
-\contentsline {subsubsection}{exponent for scaling the $y$-values}{239}{section*.90}
-\contentsline {subsubsection}{exponent for scaling the $x$-values}{240}{section*.91}
-\contentsline {chapter}{Appendix \numberline {D}Measuring Entropy Efficiently}{243}{Appendix.a.D}
+\contentsline {subsection}{\numberline {5.2.4}Order Parameter and finding $\beta $}{104}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Susceptibility and finding $\gamma $}{107}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Fractal Dimension}{109}{subsection.5.2.6}
+\contentsline {subsection}{\numberline {5.2.7}Order-Disorder Transition}{109}{subsection.5.2.7}
+\contentsline {chapter}{\numberline {6}Summary and Discussion}{111}{chapter.6}
+\contentsline {section}{\numberline {6.1}Results}{113}{section.6.1}
+\contentsline {section}{\numberline {6.2}Further Research}{114}{section.6.2}
+\contentsline {chapter}{References}{115}{chapter*.85}
+\contentsline {chapter}{Appendix \numberline {A}Percolation}{125}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Algorithm}{125}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Code}{125}{section.a.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Index}{128}{subsection.a.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Site}{132}{subsection.a.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Bond}{134}{subsection.a.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Lattice}{139}{subsection.a.A.2.4}
+\contentsline {subsection}{\numberline {A.2.5}Exception}{151}{subsection.a.A.2.5}
+\contentsline {subsection}{\numberline {A.2.6}Cluster}{152}{subsection.a.A.2.6}
+\contentsline {subsection}{\numberline {A.2.7}Percolation}{157}{subsection.a.A.2.7}
+\contentsline {subsection}{\numberline {A.2.8}Utilities}{210}{subsection.a.A.2.8}
+\contentsline {subsection}{\numberline {A.2.9}Tests}{214}{subsection.a.A.2.9}
+\contentsline {subsection}{\numberline {A.2.10}Main}{218}{subsection.a.A.2.10}
+\contentsline {subsection}{\numberline {A.2.11}CMakeLists}{220}{subsection.a.A.2.11}
+\contentsline {subsection}{\numberline {A.2.12}complete code}{221}{subsection.a.A.2.12}
+\contentsline {chapter}{Appendix \numberline {B}Convolution}{223}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}Algorithm}{224}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Code}{224}{section.a.B.2}
+\contentsline {chapter}{Appendix \numberline {C}Finding Exponents}{229}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}Algorithm}{229}{section.a.C.1}
+\contentsline {subsection}{\numberline {C.1.1}Specific Heat and Susceptibility}{229}{subsection.a.C.1.1}
+\contentsline {subsubsection}{exponent for scaling the $y$-values}{229}{section*.89}
+\contentsline {subsubsection}{exponent for scaling the $x$-values}{230}{section*.90}
+\contentsline {chapter}{Appendix \numberline {D}Measuring Entropy Efficiently}{233}{Appendix.a.D}

@@ -13,13 +13,10 @@ The \textbf{src/percolation/percolation.h} file
 #include <map>
 #include <climits>
 #include <fstream>
-
-
+#include <random>
 #include "../types.h"
 #include "../lattice/lattice.h"
 #include "../index/index.h"
-
-#include <random>
 
 
 /**
@@ -63,7 +60,6 @@ static constexpr const char* signature = "SqLatticePercolation";
 virtual ~SqLatticePercolation() = default;
 SqLatticePercolation(value_type length);
 void reset();
-
 
 bool occupy();
 value_type length() const { return _length;}

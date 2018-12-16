@@ -1,29 +1,7 @@
 %!TEX root = ../thesis.tex
 % ******************************* Thesis Appendix B ********************************
-\definecolor{mGreen}{rgb}{0,0.6,0}
-\definecolor{mGray}{rgb}{0.5,0.5,0.5}
-\definecolor{mPurple}{rgb}{0.58,0,0.82}
-\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
 
-\lstdefinestyle{CStyle}{
-	backgroundcolor=\color{backgroundColour},   
-	commentstyle=\color{mGreen},
-	keywordstyle=\color{magenta},
-	numberstyle=\tiny\color{mGray},
-	stringstyle=\color{mPurple},
-	basicstyle=\footnotesize,
-	breakatwhitespace=false,         
-	breaklines=true,                 
-	captionpos=b,                    
-	keepspaces=true,                 
-	numbers=left,                    
-	numbersep=5pt,                  
-	showspaces=false,                
-	showstringspaces=false,
-	showtabs=false,                  
-	tabsize=2,
-	language=C
-}
+\input{style.tex}
 
 
 \chapter{Convolution}
@@ -130,7 +108,7 @@ Complete code for convolution is available at
 
 The program linked above works using command line arguments. And the uses is as follows\\
 
-\begin{lstlisting}
+\begin{lstlisting}[style=Instruction]
 Usage:
 convolution [-f <STRING>] [-a <INT>,<INT>,...[:[<STRING>,<STRING>,...]]] [-b <INT>,<INT>,...[:[<STRING>,<STRING>,...]]] [-h] [-t <INT>] [-i <STRING>]
 perform convolution based on provided options.

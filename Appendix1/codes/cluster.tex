@@ -66,7 +66,6 @@ void insert(const Cluster& cluster);
 void insert_v2(const Cluster& cluster);
 void insert_with_id_v2(const Cluster& cluster, int id);
 
-
 friend std::ostream& operator<<(std::ostream& os, const Cluster& cluster);
 
 const std::vector<BondIndex>&   getBondIndices()    {return _bond_index;}
@@ -108,8 +107,6 @@ void Cluster::addBondIndex(BondIndex bondIndex) {
 _bond_index.push_back(bondIndex);
 }
 
-
-
 void Cluster::insert(const std::vector<BondIndex>& bonds){
 _bond_index.reserve(bonds.size());
 for(value_type i{} ; i != bonds.size() ; ++i){
@@ -127,7 +124,6 @@ _site_index.push_back(sites[i]);
 /**
 * Merge two cluster as one
 * All intrinsic property should be considered, e.g., creation time of a cluster must be recalculated
-* @param cluster
 */
 void Cluster::insert(const Cluster &cluster) {
 if(_id > cluster._id){
@@ -142,11 +138,9 @@ _bond_index.insert(_bond_index.end(), cluster._bond_index.begin(), cluster._bond
 _site_index.insert(_site_index.end(), cluster._site_index.begin(), cluster._site_index.end());
 }
 
-
 /**
 * Merge two cluster as one
 * All intrinsic property should be considered, e.g., creation time of a cluster must be recalculated
-* @param cluster
 */
 void Cluster::insert_v2(const Cluster &cluster) {
 // older time or smaller time is the creation birthTime of the cluster

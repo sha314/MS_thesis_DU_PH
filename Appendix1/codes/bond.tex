@@ -7,14 +7,11 @@ The \textbf{src/lattice/bond.h} file
 #ifndef SITEPERCOLATION_BOND_H
 #define SITEPERCOLATION_BOND_H
 
-
 #include <ostream>
 #include <iostream>
 #include <sstream>
-
 #include "../index/index.h"
 #include "../types.h"
-
 
 /**
 * A bond has two end
@@ -23,7 +20,6 @@ The \textbf{src/lattice/bond.h} file
 *
 */
 struct Bond{
-// check if active or not
 bool _status{false};
 value_type _length;
 int _group_id{-1};
@@ -146,7 +142,6 @@ _relative_index = {x,y};
 IndexRelative relativeIndex() const {return _relative_index;}
 };
 
-
 std::ostream&   operator<<(std::ostream& os, const Bond& bond);
 bool            operator==(Bond a, Bond b);
 bool            operator<(const Bond& bond1, const Bond& bond2);
@@ -203,7 +198,6 @@ return bond1._end1.row_ < bond2._end1.row_;
 }
 return bond1.isHorizontal();
 }
-
 
 bool  operator>(const Bond& bond1, const Bond& bond2){
 if(bond1.isHorizontal() && bond2.isHorizontal()){

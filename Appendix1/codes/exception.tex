@@ -10,9 +10,6 @@ The \textbf{src/exception/exception.h} file
 #include <string>
 #include <iostream>
 
-/**
- *
- */
 struct Mismatch{
     std::string msg_;
     size_t line_;
@@ -24,9 +21,6 @@ struct Mismatch{
     }
 };
 
-/**
- *
- */
 struct InvalidIndex{
     std::string msg_;
     InvalidIndex(std::string msg)  :msg_{msg}  {}
@@ -36,9 +30,6 @@ struct InvalidIndex{
     }
 };
 
-/**
- *
- */
 struct InvalidBond{
     std::string msg_;
     InvalidBond(std::string msg)  :msg_{msg}  {}
@@ -47,7 +38,6 @@ struct InvalidBond{
         std::cout << msg_ << std::endl;
     }
 };
-
 
 /**
  * When any neighor is occupied and no suitable neighbor is found, throw this exception
@@ -72,8 +62,6 @@ struct InvalidNeighbor{
         std::cout << msg_ << std::endl;
     }
 };
-
-
 #endif //PERCOLATION_EXCEPTIONS_H
 \end{lstlisting}
 

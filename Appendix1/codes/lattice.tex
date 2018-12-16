@@ -8,12 +8,10 @@ the \textbf{src/lattice/lattice.h} file
 
 #include <vector>
 #include <cmath>
-
 #include "../percolation/cluster.h"
 #include "../types.h"
 #include "site.h"
 #include "bond.h"
-
 
 /**
 * The square Lattice
@@ -45,28 +43,9 @@ SqLattice(value_type length, bool activate_bonds, bool activate_sites, bool bond
 
 void reset(bool reset_all=false);
 
-
 /***************************************
-* I/O functions
+* I/O functions : declarations and definitions are in github
 **************************************/
-void view_sites();
-void view_sites_extended();
-void view_sites_by_id();
-void view_sites_by_relative_index();
-void view_bonds_by_relative_index_v4();
-void view_by_relative_index();
-void view(); // view lattice bonds and sites together
-
-void view_h_bonds();
-void view_v_bonds();
-
-void view_bonds(){
-view_h_bonds();
-view_v_bonds();
-}
-
-
-void view_bonds_by_id();
 
 /************************************
 * Activation functions
@@ -90,7 +69,6 @@ void setGroupID(BondIndex index, int group_id);
 const int getGroupID(Index index)const;
 const int getGroupID(BondIndex index)const;
 
-
 /******************************************************************************
 * Get Neighbor from given index
 ******************************************************************************/
@@ -111,16 +89,11 @@ static std::vector<Index> get_neighbor_indices(size_t length, BondIndex bond);  
 
 The \textbf{src/lattice/lattice.cpp} file
 \begin{lstlisting}[style=CStyle]
-//
-// Created by shahnoor on 10/2/2017.
-//
-
 #include <iomanip>
 #include "lattice.h"
 #include "../util/printer.h"
 
 using namespace std;
-
 
 /**
 *
@@ -199,15 +172,12 @@ _v_bonds[i][j].activate();
 
 }
 
-/********************************************************************
+/************************************************
 * Activation and Deactivation
-********************************************************************/
-
-
+*************************************************/
 void SqLattice::activate_site(Index index) {
 _sites[index.row_][index.column_].activate();
 }
-
 
 void SqLattice::activateBond(BondIndex bond) {
 // check if the bond is vertical or horizontal
@@ -228,14 +198,11 @@ _v_bonds[bond.row_][bond.column_].activate();
 else{
 cout << bond << " is not a valid bond : line " << __LINE__ << endl;
 }
-
 }
-
 
 void SqLattice::deactivate_site(Index index){
 _sites[index.row_][index.column_].deactivate();
 }
-
 
 void SqLattice::deactivate_bond(Bond bond) {
 // check if the bond is vertical or horizontal
@@ -259,378 +226,10 @@ cout << bond << " is not a valid bond : line " << __LINE__ << endl;
 }
 }
 
-
 /*********************************************************
 * Viewing methods
 *********************************************************/
-/**
-*  View the sites of the lattice
-*  place (*) if the site is not active
-*/
-void SqLattice::view_sites()
-{
-std::cout << "view sites" << std::endl;
-std::cout << '{';
-for(value_type i{} ; i != _length ; ++i) {
-if(i!=0) std::cout << "  ";
-else std::cout << '{';
-for (value_type j{}; j != _length; ++j) {
-if(_sites[i][j].isActive()){
-std::cout << _sites[i][j] ;
-}
-else{
-std::cout << "(*)";
-}
-if(j != _length-1)
-std::cout << ',';
-}
-std::cout << '}';
-if(i != _length-1)
-std::cout << std::endl;
-}
-std::cout << '}';
-std::cout << std::endl;
-}
 
-/**
-*  View the sites of the lattice
-*  place (*) if the site is not active
-*  Shows the group_id along with sites
-*
-*  Very good output format. Up to lattice size < 100
-*/
-void SqLattice::view_sites_extended()
-{
-std::cout << "view sites" << std::endl;
-std::cout << '{';
-for(value_type i{} ; i != _length ; ++i) {
-if(i!=0) std::cout << "  ";
-else std::cout << '{';
-for (value_type j{}; j != _length; ++j) {
-std::cout << std::setw(3) << _sites[i][j].get_groupID() << ":";
-
-if(_sites[i][j].isActive()) {
-cout << '(' << std::setw(2) << _sites[i][j]._id.row_ << ','
-<< std::setw(2) << _sites[i][j]._id.column_ << ')';
-}
-else{
-cout << std::setw(7) << "(*)";
-}
-
-if(j != _length-1)
-std::cout << ',';
-}
-std::cout << '}';
-if(i != _length-1)
-std::cout << std::endl;
-}
-std::cout << '}';
-std::cout << std::endl;
-}
-
-
-
-/**
-* Displays group ids of sites in a matrix form
-*/
-void SqLattice::view_sites_by_id() {
-std::cout << "Sites by id : line " << __LINE__ << endl;
-cout << "   ";
-for(value_type j{}; j != _length; ++ j){
-cout << " " << setw(3) << j;
-}
-cout << endl << " __|";
-for(value_type j{}; j != _length; ++ j){
-cout << "_ _ ";
-}
-cout << endl;
-for(value_type i{} ; i != _length; ++i){
-cout << setw(3) << i << "|";
-for(value_type j{} ; j != _length ; ++ j){
-cout << setw(3) << _sites[i][j].get_groupID() << ' ';
-}
-cout << endl;
-}
-}
-
-
-/**
-*
-*/
-void SqLattice::view_sites_by_relative_index(){
-std::cout << "Relative index : line " << __LINE__ << endl;
-cout << "Format: \"id(x,y)\"" << endl;
-cout << "   |";
-for(value_type j{}; j != _length; ++ j){
-cout << setw(4) << j << "         |";
-}
-cout << endl;
-print_h_barrier(_length, "___|__", "___________|__");
-for(value_type i{} ; i != _length; ++i){
-cout << setw(3) << i << "|";
-for(value_type j{} ; j != _length ; ++ j){
-if(_sites[i][j].get_groupID() == -1){
-// left blank
-cout << setw(4) << _sites[i][j].get_groupID() << "         |";
-continue;
-}
-cout << setw(4) << _sites[i][j].get_groupID() << _sites[i][j].relativeIndex() << "|";
-}
-cout << endl;
-print_h_barrier(_length, "___|__", "___________|__");
-}
-//    print_h_barrier(_length, "___|__", "___________|_");
-}
-
-
-
-
-
-/**
-* View bonds in the lattice by relative index. id of the site is showed
-* format : id(relative index) for site and only id for bond
-* if any site is isolated relative index is not shown
-*/
-void SqLattice::view_bonds_by_relative_index_v4() {
-
-std::cout << "Bonds by id : line " << __LINE__ << endl;
-//cout << "site id -1 means isolated site and 0 means connected site in bond percolation(definition)" << endl;
-print_h_barrier(15, "_", "___", "_\n");
-cout << "|(site id) (horizontal bond id(relative index))|" << endl;
-cout << "|(vertical bond id(relative index))            |" << endl;
-print_h_barrier(15, "-", "---", "-\n");
-// printing indices for columns
-std::cout << "    | ";
-for(value_type i{}; i != _length; ++i){
-std::cout << i << "                | ";
-}
-std::cout << std::endl;
-
-// pringing H,V label
-
-print_h_barrier(_length, "    |  ", " V           H  |  ");
-print_h_barrier(_length, "____|__", "________________|__");
-
-// for each row there will be two columns
-for(value_type i{}; i != _length; ++i){
-std::cout << i << ' ';
-std::cout << "H |";
-for(value_type j1{}; j1 != _length; ++j1){
-int id = _sites[i][j1].get_groupID();
-std::cout << std::setw(3) << id  ;
-if(id != -1){
-cout << _sites[i][j1].relativeIndex();
-}else{
-cout << "(-,-)    ";
-}
-std::cout << "   " << std::setw(3) << _h_bonds[i][j1].get_groupID() << "|";
-}
-std::cout << std::endl;
-print_h_barrier(_length, "    |  ", "                |  "); // just to see a better view
-std::cout << "  " << "V |";
-for(value_type j2{}; j2 != _length; ++j2){
-std::cout << std::setw(3) << _v_bonds[i][j2].get_groupID() << "               |";
-}
-std::cout << std::endl;
-
-// printing horizontal separator
-print_h_barrier(_length, "____|__", "________________|__");
-}
-
-std::cout << std::endl;
-}
-
-
-
-/**
-* View lattice (sites and bonds) by relative index.
-* format : id(relative_index)
-*/
-void SqLattice::view_by_relative_index() {
-
-std::cout << "Bonds by id : line " << __LINE__ << endl;
-// printing indices for columns
-std::cout << "    | ";
-for(value_type i{}; i != _length; ++i){
-std::cout << i << "                         | ";
-}
-std::cout << std::endl;
-
-// pringing H,V label
-
-print_h_barrier(_length, "    |  ", " V                   H   |  ");
-print_h_barrier(_length, "____|__", "_________________________|__");
-
-// for each row there will be two columns
-for(value_type i{}; i != _length; ++i){
-std::cout << i << ' ';
-std::cout << "H |";
-for(value_type j1{}; j1 != _length; ++j1){
-std::cout << std::setw(3) << _sites[i][j1].get_groupID() << _sites[i][j1].relativeIndex();
-std::cout << "   " << std::setw(3) << _h_bonds[i][j1].get_groupID()
-<< _h_bonds[i][j1].relativeIndex() << "|";
-}
-std::cout << std::endl;
-print_h_barrier(_length, "    |  ", "                         |  "); // just to see a better view
-std::cout << "  " << "V |";
-for(value_type j2{}; j2 != _length; ++j2){
-std::cout << std::setw(3) << _v_bonds[i][j2].get_groupID()
-<< _v_bonds[i][j2].relativeIndex() << "               |";
-}
-std::cout << std::endl;
-
-// printing horizontal separator
-print_h_barrier(_length, "____|__", "_________________________|__");
-}
-
-//        view_h_bonds_extended();
-//        view_v_bonds_extended();
-std::cout << std::endl;
-
-}
-
-/**
-* View lattice (sites and bonds) by relative index.
-* format : id(relative_index)
-*/
-void SqLattice::view() {
-
-std::cout << "Bonds by id : line " << __LINE__ << endl;
-cout << "Structure " << endl;
-print_h_barrier(10, "_", "___", "_\n");
-cout << "|(site id) (horizontal bond id)|" << endl;
-cout << "|(vertical bond id)            |" << endl;
-print_h_barrier(10, "-", "---", "-\n");
-// printing indices for columns
-std::cout << "    | ";
-for(value_type i{}; i != _length; ++i){
-std::cout << i << "      | ";
-}
-std::cout << std::endl;
-
-// pringing H,V label
-
-print_h_barrier(_length, "    |  ", "V    H|  ");
-print_h_barrier(_length, "____|__", "______|__");
-
-// for each row there will be two columns
-for(value_type i{}; i != _length; ++i){
-std::cout << i << ' ';
-std::cout << "H |";
-for(value_type j1{}; j1 != _length; ++j1){
-std::cout << std::setw(3) << _sites[i][j1].get_groupID() ;
-std::cout << "  " << std::setw(3) << _h_bonds[i][j1].get_groupID() << "|";
-}
-std::cout << std::endl;
-print_h_barrier(_length, "    |  ", "      |  "); // just to see a better view
-std::cout << "  " << "V |";
-for(value_type j2{}; j2 != _length; ++j2){
-std::cout << std::setw(3) << _v_bonds[i][j2].get_groupID() << "     |";
-}
-std::cout << std::endl;
-
-// printing horizontal separator
-print_h_barrier(_length, "____|__", "______|__");
-}
-
-//        view_h_bonds_extended();
-//        view_v_bonds_extended();
-std::cout << std::endl;
-
-}
-
-
-/**
-*
-*/
-void SqLattice::view_h_bonds()
-{
-std::cout << "view horizontal bonds" << std::endl;
-std::cout << '{';
-for(value_type i{} ; i != _length ; ++i) {
-if(i!=0) std::cout << "  ";
-else std::cout << '{';
-for (value_type j{}; j != _length; ++j) {
-std::cout << _h_bonds[i][j] ;
-if(j != _length-1)
-std::cout << ',';
-}
-std::cout << '}';
-if(i != _length-1)
-std::cout << std::endl;
-}
-std::cout << '}';
-std::cout << std::endl;
-}
-
-/**
-*
-*/
-void SqLattice::view_v_bonds()
-{
-std::cout << "view vertical bonds" << std::endl;
-std::cout << '{';
-for(value_type i{} ; i != _length ; ++i) {
-if(i!=0) std::cout << "  ";
-else std::cout << '{';
-for (value_type j{}; j != _length; ++j) {
-std::cout << _v_bonds[i][j] ;
-if(j != _length-1)
-std::cout << ',';
-}
-std::cout << '}';
-if(i != _length-1)
-std::cout << std::endl;
-}
-std::cout << '}';
-std::cout << std::endl;
-}
-
-
-/**
-*
-*/
-void SqLattice::view_bonds_by_id(){
-std::cout << "Bonds by id : line " << __LINE__ << endl;
-cout << "Structure " << endl;
-print_h_barrier(8, "__", "___", "_\n");
-cout << "|      (horizontal bond id)|" << endl;
-cout << "|(vertical bond id)        |" << endl;
-print_h_barrier(8, "--", "---", "-\n");
-// printing indices for columns
-std::cout << "    | ";
-for(value_type i{}; i != _length; ++i){
-std::cout << i << "    | ";
-}
-std::cout << std::endl;
-
-// pringing H,V label
-
-print_h_barrier(_length, "    |  ", "V  H|  ");
-print_h_barrier(_length, "____|__", "____|__");
-
-// for each row there will be two columns
-for(value_type i{}; i != _length; ++i){
-std::cout << i << ' ';
-std::cout << "H |";
-for(value_type j1{}; j1 != _length; ++j1){
-std::cout << "   " << std::setw(3) << _h_bonds[i][j1].get_groupID() << "|";
-}
-std::cout << std::endl;
-std::cout << "  " << "V |";
-for(value_type j2{}; j2 != _length; ++j2){
-std::cout << std::setw(3) << _v_bonds[i][j2].get_groupID() << "   |";
-}
-std::cout << std::endl;
-
-// printing horizontal separator
-print_h_barrier(_length, "____|__", "____|__");
-}
-
-//        view_h_bonds_extended();
-//        view_v_bonds_extended();
-std::cout << std::endl;
-}
 
 
 Site& SqLattice::getSite(Index index) {
@@ -705,9 +304,7 @@ reset_bonds();
 
 }
 
-/**
-*
-*/
+
 void SqLattice::reset_bonds() {
 for(value_type i{}; i != _h_bonds.size(); ++i){
 for (int j{}; j != _h_bonds[i].size(); ++j) {
@@ -716,14 +313,11 @@ for (int j{}; j != _h_bonds[i].size(); ++j) {
 _h_bonds[i][j].deactivate();
 _v_bonds[i][j].deactivate();
 
-
 }
 }
 }
 
-/**
-*
-*/
+
 void SqLattice::reset_sites() {
 for(value_type i{}; i != _sites.size(); ++i){
 for(value_type j{}; j != _sites[i].size(); ++j) {
@@ -756,8 +350,6 @@ return sites;
 /**
 * Periodic case only.
 * Each bond has six neibhbor bonds.
-* @param site
-* @return
 */
 std::vector<BondIndex> SqLattice::get_neighbor_bond_indices(BondIndex bond) {
 value_type next_column = (bond.column_ + 1) % _length;
@@ -798,7 +390,6 @@ bonds[5] = {BondType::Vertical, next_row, bond.column_};
 
 }
 
-
 return bonds;
 }
 
@@ -830,8 +421,6 @@ return sites;
 /**
 * Periodic case only.
 * Each bond has six neibhbor bonds.
-* @param site
-* @return
 */
 std::vector<BondIndex> SqLattice::get_neighbor_bond_indices(size_t length, BondIndex bond) {
 value_type next_column = (bond.column_ + 1) % length;
@@ -871,7 +460,6 @@ bonds[4] = {BondType::Horizontal, next_row, prev_column};
 bonds[5] = {BondType::Vertical, next_row, bond.column_};
 
 }
-
 
 return bonds;
 }
