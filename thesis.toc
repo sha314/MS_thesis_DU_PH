@@ -118,25 +118,25 @@
 \contentsline {chapter}{References}{131}{chapter*.85}
 \contentsline {chapter}{Appendix \numberline {A}Percolation}{141}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Algorithm}{141}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Code}{144}{section.a.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Index}{144}{subsection.a.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Site}{145}{subsection.a.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Bond}{146}{subsection.a.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Lattice}{149}{subsection.a.A.2.4}
-\contentsline {subsection}{\numberline {A.2.5}Exception}{150}{subsection.a.A.2.5}
-\contentsline {subsection}{\numberline {A.2.6}Cluster}{152}{subsection.a.A.2.6}
-\contentsline {subsection}{\numberline {A.2.7}Percolation}{153}{subsection.a.A.2.7}
-\contentsline {subsection}{\numberline {A.2.8}Utilities}{164}{subsection.a.A.2.8}
-\contentsline {subsection}{\numberline {A.2.9}Tests}{164}{subsection.a.A.2.9}
-\contentsline {subsection}{\numberline {A.2.10}Main}{169}{subsection.a.A.2.10}
-\contentsline {subsection}{\numberline {A.2.11}CMakeLists}{170}{subsection.a.A.2.11}
-\contentsline {subsection}{\numberline {A.2.12}complete code}{171}{subsection.a.A.2.12}
-\contentsline {chapter}{Appendix \numberline {B}Convolution}{173}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}Algorithm}{174}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Code}{174}{section.a.B.2}
+\contentsline {section}{\numberline {A.2}Code}{143}{section.a.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Index}{143}{subsection.a.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Site}{144}{subsection.a.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Bond}{145}{subsection.a.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Lattice}{148}{subsection.a.A.2.4}
+\contentsline {subsection}{\numberline {A.2.5}Exception}{149}{subsection.a.A.2.5}
+\contentsline {subsection}{\numberline {A.2.6}Cluster}{151}{subsection.a.A.2.6}
+\contentsline {subsection}{\numberline {A.2.7}Percolation}{152}{subsection.a.A.2.7}
+\contentsline {subsection}{\numberline {A.2.8}Utilities}{163}{subsection.a.A.2.8}
+\contentsline {subsection}{\numberline {A.2.9}Tests}{163}{subsection.a.A.2.9}
+\contentsline {subsection}{\numberline {A.2.10}Main}{168}{subsection.a.A.2.10}
+\contentsline {subsection}{\numberline {A.2.11}CMakeLists}{169}{subsection.a.A.2.11}
+\contentsline {subsection}{\numberline {A.2.12}complete code}{170}{subsection.a.A.2.12}
+\contentsline {chapter}{Appendix \numberline {B}Convolution}{171}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}Algorithm}{172}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Code}{172}{section.a.B.2}
 \contentsline {chapter}{Appendix \numberline {C}Finding Exponents}{177}{Appendix.a.C}
 \contentsline {section}{\numberline {C.1}Algorithm}{177}{section.a.C.1}
 \contentsline {subsection}{\numberline {C.1.1}Specific Heat and Susceptibility}{177}{subsection.a.C.1.1}
-\contentsline {subsubsection}{exponent for scaling the $y$-values}{177}{section*.89}
-\contentsline {subsubsection}{exponent for scaling the $x$-values}{178}{section*.90}
+\contentsline {subsubsection}{exponent for scaling the $y$-values}{177}{section*.87}
+\contentsline {subsubsection}{exponent for scaling the $x$-values}{178}{section*.88}
 \contentsline {chapter}{Appendix \numberline {D}Measuring Entropy Efficiently}{181}{Appendix.a.D}

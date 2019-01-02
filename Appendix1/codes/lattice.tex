@@ -22,6 +22,7 @@ SqLattice& operator=(const SqLattice&) = default;
 SqLattice& operator=(SqLattice&&) = default;
 SqLattice(value_type length, bool activate_bonds, bool activate_sites, bool bond_reset, bool site_reset);
 void reset(bool reset_all=false);
+
 void activate_site(Index index);
 void activateBond(BondIndex bond);
 void deactivate_site(Index index);
@@ -35,6 +36,7 @@ void setGroupID(Index index, int group_id);
 void setGroupID(BondIndex index, int group_id);
 const int getGroupID(Index index)const;
 const int getGroupID(BondIndex index)const;
+
 std::vector<Index> get_neighbor_site_indices(Index site);   // site neighbor of site
 std::vector<BondIndex> get_neighbor_bond_indices(BondIndex site); // bond neighbor of bond
 std::vector<Index> get_neighbor_indices(BondIndex bond);   // two site neighbor of bond.
@@ -43,6 +45,4 @@ static std::vector<BondIndex> get_neighbor_bond_indices(size_t length, BondIndex
 static std::vector<Index> get_neighbor_indices(size_t length, BondIndex bond);   // 2 site neighbor of bond.
 };
 \end{lstlisting}
-
-
 

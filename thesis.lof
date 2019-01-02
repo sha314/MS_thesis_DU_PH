@@ -55,12 +55,10 @@
 \contentsline {figure}{\numberline {5.24}{\ignorespaces We plot normalized entropy $H(p,L)/H(0,L)$ and normalized order parameter $P(p,L)/P(1,L)$ vs $p$ in one graph to see the order disorder transition in square lattice for (a) $L_1$ (b) $L_2$ interaction. We had to normalize entropy to make order parameter and entropy comparable.\relax }}{122}{figure.caption.81}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces L0 interaction\relax }}{142}{figure.caption.86}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces L1 and L2 interaction\relax }}{142}{figure.caption.87}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Schematic UML diagram for Site Percolation Ballistic Deposition program. This figure shows the dependencies and inheritance os the Classes and Structs in the program.\relax }}{143}{figure.caption.88}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Schematic UML diagram for Site Percolation Ballistic Deposition program. This figure shows the dependencies and inheritance os the Classes and Structs in the program.\relax }}{142}{figure.caption.86}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Minimizing exponent for scaling $x$-values\relax }}{180}{figure.caption.91}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Minimizing exponent for scaling $x$-values\relax }}{180}{figure.caption.89}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Entropy of a system in initial state and one step after it.\relax }}{183}{figure.caption.92}
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Entropy of a system in a middle state and one step after.\relax }}{184}{figure.caption.93}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Entropy of a system in initial state and one step after it.\relax }}{183}{figure.caption.90}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Entropy of a system in a middle state and one step after.\relax }}{184}{figure.caption.91}

@@ -3,7 +3,7 @@
 %****************************** Fifth Chapter **********************************
 %*******************************************************************************
 \chapter{Ballistic Deposition With Redefinition of Site Percolation}
-\label{chapter.redefinition--ballistic-deposition}
+\label{chapter.redefinition-ballistic-deposition}
 % **************************** Define Graphics Path **************************
 \ifpdf
     \graphicspath{
@@ -482,7 +482,6 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 	\begin{equation}
 	\log(S) = d_f \log(L)
 	\end{equation}
-	Here $S$ is the average size of the spanning cluster at critical point. Using this we get the figure (\ref{fig:fractal-dimension-L0}). And we obtain fractal dimension $d_f$ for $L_0$ which is listed in (\ref{tab:cluster-info}). 
 
 	Fractal dimension gives us the information about the size of the spanning(wrapping) cluster. If the lattice size is known we can estimate the average size of the spanning cluster using $d_f$ and (\ref{eqn:fractal-dim-1}).
 	
@@ -500,7 +499,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 
 	Random sequential adsorption (RSA) refers to a process where particles are randomly introduced in a system, and if they do not overlap any previously adsorbed particle, they adsorb and remain fixed for the rest of the process.	In RSA process we take a surface (say a lattice) and deposit particle (like hard sphere) there sequentially. Each particle cover a certain area and another particle cannot be in that area. Now if a particle is tried to be deposited in the occupied area it is simply rejected \cite{Renyi1958, Widom1966}.	In the ballistic deposition process, as in RSA, disks fall	on a line with a uniform random distribution. However,	unlike the RSA process, a disk landing on top of an adsorbed disk will not be immediately rejected \cite{Talbot1992}.
 
-	Imagine a spherical shaped object, say marble, is thrown on top of a 2D square lattice structure. First possible scenario is that the marble will be deposited in the first encountered site in the lattice which is shown in figure (\ref{fig:rsbd}). Now if the first encountered site is not empty, the possible scenario is that the marble will go in any of the four direction, $+x$, $-x$, $+y$ or $-y$, assuming no other direction in between is allowed in the lattice (\ref{fig:rsbd}).  Now if the first neighbor is not empty then the marble will continue to go on in the previously selected direction and choose the next neighbor. This is another topic of this thesis. Others have done some work in this topic \cite{Choi1995, Talbot1992, Jullien1992, Viot1993}. And we have found that for a different range of interaction model they all belong to different universality classes.
+	Imagine a spherical shaped object, say marble, is thrown on top of a 2D square lattice structure. First possible scenario is that the marble will be deposited in the first encountered site in the lattice which is shown in figure (\ref{fig:rsbd-2}). Now if the first encountered site is not empty, the possible scenario is that the marble will go in any of the four direction, $+x$, $-x$, $+y$ or $-y$, assuming no other direction in between is allowed in the lattice (\ref{fig:rsbd-2}).  Now if the first neighbor is not empty then the marble will continue to go on in the previously selected direction and choose the next neighbor. This is another topic of this thesis. Others have done some work in this topic \cite{Choi1995, Talbot1992, Jullien1992, Viot1993}. And we have found that for a different range of interaction model they all belong to different universality classes.
 	
 
 
@@ -829,7 +828,7 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 	\begin{equation}
 	\log(S) = d_f \log(L)
 	\end{equation}
-	Here $S$ is the average size of the spanning cluster at critical point. Using this we get the figure (\ref{fig:fractal-dimension}). And we obtain fractal dimension $d_f$ for $L_0,L_1,L_2$ which is listed in (\ref{tab:exponents}). 
+	Here $S$ is the average size of the spanning cluster at critical point. Using this we get the figure (\ref{fig:fractal-dimension}). And we obtain fractal dimension $d_f$ for $L_0,L_1,L_2$ which is listed in (\ref{tab:cluster-info}). 
 	\begin{figure}[h]
 		\centering
 		\captionsetup[subfigure]{width=0.9\textwidth}
@@ -843,8 +842,8 @@ Then we investigate percolation by random sequential ballistic deposition (RSBD)
 			\includegraphics[width=\linewidth]{{{sq_lattice_site_percolation_ballistic_deposition_L2_periodic_-fractal_dimension_1.9081}}}
 			\caption{}
 		\end{subfigure}
-		\label{fig:fractal-dimension}
 		\caption{We plot $\log(S)$ vs $\log(L)$ where $S$ is the size of the spanning cluster and $L$ is the length of the lattice. We obtain the slope $1.8995$ and $1.9081$ for (a) $L_1$ and (b) $L_2$ respectively which are the fractal dimensions of the system for $L_1$ and $L_2$ interactions respectively.}
+		\label{fig:fractal-dimension}
 	\end{figure}
 	Fractal dimension gives us the information about the size of the spanning(wrapping) cluster. If the lattice size is known we can estimate the average size of the spanning cluster using $d_f$ and (\ref{eqn:fractal-dim}).
 	
